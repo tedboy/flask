@@ -1,0 +1,6 @@
+flask.Flask.session_cookie_name
+===============================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Flask.session_cookie_name

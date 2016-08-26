@@ -1,0 +1,6 @@
+flask.Request.values
+====================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Request.values

@@ -1,0 +1,6 @@
+werkzeug.Response.age
+=====================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Response.age

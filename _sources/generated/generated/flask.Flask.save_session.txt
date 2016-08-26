@@ -1,0 +1,6 @@
+flask.Flask.save_session
+========================
+
+.. currentmodule:: flask
+
+.. automethod:: Flask.save_session

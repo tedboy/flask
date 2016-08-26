@@ -1,0 +1,6 @@
+werkzeug.is_resource_modified
+=============================
+
+.. currentmodule:: werkzeug
+
+.. autofunction:: is_resource_modified

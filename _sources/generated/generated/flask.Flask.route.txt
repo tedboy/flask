@@ -1,0 +1,6 @@
+flask.Flask.route
+=================
+
+.. currentmodule:: flask
+
+.. automethod:: Flask.route

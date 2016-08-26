@@ -1,0 +1,6 @@
+werkzeug.LanguageAccept.best
+============================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: LanguageAccept.best

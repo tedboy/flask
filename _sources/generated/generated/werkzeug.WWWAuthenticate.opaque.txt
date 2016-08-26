@@ -1,0 +1,6 @@
+werkzeug.WWWAuthenticate.opaque
+===============================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: WWWAuthenticate.opaque

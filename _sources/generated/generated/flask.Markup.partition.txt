@@ -1,0 +1,6 @@
+flask.Markup.partition
+======================
+
+.. currentmodule:: flask
+
+.. automethod:: Markup.partition

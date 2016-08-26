@@ -1,0 +1,61 @@
+flask.Markup
+============
+.. currentmodule:: flask
+.. autoclass:: Markup
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Markup.capitalize
+   ~Markup.center
+   ~Markup.count
+   ~Markup.decode
+   ~Markup.encode
+   ~Markup.endswith
+   ~Markup.escape
+   ~Markup.expandtabs
+   ~Markup.find
+   ~Markup.format
+   ~Markup.index
+   ~Markup.isalnum
+   ~Markup.isalpha
+   ~Markup.isdecimal
+   ~Markup.isdigit
+   ~Markup.islower
+   ~Markup.isnumeric
+   ~Markup.isspace
+   ~Markup.istitle
+   ~Markup.isupper
+   ~Markup.join
+   ~Markup.ljust
+   ~Markup.lower
+   ~Markup.lstrip
+   ~Markup.partition
+   ~Markup.replace
+   ~Markup.rfind
+   ~Markup.rindex
+   ~Markup.rjust
+   ~Markup.rpartition
+   ~Markup.rsplit
+   ~Markup.rstrip
+   ~Markup.split
+   ~Markup.splitlines
+   ~Markup.startswith
+   ~Markup.strip
+   ~Markup.striptags
+   ~Markup.swapcase
+   ~Markup.title
+   ~Markup.translate
+   ~Markup.unescape
+   ~Markup.upper
+   ~Markup.zfill
+
+
+
+
+

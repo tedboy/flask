@@ -1,0 +1,6 @@
+flask.Response.make_conditional
+===============================
+
+.. currentmodule:: flask
+
+.. automethod:: Response.make_conditional

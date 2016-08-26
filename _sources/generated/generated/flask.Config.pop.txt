@@ -1,0 +1,6 @@
+flask.Config.pop
+================
+
+.. currentmodule:: flask
+
+.. automethod:: Config.pop

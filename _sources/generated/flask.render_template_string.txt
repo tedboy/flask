@@ -1,0 +1,6 @@
+flask.render_template_string
+============================
+
+.. currentmodule:: flask
+
+.. autofunction:: render_template_string

@@ -1,0 +1,6 @@
+werkzeug.EnvironHeaders.setdefault
+==================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: EnvironHeaders.setdefault

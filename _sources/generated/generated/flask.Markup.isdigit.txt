@@ -1,0 +1,6 @@
+flask.Markup.isdigit
+====================
+
+.. currentmodule:: flask
+
+.. automethod:: Markup.isdigit

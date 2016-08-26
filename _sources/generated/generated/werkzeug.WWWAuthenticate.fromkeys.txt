@@ -1,0 +1,6 @@
+werkzeug.WWWAuthenticate.fromkeys
+=================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: WWWAuthenticate.fromkeys

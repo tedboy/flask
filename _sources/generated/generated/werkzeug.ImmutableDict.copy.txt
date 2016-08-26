@@ -1,0 +1,6 @@
+werkzeug.ImmutableDict.copy
+===========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ImmutableDict.copy

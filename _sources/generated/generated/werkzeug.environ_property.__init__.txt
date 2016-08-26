@@ -1,0 +1,6 @@
+werkzeug.environ_property.__init__
+==================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: environ_property.__init__

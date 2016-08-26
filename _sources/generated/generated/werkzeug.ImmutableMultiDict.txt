@@ -1,0 +1,49 @@
+werkzeug.ImmutableMultiDict
+===========================
+.. currentmodule:: werkzeug
+.. autoclass:: ImmutableMultiDict
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~ImmutableMultiDict.__init__
+   ~ImmutableMultiDict.add
+   ~ImmutableMultiDict.clear
+   ~ImmutableMultiDict.copy
+   ~ImmutableMultiDict.deepcopy
+   ~ImmutableMultiDict.fromkeys
+   ~ImmutableMultiDict.get
+   ~ImmutableMultiDict.getlist
+   ~ImmutableMultiDict.has_key
+   ~ImmutableMultiDict.items
+   ~ImmutableMultiDict.iteritems
+   ~ImmutableMultiDict.iterkeys
+   ~ImmutableMultiDict.iterlists
+   ~ImmutableMultiDict.iterlistvalues
+   ~ImmutableMultiDict.itervalues
+   ~ImmutableMultiDict.keys
+   ~ImmutableMultiDict.lists
+   ~ImmutableMultiDict.listvalues
+   ~ImmutableMultiDict.pop
+   ~ImmutableMultiDict.popitem
+   ~ImmutableMultiDict.popitemlist
+   ~ImmutableMultiDict.poplist
+   ~ImmutableMultiDict.setdefault
+   ~ImmutableMultiDict.setlist
+   ~ImmutableMultiDict.setlistdefault
+   ~ImmutableMultiDict.to_dict
+   ~ImmutableMultiDict.update
+   ~ImmutableMultiDict.values
+   ~ImmutableMultiDict.viewitems
+   ~ImmutableMultiDict.viewkeys
+   ~ImmutableMultiDict.viewvalues
+
+
+
+
+

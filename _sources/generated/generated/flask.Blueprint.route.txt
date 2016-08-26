@@ -1,0 +1,6 @@
+flask.Blueprint.route
+=====================
+
+.. currentmodule:: flask
+
+.. automethod:: Blueprint.route

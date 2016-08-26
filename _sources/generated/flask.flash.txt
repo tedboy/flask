@@ -1,0 +1,6 @@
+flask.flash
+===========
+
+.. currentmodule:: flask
+
+.. autofunction:: flash

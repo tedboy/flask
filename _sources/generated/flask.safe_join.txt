@@ -1,0 +1,6 @@
+flask.safe_join
+===============
+
+.. currentmodule:: flask
+
+.. autofunction:: safe_join

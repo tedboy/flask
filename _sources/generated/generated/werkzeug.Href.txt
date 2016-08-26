@@ -1,0 +1,19 @@
+werkzeug.Href
+=============
+.. currentmodule:: werkzeug
+.. autoclass:: Href
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Href.__init__
+
+
+
+
+

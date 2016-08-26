@@ -1,0 +1,49 @@
+werkzeug.ImmutableOrderedMultiDict
+==================================
+.. currentmodule:: werkzeug
+.. autoclass:: ImmutableOrderedMultiDict
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~ImmutableOrderedMultiDict.__init__
+   ~ImmutableOrderedMultiDict.add
+   ~ImmutableOrderedMultiDict.clear
+   ~ImmutableOrderedMultiDict.copy
+   ~ImmutableOrderedMultiDict.deepcopy
+   ~ImmutableOrderedMultiDict.fromkeys
+   ~ImmutableOrderedMultiDict.get
+   ~ImmutableOrderedMultiDict.getlist
+   ~ImmutableOrderedMultiDict.has_key
+   ~ImmutableOrderedMultiDict.items
+   ~ImmutableOrderedMultiDict.iteritems
+   ~ImmutableOrderedMultiDict.iterkeys
+   ~ImmutableOrderedMultiDict.iterlists
+   ~ImmutableOrderedMultiDict.iterlistvalues
+   ~ImmutableOrderedMultiDict.itervalues
+   ~ImmutableOrderedMultiDict.keys
+   ~ImmutableOrderedMultiDict.lists
+   ~ImmutableOrderedMultiDict.listvalues
+   ~ImmutableOrderedMultiDict.pop
+   ~ImmutableOrderedMultiDict.popitem
+   ~ImmutableOrderedMultiDict.popitemlist
+   ~ImmutableOrderedMultiDict.poplist
+   ~ImmutableOrderedMultiDict.setdefault
+   ~ImmutableOrderedMultiDict.setlist
+   ~ImmutableOrderedMultiDict.setlistdefault
+   ~ImmutableOrderedMultiDict.to_dict
+   ~ImmutableOrderedMultiDict.update
+   ~ImmutableOrderedMultiDict.values
+   ~ImmutableOrderedMultiDict.viewitems
+   ~ImmutableOrderedMultiDict.viewkeys
+   ~ImmutableOrderedMultiDict.viewvalues
+
+
+
+
+

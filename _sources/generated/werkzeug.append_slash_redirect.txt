@@ -1,0 +1,6 @@
+werkzeug.append_slash_redirect
+==============================
+
+.. currentmodule:: werkzeug
+
+.. autofunction:: append_slash_redirect

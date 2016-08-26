@@ -1,0 +1,6 @@
+werkzeug.dump_options_header
+============================
+
+.. currentmodule:: werkzeug
+
+.. autofunction:: dump_options_header

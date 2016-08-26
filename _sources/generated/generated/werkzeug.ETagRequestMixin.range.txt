@@ -1,0 +1,6 @@
+werkzeug.ETagRequestMixin.range
+===============================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: ETagRequestMixin.range

@@ -1,0 +1,6 @@
+flask.Request.mimetype_params
+=============================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Request.mimetype_params

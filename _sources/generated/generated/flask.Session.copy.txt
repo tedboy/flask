@@ -1,0 +1,6 @@
+flask.Session.copy
+==================
+
+.. currentmodule:: flask
+
+.. automethod:: Session.copy

@@ -1,0 +1,6 @@
+werkzeug.pop_path_info
+======================
+
+.. currentmodule:: werkzeug
+
+.. autofunction:: pop_path_info

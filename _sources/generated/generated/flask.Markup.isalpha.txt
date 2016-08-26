@@ -1,0 +1,6 @@
+flask.Markup.isalpha
+====================
+
+.. currentmodule:: flask
+
+.. automethod:: Markup.isalpha

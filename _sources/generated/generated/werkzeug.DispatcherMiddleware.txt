@@ -1,0 +1,19 @@
+werkzeug.DispatcherMiddleware
+=============================
+.. currentmodule:: werkzeug
+.. autoclass:: DispatcherMiddleware
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~DispatcherMiddleware.__init__
+
+
+
+
+

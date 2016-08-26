@@ -1,0 +1,6 @@
+werkzeug.cached_property.fdel
+=============================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: cached_property.fdel

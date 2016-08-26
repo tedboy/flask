@@ -1,0 +1,42 @@
+werkzeug.EnvironHeaders
+=======================
+.. currentmodule:: werkzeug
+.. autoclass:: EnvironHeaders
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~EnvironHeaders.__init__
+   ~EnvironHeaders.add
+   ~EnvironHeaders.add_header
+   ~EnvironHeaders.clear
+   ~EnvironHeaders.copy
+   ~EnvironHeaders.extend
+   ~EnvironHeaders.get
+   ~EnvironHeaders.get_all
+   ~EnvironHeaders.getlist
+   ~EnvironHeaders.has_key
+   ~EnvironHeaders.insert
+   ~EnvironHeaders.items
+   ~EnvironHeaders.iteritems
+   ~EnvironHeaders.iterkeys
+   ~EnvironHeaders.itervalues
+   ~EnvironHeaders.keys
+   ~EnvironHeaders.pop
+   ~EnvironHeaders.popitem
+   ~EnvironHeaders.remove
+   ~EnvironHeaders.set
+   ~EnvironHeaders.setdefault
+   ~EnvironHeaders.to_list
+   ~EnvironHeaders.to_wsgi_list
+   ~EnvironHeaders.values
+
+
+
+
+

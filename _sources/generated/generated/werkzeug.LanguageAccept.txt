@@ -1,0 +1,42 @@
+werkzeug.LanguageAccept
+=======================
+.. currentmodule:: werkzeug
+.. autoclass:: LanguageAccept
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~LanguageAccept.__init__
+   ~LanguageAccept.append
+   ~LanguageAccept.best_match
+   ~LanguageAccept.count
+   ~LanguageAccept.extend
+   ~LanguageAccept.find
+   ~LanguageAccept.index
+   ~LanguageAccept.insert
+   ~LanguageAccept.itervalues
+   ~LanguageAccept.pop
+   ~LanguageAccept.quality
+   ~LanguageAccept.remove
+   ~LanguageAccept.reverse
+   ~LanguageAccept.sort
+   ~LanguageAccept.to_header
+   ~LanguageAccept.values
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~LanguageAccept.best
+

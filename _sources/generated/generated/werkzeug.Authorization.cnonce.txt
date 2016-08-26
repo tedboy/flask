@@ -1,0 +1,6 @@
+werkzeug.Authorization.cnonce
+=============================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Authorization.cnonce

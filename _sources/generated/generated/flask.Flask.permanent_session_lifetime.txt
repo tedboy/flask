@@ -1,0 +1,6 @@
+flask.Flask.permanent_session_lifetime
+======================================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Flask.permanent_session_lifetime

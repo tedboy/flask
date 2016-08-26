@@ -1,0 +1,6 @@
+werkzeug.remove_hop_by_hop_headers
+==================================
+
+.. currentmodule:: werkzeug
+
+.. autofunction:: remove_hop_by_hop_headers

@@ -1,0 +1,6 @@
+flask.Session.values
+====================
+
+.. currentmodule:: flask
+
+.. automethod:: Session.values

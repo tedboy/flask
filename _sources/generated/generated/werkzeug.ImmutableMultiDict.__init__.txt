@@ -1,0 +1,6 @@
+werkzeug.ImmutableMultiDict.__init__
+====================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ImmutableMultiDict.__init__

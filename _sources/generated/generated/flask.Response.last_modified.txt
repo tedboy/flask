@@ -1,0 +1,6 @@
+flask.Response.last_modified
+============================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Response.last_modified

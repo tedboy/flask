@@ -1,0 +1,6 @@
+werkzeug.Authorization.response
+===============================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Authorization.response

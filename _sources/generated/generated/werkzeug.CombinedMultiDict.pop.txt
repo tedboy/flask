@@ -1,0 +1,6 @@
+werkzeug.CombinedMultiDict.pop
+==============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: CombinedMultiDict.pop

@@ -1,0 +1,6 @@
+werkzeug.Client.run_wsgi_app
+============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Client.run_wsgi_app

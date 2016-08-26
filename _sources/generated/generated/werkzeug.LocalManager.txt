@@ -1,0 +1,23 @@
+werkzeug.LocalManager
+=====================
+.. currentmodule:: werkzeug
+.. autoclass:: LocalManager
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~LocalManager.__init__
+   ~LocalManager.cleanup
+   ~LocalManager.get_ident
+   ~LocalManager.make_middleware
+   ~LocalManager.middleware
+
+
+
+
+

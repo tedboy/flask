@@ -1,0 +1,6 @@
+werkzeug.header_property.lookup
+===============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: header_property.lookup

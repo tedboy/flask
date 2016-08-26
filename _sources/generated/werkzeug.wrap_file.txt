@@ -1,0 +1,6 @@
+werkzeug.wrap_file
+==================
+
+.. currentmodule:: werkzeug
+
+.. autofunction:: wrap_file

@@ -1,0 +1,6 @@
+werkzeug.Client.delete_cookie
+=============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Client.delete_cookie

@@ -1,0 +1,6 @@
+werkzeug.BaseResponse.autocorrect_location_header
+=================================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: BaseResponse.autocorrect_location_header

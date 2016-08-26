@@ -1,0 +1,56 @@
+werkzeug.ResponseCacheControl
+=============================
+.. currentmodule:: werkzeug
+.. autoclass:: ResponseCacheControl
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~ResponseCacheControl.__init__
+   ~ResponseCacheControl.cache_property
+   ~ResponseCacheControl.clear
+   ~ResponseCacheControl.copy
+   ~ResponseCacheControl.fromkeys
+   ~ResponseCacheControl.get
+   ~ResponseCacheControl.has_key
+   ~ResponseCacheControl.items
+   ~ResponseCacheControl.iteritems
+   ~ResponseCacheControl.iterkeys
+   ~ResponseCacheControl.itervalues
+   ~ResponseCacheControl.keys
+   ~ResponseCacheControl.pop
+   ~ResponseCacheControl.popitem
+   ~ResponseCacheControl.setdefault
+   ~ResponseCacheControl.to_header
+   ~ResponseCacheControl.update
+   ~ResponseCacheControl.values
+   ~ResponseCacheControl.viewitems
+   ~ResponseCacheControl.viewkeys
+   ~ResponseCacheControl.viewvalues
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~ResponseCacheControl.max_age
+   ~ResponseCacheControl.must_revalidate
+   ~ResponseCacheControl.no_cache
+   ~ResponseCacheControl.no_store
+   ~ResponseCacheControl.no_transform
+   ~ResponseCacheControl.on_update
+   ~ResponseCacheControl.private
+   ~ResponseCacheControl.proxy_revalidate
+   ~ResponseCacheControl.public
+   ~ResponseCacheControl.s_maxage
+

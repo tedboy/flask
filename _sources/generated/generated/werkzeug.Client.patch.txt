@@ -1,0 +1,6 @@
+werkzeug.Client.patch
+=====================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Client.patch

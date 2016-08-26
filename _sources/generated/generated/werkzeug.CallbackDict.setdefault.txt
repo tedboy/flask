@@ -1,0 +1,6 @@
+werkzeug.CallbackDict.setdefault
+================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: CallbackDict.setdefault

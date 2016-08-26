@@ -1,0 +1,6 @@
+werkzeug.EnvironBuilder.query_string
+====================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: EnvironBuilder.query_string

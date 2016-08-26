@@ -1,0 +1,6 @@
+flask.Markup.endswith
+=====================
+
+.. currentmodule:: flask
+
+.. automethod:: Markup.endswith

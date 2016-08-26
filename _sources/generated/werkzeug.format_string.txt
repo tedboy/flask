@@ -1,0 +1,6 @@
+werkzeug.format_string
+======================
+
+.. currentmodule:: werkzeug
+
+.. autofunction:: format_string

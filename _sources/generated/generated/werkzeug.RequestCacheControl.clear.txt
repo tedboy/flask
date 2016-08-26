@@ -1,0 +1,6 @@
+werkzeug.RequestCacheControl.clear
+==================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: RequestCacheControl.clear

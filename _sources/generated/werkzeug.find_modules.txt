@@ -1,0 +1,6 @@
+werkzeug.find_modules
+=====================
+
+.. currentmodule:: werkzeug
+
+.. autofunction:: find_modules

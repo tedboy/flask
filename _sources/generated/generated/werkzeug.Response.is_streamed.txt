@@ -1,0 +1,6 @@
+werkzeug.Response.is_streamed
+=============================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Response.is_streamed

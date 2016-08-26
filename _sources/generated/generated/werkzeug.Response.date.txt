@@ -1,0 +1,6 @@
+werkzeug.Response.date
+======================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Response.date

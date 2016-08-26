@@ -1,0 +1,6 @@
+flask.Flask.test_client_class
+=============================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Flask.test_client_class

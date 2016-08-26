@@ -1,0 +1,6 @@
+flask.Session.get
+=================
+
+.. currentmodule:: flask
+
+.. automethod:: Session.get

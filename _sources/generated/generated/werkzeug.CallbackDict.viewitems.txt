@@ -1,0 +1,6 @@
+werkzeug.CallbackDict.viewitems
+===============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: CallbackDict.viewitems

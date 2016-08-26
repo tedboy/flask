@@ -1,0 +1,6 @@
+flask.Request.content_type
+==========================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Request.content_type

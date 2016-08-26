@@ -1,0 +1,6 @@
+werkzeug.MultiDict.__init__
+===========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: MultiDict.__init__

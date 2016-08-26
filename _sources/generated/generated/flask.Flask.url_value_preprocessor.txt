@@ -1,0 +1,6 @@
+flask.Flask.url_value_preprocessor
+==================================
+
+.. currentmodule:: flask
+
+.. automethod:: Flask.url_value_preprocessor

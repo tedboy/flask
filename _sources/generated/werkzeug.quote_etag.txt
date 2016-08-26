@@ -1,0 +1,6 @@
+werkzeug.quote_etag
+===================
+
+.. currentmodule:: werkzeug
+
+.. autofunction:: quote_etag

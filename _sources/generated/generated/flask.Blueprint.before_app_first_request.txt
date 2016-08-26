@@ -1,0 +1,6 @@
+flask.Blueprint.before_app_first_request
+========================================
+
+.. currentmodule:: flask
+
+.. automethod:: Blueprint.before_app_first_request

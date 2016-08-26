@@ -1,0 +1,6 @@
+werkzeug.ImmutableList.extend
+=============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ImmutableList.extend

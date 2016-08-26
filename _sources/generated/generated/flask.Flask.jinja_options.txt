@@ -1,0 +1,6 @@
+flask.Flask.jinja_options
+=========================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Flask.jinja_options

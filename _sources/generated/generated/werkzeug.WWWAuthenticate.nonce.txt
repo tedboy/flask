@@ -1,0 +1,6 @@
+werkzeug.WWWAuthenticate.nonce
+==============================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: WWWAuthenticate.nonce

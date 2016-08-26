@@ -1,0 +1,6 @@
+werkzeug.UserAgent.__init__
+===========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: UserAgent.__init__

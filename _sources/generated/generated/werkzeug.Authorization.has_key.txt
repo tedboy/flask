@@ -1,0 +1,6 @@
+werkzeug.Authorization.has_key
+==============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Authorization.has_key

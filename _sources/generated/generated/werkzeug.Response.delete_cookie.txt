@@ -1,0 +1,6 @@
+werkzeug.Response.delete_cookie
+===============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Response.delete_cookie

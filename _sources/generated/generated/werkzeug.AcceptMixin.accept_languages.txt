@@ -1,0 +1,6 @@
+werkzeug.AcceptMixin.accept_languages
+=====================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: AcceptMixin.accept_languages

@@ -1,0 +1,6 @@
+werkzeug.BaseResponse.get_data
+==============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: BaseResponse.get_data

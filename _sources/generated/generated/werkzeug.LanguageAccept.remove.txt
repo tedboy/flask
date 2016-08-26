@@ -1,0 +1,6 @@
+werkzeug.LanguageAccept.remove
+==============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: LanguageAccept.remove

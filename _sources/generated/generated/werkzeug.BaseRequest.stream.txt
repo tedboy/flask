@@ -1,0 +1,6 @@
+werkzeug.BaseRequest.stream
+===========================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: BaseRequest.stream

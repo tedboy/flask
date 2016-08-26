@@ -1,0 +1,6 @@
+werkzeug.LanguageAccept.index
+=============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: LanguageAccept.index

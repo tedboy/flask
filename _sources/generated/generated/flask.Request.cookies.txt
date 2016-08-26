@@ -1,0 +1,6 @@
+flask.Request.cookies
+=====================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Request.cookies

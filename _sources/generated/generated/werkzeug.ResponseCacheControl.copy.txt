@@ -1,0 +1,6 @@
+werkzeug.ResponseCacheControl.copy
+==================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ResponseCacheControl.copy

@@ -1,0 +1,6 @@
+werkzeug.ResponseCacheControl.setdefault
+========================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ResponseCacheControl.setdefault

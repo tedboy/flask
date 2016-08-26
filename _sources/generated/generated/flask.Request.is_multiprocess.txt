@@ -1,0 +1,6 @@
+flask.Request.is_multiprocess
+=============================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Request.is_multiprocess

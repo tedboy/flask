@@ -1,0 +1,6 @@
+werkzeug.ClosingIterator.next
+=============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ClosingIterator.next

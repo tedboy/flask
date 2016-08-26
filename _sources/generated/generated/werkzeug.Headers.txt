@@ -1,0 +1,41 @@
+werkzeug.Headers
+================
+.. currentmodule:: werkzeug
+.. autoclass:: Headers
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Headers.__init__
+   ~Headers.add
+   ~Headers.add_header
+   ~Headers.clear
+   ~Headers.copy
+   ~Headers.extend
+   ~Headers.get
+   ~Headers.get_all
+   ~Headers.getlist
+   ~Headers.has_key
+   ~Headers.items
+   ~Headers.iteritems
+   ~Headers.iterkeys
+   ~Headers.itervalues
+   ~Headers.keys
+   ~Headers.pop
+   ~Headers.popitem
+   ~Headers.remove
+   ~Headers.set
+   ~Headers.setdefault
+   ~Headers.to_list
+   ~Headers.to_wsgi_list
+   ~Headers.values
+
+
+
+
+

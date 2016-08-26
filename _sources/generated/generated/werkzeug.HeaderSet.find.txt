@@ -1,0 +1,6 @@
+werkzeug.HeaderSet.find
+=======================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: HeaderSet.find

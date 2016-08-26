@@ -1,0 +1,45 @@
+werkzeug.MIMEAccept
+===================
+.. currentmodule:: werkzeug
+.. autoclass:: MIMEAccept
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~MIMEAccept.__init__
+   ~MIMEAccept.append
+   ~MIMEAccept.best_match
+   ~MIMEAccept.count
+   ~MIMEAccept.extend
+   ~MIMEAccept.find
+   ~MIMEAccept.index
+   ~MIMEAccept.insert
+   ~MIMEAccept.itervalues
+   ~MIMEAccept.pop
+   ~MIMEAccept.quality
+   ~MIMEAccept.remove
+   ~MIMEAccept.reverse
+   ~MIMEAccept.sort
+   ~MIMEAccept.to_header
+   ~MIMEAccept.values
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~MIMEAccept.accept_html
+   ~MIMEAccept.accept_json
+   ~MIMEAccept.accept_xhtml
+   ~MIMEAccept.best
+

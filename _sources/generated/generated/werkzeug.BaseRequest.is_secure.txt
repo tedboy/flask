@@ -1,0 +1,6 @@
+werkzeug.BaseRequest.is_secure
+==============================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: BaseRequest.is_secure

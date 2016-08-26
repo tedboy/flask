@@ -1,0 +1,6 @@
+flask.Flask.create_global_jinja_loader
+======================================
+
+.. currentmodule:: flask
+
+.. automethod:: Flask.create_global_jinja_loader

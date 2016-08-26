@@ -1,0 +1,6 @@
+werkzeug.ETagRequestMixin.if_match
+==================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: ETagRequestMixin.if_match

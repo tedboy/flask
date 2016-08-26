@@ -1,0 +1,6 @@
+flask.Markup.rstrip
+===================
+
+.. currentmodule:: flask
+
+.. automethod:: Markup.rstrip

@@ -1,0 +1,6 @@
+werkzeug.Response.allow
+=======================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Response.allow

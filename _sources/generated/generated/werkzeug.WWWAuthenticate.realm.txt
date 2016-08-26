@@ -1,0 +1,6 @@
+werkzeug.WWWAuthenticate.realm
+==============================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: WWWAuthenticate.realm

@@ -1,0 +1,6 @@
+werkzeug.Client.delete
+======================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Client.delete

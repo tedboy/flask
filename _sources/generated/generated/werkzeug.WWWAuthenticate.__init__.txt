@@ -1,0 +1,6 @@
+werkzeug.WWWAuthenticate.__init__
+=================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: WWWAuthenticate.__init__

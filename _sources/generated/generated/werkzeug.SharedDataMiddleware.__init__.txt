@@ -1,0 +1,6 @@
+werkzeug.SharedDataMiddleware.__init__
+======================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: SharedDataMiddleware.__init__

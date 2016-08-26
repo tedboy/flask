@@ -1,0 +1,6 @@
+werkzeug.FileWrapper.next
+=========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: FileWrapper.next

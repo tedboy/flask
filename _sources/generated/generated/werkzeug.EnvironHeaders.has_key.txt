@@ -1,0 +1,6 @@
+werkzeug.EnvironHeaders.has_key
+===============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: EnvironHeaders.has_key

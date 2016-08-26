@@ -1,0 +1,6 @@
+werkzeug.MIMEAccept.to_header
+=============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: MIMEAccept.to_header

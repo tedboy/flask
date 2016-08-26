@@ -1,0 +1,6 @@
+werkzeug.Response.make_conditional
+==================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Response.make_conditional

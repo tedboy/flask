@@ -1,0 +1,6 @@
+werkzeug.ResponseCacheControl.pop
+=================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ResponseCacheControl.pop

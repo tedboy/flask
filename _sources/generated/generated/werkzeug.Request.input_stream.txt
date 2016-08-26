@@ -1,0 +1,6 @@
+werkzeug.Request.input_stream
+=============================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Request.input_stream

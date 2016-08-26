@@ -1,0 +1,6 @@
+flask.Response.date
+===================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Response.date

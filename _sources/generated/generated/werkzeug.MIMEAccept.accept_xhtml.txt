@@ -1,0 +1,6 @@
+werkzeug.MIMEAccept.accept_xhtml
+================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: MIMEAccept.accept_xhtml

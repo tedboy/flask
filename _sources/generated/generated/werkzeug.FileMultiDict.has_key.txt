@@ -1,0 +1,6 @@
+werkzeug.FileMultiDict.has_key
+==============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: FileMultiDict.has_key

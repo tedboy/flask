@@ -1,0 +1,6 @@
+werkzeug.get_host
+=================
+
+.. currentmodule:: werkzeug
+
+.. autofunction:: get_host

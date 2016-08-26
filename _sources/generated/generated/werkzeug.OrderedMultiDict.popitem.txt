@@ -1,0 +1,6 @@
+werkzeug.OrderedMultiDict.popitem
+=================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: OrderedMultiDict.popitem

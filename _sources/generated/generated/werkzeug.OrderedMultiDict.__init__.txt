@@ -1,0 +1,6 @@
+werkzeug.OrderedMultiDict.__init__
+==================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: OrderedMultiDict.__init__

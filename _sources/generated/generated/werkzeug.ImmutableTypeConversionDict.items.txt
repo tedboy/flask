@@ -1,0 +1,6 @@
+werkzeug.ImmutableTypeConversionDict.items
+==========================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ImmutableTypeConversionDict.items

@@ -1,0 +1,6 @@
+werkzeug.TypeConversionDict.clear
+=================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: TypeConversionDict.clear

@@ -1,0 +1,6 @@
+werkzeug.Request.referrer
+=========================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Request.referrer

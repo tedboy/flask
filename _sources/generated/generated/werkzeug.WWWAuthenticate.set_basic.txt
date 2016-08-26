@@ -1,0 +1,6 @@
+werkzeug.WWWAuthenticate.set_basic
+==================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: WWWAuthenticate.set_basic

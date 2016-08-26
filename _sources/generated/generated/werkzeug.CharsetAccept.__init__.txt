@@ -1,0 +1,6 @@
+werkzeug.CharsetAccept.__init__
+===============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: CharsetAccept.__init__

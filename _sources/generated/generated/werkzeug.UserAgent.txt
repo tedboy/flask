@@ -1,0 +1,20 @@
+werkzeug.UserAgent
+==================
+.. currentmodule:: werkzeug
+.. autoclass:: UserAgent
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~UserAgent.__init__
+   ~UserAgent.to_header
+
+
+
+
+

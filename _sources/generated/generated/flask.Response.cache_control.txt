@@ -1,0 +1,6 @@
+flask.Response.cache_control
+============================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Response.cache_control

@@ -1,0 +1,6 @@
+werkzeug.FileStorage.content_length
+===================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: FileStorage.content_length

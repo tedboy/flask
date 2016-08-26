@@ -1,0 +1,6 @@
+flask.Config.from_object
+========================
+
+.. currentmodule:: flask
+
+.. automethod:: Config.from_object

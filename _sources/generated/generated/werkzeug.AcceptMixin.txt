@@ -1,0 +1,22 @@
+werkzeug.AcceptMixin
+====================
+.. currentmodule:: werkzeug
+.. autoclass:: AcceptMixin
+   :undoc-members:
+
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~AcceptMixin.accept_charsets
+   ~AcceptMixin.accept_encodings
+   ~AcceptMixin.accept_languages
+   ~AcceptMixin.accept_mimetypes
+

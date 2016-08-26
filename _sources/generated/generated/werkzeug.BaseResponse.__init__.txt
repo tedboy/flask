@@ -1,0 +1,6 @@
+werkzeug.BaseResponse.__init__
+==============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: BaseResponse.__init__

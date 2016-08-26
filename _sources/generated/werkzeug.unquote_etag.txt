@@ -1,0 +1,6 @@
+werkzeug.unquote_etag
+=====================
+
+.. currentmodule:: werkzeug
+
+.. autofunction:: unquote_etag

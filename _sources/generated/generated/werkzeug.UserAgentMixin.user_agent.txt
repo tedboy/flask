@@ -1,0 +1,6 @@
+werkzeug.UserAgentMixin.user_agent
+==================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: UserAgentMixin.user_agent

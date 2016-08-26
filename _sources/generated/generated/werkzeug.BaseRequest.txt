@@ -1,0 +1,67 @@
+werkzeug.BaseRequest
+====================
+.. currentmodule:: werkzeug
+.. autoclass:: BaseRequest
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~BaseRequest.__init__
+   ~BaseRequest.application
+   ~BaseRequest.close
+   ~BaseRequest.from_values
+   ~BaseRequest.get_data
+   ~BaseRequest.make_form_data_parser
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~BaseRequest.access_route
+   ~BaseRequest.args
+   ~BaseRequest.base_url
+   ~BaseRequest.charset
+   ~BaseRequest.cookies
+   ~BaseRequest.data
+   ~BaseRequest.disable_data_descriptor
+   ~BaseRequest.encoding_errors
+   ~BaseRequest.files
+   ~BaseRequest.form
+   ~BaseRequest.full_path
+   ~BaseRequest.headers
+   ~BaseRequest.host
+   ~BaseRequest.host_url
+   ~BaseRequest.input_stream
+   ~BaseRequest.is_multiprocess
+   ~BaseRequest.is_multithread
+   ~BaseRequest.is_run_once
+   ~BaseRequest.is_secure
+   ~BaseRequest.is_xhr
+   ~BaseRequest.max_content_length
+   ~BaseRequest.max_form_memory_size
+   ~BaseRequest.method
+   ~BaseRequest.path
+   ~BaseRequest.query_string
+   ~BaseRequest.remote_addr
+   ~BaseRequest.remote_user
+   ~BaseRequest.scheme
+   ~BaseRequest.script_root
+   ~BaseRequest.stream
+   ~BaseRequest.trusted_hosts
+   ~BaseRequest.url
+   ~BaseRequest.url_charset
+   ~BaseRequest.url_root
+   ~BaseRequest.values
+   ~BaseRequest.want_form_data_parsed
+

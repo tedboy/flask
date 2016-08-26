@@ -1,0 +1,6 @@
+werkzeug.WWWAuthenticate.domain
+===============================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: WWWAuthenticate.domain

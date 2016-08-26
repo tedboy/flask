@@ -1,0 +1,6 @@
+flask.Flask.open_resource
+=========================
+
+.. currentmodule:: flask
+
+.. automethod:: Flask.open_resource

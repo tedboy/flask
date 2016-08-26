@@ -1,0 +1,6 @@
+flask.Response.set_cookie
+=========================
+
+.. currentmodule:: flask
+
+.. automethod:: Response.set_cookie

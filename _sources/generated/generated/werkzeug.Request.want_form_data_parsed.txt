@@ -1,0 +1,6 @@
+werkzeug.Request.want_form_data_parsed
+======================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Request.want_form_data_parsed

@@ -1,0 +1,6 @@
+werkzeug.WWWAuthenticate.auth_property
+======================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: WWWAuthenticate.auth_property

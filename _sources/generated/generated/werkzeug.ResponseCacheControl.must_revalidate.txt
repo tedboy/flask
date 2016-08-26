@@ -1,0 +1,6 @@
+werkzeug.ResponseCacheControl.must_revalidate
+=============================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: ResponseCacheControl.must_revalidate

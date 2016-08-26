@@ -1,0 +1,6 @@
+flask.Markup.isalnum
+====================
+
+.. currentmodule:: flask
+
+.. automethod:: Markup.isalnum

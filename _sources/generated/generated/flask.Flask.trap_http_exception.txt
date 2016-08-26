@@ -1,0 +1,6 @@
+flask.Flask.trap_http_exception
+===============================
+
+.. currentmodule:: flask
+
+.. automethod:: Flask.trap_http_exception

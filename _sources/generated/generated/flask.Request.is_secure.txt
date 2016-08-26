@@ -1,0 +1,6 @@
+flask.Request.is_secure
+=======================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Request.is_secure

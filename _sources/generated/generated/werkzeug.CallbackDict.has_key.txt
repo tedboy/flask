@@ -1,0 +1,6 @@
+werkzeug.CallbackDict.has_key
+=============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: CallbackDict.has_key

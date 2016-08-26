@@ -1,0 +1,6 @@
+werkzeug.LimitedStream.is_exhausted
+===================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: LimitedStream.is_exhausted

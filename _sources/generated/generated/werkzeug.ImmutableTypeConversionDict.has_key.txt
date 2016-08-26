@@ -1,0 +1,6 @@
+werkzeug.ImmutableTypeConversionDict.has_key
+============================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ImmutableTypeConversionDict.has_key

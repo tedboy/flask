@@ -1,0 +1,6 @@
+flask.Flask.dispatch_request
+============================
+
+.. currentmodule:: flask
+
+.. automethod:: Flask.dispatch_request

@@ -1,0 +1,6 @@
+werkzeug.Request.charset
+========================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Request.charset

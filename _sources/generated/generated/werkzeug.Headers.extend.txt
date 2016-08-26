@@ -1,0 +1,6 @@
+werkzeug.Headers.extend
+=======================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Headers.extend

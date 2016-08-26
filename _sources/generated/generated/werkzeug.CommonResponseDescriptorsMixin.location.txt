@@ -1,0 +1,6 @@
+werkzeug.CommonResponseDescriptorsMixin.location
+================================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: CommonResponseDescriptorsMixin.location

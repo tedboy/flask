@@ -1,0 +1,6 @@
+flask.Blueprint.app_template_global
+===================================
+
+.. currentmodule:: flask
+
+.. automethod:: Blueprint.app_template_global

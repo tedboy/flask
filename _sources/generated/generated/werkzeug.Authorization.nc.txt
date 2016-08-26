@@ -1,0 +1,6 @@
+werkzeug.Authorization.nc
+=========================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Authorization.nc

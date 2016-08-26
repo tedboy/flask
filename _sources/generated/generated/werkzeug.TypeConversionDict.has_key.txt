@@ -1,0 +1,6 @@
+werkzeug.TypeConversionDict.has_key
+===================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: TypeConversionDict.has_key

@@ -1,0 +1,6 @@
+werkzeug.FileStorage.save
+=========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: FileStorage.save

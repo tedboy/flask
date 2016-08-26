@@ -1,0 +1,6 @@
+flask.Flask.teardown_appcontext
+===============================
+
+.. currentmodule:: flask
+
+.. automethod:: Flask.teardown_appcontext

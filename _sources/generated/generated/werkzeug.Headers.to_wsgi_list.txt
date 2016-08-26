@@ -1,0 +1,6 @@
+werkzeug.Headers.to_wsgi_list
+=============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Headers.to_wsgi_list

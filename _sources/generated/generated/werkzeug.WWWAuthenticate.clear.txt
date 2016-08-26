@@ -1,0 +1,6 @@
+werkzeug.WWWAuthenticate.clear
+==============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: WWWAuthenticate.clear

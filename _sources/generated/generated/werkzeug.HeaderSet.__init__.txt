@@ -1,0 +1,6 @@
+werkzeug.HeaderSet.__init__
+===========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: HeaderSet.__init__

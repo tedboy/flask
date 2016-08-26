@@ -1,0 +1,6 @@
+werkzeug.BaseRequest.want_form_data_parsed
+==========================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: BaseRequest.want_form_data_parsed

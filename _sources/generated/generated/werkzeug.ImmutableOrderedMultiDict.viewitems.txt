@@ -1,0 +1,6 @@
+werkzeug.ImmutableOrderedMultiDict.viewitems
+============================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ImmutableOrderedMultiDict.viewitems

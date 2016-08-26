@@ -1,0 +1,6 @@
+flask.Config.clear
+==================
+
+.. currentmodule:: flask
+
+.. automethod:: Config.clear

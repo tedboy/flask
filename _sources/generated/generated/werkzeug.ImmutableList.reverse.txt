@@ -1,0 +1,6 @@
+werkzeug.ImmutableList.reverse
+==============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ImmutableList.reverse

@@ -1,0 +1,6 @@
+werkzeug.BaseRequest.host
+=========================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: BaseRequest.host

@@ -1,0 +1,6 @@
+flask.Markup.format
+===================
+
+.. currentmodule:: flask
+
+.. automethod:: Markup.format

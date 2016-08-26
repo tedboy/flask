@@ -1,0 +1,19 @@
+werkzeug.HTMLBuilder
+====================
+.. currentmodule:: werkzeug
+.. autoclass:: HTMLBuilder
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~HTMLBuilder.__init__
+
+
+
+
+

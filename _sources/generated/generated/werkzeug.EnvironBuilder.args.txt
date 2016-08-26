@@ -1,0 +1,6 @@
+werkzeug.EnvironBuilder.args
+============================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: EnvironBuilder.args

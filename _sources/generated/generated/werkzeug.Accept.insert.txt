@@ -1,0 +1,6 @@
+werkzeug.Accept.insert
+======================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Accept.insert

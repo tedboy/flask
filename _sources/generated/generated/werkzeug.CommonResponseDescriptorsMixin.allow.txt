@@ -1,0 +1,6 @@
+werkzeug.CommonResponseDescriptorsMixin.allow
+=============================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: CommonResponseDescriptorsMixin.allow

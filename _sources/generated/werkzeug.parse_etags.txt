@@ -1,0 +1,6 @@
+werkzeug.parse_etags
+====================
+
+.. currentmodule:: werkzeug
+
+.. autofunction:: parse_etags

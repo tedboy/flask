@@ -1,0 +1,6 @@
+werkzeug.Request.is_multithread
+===============================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Request.is_multithread

@@ -1,0 +1,6 @@
+flask.Response.force_type
+=========================
+
+.. currentmodule:: flask
+
+.. automethod:: Response.force_type

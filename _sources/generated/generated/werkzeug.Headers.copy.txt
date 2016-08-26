@@ -1,0 +1,6 @@
+werkzeug.Headers.copy
+=====================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Headers.copy

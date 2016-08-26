@@ -1,0 +1,6 @@
+werkzeug.FileStorage.mimetype
+=============================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: FileStorage.mimetype

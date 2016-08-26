@@ -1,0 +1,6 @@
+werkzeug.BaseResponse.charset
+=============================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: BaseResponse.charset

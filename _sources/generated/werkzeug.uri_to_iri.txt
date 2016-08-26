@@ -1,0 +1,6 @@
+werkzeug.uri_to_iri
+===================
+
+.. currentmodule:: werkzeug
+
+.. autofunction:: uri_to_iri

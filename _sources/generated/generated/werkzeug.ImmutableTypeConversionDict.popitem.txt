@@ -1,0 +1,6 @@
+werkzeug.ImmutableTypeConversionDict.popitem
+============================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ImmutableTypeConversionDict.popitem

@@ -1,0 +1,6 @@
+werkzeug.BaseRequest.full_path
+==============================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: BaseRequest.full_path

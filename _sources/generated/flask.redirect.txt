@@ -1,0 +1,6 @@
+flask.redirect
+==============
+
+.. currentmodule:: flask
+
+.. autofunction:: redirect

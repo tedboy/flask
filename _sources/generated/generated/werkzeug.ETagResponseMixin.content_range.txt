@@ -1,0 +1,6 @@
+werkzeug.ETagResponseMixin.content_range
+========================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: ETagResponseMixin.content_range

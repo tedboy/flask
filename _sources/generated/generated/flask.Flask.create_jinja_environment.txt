@@ -1,0 +1,6 @@
+flask.Flask.create_jinja_environment
+====================================
+
+.. currentmodule:: flask
+
+.. automethod:: Flask.create_jinja_environment

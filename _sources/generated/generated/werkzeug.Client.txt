@@ -1,0 +1,32 @@
+werkzeug.Client
+===============
+.. currentmodule:: werkzeug
+.. autoclass:: Client
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Client.__init__
+   ~Client.delete
+   ~Client.delete_cookie
+   ~Client.get
+   ~Client.head
+   ~Client.open
+   ~Client.options
+   ~Client.patch
+   ~Client.post
+   ~Client.put
+   ~Client.resolve_redirect
+   ~Client.run_wsgi_app
+   ~Client.set_cookie
+   ~Client.trace
+
+
+
+
+

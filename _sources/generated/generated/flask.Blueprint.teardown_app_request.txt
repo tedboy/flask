@@ -1,0 +1,6 @@
+flask.Blueprint.teardown_app_request
+====================================
+
+.. currentmodule:: flask
+
+.. automethod:: Blueprint.teardown_app_request

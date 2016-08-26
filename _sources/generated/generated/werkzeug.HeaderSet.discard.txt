@@ -1,0 +1,6 @@
+werkzeug.HeaderSet.discard
+==========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: HeaderSet.discard

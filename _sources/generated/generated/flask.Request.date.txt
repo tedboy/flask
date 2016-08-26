@@ -1,0 +1,6 @@
+flask.Request.date
+==================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Request.date

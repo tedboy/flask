@@ -1,0 +1,6 @@
+werkzeug.HTMLBuilder.__init__
+=============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: HTMLBuilder.__init__

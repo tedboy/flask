@@ -1,0 +1,6 @@
+werkzeug.OrderedMultiDict.pop
+=============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: OrderedMultiDict.pop

@@ -1,0 +1,6 @@
+werkzeug.LimitedStream.on_exhausted
+===================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: LimitedStream.on_exhausted

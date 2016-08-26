@@ -1,0 +1,6 @@
+werkzeug.ETagResponseMixin.cache_control
+========================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: ETagResponseMixin.cache_control

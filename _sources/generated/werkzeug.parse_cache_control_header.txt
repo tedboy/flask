@@ -1,0 +1,6 @@
+werkzeug.parse_cache_control_header
+===================================
+
+.. currentmodule:: werkzeug
+
+.. autofunction:: parse_cache_control_header

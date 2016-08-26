@@ -1,0 +1,25 @@
+werkzeug.ETagRequestMixin
+=========================
+.. currentmodule:: werkzeug
+.. autoclass:: ETagRequestMixin
+   :undoc-members:
+
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~ETagRequestMixin.cache_control
+   ~ETagRequestMixin.if_match
+   ~ETagRequestMixin.if_modified_since
+   ~ETagRequestMixin.if_none_match
+   ~ETagRequestMixin.if_range
+   ~ETagRequestMixin.if_unmodified_since
+   ~ETagRequestMixin.range
+

@@ -1,0 +1,6 @@
+werkzeug.ResponseCacheControl.items
+===================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ResponseCacheControl.items

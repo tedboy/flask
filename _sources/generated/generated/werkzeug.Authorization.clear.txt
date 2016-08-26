@@ -1,0 +1,6 @@
+werkzeug.Authorization.clear
+============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Authorization.clear

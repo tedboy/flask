@@ -1,0 +1,6 @@
+werkzeug.DebuggedApplication.pin_cookie_name
+============================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: DebuggedApplication.pin_cookie_name

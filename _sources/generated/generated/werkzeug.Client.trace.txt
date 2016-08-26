@@ -1,0 +1,6 @@
+werkzeug.Client.trace
+=====================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Client.trace

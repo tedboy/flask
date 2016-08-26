@@ -1,0 +1,6 @@
+werkzeug.redirect
+=================
+
+.. currentmodule:: werkzeug
+
+.. autofunction:: redirect

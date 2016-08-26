@@ -1,0 +1,6 @@
+flask.Request.is_run_once
+=========================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Request.is_run_once

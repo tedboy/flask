@@ -1,0 +1,6 @@
+werkzeug.Response.call_on_close
+===============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Response.call_on_close

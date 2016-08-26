@@ -1,0 +1,6 @@
+werkzeug.RequestCacheControl.popitem
+====================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: RequestCacheControl.popitem

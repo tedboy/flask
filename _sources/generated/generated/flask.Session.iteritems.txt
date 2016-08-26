@@ -1,0 +1,6 @@
+flask.Session.iteritems
+=======================
+
+.. currentmodule:: flask
+
+.. automethod:: Session.iteritems

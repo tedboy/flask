@@ -1,0 +1,6 @@
+werkzeug.MIMEAccept.sort
+========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: MIMEAccept.sort

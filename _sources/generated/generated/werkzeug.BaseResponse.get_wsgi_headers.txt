@@ -1,0 +1,6 @@
+werkzeug.BaseResponse.get_wsgi_headers
+======================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: BaseResponse.get_wsgi_headers

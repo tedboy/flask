@@ -1,0 +1,6 @@
+flask.Markup.splitlines
+=======================
+
+.. currentmodule:: flask
+
+.. automethod:: Markup.splitlines

@@ -1,0 +1,6 @@
+werkzeug.ImmutableList.count
+============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ImmutableList.count

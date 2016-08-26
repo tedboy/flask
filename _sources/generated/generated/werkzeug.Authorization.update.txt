@@ -1,0 +1,6 @@
+werkzeug.Authorization.update
+=============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Authorization.update

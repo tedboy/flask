@@ -1,0 +1,6 @@
+werkzeug.Request.content_length
+===============================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Request.content_length

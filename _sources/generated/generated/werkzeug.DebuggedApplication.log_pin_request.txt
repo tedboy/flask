@@ -1,0 +1,6 @@
+werkzeug.DebuggedApplication.log_pin_request
+============================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: DebuggedApplication.log_pin_request

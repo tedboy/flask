@@ -1,0 +1,6 @@
+werkzeug.Response.content_type
+==============================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Response.content_type

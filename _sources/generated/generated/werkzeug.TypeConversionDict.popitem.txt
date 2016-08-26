@@ -1,0 +1,6 @@
+werkzeug.TypeConversionDict.popitem
+===================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: TypeConversionDict.popitem

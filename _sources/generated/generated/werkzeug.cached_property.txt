@@ -1,0 +1,32 @@
+werkzeug.cached_property
+========================
+.. currentmodule:: werkzeug
+.. autoclass:: cached_property
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~cached_property.__init__
+   ~cached_property.deleter
+   ~cached_property.getter
+   ~cached_property.setter
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~cached_property.fdel
+   ~cached_property.fget
+   ~cached_property.fset
+

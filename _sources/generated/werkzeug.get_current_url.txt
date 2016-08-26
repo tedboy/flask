@@ -1,0 +1,6 @@
+werkzeug.get_current_url
+========================
+
+.. currentmodule:: werkzeug
+
+.. autofunction:: get_current_url

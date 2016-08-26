@@ -1,0 +1,6 @@
+werkzeug.LanguageAccept.count
+=============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: LanguageAccept.count

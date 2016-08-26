@@ -1,0 +1,6 @@
+werkzeug.ImmutableOrderedMultiDict.copy
+=======================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ImmutableOrderedMultiDict.copy

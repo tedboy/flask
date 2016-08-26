@@ -1,0 +1,6 @@
+werkzeug.TypeConversionDict.update
+==================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: TypeConversionDict.update

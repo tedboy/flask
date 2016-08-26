@@ -1,0 +1,6 @@
+flask.Request.user_agent
+========================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Request.user_agent

@@ -1,0 +1,6 @@
+werkzeug.Response.accept_ranges
+===============================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Response.accept_ranges

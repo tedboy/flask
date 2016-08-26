@@ -1,0 +1,6 @@
+werkzeug.BaseRequest.scheme
+===========================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: BaseRequest.scheme

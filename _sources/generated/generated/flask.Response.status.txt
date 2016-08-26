@@ -1,0 +1,6 @@
+flask.Response.status
+=====================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Response.status

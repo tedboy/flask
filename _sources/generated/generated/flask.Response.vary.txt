@@ -1,0 +1,6 @@
+flask.Response.vary
+===================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Response.vary

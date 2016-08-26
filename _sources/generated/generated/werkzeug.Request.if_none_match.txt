@@ -1,0 +1,6 @@
+werkzeug.Request.if_none_match
+==============================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Request.if_none_match

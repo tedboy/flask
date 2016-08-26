@@ -1,0 +1,6 @@
+flask.Markup.upper
+==================
+
+.. currentmodule:: flask
+
+.. automethod:: Markup.upper

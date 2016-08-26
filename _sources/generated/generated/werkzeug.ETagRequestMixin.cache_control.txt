@@ -1,0 +1,6 @@
+werkzeug.ETagRequestMixin.cache_control
+=======================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: ETagRequestMixin.cache_control

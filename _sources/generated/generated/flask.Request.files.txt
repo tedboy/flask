@@ -1,0 +1,6 @@
+flask.Request.files
+===================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Request.files

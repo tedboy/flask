@@ -1,0 +1,6 @@
+werkzeug.FileStorage.content_type
+=================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: FileStorage.content_type

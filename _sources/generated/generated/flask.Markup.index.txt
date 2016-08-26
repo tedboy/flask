@@ -1,0 +1,6 @@
+flask.Markup.index
+==================
+
+.. currentmodule:: flask
+
+.. automethod:: Markup.index

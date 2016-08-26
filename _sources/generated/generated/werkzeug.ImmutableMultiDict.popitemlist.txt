@@ -1,0 +1,6 @@
+werkzeug.ImmutableMultiDict.popitemlist
+=======================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ImmutableMultiDict.popitemlist

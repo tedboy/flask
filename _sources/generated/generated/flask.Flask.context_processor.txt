@@ -1,0 +1,6 @@
+flask.Flask.context_processor
+=============================
+
+.. currentmodule:: flask
+
+.. automethod:: Flask.context_processor

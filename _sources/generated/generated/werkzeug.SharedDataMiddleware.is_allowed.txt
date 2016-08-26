@@ -1,0 +1,6 @@
+werkzeug.SharedDataMiddleware.is_allowed
+========================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: SharedDataMiddleware.is_allowed

@@ -1,0 +1,6 @@
+werkzeug.Accept.append
+======================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Accept.append

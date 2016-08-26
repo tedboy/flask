@@ -1,0 +1,6 @@
+werkzeug.parse_accept_header
+============================
+
+.. currentmodule:: werkzeug
+
+.. autofunction:: parse_accept_header

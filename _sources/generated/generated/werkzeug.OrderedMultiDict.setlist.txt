@@ -1,0 +1,6 @@
+werkzeug.OrderedMultiDict.setlist
+=================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: OrderedMultiDict.setlist

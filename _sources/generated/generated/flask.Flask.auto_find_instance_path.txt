@@ -1,0 +1,6 @@
+flask.Flask.auto_find_instance_path
+===================================
+
+.. currentmodule:: flask
+
+.. automethod:: Flask.auto_find_instance_path

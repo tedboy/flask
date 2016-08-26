@@ -1,0 +1,6 @@
+werkzeug.ETagResponseMixin.accept_ranges
+========================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: ETagResponseMixin.accept_ranges

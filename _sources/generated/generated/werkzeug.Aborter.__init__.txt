@@ -1,0 +1,6 @@
+werkzeug.Aborter.__init__
+=========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Aborter.__init__

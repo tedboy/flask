@@ -1,0 +1,6 @@
+werkzeug.Authorization.realm
+============================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Authorization.realm

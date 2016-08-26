@@ -1,0 +1,28 @@
+werkzeug.environ_property
+=========================
+.. currentmodule:: werkzeug
+.. autoclass:: environ_property
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~environ_property.__init__
+   ~environ_property.lookup
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~environ_property.read_only
+

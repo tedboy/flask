@@ -1,0 +1,6 @@
+werkzeug.CommonRequestDescriptorsMixin.mimetype_params
+======================================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: CommonRequestDescriptorsMixin.mimetype_params

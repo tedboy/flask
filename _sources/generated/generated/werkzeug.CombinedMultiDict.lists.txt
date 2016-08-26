@@ -1,0 +1,6 @@
+werkzeug.CombinedMultiDict.lists
+================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: CombinedMultiDict.lists

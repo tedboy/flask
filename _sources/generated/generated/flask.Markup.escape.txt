@@ -1,0 +1,6 @@
+flask.Markup.escape
+===================
+
+.. currentmodule:: flask
+
+.. automethod:: Markup.escape

@@ -1,0 +1,6 @@
+werkzeug.ResponseCacheControl.iteritems
+=======================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ResponseCacheControl.iteritems

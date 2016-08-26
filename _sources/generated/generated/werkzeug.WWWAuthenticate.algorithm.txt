@@ -1,0 +1,6 @@
+werkzeug.WWWAuthenticate.algorithm
+==================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: WWWAuthenticate.algorithm

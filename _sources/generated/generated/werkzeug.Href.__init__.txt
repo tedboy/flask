@@ -1,0 +1,6 @@
+werkzeug.Href.__init__
+======================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Href.__init__

@@ -1,0 +1,6 @@
+flask.get_template_attribute
+============================
+
+.. currentmodule:: flask
+
+.. autofunction:: get_template_attribute

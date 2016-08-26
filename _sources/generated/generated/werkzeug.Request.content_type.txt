@@ -1,0 +1,6 @@
+werkzeug.Request.content_type
+=============================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Request.content_type

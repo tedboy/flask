@@ -1,0 +1,6 @@
+werkzeug.FileWrapper.__init__
+=============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: FileWrapper.__init__

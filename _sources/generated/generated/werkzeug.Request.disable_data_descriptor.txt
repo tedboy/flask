@@ -1,0 +1,6 @@
+werkzeug.Request.disable_data_descriptor
+========================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Request.disable_data_descriptor

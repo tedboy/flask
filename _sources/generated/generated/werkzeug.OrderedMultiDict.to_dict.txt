@@ -1,0 +1,6 @@
+werkzeug.OrderedMultiDict.to_dict
+=================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: OrderedMultiDict.to_dict

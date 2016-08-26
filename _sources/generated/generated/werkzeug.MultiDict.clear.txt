@@ -1,0 +1,6 @@
+werkzeug.MultiDict.clear
+========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: MultiDict.clear

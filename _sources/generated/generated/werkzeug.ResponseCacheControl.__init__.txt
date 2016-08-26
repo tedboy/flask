@@ -1,0 +1,6 @@
+werkzeug.ResponseCacheControl.__init__
+======================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ResponseCacheControl.__init__

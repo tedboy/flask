@@ -1,0 +1,6 @@
+werkzeug.RequestCacheControl.cache_property
+===========================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: RequestCacheControl.cache_property

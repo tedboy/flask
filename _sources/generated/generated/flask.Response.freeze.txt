@@ -1,0 +1,6 @@
+flask.Response.freeze
+=====================
+
+.. currentmodule:: flask
+
+.. automethod:: Response.freeze

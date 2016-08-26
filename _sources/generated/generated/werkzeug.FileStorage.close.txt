@@ -1,0 +1,6 @@
+werkzeug.FileStorage.close
+==========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: FileStorage.close

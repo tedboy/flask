@@ -1,0 +1,6 @@
+flask.Request.access_route
+==========================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Request.access_route

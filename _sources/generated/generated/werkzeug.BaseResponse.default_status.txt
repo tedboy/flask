@@ -1,0 +1,6 @@
+werkzeug.BaseResponse.default_status
+====================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: BaseResponse.default_status

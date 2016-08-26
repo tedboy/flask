@@ -1,0 +1,6 @@
+werkzeug.Request.host
+=====================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Request.host

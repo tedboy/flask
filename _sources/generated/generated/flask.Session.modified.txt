@@ -1,0 +1,6 @@
+flask.Session.modified
+======================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Session.modified

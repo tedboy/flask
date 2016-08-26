@@ -1,0 +1,6 @@
+flask.Request.json
+==================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Request.json

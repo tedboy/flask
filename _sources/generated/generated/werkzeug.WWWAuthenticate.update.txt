@@ -1,0 +1,6 @@
+werkzeug.WWWAuthenticate.update
+===============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: WWWAuthenticate.update

@@ -1,0 +1,6 @@
+werkzeug.Response.expires
+=========================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Response.expires

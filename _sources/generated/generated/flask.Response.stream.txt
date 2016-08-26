@@ -1,0 +1,6 @@
+flask.Response.stream
+=====================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Response.stream

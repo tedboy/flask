@@ -1,0 +1,6 @@
+werkzeug.ETags.contains_weak
+============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ETags.contains_weak

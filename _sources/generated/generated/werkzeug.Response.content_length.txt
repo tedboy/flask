@@ -1,0 +1,6 @@
+werkzeug.Response.content_length
+================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Response.content_length

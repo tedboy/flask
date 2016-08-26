@@ -1,0 +1,6 @@
+werkzeug.DispatcherMiddleware.__init__
+======================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: DispatcherMiddleware.__init__

@@ -1,0 +1,6 @@
+flask.Response.content_location
+===============================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Response.content_location

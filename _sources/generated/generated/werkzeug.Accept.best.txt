@@ -1,0 +1,6 @@
+werkzeug.Accept.best
+====================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Accept.best

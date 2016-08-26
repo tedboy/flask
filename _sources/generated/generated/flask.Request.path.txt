@@ -1,0 +1,6 @@
+flask.Request.path
+==================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Request.path

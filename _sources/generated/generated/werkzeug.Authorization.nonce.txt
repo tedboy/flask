@@ -1,0 +1,6 @@
+werkzeug.Authorization.nonce
+============================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Authorization.nonce

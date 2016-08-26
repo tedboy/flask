@@ -1,0 +1,6 @@
+flask.Request.view_args
+=======================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Request.view_args

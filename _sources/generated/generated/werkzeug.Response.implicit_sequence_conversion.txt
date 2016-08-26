@@ -1,0 +1,6 @@
+werkzeug.Response.implicit_sequence_conversion
+==============================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Response.implicit_sequence_conversion

@@ -1,0 +1,6 @@
+werkzeug.CombinedMultiDict.setlist
+==================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: CombinedMultiDict.setlist

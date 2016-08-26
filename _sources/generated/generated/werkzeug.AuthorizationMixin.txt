@@ -1,0 +1,19 @@
+werkzeug.AuthorizationMixin
+===========================
+.. currentmodule:: werkzeug
+.. autoclass:: AuthorizationMixin
+   :undoc-members:
+
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~AuthorizationMixin.authorization
+

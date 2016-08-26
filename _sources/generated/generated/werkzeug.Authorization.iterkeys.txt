@@ -1,0 +1,6 @@
+werkzeug.Authorization.iterkeys
+===============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Authorization.iterkeys

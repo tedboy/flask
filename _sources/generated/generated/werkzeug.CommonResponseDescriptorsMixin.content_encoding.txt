@@ -1,0 +1,6 @@
+werkzeug.CommonResponseDescriptorsMixin.content_encoding
+========================================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: CommonResponseDescriptorsMixin.content_encoding

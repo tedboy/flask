@@ -1,0 +1,6 @@
+werkzeug.EnvironBuilder.server_port
+===================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: EnvironBuilder.server_port

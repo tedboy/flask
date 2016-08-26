@@ -1,0 +1,6 @@
+werkzeug.SharedDataMiddleware.get_file_loader
+=============================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: SharedDataMiddleware.get_file_loader

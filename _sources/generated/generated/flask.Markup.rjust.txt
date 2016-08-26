@@ -1,0 +1,6 @@
+flask.Markup.rjust
+==================
+
+.. currentmodule:: flask
+
+.. automethod:: Markup.rjust

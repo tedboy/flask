@@ -1,0 +1,6 @@
+werkzeug.BaseResponse.set_cookie
+================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: BaseResponse.set_cookie

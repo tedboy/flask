@@ -1,0 +1,6 @@
+flask.Flask.jinja_env
+=====================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Flask.jinja_env

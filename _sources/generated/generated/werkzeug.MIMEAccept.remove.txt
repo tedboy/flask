@@ -1,0 +1,6 @@
+werkzeug.MIMEAccept.remove
+==========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: MIMEAccept.remove

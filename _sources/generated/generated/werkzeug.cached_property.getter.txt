@@ -1,0 +1,6 @@
+werkzeug.cached_property.getter
+===============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: cached_property.getter

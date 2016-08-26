@@ -1,0 +1,6 @@
+werkzeug.Response.iter_encoded
+==============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Response.iter_encoded

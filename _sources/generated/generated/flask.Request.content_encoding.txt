@@ -1,0 +1,6 @@
+flask.Request.content_encoding
+==============================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Request.content_encoding

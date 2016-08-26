@@ -1,0 +1,6 @@
+werkzeug.parse_set_header
+=========================
+
+.. currentmodule:: werkzeug
+
+.. autofunction:: parse_set_header

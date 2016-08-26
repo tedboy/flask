@@ -1,0 +1,6 @@
+werkzeug.WWWAuthenticate.popitem
+================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: WWWAuthenticate.popitem

@@ -1,0 +1,33 @@
+werkzeug.ETagResponseMixin
+==========================
+.. currentmodule:: werkzeug
+.. autoclass:: ETagResponseMixin
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~ETagResponseMixin.add_etag
+   ~ETagResponseMixin.freeze
+   ~ETagResponseMixin.get_etag
+   ~ETagResponseMixin.make_conditional
+   ~ETagResponseMixin.set_etag
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~ETagResponseMixin.accept_ranges
+   ~ETagResponseMixin.cache_control
+   ~ETagResponseMixin.content_range
+

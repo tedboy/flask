@@ -1,0 +1,6 @@
+werkzeug.Headers.__init__
+=========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Headers.__init__

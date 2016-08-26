@@ -1,0 +1,6 @@
+werkzeug.ArgumentValidationError
+================================
+
+.. currentmodule:: werkzeug
+
+.. autoexception:: ArgumentValidationError

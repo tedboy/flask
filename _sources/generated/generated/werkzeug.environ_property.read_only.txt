@@ -1,0 +1,6 @@
+werkzeug.environ_property.read_only
+===================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: environ_property.read_only

@@ -1,0 +1,6 @@
+werkzeug.EnvironBuilder.base_url
+================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: EnvironBuilder.base_url

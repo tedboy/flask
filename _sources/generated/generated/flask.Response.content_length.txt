@@ -1,0 +1,6 @@
+flask.Response.content_length
+=============================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Response.content_length

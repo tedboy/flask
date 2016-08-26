@@ -1,0 +1,6 @@
+werkzeug.Request.access_route
+=============================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Request.access_route

@@ -1,0 +1,6 @@
+werkzeug.ImmutableDict.clear
+============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ImmutableDict.clear

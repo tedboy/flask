@@ -1,0 +1,6 @@
+werkzeug.RequestCacheControl.iteritems
+======================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: RequestCacheControl.iteritems

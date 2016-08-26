@@ -1,0 +1,6 @@
+flask.Request.if_match
+======================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Request.if_match

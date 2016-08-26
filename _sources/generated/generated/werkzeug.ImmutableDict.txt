@@ -1,0 +1,36 @@
+werkzeug.ImmutableDict
+======================
+.. currentmodule:: werkzeug
+.. autoclass:: ImmutableDict
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~ImmutableDict.clear
+   ~ImmutableDict.copy
+   ~ImmutableDict.fromkeys
+   ~ImmutableDict.get
+   ~ImmutableDict.has_key
+   ~ImmutableDict.items
+   ~ImmutableDict.iteritems
+   ~ImmutableDict.iterkeys
+   ~ImmutableDict.itervalues
+   ~ImmutableDict.keys
+   ~ImmutableDict.pop
+   ~ImmutableDict.popitem
+   ~ImmutableDict.setdefault
+   ~ImmutableDict.update
+   ~ImmutableDict.values
+   ~ImmutableDict.viewitems
+   ~ImmutableDict.viewkeys
+   ~ImmutableDict.viewvalues
+
+
+
+
+

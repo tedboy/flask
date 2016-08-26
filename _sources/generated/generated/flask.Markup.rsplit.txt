@@ -1,0 +1,6 @@
+flask.Markup.rsplit
+===================
+
+.. currentmodule:: flask
+
+.. automethod:: Markup.rsplit

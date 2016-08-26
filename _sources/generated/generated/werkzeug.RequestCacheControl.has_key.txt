@@ -1,0 +1,6 @@
+werkzeug.RequestCacheControl.has_key
+====================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: RequestCacheControl.has_key

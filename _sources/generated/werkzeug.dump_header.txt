@@ -1,0 +1,6 @@
+werkzeug.dump_header
+====================
+
+.. currentmodule:: werkzeug
+
+.. autofunction:: dump_header

@@ -1,0 +1,6 @@
+werkzeug.CharsetAccept.quality
+==============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: CharsetAccept.quality

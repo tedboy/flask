@@ -1,0 +1,6 @@
+werkzeug.MIMEAccept.best_match
+==============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: MIMEAccept.best_match

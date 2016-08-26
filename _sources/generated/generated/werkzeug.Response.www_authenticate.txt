@@ -1,0 +1,6 @@
+werkzeug.Response.www_authenticate
+==================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Response.www_authenticate

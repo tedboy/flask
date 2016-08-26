@@ -1,0 +1,6 @@
+werkzeug.Request.make_form_data_parser
+======================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Request.make_form_data_parser

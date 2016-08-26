@@ -1,0 +1,6 @@
+werkzeug.extract_path_info
+==========================
+
+.. currentmodule:: werkzeug
+
+.. autofunction:: extract_path_info

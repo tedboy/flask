@@ -1,0 +1,6 @@
+werkzeug.url_encode
+===================
+
+.. currentmodule:: werkzeug
+
+.. autofunction:: url_encode

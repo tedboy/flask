@@ -1,0 +1,6 @@
+werkzeug.Authorization.values
+=============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Authorization.values

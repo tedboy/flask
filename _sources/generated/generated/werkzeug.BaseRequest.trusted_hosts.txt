@@ -1,0 +1,6 @@
+werkzeug.BaseRequest.trusted_hosts
+==================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: BaseRequest.trusted_hosts

@@ -1,0 +1,6 @@
+werkzeug.EnvironHeaders.__init__
+================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: EnvironHeaders.__init__

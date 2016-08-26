@@ -1,0 +1,6 @@
+werkzeug.Accept.to_header
+=========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Accept.to_header

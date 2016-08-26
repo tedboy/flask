@@ -1,0 +1,6 @@
+flask.Request.make_form_data_parser
+===================================
+
+.. currentmodule:: flask
+
+.. automethod:: Request.make_form_data_parser

@@ -1,0 +1,6 @@
+flask.Flask.before_request
+==========================
+
+.. currentmodule:: flask
+
+.. automethod:: Flask.before_request

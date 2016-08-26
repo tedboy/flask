@@ -1,0 +1,6 @@
+werkzeug.OrderedMultiDict.iteritems
+===================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: OrderedMultiDict.iteritems

@@ -1,0 +1,52 @@
+werkzeug.BaseResponse
+=====================
+.. currentmodule:: werkzeug
+.. autoclass:: BaseResponse
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~BaseResponse.__init__
+   ~BaseResponse.calculate_content_length
+   ~BaseResponse.call_on_close
+   ~BaseResponse.close
+   ~BaseResponse.delete_cookie
+   ~BaseResponse.force_type
+   ~BaseResponse.freeze
+   ~BaseResponse.from_app
+   ~BaseResponse.get_app_iter
+   ~BaseResponse.get_data
+   ~BaseResponse.get_wsgi_headers
+   ~BaseResponse.get_wsgi_response
+   ~BaseResponse.iter_encoded
+   ~BaseResponse.make_sequence
+   ~BaseResponse.set_cookie
+   ~BaseResponse.set_data
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~BaseResponse.autocorrect_location_header
+   ~BaseResponse.automatically_set_content_length
+   ~BaseResponse.charset
+   ~BaseResponse.data
+   ~BaseResponse.default_mimetype
+   ~BaseResponse.default_status
+   ~BaseResponse.implicit_sequence_conversion
+   ~BaseResponse.is_sequence
+   ~BaseResponse.is_streamed
+   ~BaseResponse.status
+   ~BaseResponse.status_code
+

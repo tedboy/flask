@@ -1,0 +1,6 @@
+werkzeug.ETags.to_header
+========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ETags.to_header

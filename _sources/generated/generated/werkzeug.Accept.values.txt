@@ -1,0 +1,6 @@
+werkzeug.Accept.values
+======================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Accept.values

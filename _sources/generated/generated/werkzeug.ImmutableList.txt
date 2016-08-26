@@ -1,0 +1,27 @@
+werkzeug.ImmutableList
+======================
+.. currentmodule:: werkzeug
+.. autoclass:: ImmutableList
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~ImmutableList.append
+   ~ImmutableList.count
+   ~ImmutableList.extend
+   ~ImmutableList.index
+   ~ImmutableList.insert
+   ~ImmutableList.pop
+   ~ImmutableList.remove
+   ~ImmutableList.reverse
+   ~ImmutableList.sort
+
+
+
+
+

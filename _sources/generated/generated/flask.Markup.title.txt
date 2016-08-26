@@ -1,0 +1,6 @@
+flask.Markup.title
+==================
+
+.. currentmodule:: flask
+
+.. automethod:: Markup.title

@@ -1,0 +1,6 @@
+werkzeug.Response.get_etag
+==========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Response.get_etag

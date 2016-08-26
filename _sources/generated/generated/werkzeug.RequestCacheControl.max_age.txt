@@ -1,0 +1,6 @@
+werkzeug.RequestCacheControl.max_age
+====================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: RequestCacheControl.max_age

@@ -1,0 +1,6 @@
+flask.Response.delete_cookie
+============================
+
+.. currentmodule:: flask
+
+.. automethod:: Response.delete_cookie

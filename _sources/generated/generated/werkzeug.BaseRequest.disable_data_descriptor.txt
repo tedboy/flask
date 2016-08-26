@@ -1,0 +1,6 @@
+werkzeug.BaseRequest.disable_data_descriptor
+============================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: BaseRequest.disable_data_descriptor

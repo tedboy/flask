@@ -1,0 +1,6 @@
+flask.Markup.encode
+===================
+
+.. currentmodule:: flask
+
+.. automethod:: Markup.encode

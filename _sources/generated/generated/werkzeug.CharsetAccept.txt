@@ -1,0 +1,42 @@
+werkzeug.CharsetAccept
+======================
+.. currentmodule:: werkzeug
+.. autoclass:: CharsetAccept
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~CharsetAccept.__init__
+   ~CharsetAccept.append
+   ~CharsetAccept.best_match
+   ~CharsetAccept.count
+   ~CharsetAccept.extend
+   ~CharsetAccept.find
+   ~CharsetAccept.index
+   ~CharsetAccept.insert
+   ~CharsetAccept.itervalues
+   ~CharsetAccept.pop
+   ~CharsetAccept.quality
+   ~CharsetAccept.remove
+   ~CharsetAccept.reverse
+   ~CharsetAccept.sort
+   ~CharsetAccept.to_header
+   ~CharsetAccept.values
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~CharsetAccept.best
+

@@ -1,0 +1,90 @@
+werkzeug.Request
+================
+.. currentmodule:: werkzeug
+.. autoclass:: Request
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Request.__init__
+   ~Request.application
+   ~Request.close
+   ~Request.from_values
+   ~Request.get_data
+   ~Request.make_form_data_parser
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~Request.accept_charsets
+   ~Request.accept_encodings
+   ~Request.accept_languages
+   ~Request.accept_mimetypes
+   ~Request.access_route
+   ~Request.args
+   ~Request.authorization
+   ~Request.base_url
+   ~Request.cache_control
+   ~Request.charset
+   ~Request.content_encoding
+   ~Request.content_length
+   ~Request.content_md5
+   ~Request.content_type
+   ~Request.cookies
+   ~Request.data
+   ~Request.date
+   ~Request.disable_data_descriptor
+   ~Request.encoding_errors
+   ~Request.files
+   ~Request.form
+   ~Request.full_path
+   ~Request.headers
+   ~Request.host
+   ~Request.host_url
+   ~Request.if_match
+   ~Request.if_modified_since
+   ~Request.if_none_match
+   ~Request.if_range
+   ~Request.if_unmodified_since
+   ~Request.input_stream
+   ~Request.is_multiprocess
+   ~Request.is_multithread
+   ~Request.is_run_once
+   ~Request.is_secure
+   ~Request.is_xhr
+   ~Request.max_content_length
+   ~Request.max_form_memory_size
+   ~Request.max_forwards
+   ~Request.method
+   ~Request.mimetype
+   ~Request.mimetype_params
+   ~Request.path
+   ~Request.pragma
+   ~Request.query_string
+   ~Request.range
+   ~Request.referrer
+   ~Request.remote_addr
+   ~Request.remote_user
+   ~Request.scheme
+   ~Request.script_root
+   ~Request.stream
+   ~Request.trusted_hosts
+   ~Request.url
+   ~Request.url_charset
+   ~Request.url_root
+   ~Request.user_agent
+   ~Request.values
+   ~Request.want_form_data_parsed
+

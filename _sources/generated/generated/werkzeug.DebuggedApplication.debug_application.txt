@@ -1,0 +1,6 @@
+werkzeug.DebuggedApplication.debug_application
+==============================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: DebuggedApplication.debug_application

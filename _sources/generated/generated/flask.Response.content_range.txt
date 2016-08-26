@@ -1,0 +1,6 @@
+flask.Response.content_range
+============================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Response.content_range

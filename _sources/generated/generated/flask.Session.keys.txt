@@ -1,0 +1,6 @@
+flask.Session.keys
+==================
+
+.. currentmodule:: flask
+
+.. automethod:: Session.keys

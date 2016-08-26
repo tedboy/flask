@@ -1,0 +1,6 @@
+werkzeug.FileMultiDict.popitem
+==============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: FileMultiDict.popitem

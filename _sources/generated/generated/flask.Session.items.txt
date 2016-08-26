@@ -1,0 +1,6 @@
+flask.Session.items
+===================
+
+.. currentmodule:: flask
+
+.. automethod:: Session.items

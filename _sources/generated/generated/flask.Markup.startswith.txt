@@ -1,0 +1,6 @@
+flask.Markup.startswith
+=======================
+
+.. currentmodule:: flask
+
+.. automethod:: Markup.startswith

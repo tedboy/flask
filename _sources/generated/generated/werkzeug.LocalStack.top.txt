@@ -1,0 +1,6 @@
+werkzeug.LocalStack.top
+=======================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: LocalStack.top

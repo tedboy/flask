@@ -1,0 +1,6 @@
+flask.has_app_context
+=====================
+
+.. currentmodule:: flask
+
+.. autofunction:: has_app_context

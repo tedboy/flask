@@ -1,0 +1,6 @@
+flask.Flask.static_url_path
+===========================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Flask.static_url_path

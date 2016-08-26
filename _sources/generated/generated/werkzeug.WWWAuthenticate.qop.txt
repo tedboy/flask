@@ -1,0 +1,6 @@
+werkzeug.WWWAuthenticate.qop
+============================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: WWWAuthenticate.qop

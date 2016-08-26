@@ -1,0 +1,6 @@
+flask.Flask.test_client
+=======================
+
+.. currentmodule:: flask
+
+.. automethod:: Flask.test_client

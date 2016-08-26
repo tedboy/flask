@@ -1,0 +1,6 @@
+werkzeug.Authorization.username
+===============================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Authorization.username

@@ -1,0 +1,6 @@
+flask.Session.update
+====================
+
+.. currentmodule:: flask
+
+.. automethod:: Session.update

@@ -1,0 +1,6 @@
+werkzeug.BaseRequest.is_multiprocess
+====================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: BaseRequest.is_multiprocess

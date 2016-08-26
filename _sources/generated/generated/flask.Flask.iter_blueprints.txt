@@ -1,0 +1,6 @@
+flask.Flask.iter_blueprints
+===========================
+
+.. currentmodule:: flask
+
+.. automethod:: Flask.iter_blueprints

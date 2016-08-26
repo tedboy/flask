@@ -1,0 +1,6 @@
+werkzeug.MIMEAccept.quality
+===========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: MIMEAccept.quality

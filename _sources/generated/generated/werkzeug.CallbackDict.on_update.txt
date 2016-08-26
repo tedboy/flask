@@ -1,0 +1,6 @@
+werkzeug.CallbackDict.on_update
+===============================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: CallbackDict.on_update

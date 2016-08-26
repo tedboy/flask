@@ -1,0 +1,6 @@
+werkzeug.MIMEAccept.index
+=========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: MIMEAccept.index

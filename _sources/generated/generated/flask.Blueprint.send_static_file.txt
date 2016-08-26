@@ -1,0 +1,6 @@
+flask.Blueprint.send_static_file
+================================
+
+.. currentmodule:: flask
+
+.. automethod:: Blueprint.send_static_file

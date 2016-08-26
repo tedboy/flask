@@ -1,0 +1,6 @@
+werkzeug.CallbackDict.clear
+===========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: CallbackDict.clear

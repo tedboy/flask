@@ -1,0 +1,6 @@
+werkzeug.SharedDataMiddleware.get_directory_loader
+==================================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: SharedDataMiddleware.get_directory_loader

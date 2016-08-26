@@ -1,0 +1,6 @@
+werkzeug.MultiDict.update
+=========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: MultiDict.update

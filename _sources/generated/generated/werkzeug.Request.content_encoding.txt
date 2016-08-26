@@ -1,0 +1,6 @@
+werkzeug.Request.content_encoding
+=================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Request.content_encoding

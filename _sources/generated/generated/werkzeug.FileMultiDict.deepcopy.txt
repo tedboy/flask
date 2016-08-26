@@ -1,0 +1,6 @@
+werkzeug.FileMultiDict.deepcopy
+===============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: FileMultiDict.deepcopy

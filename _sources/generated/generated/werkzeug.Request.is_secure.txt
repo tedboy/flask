@@ -1,0 +1,6 @@
+werkzeug.Request.is_secure
+==========================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Request.is_secure

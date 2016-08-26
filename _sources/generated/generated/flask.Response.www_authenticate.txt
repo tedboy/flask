@@ -1,0 +1,6 @@
+flask.Response.www_authenticate
+===============================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Response.www_authenticate

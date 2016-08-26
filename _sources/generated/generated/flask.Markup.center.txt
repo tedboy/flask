@@ -1,0 +1,6 @@
+flask.Markup.center
+===================
+
+.. currentmodule:: flask
+
+.. automethod:: Markup.center

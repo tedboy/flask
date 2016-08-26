@@ -1,0 +1,6 @@
+werkzeug.CommonResponseDescriptorsMixin.vary
+============================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: CommonResponseDescriptorsMixin.vary

@@ -1,0 +1,6 @@
+werkzeug.Headers.remove
+=======================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Headers.remove

@@ -1,0 +1,6 @@
+flask.Request.from_values
+=========================
+
+.. currentmodule:: flask
+
+.. automethod:: Request.from_values

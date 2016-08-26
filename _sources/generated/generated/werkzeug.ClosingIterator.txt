@@ -1,0 +1,21 @@
+werkzeug.ClosingIterator
+========================
+.. currentmodule:: werkzeug
+.. autoclass:: ClosingIterator
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~ClosingIterator.__init__
+   ~ClosingIterator.close
+   ~ClosingIterator.next
+
+
+
+
+

@@ -1,0 +1,6 @@
+werkzeug.DebuggedApplication.pin_auth
+=====================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: DebuggedApplication.pin_auth

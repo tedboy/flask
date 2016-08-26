@@ -1,0 +1,6 @@
+flask.Blueprint.record
+======================
+
+.. currentmodule:: flask
+
+.. automethod:: Blueprint.record

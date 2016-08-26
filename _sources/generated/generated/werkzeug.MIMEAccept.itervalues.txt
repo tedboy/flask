@@ -1,0 +1,6 @@
+werkzeug.MIMEAccept.itervalues
+==============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: MIMEAccept.itervalues

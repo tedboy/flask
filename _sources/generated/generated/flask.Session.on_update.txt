@@ -1,0 +1,6 @@
+flask.Session.on_update
+=======================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Session.on_update

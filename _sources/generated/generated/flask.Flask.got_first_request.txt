@@ -1,0 +1,6 @@
+flask.Flask.got_first_request
+=============================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Flask.got_first_request

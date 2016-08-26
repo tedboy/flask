@@ -1,0 +1,6 @@
+werkzeug.ImmutableTypeConversionDict.iterkeys
+=============================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ImmutableTypeConversionDict.iterkeys

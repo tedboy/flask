@@ -1,0 +1,6 @@
+flask.Flask.shell_context_processor
+===================================
+
+.. currentmodule:: flask
+
+.. automethod:: Flask.shell_context_processor

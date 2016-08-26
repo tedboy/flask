@@ -1,0 +1,6 @@
+werkzeug.Accept.__init__
+========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Accept.__init__

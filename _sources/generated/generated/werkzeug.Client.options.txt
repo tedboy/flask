@@ -1,0 +1,6 @@
+werkzeug.Client.options
+=======================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Client.options

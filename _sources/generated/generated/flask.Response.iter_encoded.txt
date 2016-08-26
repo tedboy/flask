@@ -1,0 +1,6 @@
+flask.Response.iter_encoded
+===========================
+
+.. currentmodule:: flask
+
+.. automethod:: Response.iter_encoded

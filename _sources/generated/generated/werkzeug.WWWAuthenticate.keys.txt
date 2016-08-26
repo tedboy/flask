@@ -1,0 +1,6 @@
+werkzeug.WWWAuthenticate.keys
+=============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: WWWAuthenticate.keys

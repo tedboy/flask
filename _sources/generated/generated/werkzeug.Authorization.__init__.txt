@@ -1,0 +1,6 @@
+werkzeug.Authorization.__init__
+===============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Authorization.__init__

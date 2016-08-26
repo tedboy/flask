@@ -1,0 +1,6 @@
+werkzeug.Request.user_agent
+===========================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Request.user_agent

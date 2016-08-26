@@ -1,0 +1,6 @@
+werkzeug.Client.post
+====================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Client.post

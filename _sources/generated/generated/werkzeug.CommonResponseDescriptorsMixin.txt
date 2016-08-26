@@ -1,0 +1,34 @@
+werkzeug.CommonResponseDescriptorsMixin
+=======================================
+.. currentmodule:: werkzeug
+.. autoclass:: CommonResponseDescriptorsMixin
+   :undoc-members:
+
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~CommonResponseDescriptorsMixin.age
+   ~CommonResponseDescriptorsMixin.allow
+   ~CommonResponseDescriptorsMixin.content_encoding
+   ~CommonResponseDescriptorsMixin.content_language
+   ~CommonResponseDescriptorsMixin.content_length
+   ~CommonResponseDescriptorsMixin.content_location
+   ~CommonResponseDescriptorsMixin.content_md5
+   ~CommonResponseDescriptorsMixin.content_type
+   ~CommonResponseDescriptorsMixin.date
+   ~CommonResponseDescriptorsMixin.expires
+   ~CommonResponseDescriptorsMixin.last_modified
+   ~CommonResponseDescriptorsMixin.location
+   ~CommonResponseDescriptorsMixin.mimetype
+   ~CommonResponseDescriptorsMixin.mimetype_params
+   ~CommonResponseDescriptorsMixin.retry_after
+   ~CommonResponseDescriptorsMixin.vary
+

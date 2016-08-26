@@ -1,0 +1,6 @@
+werkzeug.LocalManager.cleanup
+=============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: LocalManager.cleanup

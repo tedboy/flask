@@ -1,0 +1,6 @@
+werkzeug.ResponseCacheControl.public
+====================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: ResponseCacheControl.public

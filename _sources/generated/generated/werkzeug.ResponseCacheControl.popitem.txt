@@ -1,0 +1,6 @@
+werkzeug.ResponseCacheControl.popitem
+=====================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ResponseCacheControl.popitem

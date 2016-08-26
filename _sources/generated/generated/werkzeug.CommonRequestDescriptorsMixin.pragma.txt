@@ -1,0 +1,6 @@
+werkzeug.CommonRequestDescriptorsMixin.pragma
+=============================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: CommonRequestDescriptorsMixin.pragma

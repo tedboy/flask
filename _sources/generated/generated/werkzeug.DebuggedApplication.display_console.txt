@@ -1,0 +1,6 @@
+werkzeug.DebuggedApplication.display_console
+============================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: DebuggedApplication.display_console

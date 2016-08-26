@@ -1,0 +1,6 @@
+flask.Flask.inject_url_defaults
+===============================
+
+.. currentmodule:: flask
+
+.. automethod:: Flask.inject_url_defaults

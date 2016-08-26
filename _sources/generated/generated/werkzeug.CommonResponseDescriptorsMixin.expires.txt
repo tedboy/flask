@@ -1,0 +1,6 @@
+werkzeug.CommonResponseDescriptorsMixin.expires
+===============================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: CommonResponseDescriptorsMixin.expires

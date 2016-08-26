@@ -1,0 +1,6 @@
+werkzeug.ImmutableList.append
+=============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ImmutableList.append

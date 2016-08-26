@@ -1,0 +1,6 @@
+werkzeug.ResponseCacheControl.max_age
+=====================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: ResponseCacheControl.max_age

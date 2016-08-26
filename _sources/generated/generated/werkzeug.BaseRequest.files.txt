@@ -1,0 +1,6 @@
+werkzeug.BaseRequest.files
+==========================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: BaseRequest.files

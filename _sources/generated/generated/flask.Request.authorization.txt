@@ -1,0 +1,6 @@
+flask.Request.authorization
+===========================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Request.authorization

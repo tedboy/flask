@@ -1,0 +1,6 @@
+werkzeug.secure_filename
+========================
+
+.. currentmodule:: werkzeug
+
+.. autofunction:: secure_filename

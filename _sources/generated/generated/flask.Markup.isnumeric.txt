@@ -1,0 +1,6 @@
+flask.Markup.isnumeric
+======================
+
+.. currentmodule:: flask
+
+.. automethod:: Markup.isnumeric

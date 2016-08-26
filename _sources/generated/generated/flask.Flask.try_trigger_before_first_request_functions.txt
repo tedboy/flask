@@ -1,0 +1,6 @@
+flask.Flask.try_trigger_before_first_request_functions
+======================================================
+
+.. currentmodule:: flask
+
+.. automethod:: Flask.try_trigger_before_first_request_functions

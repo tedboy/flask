@@ -1,0 +1,6 @@
+werkzeug.ETagRequestMixin.if_unmodified_since
+=============================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: ETagRequestMixin.if_unmodified_since

@@ -1,0 +1,6 @@
+flask.Blueprint.endpoint
+========================
+
+.. currentmodule:: flask
+
+.. automethod:: Blueprint.endpoint

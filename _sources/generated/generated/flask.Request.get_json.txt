@@ -1,0 +1,6 @@
+flask.Request.get_json
+======================
+
+.. currentmodule:: flask
+
+.. automethod:: Request.get_json

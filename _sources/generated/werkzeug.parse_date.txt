@@ -1,0 +1,6 @@
+werkzeug.parse_date
+===================
+
+.. currentmodule:: werkzeug
+
+.. autofunction:: parse_date

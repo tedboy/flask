@@ -1,0 +1,6 @@
+werkzeug.run_wsgi_app
+=====================
+
+.. currentmodule:: werkzeug
+
+.. autofunction:: run_wsgi_app

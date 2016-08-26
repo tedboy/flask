@@ -1,0 +1,6 @@
+flask.Flask.add_url_rule
+========================
+
+.. currentmodule:: flask
+
+.. automethod:: Flask.add_url_rule

@@ -1,0 +1,6 @@
+flask.Markup.join
+=================
+
+.. currentmodule:: flask
+
+.. automethod:: Markup.join

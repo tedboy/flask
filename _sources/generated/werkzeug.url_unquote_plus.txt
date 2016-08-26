@@ -1,0 +1,6 @@
+werkzeug.url_unquote_plus
+=========================
+
+.. currentmodule:: werkzeug
+
+.. autofunction:: url_unquote_plus

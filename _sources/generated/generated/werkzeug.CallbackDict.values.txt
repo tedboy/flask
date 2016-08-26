@@ -1,0 +1,6 @@
+werkzeug.CallbackDict.values
+============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: CallbackDict.values

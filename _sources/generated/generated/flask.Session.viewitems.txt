@@ -1,0 +1,6 @@
+flask.Session.viewitems
+=======================
+
+.. currentmodule:: flask
+
+.. automethod:: Session.viewitems

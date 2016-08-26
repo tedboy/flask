@@ -1,0 +1,6 @@
+werkzeug.ImmutableMultiDict.setlistdefault
+==========================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ImmutableMultiDict.setlistdefault

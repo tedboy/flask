@@ -1,0 +1,6 @@
+werkzeug.Client.resolve_redirect
+================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Client.resolve_redirect

@@ -1,0 +1,6 @@
+flask.Config.itervalues
+=======================
+
+.. currentmodule:: flask
+
+.. automethod:: Config.itervalues

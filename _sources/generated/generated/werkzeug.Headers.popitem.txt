@@ -1,0 +1,6 @@
+werkzeug.Headers.popitem
+========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Headers.popitem

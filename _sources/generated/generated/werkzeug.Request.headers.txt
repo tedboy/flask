@@ -1,0 +1,6 @@
+werkzeug.Request.headers
+========================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Request.headers

@@ -1,0 +1,6 @@
+flask.Config.get
+================
+
+.. currentmodule:: flask
+
+.. automethod:: Config.get

@@ -1,0 +1,6 @@
+werkzeug.EnvironBuilder.server_protocol
+=======================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: EnvironBuilder.server_protocol

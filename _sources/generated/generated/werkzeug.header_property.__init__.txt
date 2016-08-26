@@ -1,0 +1,6 @@
+werkzeug.header_property.__init__
+=================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: header_property.__init__

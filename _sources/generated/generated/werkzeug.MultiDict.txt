@@ -1,0 +1,49 @@
+werkzeug.MultiDict
+==================
+.. currentmodule:: werkzeug
+.. autoclass:: MultiDict
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~MultiDict.__init__
+   ~MultiDict.add
+   ~MultiDict.clear
+   ~MultiDict.copy
+   ~MultiDict.deepcopy
+   ~MultiDict.fromkeys
+   ~MultiDict.get
+   ~MultiDict.getlist
+   ~MultiDict.has_key
+   ~MultiDict.items
+   ~MultiDict.iteritems
+   ~MultiDict.iterkeys
+   ~MultiDict.iterlists
+   ~MultiDict.iterlistvalues
+   ~MultiDict.itervalues
+   ~MultiDict.keys
+   ~MultiDict.lists
+   ~MultiDict.listvalues
+   ~MultiDict.pop
+   ~MultiDict.popitem
+   ~MultiDict.popitemlist
+   ~MultiDict.poplist
+   ~MultiDict.setdefault
+   ~MultiDict.setlist
+   ~MultiDict.setlistdefault
+   ~MultiDict.to_dict
+   ~MultiDict.update
+   ~MultiDict.values
+   ~MultiDict.viewitems
+   ~MultiDict.viewkeys
+   ~MultiDict.viewvalues
+
+
+
+
+

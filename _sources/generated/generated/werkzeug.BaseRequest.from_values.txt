@@ -1,0 +1,6 @@
+werkzeug.BaseRequest.from_values
+================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: BaseRequest.from_values

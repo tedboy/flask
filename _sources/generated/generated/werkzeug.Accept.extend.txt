@@ -1,0 +1,6 @@
+werkzeug.Accept.extend
+======================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Accept.extend

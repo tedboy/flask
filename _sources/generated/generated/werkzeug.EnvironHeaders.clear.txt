@@ -1,0 +1,6 @@
+werkzeug.EnvironHeaders.clear
+=============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: EnvironHeaders.clear

@@ -1,0 +1,6 @@
+werkzeug.Client.__init__
+========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Client.__init__

@@ -1,0 +1,6 @@
+werkzeug.BaseRequest.application
+================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: BaseRequest.application

@@ -1,0 +1,6 @@
+werkzeug.DebuggedApplication.check_pin_trust
+============================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: DebuggedApplication.check_pin_trust

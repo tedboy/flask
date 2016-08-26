@@ -1,0 +1,6 @@
+werkzeug.WWWAuthenticate.iterkeys
+=================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: WWWAuthenticate.iterkeys

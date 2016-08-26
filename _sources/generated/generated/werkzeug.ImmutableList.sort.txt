@@ -1,0 +1,6 @@
+werkzeug.ImmutableList.sort
+===========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ImmutableList.sort

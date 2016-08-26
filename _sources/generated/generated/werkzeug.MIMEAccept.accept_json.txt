@@ -1,0 +1,6 @@
+werkzeug.MIMEAccept.accept_json
+===============================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: MIMEAccept.accept_json

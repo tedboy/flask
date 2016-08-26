@@ -1,0 +1,6 @@
+werkzeug.LimitedStream.on_disconnect
+====================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: LimitedStream.on_disconnect

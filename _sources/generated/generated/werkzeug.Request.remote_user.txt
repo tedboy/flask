@@ -1,0 +1,6 @@
+werkzeug.Request.remote_user
+============================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Request.remote_user

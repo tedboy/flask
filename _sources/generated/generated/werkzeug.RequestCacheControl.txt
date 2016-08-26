@@ -1,0 +1,54 @@
+werkzeug.RequestCacheControl
+============================
+.. currentmodule:: werkzeug
+.. autoclass:: RequestCacheControl
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~RequestCacheControl.__init__
+   ~RequestCacheControl.cache_property
+   ~RequestCacheControl.clear
+   ~RequestCacheControl.copy
+   ~RequestCacheControl.fromkeys
+   ~RequestCacheControl.get
+   ~RequestCacheControl.has_key
+   ~RequestCacheControl.items
+   ~RequestCacheControl.iteritems
+   ~RequestCacheControl.iterkeys
+   ~RequestCacheControl.itervalues
+   ~RequestCacheControl.keys
+   ~RequestCacheControl.pop
+   ~RequestCacheControl.popitem
+   ~RequestCacheControl.setdefault
+   ~RequestCacheControl.to_header
+   ~RequestCacheControl.update
+   ~RequestCacheControl.values
+   ~RequestCacheControl.viewitems
+   ~RequestCacheControl.viewkeys
+   ~RequestCacheControl.viewvalues
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~RequestCacheControl.max_age
+   ~RequestCacheControl.max_stale
+   ~RequestCacheControl.min_fresh
+   ~RequestCacheControl.no_cache
+   ~RequestCacheControl.no_store
+   ~RequestCacheControl.no_transform
+   ~RequestCacheControl.on_update
+   ~RequestCacheControl.only_if_cached
+

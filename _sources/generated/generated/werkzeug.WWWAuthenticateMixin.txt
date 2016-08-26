@@ -1,0 +1,19 @@
+werkzeug.WWWAuthenticateMixin
+=============================
+.. currentmodule:: werkzeug
+.. autoclass:: WWWAuthenticateMixin
+   :undoc-members:
+
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~WWWAuthenticateMixin.www_authenticate
+

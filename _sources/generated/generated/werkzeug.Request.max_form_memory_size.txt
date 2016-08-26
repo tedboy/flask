@@ -1,0 +1,6 @@
+werkzeug.Request.max_form_memory_size
+=====================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Request.max_form_memory_size

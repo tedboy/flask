@@ -1,0 +1,6 @@
+werkzeug.RequestCacheControl.setdefault
+=======================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: RequestCacheControl.setdefault

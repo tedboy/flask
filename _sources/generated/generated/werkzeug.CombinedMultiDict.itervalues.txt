@@ -1,0 +1,6 @@
+werkzeug.CombinedMultiDict.itervalues
+=====================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: CombinedMultiDict.itervalues

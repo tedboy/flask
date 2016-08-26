@@ -1,0 +1,6 @@
+werkzeug.ResponseCacheControl.proxy_revalidate
+==============================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: ResponseCacheControl.proxy_revalidate

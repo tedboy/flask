@@ -1,0 +1,6 @@
+flask.Request.on_json_loading_failed
+====================================
+
+.. currentmodule:: flask
+
+.. automethod:: Request.on_json_loading_failed

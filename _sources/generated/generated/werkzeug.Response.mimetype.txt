@@ -1,0 +1,6 @@
+werkzeug.Response.mimetype
+==========================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Response.mimetype

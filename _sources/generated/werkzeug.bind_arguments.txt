@@ -1,0 +1,6 @@
+werkzeug.bind_arguments
+=======================
+
+.. currentmodule:: werkzeug
+
+.. autofunction:: bind_arguments

@@ -1,0 +1,6 @@
+flask.Flask.make_config
+=======================
+
+.. currentmodule:: flask
+
+.. automethod:: Flask.make_config

@@ -1,0 +1,6 @@
+werkzeug.BaseRequest.remote_addr
+================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: BaseRequest.remote_addr

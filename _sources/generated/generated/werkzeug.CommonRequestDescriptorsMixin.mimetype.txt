@@ -1,0 +1,6 @@
+werkzeug.CommonRequestDescriptorsMixin.mimetype
+===============================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: CommonRequestDescriptorsMixin.mimetype

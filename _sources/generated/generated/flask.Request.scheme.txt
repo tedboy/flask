@@ -1,0 +1,6 @@
+flask.Request.scheme
+====================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Request.scheme

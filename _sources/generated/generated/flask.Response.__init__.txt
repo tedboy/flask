@@ -1,0 +1,6 @@
+flask.Response.__init__
+=======================
+
+.. currentmodule:: flask
+
+.. automethod:: Response.__init__

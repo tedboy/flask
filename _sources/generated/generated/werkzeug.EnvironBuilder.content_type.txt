@@ -1,0 +1,6 @@
+werkzeug.EnvironBuilder.content_type
+====================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: EnvironBuilder.content_type

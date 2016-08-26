@@ -1,0 +1,6 @@
+flask.Blueprint.after_app_request
+=================================
+
+.. currentmodule:: flask
+
+.. automethod:: Blueprint.after_app_request

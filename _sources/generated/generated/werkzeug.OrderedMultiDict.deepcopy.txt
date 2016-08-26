@@ -1,0 +1,6 @@
+werkzeug.OrderedMultiDict.deepcopy
+==================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: OrderedMultiDict.deepcopy

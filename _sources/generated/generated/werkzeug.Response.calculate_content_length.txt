@@ -1,0 +1,6 @@
+werkzeug.Response.calculate_content_length
+==========================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Response.calculate_content_length

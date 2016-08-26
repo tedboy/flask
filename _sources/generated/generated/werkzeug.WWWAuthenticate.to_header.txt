@@ -1,0 +1,6 @@
+werkzeug.WWWAuthenticate.to_header
+==================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: WWWAuthenticate.to_header

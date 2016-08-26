@@ -1,0 +1,6 @@
+werkzeug.RequestCacheControl.viewitems
+======================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: RequestCacheControl.viewitems

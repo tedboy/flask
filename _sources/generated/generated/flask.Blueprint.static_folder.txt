@@ -1,0 +1,6 @@
+flask.Blueprint.static_folder
+=============================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Blueprint.static_folder

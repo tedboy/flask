@@ -1,0 +1,6 @@
+flask.Markup.swapcase
+=====================
+
+.. currentmodule:: flask
+
+.. automethod:: Markup.swapcase

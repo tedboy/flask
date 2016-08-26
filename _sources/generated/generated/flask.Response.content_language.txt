@@ -1,0 +1,6 @@
+flask.Response.content_language
+===============================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Response.content_language

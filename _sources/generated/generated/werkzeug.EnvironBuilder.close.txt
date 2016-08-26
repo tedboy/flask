@@ -1,0 +1,6 @@
+werkzeug.EnvironBuilder.close
+=============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: EnvironBuilder.close

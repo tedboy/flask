@@ -1,0 +1,6 @@
+werkzeug.Headers.set
+====================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Headers.set

@@ -1,0 +1,6 @@
+werkzeug.BaseResponse.get_app_iter
+==================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: BaseResponse.get_app_iter

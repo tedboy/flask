@@ -1,0 +1,6 @@
+flask.Flask.__init__
+====================
+
+.. currentmodule:: flask
+
+.. automethod:: Flask.__init__

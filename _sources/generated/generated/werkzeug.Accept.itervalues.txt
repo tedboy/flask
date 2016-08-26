@@ -1,0 +1,6 @@
+werkzeug.Accept.itervalues
+==========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Accept.itervalues

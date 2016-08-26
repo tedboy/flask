@@ -1,0 +1,6 @@
+werkzeug.Response.vary
+======================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Response.vary

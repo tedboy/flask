@@ -1,0 +1,6 @@
+werkzeug.unescape
+=================
+
+.. currentmodule:: werkzeug
+
+.. autofunction:: unescape

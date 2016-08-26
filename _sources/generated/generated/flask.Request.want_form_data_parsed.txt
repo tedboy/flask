@@ -1,0 +1,6 @@
+flask.Request.want_form_data_parsed
+===================================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Request.want_form_data_parsed

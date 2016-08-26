@@ -1,0 +1,6 @@
+flask.Config.has_key
+====================
+
+.. currentmodule:: flask
+
+.. automethod:: Config.has_key

@@ -1,0 +1,6 @@
+flask.Markup.istitle
+====================
+
+.. currentmodule:: flask
+
+.. automethod:: Markup.istitle

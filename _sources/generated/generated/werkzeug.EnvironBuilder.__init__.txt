@@ -1,0 +1,6 @@
+werkzeug.EnvironBuilder.__init__
+================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: EnvironBuilder.__init__

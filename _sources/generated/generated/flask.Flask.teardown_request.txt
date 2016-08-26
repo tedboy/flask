@@ -1,0 +1,6 @@
+flask.Flask.teardown_request
+============================
+
+.. currentmodule:: flask
+
+.. automethod:: Flask.teardown_request

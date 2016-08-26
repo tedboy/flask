@@ -1,0 +1,6 @@
+flask.Request.accept_languages
+==============================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Request.accept_languages

@@ -1,0 +1,6 @@
+werkzeug.Response.force_type
+============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Response.force_type

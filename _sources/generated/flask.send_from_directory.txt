@@ -1,0 +1,6 @@
+flask.send_from_directory
+=========================
+
+.. currentmodule:: flask
+
+.. autofunction:: send_from_directory

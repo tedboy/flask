@@ -1,0 +1,6 @@
+werkzeug.generate_etag
+======================
+
+.. currentmodule:: werkzeug
+
+.. autofunction:: generate_etag

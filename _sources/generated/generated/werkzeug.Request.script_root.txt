@@ -1,0 +1,6 @@
+werkzeug.Request.script_root
+============================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Request.script_root

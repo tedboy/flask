@@ -1,0 +1,6 @@
+flask.Markup.lstrip
+===================
+
+.. currentmodule:: flask
+
+.. automethod:: Markup.lstrip

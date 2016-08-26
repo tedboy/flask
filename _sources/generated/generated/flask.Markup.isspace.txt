@@ -1,0 +1,6 @@
+flask.Markup.isspace
+====================
+
+.. currentmodule:: flask
+
+.. automethod:: Markup.isspace

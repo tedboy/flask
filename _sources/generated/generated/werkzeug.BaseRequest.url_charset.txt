@@ -1,0 +1,6 @@
+werkzeug.BaseRequest.url_charset
+================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: BaseRequest.url_charset

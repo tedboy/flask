@@ -1,0 +1,6 @@
+werkzeug.EnvironHeaders.pop
+===========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: EnvironHeaders.pop

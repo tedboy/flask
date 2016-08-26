@@ -1,0 +1,6 @@
+flask.Flask.select_jinja_autoescape
+===================================
+
+.. currentmodule:: flask
+
+.. automethod:: Flask.select_jinja_autoescape

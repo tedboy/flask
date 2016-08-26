@@ -1,0 +1,6 @@
+werkzeug.Headers.has_key
+========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Headers.has_key

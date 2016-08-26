@@ -1,0 +1,6 @@
+flask.Blueprint.url_defaults
+============================
+
+.. currentmodule:: flask
+
+.. automethod:: Blueprint.url_defaults

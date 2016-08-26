@@ -1,0 +1,35 @@
+werkzeug.LimitedStream
+======================
+.. currentmodule:: werkzeug
+.. autoclass:: LimitedStream
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~LimitedStream.__init__
+   ~LimitedStream.exhaust
+   ~LimitedStream.next
+   ~LimitedStream.on_disconnect
+   ~LimitedStream.on_exhausted
+   ~LimitedStream.read
+   ~LimitedStream.readline
+   ~LimitedStream.readlines
+   ~LimitedStream.tell
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~LimitedStream.is_exhausted
+

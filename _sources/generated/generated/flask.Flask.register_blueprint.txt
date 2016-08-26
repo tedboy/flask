@@ -1,0 +1,6 @@
+flask.Flask.register_blueprint
+==============================
+
+.. currentmodule:: flask
+
+.. automethod:: Flask.register_blueprint

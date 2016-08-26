@@ -1,0 +1,6 @@
+flask.Flask.handle_url_build_error
+==================================
+
+.. currentmodule:: flask
+
+.. automethod:: Flask.handle_url_build_error

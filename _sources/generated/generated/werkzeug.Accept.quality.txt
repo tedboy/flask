@@ -1,0 +1,6 @@
+werkzeug.Accept.quality
+=======================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Accept.quality

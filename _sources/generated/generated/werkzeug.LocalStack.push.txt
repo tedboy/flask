@@ -1,0 +1,6 @@
+werkzeug.LocalStack.push
+========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: LocalStack.push

@@ -1,0 +1,6 @@
+werkzeug.ResponseStreamMixin.stream
+===================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: ResponseStreamMixin.stream

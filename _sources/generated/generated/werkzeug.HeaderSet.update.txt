@@ -1,0 +1,6 @@
+werkzeug.HeaderSet.update
+=========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: HeaderSet.update

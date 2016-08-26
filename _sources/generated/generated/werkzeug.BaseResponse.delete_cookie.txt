@@ -1,0 +1,6 @@
+werkzeug.BaseResponse.delete_cookie
+===================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: BaseResponse.delete_cookie

@@ -1,0 +1,6 @@
+werkzeug.BaseRequest.script_root
+================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: BaseRequest.script_root

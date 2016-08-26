@@ -1,0 +1,6 @@
+werkzeug.Authorization.viewitems
+================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Authorization.viewitems

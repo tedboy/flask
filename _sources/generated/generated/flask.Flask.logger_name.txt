@@ -1,0 +1,6 @@
+flask.Flask.logger_name
+=======================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Flask.logger_name

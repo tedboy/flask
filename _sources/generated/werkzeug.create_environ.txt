@@ -1,0 +1,6 @@
+werkzeug.create_environ
+=======================
+
+.. currentmodule:: werkzeug
+
+.. autofunction:: create_environ

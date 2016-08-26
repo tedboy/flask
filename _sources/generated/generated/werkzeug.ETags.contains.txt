@@ -1,0 +1,6 @@
+werkzeug.ETags.contains
+=======================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ETags.contains

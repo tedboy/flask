@@ -1,0 +1,6 @@
+flask.Markup.expandtabs
+=======================
+
+.. currentmodule:: flask
+
+.. automethod:: Markup.expandtabs

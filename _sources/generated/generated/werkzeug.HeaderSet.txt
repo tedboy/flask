@@ -1,0 +1,28 @@
+werkzeug.HeaderSet
+==================
+.. currentmodule:: werkzeug
+.. autoclass:: HeaderSet
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~HeaderSet.__init__
+   ~HeaderSet.add
+   ~HeaderSet.as_set
+   ~HeaderSet.clear
+   ~HeaderSet.discard
+   ~HeaderSet.find
+   ~HeaderSet.index
+   ~HeaderSet.remove
+   ~HeaderSet.to_header
+   ~HeaderSet.update
+
+
+
+
+

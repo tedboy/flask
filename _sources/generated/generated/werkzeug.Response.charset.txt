@@ -1,0 +1,6 @@
+werkzeug.Response.charset
+=========================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Response.charset

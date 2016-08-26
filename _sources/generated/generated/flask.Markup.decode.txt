@@ -1,0 +1,6 @@
+flask.Markup.decode
+===================
+
+.. currentmodule:: flask
+
+.. automethod:: Markup.decode

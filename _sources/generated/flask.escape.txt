@@ -1,0 +1,6 @@
+flask.escape
+============
+
+.. currentmodule:: flask
+
+.. autofunction:: escape

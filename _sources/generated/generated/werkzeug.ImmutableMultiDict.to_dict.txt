@@ -1,0 +1,6 @@
+werkzeug.ImmutableMultiDict.to_dict
+===================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ImmutableMultiDict.to_dict

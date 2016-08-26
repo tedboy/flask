@@ -1,0 +1,6 @@
+werkzeug.CharsetAccept.itervalues
+=================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: CharsetAccept.itervalues

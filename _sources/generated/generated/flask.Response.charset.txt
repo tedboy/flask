@@ -1,0 +1,6 @@
+flask.Response.charset
+======================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Response.charset

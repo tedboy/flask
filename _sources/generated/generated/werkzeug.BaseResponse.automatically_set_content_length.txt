@@ -1,0 +1,6 @@
+werkzeug.BaseResponse.automatically_set_content_length
+======================================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: BaseResponse.automatically_set_content_length

@@ -1,0 +1,6 @@
+flask.get_flashed_messages
+==========================
+
+.. currentmodule:: flask
+
+.. autofunction:: get_flashed_messages

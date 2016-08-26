@@ -1,0 +1,6 @@
+flask.Response.is_streamed
+==========================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Response.is_streamed

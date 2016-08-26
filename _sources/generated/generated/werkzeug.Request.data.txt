@@ -1,0 +1,6 @@
+werkzeug.Request.data
+=====================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Request.data

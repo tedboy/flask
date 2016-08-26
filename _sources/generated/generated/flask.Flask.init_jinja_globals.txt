@@ -1,0 +1,6 @@
+flask.Flask.init_jinja_globals
+==============================
+
+.. currentmodule:: flask
+
+.. automethod:: Flask.init_jinja_globals

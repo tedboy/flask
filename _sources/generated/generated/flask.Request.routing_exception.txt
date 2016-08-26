@@ -1,0 +1,6 @@
+flask.Request.routing_exception
+===============================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Request.routing_exception

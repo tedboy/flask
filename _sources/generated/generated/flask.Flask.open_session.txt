@@ -1,0 +1,6 @@
+flask.Flask.open_session
+========================
+
+.. currentmodule:: flask
+
+.. automethod:: Flask.open_session

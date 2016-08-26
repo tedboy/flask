@@ -1,0 +1,6 @@
+flask.Response.set_data
+=======================
+
+.. currentmodule:: flask
+
+.. automethod:: Response.set_data

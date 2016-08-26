@@ -1,0 +1,6 @@
+werkzeug.CommonResponseDescriptorsMixin.content_md5
+===================================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: CommonResponseDescriptorsMixin.content_md5

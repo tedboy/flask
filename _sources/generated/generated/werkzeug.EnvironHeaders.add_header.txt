@@ -1,0 +1,6 @@
+werkzeug.EnvironHeaders.add_header
+==================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: EnvironHeaders.add_header

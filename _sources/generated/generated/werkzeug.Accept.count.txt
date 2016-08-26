@@ -1,0 +1,6 @@
+werkzeug.Accept.count
+=====================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Accept.count

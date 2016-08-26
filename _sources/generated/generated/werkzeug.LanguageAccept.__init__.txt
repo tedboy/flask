@@ -1,0 +1,6 @@
+werkzeug.LanguageAccept.__init__
+================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: LanguageAccept.__init__

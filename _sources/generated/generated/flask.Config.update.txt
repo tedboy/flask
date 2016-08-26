@@ -1,0 +1,6 @@
+flask.Config.update
+===================
+
+.. currentmodule:: flask
+
+.. automethod:: Config.update

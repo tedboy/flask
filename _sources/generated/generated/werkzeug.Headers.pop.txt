@@ -1,0 +1,6 @@
+werkzeug.Headers.pop
+====================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Headers.pop

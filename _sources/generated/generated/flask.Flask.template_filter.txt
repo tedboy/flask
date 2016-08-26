@@ -1,0 +1,6 @@
+flask.Flask.template_filter
+===========================
+
+.. currentmodule:: flask
+
+.. automethod:: Flask.template_filter

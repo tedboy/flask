@@ -1,0 +1,6 @@
+werkzeug.WWWAuthenticate.stale
+==============================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: WWWAuthenticate.stale

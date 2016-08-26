@@ -1,0 +1,41 @@
+werkzeug.EnvironBuilder
+=======================
+.. currentmodule:: werkzeug
+.. autoclass:: EnvironBuilder
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~EnvironBuilder.__init__
+   ~EnvironBuilder.close
+   ~EnvironBuilder.get_environ
+   ~EnvironBuilder.get_request
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~EnvironBuilder.args
+   ~EnvironBuilder.base_url
+   ~EnvironBuilder.content_length
+   ~EnvironBuilder.content_type
+   ~EnvironBuilder.files
+   ~EnvironBuilder.form
+   ~EnvironBuilder.input_stream
+   ~EnvironBuilder.query_string
+   ~EnvironBuilder.server_name
+   ~EnvironBuilder.server_port
+   ~EnvironBuilder.server_protocol
+   ~EnvironBuilder.wsgi_version
+

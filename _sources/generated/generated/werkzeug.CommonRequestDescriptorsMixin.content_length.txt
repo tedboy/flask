@@ -1,0 +1,6 @@
+werkzeug.CommonRequestDescriptorsMixin.content_length
+=====================================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: CommonRequestDescriptorsMixin.content_length

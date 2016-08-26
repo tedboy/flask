@@ -1,0 +1,6 @@
+werkzeug.WWWAuthenticate.viewvalues
+===================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: WWWAuthenticate.viewvalues

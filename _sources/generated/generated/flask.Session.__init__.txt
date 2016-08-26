@@ -1,0 +1,6 @@
+flask.Session.__init__
+======================
+
+.. currentmodule:: flask
+
+.. automethod:: Session.__init__

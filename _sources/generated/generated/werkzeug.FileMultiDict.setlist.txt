@@ -1,0 +1,6 @@
+werkzeug.FileMultiDict.setlist
+==============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: FileMultiDict.setlist

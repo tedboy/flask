@@ -1,0 +1,6 @@
+werkzeug.url_quote
+==================
+
+.. currentmodule:: werkzeug
+
+.. autofunction:: url_quote

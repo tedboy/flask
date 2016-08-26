@@ -1,0 +1,6 @@
+flask.Response.default_mimetype
+===============================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Response.default_mimetype

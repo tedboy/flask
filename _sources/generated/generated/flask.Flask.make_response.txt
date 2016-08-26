@@ -1,0 +1,6 @@
+flask.Flask.make_response
+=========================
+
+.. currentmodule:: flask
+
+.. automethod:: Flask.make_response

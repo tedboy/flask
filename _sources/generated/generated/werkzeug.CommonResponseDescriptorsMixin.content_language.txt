@@ -1,0 +1,6 @@
+werkzeug.CommonResponseDescriptorsMixin.content_language
+========================================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: CommonResponseDescriptorsMixin.content_language

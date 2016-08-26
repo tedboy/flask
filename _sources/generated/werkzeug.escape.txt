@@ -1,0 +1,6 @@
+werkzeug.escape
+===============
+
+.. currentmodule:: werkzeug
+
+.. autofunction:: escape

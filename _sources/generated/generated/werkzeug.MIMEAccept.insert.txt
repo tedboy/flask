@@ -1,0 +1,6 @@
+werkzeug.MIMEAccept.insert
+==========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: MIMEAccept.insert

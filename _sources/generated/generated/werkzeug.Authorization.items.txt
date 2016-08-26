@@ -1,0 +1,6 @@
+werkzeug.Authorization.items
+============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Authorization.items

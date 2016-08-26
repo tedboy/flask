@@ -1,0 +1,6 @@
+werkzeug.WWWAuthenticate.iteritems
+==================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: WWWAuthenticate.iteritems

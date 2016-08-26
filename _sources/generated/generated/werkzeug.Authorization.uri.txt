@@ -1,0 +1,6 @@
+werkzeug.Authorization.uri
+==========================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Authorization.uri

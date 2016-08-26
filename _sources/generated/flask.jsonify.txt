@@ -1,0 +1,6 @@
+flask.jsonify
+=============
+
+.. currentmodule:: flask
+
+.. autofunction:: jsonify

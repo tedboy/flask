@@ -1,0 +1,6 @@
+werkzeug.Response.content_range
+===============================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Response.content_range

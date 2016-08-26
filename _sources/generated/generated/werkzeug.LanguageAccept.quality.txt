@@ -1,0 +1,6 @@
+werkzeug.LanguageAccept.quality
+===============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: LanguageAccept.quality

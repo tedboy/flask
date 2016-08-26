@@ -1,0 +1,6 @@
+werkzeug.ETags.as_set
+=====================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ETags.as_set

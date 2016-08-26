@@ -1,0 +1,6 @@
+flask.Config.viewvalues
+=======================
+
+.. currentmodule:: flask
+
+.. automethod:: Config.viewvalues

@@ -1,0 +1,6 @@
+werkzeug.Authorization.qop
+==========================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Authorization.qop

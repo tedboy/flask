@@ -1,0 +1,6 @@
+werkzeug.CommonResponseDescriptorsMixin.retry_after
+===================================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: CommonResponseDescriptorsMixin.retry_after

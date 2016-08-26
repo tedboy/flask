@@ -1,0 +1,1920 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>werkzeug.http &mdash; Flask API</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Flask API" href="../../index.html"/>
+        <link rel="up" title="Module code" href="../index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Flask API
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../flask_doc.html">Flask doc materials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.foreword.html">1. Foreword</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.foreword.html#what-does-micro-mean">1.1. What does &#8220;micro&#8221; mean?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.foreword.html#configuration-and-conventions">1.2. Configuration and Conventions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.foreword.html#growing-with-flask">1.3. Growing with Flask</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.advanced_foreword.html">2. Foreword for Experienced Programmers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.advanced_foreword.html#thread-locals-in-flask">2.1. Thread-Locals in Flask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.advanced_foreword.html#develop-for-the-web-with-caution">2.2. Develop for the Web with Caution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.advanced_foreword.html#python-3-support-in-flask">2.3. Python 3 Support in Flask</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.installation.html">3. Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.installation.html#virtualenv">3.1. virtualenv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.installation.html#system-wide-installation">3.2. System-Wide Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.installation.html#living-on-the-edge">3.3. Living on the Edge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.installation.html#pip-and-setuptools-on-windows">3.4. <cite>pip</cite> and <cite>setuptools</cite> on Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.quickstart.html">4. Quickstart</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.quickstart.html#a-minimal-application">4.1. A Minimal Application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.quickstart.html#what-to-do-if-the-server-does-not-start">4.2. What to do if the Server does not Start</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../flask_doc.quickstart.html#old-version-of-flask">4.2.1. Old Version of Flask</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../flask_doc.quickstart.html#invalid-import-name">4.2.2. Invalid Import Name</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.quickstart.html#debug-mode">4.3. Debug Mode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.quickstart.html#routing">4.4. Routing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../flask_doc.quickstart.html#variable-rules">4.4.1. Variable Rules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../flask_doc.quickstart.html#url-building">4.4.2. URL Building</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../flask_doc.quickstart.html#http-methods">4.4.3. HTTP Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.quickstart.html#static-files">4.5. Static Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.quickstart.html#rendering-templates">4.6. Rendering Templates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.quickstart.html#accessing-request-data">4.7. Accessing Request Data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../flask_doc.quickstart.html#context-locals">4.7.1. Context Locals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../flask_doc.quickstart.html#the-request-object">4.7.2. The Request Object</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../flask_doc.quickstart.html#file-uploads">4.7.3. File Uploads</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../flask_doc.quickstart.html#cookies">4.7.4. Cookies</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.quickstart.html#redirects-and-errors">4.8. Redirects and Errors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.quickstart.html#about-responses">4.9. About Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.quickstart.html#sessions">4.10. Sessions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.quickstart.html#message-flashing">4.11. Message Flashing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.quickstart.html#logging">4.12. Logging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.quickstart.html#hooking-in-wsgi-middlewares">4.13. Hooking in WSGI Middlewares</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.quickstart.html#using-flask-extensions">4.14. Using Flask Extensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.quickstart.html#deploying-to-a-web-server">4.15. Deploying to a Web Server</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.tutorial.html">5. TODO - Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.templating.html">6. Templates</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.templating.html#jinja-setup">6.1. Jinja Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.templating.html#standard-context">6.2. Standard Context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.templating.html#standard-filters">6.3. Standard Filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.templating.html#controlling-autoescaping">6.4. Controlling Autoescaping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.templating.html#registering-filters">6.5. Registering Filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.templating.html#context-processors">6.6. Context Processors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.testing.html">7. Testing Flask Applications</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.testing.html#the-application">7.1. The Application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.testing.html#the-testing-skeleton">7.2. The Testing Skeleton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.testing.html#the-first-test">7.3. The First Test</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.testing.html#logging-in-and-out">7.4. Logging In and Out</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.testing.html#test-adding-messages">7.5. Test Adding Messages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.testing.html#other-testing-tricks">7.6. Other Testing Tricks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.testing.html#faking-resources-and-context">7.7. Faking Resources and Context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.testing.html#keeping-the-context-around">7.8. Keeping the Context Around</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.testing.html#accessing-and-modifying-sessions">7.9. Accessing and Modifying Sessions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.errorhandling.html">8. Application Errors</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.errorhandling.html#error-logging-tools">8.1. Error Logging Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.errorhandling.html#error-handlers">8.2. Error handlers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../flask_doc.errorhandling.html#registering">8.2.1. Registering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../flask_doc.errorhandling.html#handling">8.2.2. Handling</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.errorhandling.html#error-mails">8.3. Error Mails</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.errorhandling.html#logging-to-a-file">8.4. Logging to a File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.errorhandling.html#controlling-the-log-format">8.5. Controlling the Log Format</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../flask_doc.errorhandling.html#email">8.5.1. Email</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../flask_doc.errorhandling.html#file-logging">8.5.2. File logging</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../flask_doc.errorhandling.html#complex-log-formatting">8.5.3. Complex Log Formatting</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.errorhandling.html#other-libraries">8.6. Other Libraries</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.errorhandling.html#debugging-application-errors">9. Debugging Application Errors</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.errorhandling.html#when-in-doubt-run-manually">9.1. When in Doubt, Run Manually</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.errorhandling.html#working-with-debuggers">9.2. Working with Debuggers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.config.html">10. Configuration Handling</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.config.html#configuration-basics">10.1. Configuration Basics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.config.html#builtin-configuration-values">10.2. Builtin Configuration Values</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.config.html#configuring-from-files">10.3. Configuring from Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.config.html#configuration-best-practices">10.4. Configuration Best Practices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.config.html#development-production">10.5. Development / Production</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.config.html#instance-folders">10.6. Instance Folders</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.signals.html">11. Signals</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.signals.html#subscribing-to-signals">11.1. Subscribing to Signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.signals.html#creating-signals">11.2. Creating Signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.signals.html#sending-signals">11.3. Sending Signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.signals.html#signals-and-flask-s-request-context">11.4. Signals and Flask&#8217;s Request Context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.signals.html#decorator-based-signal-subscriptions">11.5. Decorator Based Signal Subscriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.signals.html#core-signals">11.6. Core Signals</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.views.html">12. Pluggable Views</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.views.html#basic-principle">12.1. Basic Principle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.views.html#method-hints">12.2. Method Hints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.views.html#method-based-dispatching">12.3. Method Based Dispatching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.views.html#decorating-views">12.4. Decorating Views</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.views.html#method-views-for-apis">12.5. Method Views for APIs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.appcontext.html">13. The Application Context</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.appcontext.html#purpose-of-the-application-context">13.1. Purpose of the Application Context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.appcontext.html#creating-an-application-context">13.2. Creating an Application Context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.appcontext.html#locality-of-the-context">13.3. Locality of the Context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.appcontext.html#context-usage">13.4. Context Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.reqcontext.html">14. The Request Context</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.reqcontext.html#diving-into-context-locals">14.1. Diving into Context Locals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.reqcontext.html#how-the-context-works">14.2. How the Context Works</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.reqcontext.html#callbacks-and-errors">14.3. Callbacks and Errors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.reqcontext.html#teardown-callbacks">14.4. Teardown Callbacks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.reqcontext.html#notes-on-proxies">14.5. Notes On Proxies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.reqcontext.html#context-preservation-on-error">14.6. Context Preservation on Error</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.blueprints.html">15. Modular Applications with Blueprints</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.blueprints.html#why-blueprints">15.1. Why Blueprints?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.blueprints.html#the-concept-of-blueprints">15.2. The Concept of Blueprints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.blueprints.html#my-first-blueprint">15.3. My First Blueprint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.blueprints.html#registering-blueprints">15.4. Registering Blueprints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.blueprints.html#blueprint-resources">15.5. Blueprint Resources</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../flask_doc.blueprints.html#blueprint-resource-folder">15.5.1. Blueprint Resource Folder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../flask_doc.blueprints.html#static-files">15.5.2. Static Files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../flask_doc.blueprints.html#templates">15.5.3. Templates</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.blueprints.html#building-urls">15.6. Building URLs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.blueprints.html#error-handlers">15.7. Error Handlers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.extensions.html">16. Flask Extensions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.extensions.html#finding-extensions">16.1. Finding Extensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.extensions.html#using-extensions">16.2. Using Extensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.extensions.html#building-extensions">16.3. Building Extensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.extensions.html#flask-before-0-8">16.4. Flask Before 0.8</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.cli.html">17. Command Line Interface</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.cli.html#basic-usage">17.1. Basic Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.cli.html#virtualenv-integration">17.2. Virtualenv Integration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.cli.html#debug-flag">17.3. Debug Flag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.cli.html#running-a-shell">17.4. Running a Shell</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.cli.html#custom-commands">17.5. Custom Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.cli.html#application-context">17.6. Application Context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.cli.html#factory-functions">17.7. Factory Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.cli.html#custom-scripts">17.8. Custom Scripts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.cli.html#cli-plugins">17.9. CLI Plugins</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.server.html">18. Development Server</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.server.html#command-line">18.1. Command Line</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.server.html#in-code">18.2. In Code</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.shell.html">19. Working with the Shell</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.shell.html#command-line-interface">19.1. Command Line Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.shell.html#creating-a-request-context">19.2. Creating a Request Context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.shell.html#firing-before-after-request">19.3. Firing Before/After Request</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.shell.html#further-improving-the-shell-experience">19.4. Further Improving the Shell Experience</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.patterns.html">20. TODO - PATTERNS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.deploying.html">21. TODO - Deployment Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.becomingbig.html">22. Becoming Big</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.becomingbig.html#read-the-source">22.1. Read the Source.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.becomingbig.html#hook-extend">22.2. Hook. Extend.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.becomingbig.html#subclass">22.3. Subclass.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.becomingbig.html#wrap-with-middleware">22.4. Wrap with middleware.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.becomingbig.html#fork">22.5. Fork.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.becomingbig.html#scale-like-a-pro">22.6. Scale like a pro.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.becomingbig.html#discuss-with-the-community">22.7. Discuss with the community.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../flask_doc2.html">Flask doc &#8212; Additional Notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.design.html">1. Design Decisions in Flask</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.design.html#the-explicit-application-object">1.1. The Explicit Application Object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.design.html#the-routing-system">1.2. The Routing System</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.design.html#one-template-engine">1.3. One Template Engine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.design.html#micro-with-dependencies">1.4. Micro with Dependencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.design.html#thread-locals">1.5. Thread Locals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.design.html#what-flask-is-what-flask-is-not">1.6. What Flask is, What Flask is Not</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.htmlfaq.html">2. HTML/XHTML FAQ</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.htmlfaq.html#history-of-xhtml">2.1. History of XHTML</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.htmlfaq.html#history-of-html5">2.2. History of HTML5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.htmlfaq.html#html-versus-xhtml">2.3. HTML versus XHTML</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.htmlfaq.html#what-does-strict-mean">2.4. What does &#8220;strict&#8221; mean?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.htmlfaq.html#new-technologies-in-html5">2.5. New technologies in HTML5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.htmlfaq.html#what-should-be-used">2.6. What should be used?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.security.html">3. Security Considerations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.security.html#cross-site-scripting-xss">3.1. Cross-Site Scripting (XSS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.security.html#cross-site-request-forgery-csrf">3.2. Cross-Site Request Forgery (CSRF)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.security.html#json-security">3.3. JSON Security</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.unicode.html">4. Unicode in Flask</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.unicode.html#automatic-conversion">4.1. Automatic Conversion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.unicode.html#the-golden-rule">4.2. The Golden Rule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.unicode.html#encoding-and-decoding-yourself">4.3. Encoding and Decoding Yourself</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.unicode.html#configuring-editors">4.4. Configuring Editors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.extensiondev.html">5. Flask Extension Development</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.extensiondev.html#anatomy-of-an-extension">5.1. Anatomy of an Extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.extensiondev.html#hello-flaskext">5.2. &#8220;Hello Flaskext!&#8221;</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../flask_doc.extensiondev.html#setup-py">5.2.1. setup.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../flask_doc.extensiondev.html#flask-sqlite3-py">5.2.2. flask_sqlite3.py</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.extensiondev.html#initializing-extensions">5.3. Initializing Extensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.extensiondev.html#the-extension-code">5.4. The Extension Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.extensiondev.html#using-app-ctx-stack">5.5. Using _app_ctx_stack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.extensiondev.html#teardown-behavior">5.6. Teardown Behavior</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.extensiondev.html#learn-from-others">5.7. Learn from Others</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.extensiondev.html#approved-extensions">5.8. Approved Extensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.extensiondev.html#extension-import-transition">5.9. Extension Import Transition</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.styleguide.html">6. Pocoo Styleguide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.styleguide.html#general-layout">6.1. General Layout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.styleguide.html#expressions-and-statements">6.2. Expressions and Statements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.styleguide.html#naming-conventions">6.3. Naming Conventions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.styleguide.html#docstrings">6.4. Docstrings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.styleguide.html#comments">6.5. Comments</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../werk_doc.html">Werkzeug doc materials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../werk_doc.tutorial.html">1. Werkzeug Tutorial</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../werk_doc.tutorial.html#introducing-shortly">1.1. Introducing Shortly</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../werk_doc.tutorial.html#step-0-a-basic-wsgi-introduction">1.2. Step 0: A Basic WSGI Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../werk_doc.tutorial.html#step-1-creating-the-folders">1.3. Step 1: Creating the Folders</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../werk_doc.tutorial.html#step-2-the-base-structure">1.4. Step 2: The Base Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../werk_doc.tutorial.html#intermezzo-running-the-application">1.5. Intermezzo: Running the Application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../werk_doc.tutorial.html#step-3-the-environment">1.6. Step 3: The Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../werk_doc.tutorial.html#step-4-the-routing">1.7. Step 4: The Routing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../werk_doc.tutorial.html#step-5-the-first-view">1.8. Step 5: The First View</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../werk_doc.tutorial.html#step-6-redirect-view">1.9. Step 6: Redirect View</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../werk_doc.tutorial.html#step-7-detail-view">1.10. Step 7: Detail View</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../werk_doc.tutorial.html#step-8-templates">1.11. Step 8: Templates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../werk_doc.tutorial.html#step-9-the-style">1.12. Step 9: The Style</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../werk_doc.tutorial.html#bonus-refinements">1.13. Bonus: Refinements</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../werk_doc.quickstart.html">2. Quickstart</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../werk_doc.quickstart.html#wsgi-environment">2.1. WSGI Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../werk_doc.quickstart.html#enter-request">2.2. Enter Request</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../werk_doc.quickstart.html#header-parsing">2.3. Header Parsing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../werk_doc.quickstart.html#responses">2.4. Responses</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../werk_doc.deployment.html">3. Application Deployment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../werk_doc.deployment.cgi.html">3.1. CGI</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../werk_doc.deployment.cgi.html#creating-a-cgi-file">3.1.1. Creating a <cite>.cgi</cite> file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../werk_doc.deployment.cgi.html#server-setup">3.1.2. Server Setup</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../werk_doc.deployment.mod_wsgi.html">3.2. <cite>mod_wsgi</cite> (Apache)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../werk_doc.deployment.mod_wsgi.html#installing-mod-wsgi">3.2.1. Installing <cite>mod_wsgi</cite></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../werk_doc.deployment.mod_wsgi.html#creating-a-wsgi-file">3.2.2. Creating a <cite>.wsgi</cite> file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../werk_doc.deployment.mod_wsgi.html#configuring-apache">3.2.3. Configuring Apache</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../werk_doc.deployment.fastcgi.html">3.3. FastCGI</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../werk_doc.deployment.fastcgi.html#creating-a-fcgi-file">3.3.1. Creating a <cite>.fcgi</cite> file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../werk_doc.deployment.fastcgi.html#configuring-lighttpd">3.3.2. Configuring lighttpd</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../werk_doc.deployment.fastcgi.html#configuring-nginx">3.3.3. Configuring nginx</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../werk_doc.deployment.fastcgi.html#debugging">3.3.4. Debugging</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../werk_doc.deployment.proxying.html">3.4. HTTP Proxying</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../werk_doc.deployment.proxying.html#creating-a-py-server">3.4.1. Creating a <cite>.py</cite> server</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../werk_doc.deployment.proxying.html#configuring-nginx">3.4.2. Configuring nginx</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/flask.html">flask</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/flask.html#functions">Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/flask.after_this_request.html">flask.after_this_request</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/flask.copy_current_request_context.html">flask.copy_current_request_context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/flask.escape.html">flask.escape</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/flask.flash.html">flask.flash</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/flask.get_flashed_messages.html">flask.get_flashed_messages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/flask.get_template_attribute.html">flask.get_template_attribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/flask.has_app_context.html">flask.has_app_context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/flask.has_request_context.html">flask.has_request_context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/flask.jsonify.html">flask.jsonify</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/flask.make_response.html">flask.make_response</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/flask.redirect.html">flask.redirect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/flask.render_template.html">flask.render_template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/flask.render_template_string.html">flask.render_template_string</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/flask.safe_join.html">flask.safe_join</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/flask.send_file.html">flask.send_file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/flask.send_from_directory.html">flask.send_from_directory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/flask.stream_with_context.html">flask.stream_with_context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/flask.url_for.html">flask.url_for</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/flask.html#classes">Classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/flask.Blueprint.html">flask.Blueprint</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/flask.Blueprint.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/flask.Blueprint.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/flask.Config.html">flask.Config</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/flask.Config.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/flask.Flask.html">flask.Flask</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/flask.Flask.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/flask.Flask.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/flask.Markup.html">flask.Markup</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/flask.Markup.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/flask.Request.html">flask.Request</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/flask.Request.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/flask.Request.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/flask.Response.html">flask.Response</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/flask.Response.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/flask.Response.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/flask.Session.html">flask.Session</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/flask.Session.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/flask.Session.html#attributes">Attributes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/werkzeug.html">werkzeug</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/werkzeug.html#functions">Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.append_slash_redirect.html">werkzeug.append_slash_redirect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.bind_arguments.html">werkzeug.bind_arguments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.check_password_hash.html">werkzeug.check_password_hash</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.cookie_date.html">werkzeug.cookie_date</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.create_environ.html">werkzeug.create_environ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.dump_cookie.html">werkzeug.dump_cookie</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.dump_header.html">werkzeug.dump_header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.dump_options_header.html">werkzeug.dump_options_header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.escape.html">werkzeug.escape</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.extract_path_info.html">werkzeug.extract_path_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.find_modules.html">werkzeug.find_modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.format_string.html">werkzeug.format_string</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.generate_etag.html">werkzeug.generate_etag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.generate_password_hash.html">werkzeug.generate_password_hash</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.get_current_url.html">werkzeug.get_current_url</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.get_host.html">werkzeug.get_host</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.http_date.html">werkzeug.http_date</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.import_string.html">werkzeug.import_string</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.iri_to_uri.html">werkzeug.iri_to_uri</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.is_entity_header.html">werkzeug.is_entity_header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.is_hop_by_hop_header.html">werkzeug.is_hop_by_hop_header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.is_resource_modified.html">werkzeug.is_resource_modified</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.make_line_iter.html">werkzeug.make_line_iter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.parse_accept_header.html">werkzeug.parse_accept_header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.parse_authorization_header.html">werkzeug.parse_authorization_header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.parse_cache_control_header.html">werkzeug.parse_cache_control_header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.parse_cookie.html">werkzeug.parse_cookie</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.parse_date.html">werkzeug.parse_date</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.parse_dict_header.html">werkzeug.parse_dict_header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.parse_etags.html">werkzeug.parse_etags</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.parse_form_data.html">werkzeug.parse_form_data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.parse_list_header.html">werkzeug.parse_list_header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.parse_options_header.html">werkzeug.parse_options_header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.parse_set_header.html">werkzeug.parse_set_header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.parse_www_authenticate_header.html">werkzeug.parse_www_authenticate_header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.peek_path_info.html">werkzeug.peek_path_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.pop_path_info.html">werkzeug.pop_path_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.quote_etag.html">werkzeug.quote_etag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.quote_header_value.html">werkzeug.quote_header_value</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.redirect.html">werkzeug.redirect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.release_local.html">werkzeug.release_local</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.remove_entity_headers.html">werkzeug.remove_entity_headers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.remove_hop_by_hop_headers.html">werkzeug.remove_hop_by_hop_headers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.responder.html">werkzeug.responder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.run_simple.html">werkzeug.run_simple</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.run_wsgi_app.html">werkzeug.run_wsgi_app</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.secure_filename.html">werkzeug.secure_filename</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.test_app.html">werkzeug.test_app</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.unescape.html">werkzeug.unescape</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.unquote_etag.html">werkzeug.unquote_etag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.unquote_header_value.html">werkzeug.unquote_header_value</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.uri_to_iri.html">werkzeug.uri_to_iri</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.url_decode.html">werkzeug.url_decode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.url_encode.html">werkzeug.url_encode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.url_fix.html">werkzeug.url_fix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.url_quote.html">werkzeug.url_quote</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.url_quote_plus.html">werkzeug.url_quote_plus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.url_unquote.html">werkzeug.url_unquote</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.url_unquote_plus.html">werkzeug.url_unquote_plus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.validate_arguments.html">werkzeug.validate_arguments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.wrap_file.html">werkzeug.wrap_file</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/werkzeug.html#classes">Classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.Aborter.html">werkzeug.Aborter</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.Aborter.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.Accept.html">werkzeug.Accept</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.Accept.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.Accept.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.AcceptMixin.html">werkzeug.AcceptMixin</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.AcceptMixin.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.Authorization.html">werkzeug.Authorization</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.Authorization.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.Authorization.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.AuthorizationMixin.html">werkzeug.AuthorizationMixin</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.AuthorizationMixin.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.BaseRequest.html">werkzeug.BaseRequest</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.BaseRequest.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.BaseRequest.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.BaseResponse.html">werkzeug.BaseResponse</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.BaseResponse.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.BaseResponse.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.CallbackDict.html">werkzeug.CallbackDict</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.CallbackDict.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.CallbackDict.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.CharsetAccept.html">werkzeug.CharsetAccept</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.CharsetAccept.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.CharsetAccept.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.Client.html">werkzeug.Client</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.Client.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.ClosingIterator.html">werkzeug.ClosingIterator</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.ClosingIterator.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.CombinedMultiDict.html">werkzeug.CombinedMultiDict</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.CombinedMultiDict.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.CommonRequestDescriptorsMixin.html">werkzeug.CommonRequestDescriptorsMixin</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.CommonRequestDescriptorsMixin.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.CommonResponseDescriptorsMixin.html">werkzeug.CommonResponseDescriptorsMixin</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.CommonResponseDescriptorsMixin.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.DebuggedApplication.html">werkzeug.DebuggedApplication</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.DebuggedApplication.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.DebuggedApplication.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.DispatcherMiddleware.html">werkzeug.DispatcherMiddleware</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.DispatcherMiddleware.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.ETagRequestMixin.html">werkzeug.ETagRequestMixin</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.ETagRequestMixin.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.ETagResponseMixin.html">werkzeug.ETagResponseMixin</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.ETagResponseMixin.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.ETagResponseMixin.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.ETags.html">werkzeug.ETags</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.ETags.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.EnvironBuilder.html">werkzeug.EnvironBuilder</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.EnvironBuilder.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.EnvironBuilder.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.EnvironHeaders.html">werkzeug.EnvironHeaders</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.EnvironHeaders.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.FileMultiDict.html">werkzeug.FileMultiDict</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.FileMultiDict.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.FileStorage.html">werkzeug.FileStorage</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.FileStorage.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.FileStorage.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.FileWrapper.html">werkzeug.FileWrapper</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.FileWrapper.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.HTMLBuilder.html">werkzeug.HTMLBuilder</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.HTMLBuilder.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.HeaderSet.html">werkzeug.HeaderSet</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.HeaderSet.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.Headers.html">werkzeug.Headers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.Headers.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.Href.html">werkzeug.Href</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.Href.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.ImmutableDict.html">werkzeug.ImmutableDict</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.ImmutableDict.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.ImmutableList.html">werkzeug.ImmutableList</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.ImmutableList.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.ImmutableMultiDict.html">werkzeug.ImmutableMultiDict</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.ImmutableMultiDict.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.ImmutableOrderedMultiDict.html">werkzeug.ImmutableOrderedMultiDict</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.ImmutableOrderedMultiDict.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.ImmutableTypeConversionDict.html">werkzeug.ImmutableTypeConversionDict</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.ImmutableTypeConversionDict.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.LanguageAccept.html">werkzeug.LanguageAccept</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.LanguageAccept.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.LanguageAccept.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.LimitedStream.html">werkzeug.LimitedStream</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.LimitedStream.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.LimitedStream.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.Local.html">werkzeug.Local</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.Local.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.LocalManager.html">werkzeug.LocalManager</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.LocalManager.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.LocalProxy.html">werkzeug.LocalProxy</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.LocalProxy.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.LocalStack.html">werkzeug.LocalStack</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.LocalStack.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.LocalStack.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.MIMEAccept.html">werkzeug.MIMEAccept</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.MIMEAccept.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.MIMEAccept.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.MultiDict.html">werkzeug.MultiDict</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.MultiDict.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.OrderedMultiDict.html">werkzeug.OrderedMultiDict</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.OrderedMultiDict.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.Request.html">werkzeug.Request</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.Request.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.Request.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.RequestCacheControl.html">werkzeug.RequestCacheControl</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.RequestCacheControl.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.RequestCacheControl.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.Response.html">werkzeug.Response</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.Response.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.Response.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.ResponseCacheControl.html">werkzeug.ResponseCacheControl</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.ResponseCacheControl.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.ResponseCacheControl.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.ResponseStreamMixin.html">werkzeug.ResponseStreamMixin</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.ResponseStreamMixin.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.SharedDataMiddleware.html">werkzeug.SharedDataMiddleware</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.SharedDataMiddleware.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.TypeConversionDict.html">werkzeug.TypeConversionDict</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.TypeConversionDict.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.UserAgent.html">werkzeug.UserAgent</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.UserAgent.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.UserAgentMixin.html">werkzeug.UserAgentMixin</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.UserAgentMixin.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.WWWAuthenticate.html">werkzeug.WWWAuthenticate</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.WWWAuthenticate.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.WWWAuthenticate.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.WWWAuthenticateMixin.html">werkzeug.WWWAuthenticateMixin</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.WWWAuthenticateMixin.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.cached_property.html">werkzeug.cached_property</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.cached_property.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.cached_property.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.environ_property.html">werkzeug.environ_property</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.environ_property.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.environ_property.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.header_property.html">werkzeug.header_property</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.header_property.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.header_property.html#attributes">Attributes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/werkzeug.html#exceptions">Exceptions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.ArgumentValidationError.html">werkzeug.ArgumentValidationError</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Flask API</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>werkzeug.http</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for werkzeug.http</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    werkzeug.http</span>
+<span class="sd">    ~~~~~~~~~~~~~</span>
+
+<span class="sd">    Werkzeug comes with a bunch of utilities that help Werkzeug to deal with</span>
+<span class="sd">    HTTP data.  Most of the classes and functions provided by this module are</span>
+<span class="sd">    used by the wrappers, but they are useful on their own, too, especially if</span>
+<span class="sd">    the response and request objects are not used.</span>
+
+<span class="sd">    This covers some of the more HTTP centric features of WSGI, some other</span>
+<span class="sd">    utilities such as cookie handling are documented in the `werkzeug.utils`</span>
+<span class="sd">    module.</span>
+
+
+<span class="sd">    :copyright: (c) 2014 by the Werkzeug Team, see AUTHORS for more details.</span>
+<span class="sd">    :license: BSD, see LICENSE for more details.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">time</span><span class="p">,</span> <span class="n">gmtime</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">email.utils</span> <span class="kn">import</span> <span class="n">parsedate_tz</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>  <span class="c1"># pragma: no cover</span>
+    <span class="kn">from</span> <span class="nn">email.Utils</span> <span class="kn">import</span> <span class="n">parsedate_tz</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">urllib2</span> <span class="kn">import</span> <span class="n">parse_http_list</span> <span class="k">as</span> <span class="n">_parse_list_header</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>  <span class="c1"># pragma: no cover</span>
+    <span class="kn">from</span> <span class="nn">urllib.request</span> <span class="kn">import</span> <span class="n">parse_http_list</span> <span class="k">as</span> <span class="n">_parse_list_header</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
+<span class="kn">from</span> <span class="nn">hashlib</span> <span class="kn">import</span> <span class="n">md5</span>
+<span class="kn">import</span> <span class="nn">base64</span>
+
+<span class="kn">from</span> <span class="nn">werkzeug._internal</span> <span class="kn">import</span> <span class="n">_cookie_quote</span><span class="p">,</span> <span class="n">_make_cookie_domain</span><span class="p">,</span> \
+    <span class="n">_cookie_parse_impl</span>
+<span class="kn">from</span> <span class="nn">werkzeug._compat</span> <span class="kn">import</span> <span class="n">to_unicode</span><span class="p">,</span> <span class="n">iteritems</span><span class="p">,</span> <span class="n">text_type</span><span class="p">,</span> \
+    <span class="n">string_types</span><span class="p">,</span> <span class="n">try_coerce_native</span><span class="p">,</span> <span class="n">to_bytes</span><span class="p">,</span> <span class="n">PY2</span><span class="p">,</span> \
+    <span class="n">integer_types</span>
+
+
+<span class="n">_cookie_charset</span> <span class="o">=</span> <span class="s1">&#39;latin1&#39;</span>
+<span class="c1"># for explanation of &quot;media-range&quot;, etc. see Sections 5.3.{1,2} of RFC 7231</span>
+<span class="n">_accept_re</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
+    <span class="sd">r&#39;&#39;&#39;(                       # media-range capturing-parenthesis</span>
+<span class="sd">              [^\s;,]+              # type/subtype</span>
+<span class="sd">              (?:[ \t]*;[ \t]*      # &quot;;&quot;</span>
+<span class="sd">                (?:                 # parameter non-capturing-parenthesis</span>
+<span class="sd">                  [^\s;,q][^\s;,]*  # token that doesn&#39;t start with &quot;q&quot;</span>
+<span class="sd">                |                   # or</span>
+<span class="sd">                  q[^\s;,=][^\s;,]* # token that is more than just &quot;q&quot;</span>
+<span class="sd">                )</span>
+<span class="sd">              )*                    # zero or more parameters</span>
+<span class="sd">            )                       # end of media-range</span>
+<span class="sd">            (?:[ \t]*;[ \t]*q=      # weight is a &quot;q&quot; parameter</span>
+<span class="sd">              (\d*(?:\.\d+)?)       # qvalue capturing-parentheses</span>
+<span class="sd">              [^,]*                 # &quot;extension&quot; accept params: who cares?</span>
+<span class="sd">            )?                      # accept params are optional</span>
+<span class="sd">        &#39;&#39;&#39;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">VERBOSE</span><span class="p">)</span>
+<span class="n">_token_chars</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">(</span><span class="s2">&quot;!#$%&amp;&#39;*+-.0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</span>
+                         <span class="s1">&#39;^_`abcdefghijklmnopqrstuvwxyz|~&#39;</span><span class="p">)</span>
+<span class="n">_etag_re</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">r&#39;([Ww]/)?(?:&quot;(.*?)&quot;|(.*?))(?:\s*,\s*|$)&#39;</span><span class="p">)</span>
+<span class="n">_unsafe_header_chars</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="s1">&#39;()&lt;&gt;@,;:</span><span class="se">\&quot;</span><span class="s1">/[]?={} </span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">_quoted_string_re</span> <span class="o">=</span> <span class="s1">r&#39;&quot;[^&quot;</span><span class="se">\\</span><span class="s1">]*(?:</span><span class="se">\\</span><span class="s1">.[^&quot;</span><span class="se">\\</span><span class="s1">]*)*&quot;&#39;</span>
+<span class="n">_option_header_piece_re</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
+    <span class="s1">r&#39;;\s*(</span><span class="si">%s</span><span class="s1">|[^\s;,=]+)\s*(?:=\s*(</span><span class="si">%s</span><span class="s1">|[^;,]+)?)?\s*&#39;</span> <span class="o">%</span>
+    <span class="p">(</span><span class="n">_quoted_string_re</span><span class="p">,</span> <span class="n">_quoted_string_re</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="n">_option_header_start_mime_type</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">r&#39;,\s*([^;,\s]+)([;,]\s*.+)?&#39;</span><span class="p">)</span>
+
+<span class="n">_entity_headers</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">([</span>
+    <span class="s1">&#39;allow&#39;</span><span class="p">,</span> <span class="s1">&#39;content-encoding&#39;</span><span class="p">,</span> <span class="s1">&#39;content-language&#39;</span><span class="p">,</span> <span class="s1">&#39;content-length&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;content-location&#39;</span><span class="p">,</span> <span class="s1">&#39;content-md5&#39;</span><span class="p">,</span> <span class="s1">&#39;content-range&#39;</span><span class="p">,</span> <span class="s1">&#39;content-type&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;expires&#39;</span><span class="p">,</span> <span class="s1">&#39;last-modified&#39;</span>
+<span class="p">])</span>
+<span class="n">_hop_by_hop_headers</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">([</span>
+    <span class="s1">&#39;connection&#39;</span><span class="p">,</span> <span class="s1">&#39;keep-alive&#39;</span><span class="p">,</span> <span class="s1">&#39;proxy-authenticate&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;proxy-authorization&#39;</span><span class="p">,</span> <span class="s1">&#39;te&#39;</span><span class="p">,</span> <span class="s1">&#39;trailer&#39;</span><span class="p">,</span> <span class="s1">&#39;transfer-encoding&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;upgrade&#39;</span>
+<span class="p">])</span>
+
+
+<span class="n">HTTP_STATUS_CODES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="mi">100</span><span class="p">:</span>    <span class="s1">&#39;Continue&#39;</span><span class="p">,</span>
+    <span class="mi">101</span><span class="p">:</span>    <span class="s1">&#39;Switching Protocols&#39;</span><span class="p">,</span>
+    <span class="mi">102</span><span class="p">:</span>    <span class="s1">&#39;Processing&#39;</span><span class="p">,</span>
+    <span class="mi">200</span><span class="p">:</span>    <span class="s1">&#39;OK&#39;</span><span class="p">,</span>
+    <span class="mi">201</span><span class="p">:</span>    <span class="s1">&#39;Created&#39;</span><span class="p">,</span>
+    <span class="mi">202</span><span class="p">:</span>    <span class="s1">&#39;Accepted&#39;</span><span class="p">,</span>
+    <span class="mi">203</span><span class="p">:</span>    <span class="s1">&#39;Non Authoritative Information&#39;</span><span class="p">,</span>
+    <span class="mi">204</span><span class="p">:</span>    <span class="s1">&#39;No Content&#39;</span><span class="p">,</span>
+    <span class="mi">205</span><span class="p">:</span>    <span class="s1">&#39;Reset Content&#39;</span><span class="p">,</span>
+    <span class="mi">206</span><span class="p">:</span>    <span class="s1">&#39;Partial Content&#39;</span><span class="p">,</span>
+    <span class="mi">207</span><span class="p">:</span>    <span class="s1">&#39;Multi Status&#39;</span><span class="p">,</span>
+    <span class="mi">226</span><span class="p">:</span>    <span class="s1">&#39;IM Used&#39;</span><span class="p">,</span>              <span class="c1"># see RFC 3229</span>
+    <span class="mi">300</span><span class="p">:</span>    <span class="s1">&#39;Multiple Choices&#39;</span><span class="p">,</span>
+    <span class="mi">301</span><span class="p">:</span>    <span class="s1">&#39;Moved Permanently&#39;</span><span class="p">,</span>
+    <span class="mi">302</span><span class="p">:</span>    <span class="s1">&#39;Found&#39;</span><span class="p">,</span>
+    <span class="mi">303</span><span class="p">:</span>    <span class="s1">&#39;See Other&#39;</span><span class="p">,</span>
+    <span class="mi">304</span><span class="p">:</span>    <span class="s1">&#39;Not Modified&#39;</span><span class="p">,</span>
+    <span class="mi">305</span><span class="p">:</span>    <span class="s1">&#39;Use Proxy&#39;</span><span class="p">,</span>
+    <span class="mi">307</span><span class="p">:</span>    <span class="s1">&#39;Temporary Redirect&#39;</span><span class="p">,</span>
+    <span class="mi">400</span><span class="p">:</span>    <span class="s1">&#39;Bad Request&#39;</span><span class="p">,</span>
+    <span class="mi">401</span><span class="p">:</span>    <span class="s1">&#39;Unauthorized&#39;</span><span class="p">,</span>
+    <span class="mi">402</span><span class="p">:</span>    <span class="s1">&#39;Payment Required&#39;</span><span class="p">,</span>     <span class="c1"># unused</span>
+    <span class="mi">403</span><span class="p">:</span>    <span class="s1">&#39;Forbidden&#39;</span><span class="p">,</span>
+    <span class="mi">404</span><span class="p">:</span>    <span class="s1">&#39;Not Found&#39;</span><span class="p">,</span>
+    <span class="mi">405</span><span class="p">:</span>    <span class="s1">&#39;Method Not Allowed&#39;</span><span class="p">,</span>
+    <span class="mi">406</span><span class="p">:</span>    <span class="s1">&#39;Not Acceptable&#39;</span><span class="p">,</span>
+    <span class="mi">407</span><span class="p">:</span>    <span class="s1">&#39;Proxy Authentication Required&#39;</span><span class="p">,</span>
+    <span class="mi">408</span><span class="p">:</span>    <span class="s1">&#39;Request Timeout&#39;</span><span class="p">,</span>
+    <span class="mi">409</span><span class="p">:</span>    <span class="s1">&#39;Conflict&#39;</span><span class="p">,</span>
+    <span class="mi">410</span><span class="p">:</span>    <span class="s1">&#39;Gone&#39;</span><span class="p">,</span>
+    <span class="mi">411</span><span class="p">:</span>    <span class="s1">&#39;Length Required&#39;</span><span class="p">,</span>
+    <span class="mi">412</span><span class="p">:</span>    <span class="s1">&#39;Precondition Failed&#39;</span><span class="p">,</span>
+    <span class="mi">413</span><span class="p">:</span>    <span class="s1">&#39;Request Entity Too Large&#39;</span><span class="p">,</span>
+    <span class="mi">414</span><span class="p">:</span>    <span class="s1">&#39;Request URI Too Long&#39;</span><span class="p">,</span>
+    <span class="mi">415</span><span class="p">:</span>    <span class="s1">&#39;Unsupported Media Type&#39;</span><span class="p">,</span>
+    <span class="mi">416</span><span class="p">:</span>    <span class="s1">&#39;Requested Range Not Satisfiable&#39;</span><span class="p">,</span>
+    <span class="mi">417</span><span class="p">:</span>    <span class="s1">&#39;Expectation Failed&#39;</span><span class="p">,</span>
+    <span class="mi">418</span><span class="p">:</span>    <span class="s1">&#39;I</span><span class="se">\&#39;</span><span class="s1">m a teapot&#39;</span><span class="p">,</span>  <span class="c1"># see RFC 2324</span>
+    <span class="mi">422</span><span class="p">:</span>    <span class="s1">&#39;Unprocessable Entity&#39;</span><span class="p">,</span>
+    <span class="mi">423</span><span class="p">:</span>    <span class="s1">&#39;Locked&#39;</span><span class="p">,</span>
+    <span class="mi">424</span><span class="p">:</span>    <span class="s1">&#39;Failed Dependency&#39;</span><span class="p">,</span>
+    <span class="mi">426</span><span class="p">:</span>    <span class="s1">&#39;Upgrade Required&#39;</span><span class="p">,</span>
+    <span class="mi">428</span><span class="p">:</span>    <span class="s1">&#39;Precondition Required&#39;</span><span class="p">,</span>  <span class="c1"># see RFC 6585</span>
+    <span class="mi">429</span><span class="p">:</span>    <span class="s1">&#39;Too Many Requests&#39;</span><span class="p">,</span>
+    <span class="mi">431</span><span class="p">:</span>    <span class="s1">&#39;Request Header Fields Too Large&#39;</span><span class="p">,</span>
+    <span class="mi">449</span><span class="p">:</span>    <span class="s1">&#39;Retry With&#39;</span><span class="p">,</span>  <span class="c1"># proprietary MS extension</span>
+    <span class="mi">500</span><span class="p">:</span>    <span class="s1">&#39;Internal Server Error&#39;</span><span class="p">,</span>
+    <span class="mi">501</span><span class="p">:</span>    <span class="s1">&#39;Not Implemented&#39;</span><span class="p">,</span>
+    <span class="mi">502</span><span class="p">:</span>    <span class="s1">&#39;Bad Gateway&#39;</span><span class="p">,</span>
+    <span class="mi">503</span><span class="p">:</span>    <span class="s1">&#39;Service Unavailable&#39;</span><span class="p">,</span>
+    <span class="mi">504</span><span class="p">:</span>    <span class="s1">&#39;Gateway Timeout&#39;</span><span class="p">,</span>
+    <span class="mi">505</span><span class="p">:</span>    <span class="s1">&#39;HTTP Version Not Supported&#39;</span><span class="p">,</span>
+    <span class="mi">507</span><span class="p">:</span>    <span class="s1">&#39;Insufficient Storage&#39;</span><span class="p">,</span>
+    <span class="mi">510</span><span class="p">:</span>    <span class="s1">&#39;Not Extended&#39;</span>
+<span class="p">}</span>
+
+
+<span class="k">def</span> <span class="nf">wsgi_to_bytes</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;coerce wsgi unicode represented bytes to real ones</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">data</span>
+    <span class="k">return</span> <span class="n">data</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;latin1&#39;</span><span class="p">)</span>  <span class="c1"># XXX: utf8 fallback?</span>
+
+
+<span class="k">def</span> <span class="nf">bytes_to_wsgi</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+    <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">),</span> <span class="s1">&#39;data must be bytes&#39;</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">data</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">data</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;latin1&#39;</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="quote_header_value"><a class="viewcode-back" href="../../generated/werkzeug.quote_header_value.html#werkzeug.quote_header_value">[docs]</a><span class="k">def</span> <span class="nf">quote_header_value</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">extra_chars</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">allow_token</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Quote a header value if necessary.</span>
+
+<span class="sd">    .. versionadded:: 0.5</span>
+
+<span class="sd">    :param value: the value to quote.</span>
+<span class="sd">    :param extra_chars: a list of extra characters to skip quoting.</span>
+<span class="sd">    :param allow_token: if this is enabled token values are returned</span>
+<span class="sd">                        unchanged.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">):</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="n">bytes_to_wsgi</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="n">value</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">allow_token</span><span class="p">:</span>
+        <span class="n">token_chars</span> <span class="o">=</span> <span class="n">_token_chars</span> <span class="o">|</span> <span class="nb">set</span><span class="p">(</span><span class="n">extra_chars</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">set</span><span class="p">(</span><span class="n">value</span><span class="p">)</span><span class="o">.</span><span class="n">issubset</span><span class="p">(</span><span class="n">token_chars</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">value</span>
+    <span class="k">return</span> <span class="s1">&#39;&quot;</span><span class="si">%s</span><span class="s1">&quot;&#39;</span> <span class="o">%</span> <span class="n">value</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\\\\</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;&quot;&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\\</span><span class="s1">&quot;&#39;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="unquote_header_value"><a class="viewcode-back" href="../../generated/werkzeug.unquote_header_value.html#werkzeug.unquote_header_value">[docs]</a><span class="k">def</span> <span class="nf">unquote_header_value</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">is_filename</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+    <span class="sd">r&quot;&quot;&quot;Unquotes a header value.  (Reversal of :func:`quote_header_value`).</span>
+<span class="sd">    This does not use the real unquoting but what browsers are actually</span>
+<span class="sd">    using for quoting.</span>
+
+<span class="sd">    .. versionadded:: 0.5</span>
+
+<span class="sd">    :param value: the header value to unquote.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">value</span> <span class="ow">and</span> <span class="n">value</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">value</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;&quot;&#39;</span><span class="p">:</span>
+        <span class="c1"># this is not the real unquoting, but fixing this so that the</span>
+        <span class="c1"># RFC is met will result in bugs with internet explorer and</span>
+        <span class="c1"># probably some other browsers as well.  IE for example is</span>
+        <span class="c1"># uploading files with &quot;C:\foo\bar.txt&quot; as filename</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="n">value</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+        <span class="c1"># if this is a filename and the starting characters look like</span>
+        <span class="c1"># a UNC path, then just return the value without quotes.  Using the</span>
+        <span class="c1"># replace sequence below on a UNC path has the effect of turning</span>
+        <span class="c1"># the leading double slash into a single slash and then</span>
+        <span class="c1"># _fix_ie_filename() doesn&#39;t work correctly.  See #458.</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">is_filename</span> <span class="ow">or</span> <span class="n">value</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;</span><span class="se">\\\\</span><span class="s1">&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">value</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\\\</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\\</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">&quot;&#39;</span><span class="p">,</span> <span class="s1">&#39;&quot;&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">value</span></div>
+
+
+<div class="viewcode-block" id="dump_options_header"><a class="viewcode-back" href="../../generated/werkzeug.dump_options_header.html#werkzeug.dump_options_header">[docs]</a><span class="k">def</span> <span class="nf">dump_options_header</span><span class="p">(</span><span class="n">header</span><span class="p">,</span> <span class="n">options</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;The reverse function to :func:`parse_options_header`.</span>
+
+<span class="sd">    :param header: the header to dump</span>
+<span class="sd">    :param options: a dict of options to append.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">segments</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">if</span> <span class="n">header</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">segments</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">header</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">iteritems</span><span class="p">(</span><span class="n">options</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">segments</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">segments</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1">=</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">quote_header_value</span><span class="p">(</span><span class="n">value</span><span class="p">)))</span>
+    <span class="k">return</span> <span class="s1">&#39;; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">segments</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="dump_header"><a class="viewcode-back" href="../../generated/werkzeug.dump_header.html#werkzeug.dump_header">[docs]</a><span class="k">def</span> <span class="nf">dump_header</span><span class="p">(</span><span class="n">iterable</span><span class="p">,</span> <span class="n">allow_token</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Dump an HTTP header again.  This is the reversal of</span>
+<span class="sd">    :func:`parse_list_header`, :func:`parse_set_header` and</span>
+<span class="sd">    :func:`parse_dict_header`.  This also quotes strings that include an</span>
+<span class="sd">    equals sign unless you pass it as dict of key, value pairs.</span>
+
+<span class="sd">    &gt;&gt;&gt; dump_header({&#39;foo&#39;: &#39;bar baz&#39;})</span>
+<span class="sd">    &#39;foo=&quot;bar baz&quot;&#39;</span>
+<span class="sd">    &gt;&gt;&gt; dump_header((&#39;foo&#39;, &#39;bar baz&#39;))</span>
+<span class="sd">    &#39;foo, &quot;bar baz&quot;&#39;</span>
+
+<span class="sd">    :param iterable: the iterable or dict of values to quote.</span>
+<span class="sd">    :param allow_token: if set to `False` tokens as values are disallowed.</span>
+<span class="sd">                        See :func:`quote_header_value` for more details.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">iterable</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+        <span class="n">items</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">iteritems</span><span class="p">(</span><span class="n">iterable</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="n">items</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">items</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1">=</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span>
+                    <span class="n">key</span><span class="p">,</span>
+                    <span class="n">quote_header_value</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">allow_token</span><span class="o">=</span><span class="n">allow_token</span><span class="p">)</span>
+                <span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">items</span> <span class="o">=</span> <span class="p">[</span><span class="n">quote_header_value</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">allow_token</span><span class="o">=</span><span class="n">allow_token</span><span class="p">)</span>
+                 <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">iterable</span><span class="p">]</span>
+    <span class="k">return</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">items</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="parse_list_header"><a class="viewcode-back" href="../../generated/werkzeug.parse_list_header.html#werkzeug.parse_list_header">[docs]</a><span class="k">def</span> <span class="nf">parse_list_header</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Parse lists as described by RFC 2068 Section 2.</span>
+
+<span class="sd">    In particular, parse comma-separated lists where the elements of</span>
+<span class="sd">    the list may include quoted-strings.  A quoted-string could</span>
+<span class="sd">    contain a comma.  A non-quoted string could have quotes in the</span>
+<span class="sd">    middle.  Quotes are removed automatically after parsing.</span>
+
+<span class="sd">    It basically works like :func:`parse_set_header` just that items</span>
+<span class="sd">    may appear multiple times and case sensitivity is preserved.</span>
+
+<span class="sd">    The return value is a standard :class:`list`:</span>
+
+<span class="sd">    &gt;&gt;&gt; parse_list_header(&#39;token, &quot;quoted value&quot;&#39;)</span>
+<span class="sd">    [&#39;token&#39;, &#39;quoted value&#39;]</span>
+
+<span class="sd">    To create a header from the :class:`list` again, use the</span>
+<span class="sd">    :func:`dump_header` function.</span>
+
+<span class="sd">    :param value: a string with a list header.</span>
+<span class="sd">    :return: :class:`list`</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">_parse_list_header</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">item</span><span class="p">[:</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">item</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">:]</span> <span class="o">==</span> <span class="s1">&#39;&quot;&#39;</span><span class="p">:</span>
+            <span class="n">item</span> <span class="o">=</span> <span class="n">unquote_header_value</span><span class="p">(</span><span class="n">item</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">result</span></div>
+
+
+<div class="viewcode-block" id="parse_dict_header"><a class="viewcode-back" href="../../generated/werkzeug.parse_dict_header.html#werkzeug.parse_dict_header">[docs]</a><span class="k">def</span> <span class="nf">parse_dict_header</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">cls</span><span class="o">=</span><span class="nb">dict</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Parse lists of key, value pairs as described by RFC 2068 Section 2 and</span>
+<span class="sd">    convert them into a python dict (or any other mapping object created from</span>
+<span class="sd">    the type with a dict like interface provided by the `cls` arugment):</span>
+
+<span class="sd">    &gt;&gt;&gt; d = parse_dict_header(&#39;foo=&quot;is a fish&quot;, bar=&quot;as well&quot;&#39;)</span>
+<span class="sd">    &gt;&gt;&gt; type(d) is dict</span>
+<span class="sd">    True</span>
+<span class="sd">    &gt;&gt;&gt; sorted(d.items())</span>
+<span class="sd">    [(&#39;bar&#39;, &#39;as well&#39;), (&#39;foo&#39;, &#39;is a fish&#39;)]</span>
+
+<span class="sd">    If there is no value for a key it will be `None`:</span>
+
+<span class="sd">    &gt;&gt;&gt; parse_dict_header(&#39;key_without_value&#39;)</span>
+<span class="sd">    {&#39;key_without_value&#39;: None}</span>
+
+<span class="sd">    To create a header from the :class:`dict` again, use the</span>
+<span class="sd">    :func:`dump_header` function.</span>
+
+<span class="sd">    .. versionchanged:: 0.9</span>
+<span class="sd">       Added support for `cls` argument.</span>
+
+<span class="sd">    :param value: a string with a dict header.</span>
+<span class="sd">    :param cls: callable to use for storage of parsed results.</span>
+<span class="sd">    :return: an instance of `cls`</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">cls</span><span class="p">()</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">text_type</span><span class="p">):</span>
+        <span class="c1"># XXX: validate</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="n">bytes_to_wsgi</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">_parse_list_header</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="s1">&#39;=&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">item</span><span class="p">:</span>
+            <span class="n">result</span><span class="p">[</span><span class="n">item</span><span class="p">]</span> <span class="o">=</span> <span class="bp">None</span>
+            <span class="k">continue</span>
+        <span class="n">name</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;=&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">value</span><span class="p">[:</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">value</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">:]</span> <span class="o">==</span> <span class="s1">&#39;&quot;&#39;</span><span class="p">:</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="n">unquote_header_value</span><span class="p">(</span><span class="n">value</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">result</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+    <span class="k">return</span> <span class="n">result</span></div>
+
+
+<div class="viewcode-block" id="parse_options_header"><a class="viewcode-back" href="../../generated/werkzeug.parse_options_header.html#werkzeug.parse_options_header">[docs]</a><span class="k">def</span> <span class="nf">parse_options_header</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">multiple</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Parse a ``Content-Type`` like header into a tuple with the content</span>
+<span class="sd">    type and the options:</span>
+
+<span class="sd">    &gt;&gt;&gt; parse_options_header(&#39;text/html; charset=utf8&#39;)</span>
+<span class="sd">    (&#39;text/html&#39;, {&#39;charset&#39;: &#39;utf8&#39;})</span>
+
+<span class="sd">    This should not be used to parse ``Cache-Control`` like headers that use</span>
+<span class="sd">    a slightly different format.  For these headers use the</span>
+<span class="sd">    :func:`parse_dict_header` function.</span>
+
+<span class="sd">    .. versionadded:: 0.5</span>
+
+<span class="sd">    :param value: the header to parse.</span>
+<span class="sd">    :param multiple: Whether try to parse and return multiple MIME types</span>
+<span class="sd">    :return: (mimetype, options) or (mimetype, options, mimetype, options, …)</span>
+<span class="sd">             if multiple=True</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">value</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="p">{}</span>
+
+    <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="n">value</span> <span class="o">=</span> <span class="s2">&quot;,&quot;</span> <span class="o">+</span> <span class="n">value</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;,&quot;</span><span class="p">)</span>
+    <span class="k">while</span> <span class="n">value</span><span class="p">:</span>
+        <span class="n">match</span> <span class="o">=</span> <span class="n">_option_header_start_mime_type</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">match</span><span class="p">:</span>
+            <span class="k">break</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>  <span class="c1"># mimetype</span>
+        <span class="n">options</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="c1"># Parse options</span>
+        <span class="n">rest</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+        <span class="k">while</span> <span class="n">rest</span><span class="p">:</span>
+            <span class="n">optmatch</span> <span class="o">=</span> <span class="n">_option_header_piece_re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">rest</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">optmatch</span><span class="p">:</span>
+                <span class="k">break</span>
+            <span class="n">option</span><span class="p">,</span> <span class="n">option_value</span> <span class="o">=</span> <span class="n">optmatch</span><span class="o">.</span><span class="n">groups</span><span class="p">()</span>
+            <span class="n">option</span> <span class="o">=</span> <span class="n">unquote_header_value</span><span class="p">(</span><span class="n">option</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">option_value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="n">option_value</span> <span class="o">=</span> <span class="n">unquote_header_value</span><span class="p">(</span>
+                    <span class="n">option_value</span><span class="p">,</span>
+                    <span class="n">option</span> <span class="o">==</span> <span class="s1">&#39;filename&#39;</span><span class="p">)</span>
+            <span class="n">options</span><span class="p">[</span><span class="n">option</span><span class="p">]</span> <span class="o">=</span> <span class="n">option_value</span>
+            <span class="n">rest</span> <span class="o">=</span> <span class="n">rest</span><span class="p">[</span><span class="n">optmatch</span><span class="o">.</span><span class="n">end</span><span class="p">():]</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">options</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">multiple</span> <span class="ow">is</span> <span class="bp">False</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="n">rest</span>
+
+    <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">result</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="parse_accept_header"><a class="viewcode-back" href="../../generated/werkzeug.parse_accept_header.html#werkzeug.parse_accept_header">[docs]</a><span class="k">def</span> <span class="nf">parse_accept_header</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">cls</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Parses an HTTP Accept-* header.  This does not implement a complete</span>
+<span class="sd">    valid algorithm but one that supports at least value and quality</span>
+<span class="sd">    extraction.</span>
+
+<span class="sd">    Returns a new :class:`Accept` object (basically a list of ``(value, quality)``</span>
+<span class="sd">    tuples sorted by the quality with some additional accessor methods).</span>
+
+<span class="sd">    The second parameter can be a subclass of :class:`Accept` that is created</span>
+<span class="sd">    with the parsed values and returned.</span>
+
+<span class="sd">    :param value: the accept header string to be parsed.</span>
+<span class="sd">    :param cls: the wrapper class for the return value (can be</span>
+<span class="sd">                         :class:`Accept` or a subclass thereof)</span>
+<span class="sd">    :return: an instance of `cls`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">cls</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">cls</span> <span class="o">=</span> <span class="n">Accept</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">value</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">cls</span><span class="p">(</span><span class="bp">None</span><span class="p">)</span>
+
+    <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">match</span> <span class="ow">in</span> <span class="n">_accept_re</span><span class="o">.</span><span class="n">finditer</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+        <span class="n">quality</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">quality</span><span class="p">:</span>
+            <span class="n">quality</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">quality</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">quality</span><span class="p">),</span> <span class="mi">1</span><span class="p">),</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">quality</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">cls</span><span class="p">(</span><span class="n">result</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="parse_cache_control_header"><a class="viewcode-back" href="../../generated/werkzeug.parse_cache_control_header.html#werkzeug.parse_cache_control_header">[docs]</a><span class="k">def</span> <span class="nf">parse_cache_control_header</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">on_update</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">cls</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Parse a cache control header.  The RFC differs between response and</span>
+<span class="sd">    request cache control, this method does not.  It&#39;s your responsibility</span>
+<span class="sd">    to not use the wrong control statements.</span>
+
+<span class="sd">    .. versionadded:: 0.5</span>
+<span class="sd">       The `cls` was added.  If not specified an immutable</span>
+<span class="sd">       :class:`~werkzeug.datastructures.RequestCacheControl` is returned.</span>
+
+<span class="sd">    :param value: a cache control header to be parsed.</span>
+<span class="sd">    :param on_update: an optional callable that is called every time a value</span>
+<span class="sd">                      on the :class:`~werkzeug.datastructures.CacheControl`</span>
+<span class="sd">                      object is changed.</span>
+<span class="sd">    :param cls: the class for the returned object.  By default</span>
+<span class="sd">                :class:`~werkzeug.datastructures.RequestCacheControl` is used.</span>
+<span class="sd">    :return: a `cls` object.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">cls</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">cls</span> <span class="o">=</span> <span class="n">RequestCacheControl</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">value</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">cls</span><span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="n">on_update</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">cls</span><span class="p">(</span><span class="n">parse_dict_header</span><span class="p">(</span><span class="n">value</span><span class="p">),</span> <span class="n">on_update</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="parse_set_header"><a class="viewcode-back" href="../../generated/werkzeug.parse_set_header.html#werkzeug.parse_set_header">[docs]</a><span class="k">def</span> <span class="nf">parse_set_header</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">on_update</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Parse a set-like header and return a</span>
+<span class="sd">    :class:`~werkzeug.datastructures.HeaderSet` object:</span>
+
+<span class="sd">    &gt;&gt;&gt; hs = parse_set_header(&#39;token, &quot;quoted value&quot;&#39;)</span>
+
+<span class="sd">    The return value is an object that treats the items case-insensitively</span>
+<span class="sd">    and keeps the order of the items:</span>
+
+<span class="sd">    &gt;&gt;&gt; &#39;TOKEN&#39; in hs</span>
+<span class="sd">    True</span>
+<span class="sd">    &gt;&gt;&gt; hs.index(&#39;quoted value&#39;)</span>
+<span class="sd">    1</span>
+<span class="sd">    &gt;&gt;&gt; hs</span>
+<span class="sd">    HeaderSet([&#39;token&#39;, &#39;quoted value&#39;])</span>
+
+<span class="sd">    To create a header from the :class:`HeaderSet` again, use the</span>
+<span class="sd">    :func:`dump_header` function.</span>
+
+<span class="sd">    :param value: a set header to be parsed.</span>
+<span class="sd">    :param on_update: an optional callable that is called every time a</span>
+<span class="sd">                      value on the :class:`~werkzeug.datastructures.HeaderSet`</span>
+<span class="sd">                      object is changed.</span>
+<span class="sd">    :return: a :class:`~werkzeug.datastructures.HeaderSet`</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">value</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">HeaderSet</span><span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="n">on_update</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">HeaderSet</span><span class="p">(</span><span class="n">parse_list_header</span><span class="p">(</span><span class="n">value</span><span class="p">),</span> <span class="n">on_update</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="parse_authorization_header"><a class="viewcode-back" href="../../generated/werkzeug.parse_authorization_header.html#werkzeug.parse_authorization_header">[docs]</a><span class="k">def</span> <span class="nf">parse_authorization_header</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Parse an HTTP basic/digest authorization header transmitted by the web</span>
+<span class="sd">    browser.  The return value is either `None` if the header was invalid or</span>
+<span class="sd">    not given, otherwise an :class:`~werkzeug.datastructures.Authorization`</span>
+<span class="sd">    object.</span>
+
+<span class="sd">    :param value: the authorization header to parse.</span>
+<span class="sd">    :return: a :class:`~werkzeug.datastructures.Authorization` object or `None`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">value</span><span class="p">:</span>
+        <span class="k">return</span>
+    <span class="n">value</span> <span class="o">=</span> <span class="n">wsgi_to_bytes</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">auth_type</span><span class="p">,</span> <span class="n">auth_info</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">auth_type</span> <span class="o">=</span> <span class="n">auth_type</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="k">return</span>
+    <span class="k">if</span> <span class="n">auth_type</span> <span class="o">==</span> <span class="n">b</span><span class="s1">&#39;basic&#39;</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">username</span><span class="p">,</span> <span class="n">password</span> <span class="o">=</span> <span class="n">base64</span><span class="o">.</span><span class="n">b64decode</span><span class="p">(</span><span class="n">auth_info</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">b</span><span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="k">return</span> <span class="n">Authorization</span><span class="p">(</span><span class="s1">&#39;basic&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;username&#39;</span><span class="p">:</span>  <span class="n">bytes_to_wsgi</span><span class="p">(</span><span class="n">username</span><span class="p">),</span>
+                                       <span class="s1">&#39;password&#39;</span><span class="p">:</span> <span class="n">bytes_to_wsgi</span><span class="p">(</span><span class="n">password</span><span class="p">)})</span>
+    <span class="k">elif</span> <span class="n">auth_type</span> <span class="o">==</span> <span class="n">b</span><span class="s1">&#39;digest&#39;</span><span class="p">:</span>
+        <span class="n">auth_map</span> <span class="o">=</span> <span class="n">parse_dict_header</span><span class="p">(</span><span class="n">auth_info</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="s1">&#39;realm&#39;</span><span class="p">,</span> <span class="s1">&#39;nonce&#39;</span><span class="p">,</span> <span class="s1">&#39;uri&#39;</span><span class="p">,</span> <span class="s1">&#39;response&#39;</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">key</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">auth_map</span><span class="p">:</span>
+                <span class="k">return</span>
+        <span class="k">if</span> <span class="s1">&#39;qop&#39;</span> <span class="ow">in</span> <span class="n">auth_map</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">auth_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;nc&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">auth_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;cnonce&#39;</span><span class="p">):</span>
+                <span class="k">return</span>
+        <span class="k">return</span> <span class="n">Authorization</span><span class="p">(</span><span class="s1">&#39;digest&#39;</span><span class="p">,</span> <span class="n">auth_map</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="parse_www_authenticate_header"><a class="viewcode-back" href="../../generated/werkzeug.parse_www_authenticate_header.html#werkzeug.parse_www_authenticate_header">[docs]</a><span class="k">def</span> <span class="nf">parse_www_authenticate_header</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">on_update</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Parse an HTTP WWW-Authenticate header into a</span>
+<span class="sd">    :class:`~werkzeug.datastructures.WWWAuthenticate` object.</span>
+
+<span class="sd">    :param value: a WWW-Authenticate header to parse.</span>
+<span class="sd">    :param on_update: an optional callable that is called every time a value</span>
+<span class="sd">                      on the :class:`~werkzeug.datastructures.WWWAuthenticate`</span>
+<span class="sd">                      object is changed.</span>
+<span class="sd">    :return: a :class:`~werkzeug.datastructures.WWWAuthenticate` object.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">value</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">WWWAuthenticate</span><span class="p">(</span><span class="n">on_update</span><span class="o">=</span><span class="n">on_update</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">auth_type</span><span class="p">,</span> <span class="n">auth_info</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">auth_type</span> <span class="o">=</span> <span class="n">auth_type</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    <span class="k">except</span> <span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="ne">AttributeError</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">WWWAuthenticate</span><span class="p">(</span><span class="n">value</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">(),</span> <span class="n">on_update</span><span class="o">=</span><span class="n">on_update</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">WWWAuthenticate</span><span class="p">(</span><span class="n">auth_type</span><span class="p">,</span> <span class="n">parse_dict_header</span><span class="p">(</span><span class="n">auth_info</span><span class="p">),</span>
+                           <span class="n">on_update</span><span class="p">)</span></div>
+
+
+<span class="k">def</span> <span class="nf">parse_if_range_header</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Parses an if-range header which can be an etag or a date.  Returns</span>
+<span class="sd">    a :class:`~werkzeug.datastructures.IfRange` object.</span>
+
+<span class="sd">    .. versionadded:: 0.7</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">value</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">IfRange</span><span class="p">()</span>
+    <span class="n">date</span> <span class="o">=</span> <span class="n">parse_date</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">date</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">IfRange</span><span class="p">(</span><span class="n">date</span><span class="o">=</span><span class="n">date</span><span class="p">)</span>
+    <span class="c1"># drop weakness information</span>
+    <span class="k">return</span> <span class="n">IfRange</span><span class="p">(</span><span class="n">unquote_etag</span><span class="p">(</span><span class="n">value</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+
+
+<span class="k">def</span> <span class="nf">parse_range_header</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">make_inclusive</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Parses a range header into a :class:`~werkzeug.datastructures.Range`</span>
+<span class="sd">    object.  If the header is missing or malformed `None` is returned.</span>
+<span class="sd">    `ranges` is a list of ``(start, stop)`` tuples where the ranges are</span>
+<span class="sd">    non-inclusive.</span>
+
+<span class="sd">    .. versionadded:: 0.7</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">value</span> <span class="ow">or</span> <span class="s1">&#39;=&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">value</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">None</span>
+
+    <span class="n">ranges</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">last_end</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">units</span><span class="p">,</span> <span class="n">rng</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;=&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">units</span> <span class="o">=</span> <span class="n">units</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">rng</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">):</span>
+        <span class="n">item</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="k">if</span> <span class="s1">&#39;-&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">item</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">None</span>
+        <span class="k">if</span> <span class="n">item</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">last_end</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">None</span>
+            <span class="n">begin</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+            <span class="n">end</span> <span class="o">=</span> <span class="bp">None</span>
+            <span class="n">last_end</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="k">elif</span> <span class="s1">&#39;-&#39;</span> <span class="ow">in</span> <span class="n">item</span><span class="p">:</span>
+            <span class="n">begin</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">begin</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">begin</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">begin</span> <span class="o">&lt;</span> <span class="n">last_end</span> <span class="ow">or</span> <span class="n">last_end</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">None</span>
+            <span class="k">if</span> <span class="n">end</span><span class="p">:</span>
+                <span class="n">end</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">end</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+                <span class="k">if</span> <span class="n">begin</span> <span class="o">&gt;=</span> <span class="n">end</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="bp">None</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">end</span> <span class="o">=</span> <span class="bp">None</span>
+            <span class="n">last_end</span> <span class="o">=</span> <span class="n">end</span>
+        <span class="n">ranges</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">begin</span><span class="p">,</span> <span class="n">end</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">Range</span><span class="p">(</span><span class="n">units</span><span class="p">,</span> <span class="n">ranges</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">parse_content_range_header</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">on_update</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Parses a range header into a</span>
+<span class="sd">    :class:`~werkzeug.datastructures.ContentRange` object or `None` if</span>
+<span class="sd">    parsing is not possible.</span>
+
+<span class="sd">    .. versionadded:: 0.7</span>
+
+<span class="sd">    :param value: a content range header to be parsed.</span>
+<span class="sd">    :param on_update: an optional callable that is called every time a value</span>
+<span class="sd">                      on the :class:`~werkzeug.datastructures.ContentRange`</span>
+<span class="sd">                      object is changed.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">None</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">units</span><span class="p">,</span> <span class="n">rangedef</span> <span class="o">=</span> <span class="p">(</span><span class="n">value</span> <span class="ow">or</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">None</span>
+
+    <span class="k">if</span> <span class="s1">&#39;/&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">rangedef</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">None</span>
+    <span class="n">rng</span><span class="p">,</span> <span class="n">length</span> <span class="o">=</span> <span class="n">rangedef</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">length</span> <span class="o">==</span> <span class="s1">&#39;*&#39;</span><span class="p">:</span>
+        <span class="n">length</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="k">elif</span> <span class="n">length</span><span class="o">.</span><span class="n">isdigit</span><span class="p">():</span>
+        <span class="n">length</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">length</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">None</span>
+
+    <span class="k">if</span> <span class="n">rng</span> <span class="o">==</span> <span class="s1">&#39;*&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">ContentRange</span><span class="p">(</span><span class="n">units</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">on_update</span><span class="o">=</span><span class="n">on_update</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="s1">&#39;-&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">rng</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">None</span>
+
+    <span class="n">start</span><span class="p">,</span> <span class="n">stop</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">start</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">start</span><span class="p">)</span>
+        <span class="n">stop</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">stop</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">None</span>
+
+    <span class="k">if</span> <span class="n">is_byte_range_valid</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">,</span> <span class="n">length</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">ContentRange</span><span class="p">(</span><span class="n">units</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">on_update</span><span class="o">=</span><span class="n">on_update</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="quote_etag"><a class="viewcode-back" href="../../generated/werkzeug.quote_etag.html#werkzeug.quote_etag">[docs]</a><span class="k">def</span> <span class="nf">quote_etag</span><span class="p">(</span><span class="n">etag</span><span class="p">,</span> <span class="n">weak</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Quote an etag.</span>
+
+<span class="sd">    :param etag: the etag to quote.</span>
+<span class="sd">    :param weak: set to `True` to tag it &quot;weak&quot;.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="s1">&#39;&quot;&#39;</span> <span class="ow">in</span> <span class="n">etag</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;invalid etag&#39;</span><span class="p">)</span>
+    <span class="n">etag</span> <span class="o">=</span> <span class="s1">&#39;&quot;</span><span class="si">%s</span><span class="s1">&quot;&#39;</span> <span class="o">%</span> <span class="n">etag</span>
+    <span class="k">if</span> <span class="n">weak</span><span class="p">:</span>
+        <span class="n">etag</span> <span class="o">=</span> <span class="s1">&#39;W/&#39;</span> <span class="o">+</span> <span class="n">etag</span>
+    <span class="k">return</span> <span class="n">etag</span></div>
+
+
+<div class="viewcode-block" id="unquote_etag"><a class="viewcode-back" href="../../generated/werkzeug.unquote_etag.html#werkzeug.unquote_etag">[docs]</a><span class="k">def</span> <span class="nf">unquote_etag</span><span class="p">(</span><span class="n">etag</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Unquote a single etag:</span>
+
+<span class="sd">    &gt;&gt;&gt; unquote_etag(&#39;W/&quot;bar&quot;&#39;)</span>
+<span class="sd">    (&#39;bar&#39;, True)</span>
+<span class="sd">    &gt;&gt;&gt; unquote_etag(&#39;&quot;bar&quot;&#39;)</span>
+<span class="sd">    (&#39;bar&#39;, False)</span>
+
+<span class="sd">    :param etag: the etag identifier to unquote.</span>
+<span class="sd">    :return: a ``(etag, weak)`` tuple.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">etag</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span>
+    <span class="n">etag</span> <span class="o">=</span> <span class="n">etag</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="n">weak</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="k">if</span> <span class="n">etag</span><span class="o">.</span><span class="n">startswith</span><span class="p">((</span><span class="s1">&#39;W/&#39;</span><span class="p">,</span> <span class="s1">&#39;w/&#39;</span><span class="p">)):</span>
+        <span class="n">weak</span> <span class="o">=</span> <span class="bp">True</span>
+        <span class="n">etag</span> <span class="o">=</span> <span class="n">etag</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>
+    <span class="k">if</span> <span class="n">etag</span><span class="p">[:</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">etag</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">:]</span> <span class="o">==</span> <span class="s1">&#39;&quot;&#39;</span><span class="p">:</span>
+        <span class="n">etag</span> <span class="o">=</span> <span class="n">etag</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">etag</span><span class="p">,</span> <span class="n">weak</span></div>
+
+
+<div class="viewcode-block" id="parse_etags"><a class="viewcode-back" href="../../generated/werkzeug.parse_etags.html#werkzeug.parse_etags">[docs]</a><span class="k">def</span> <span class="nf">parse_etags</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Parse an etag header.</span>
+
+<span class="sd">    :param value: the tag header to parse</span>
+<span class="sd">    :return: an :class:`~werkzeug.datastructures.ETags` object.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">value</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">ETags</span><span class="p">()</span>
+    <span class="n">strong</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">weak</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">end</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="n">pos</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">pos</span> <span class="o">&lt;</span> <span class="n">end</span><span class="p">:</span>
+        <span class="n">match</span> <span class="o">=</span> <span class="n">_etag_re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">pos</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">match</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">break</span>
+        <span class="n">is_weak</span><span class="p">,</span> <span class="n">quoted</span><span class="p">,</span> <span class="n">raw</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">groups</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">raw</span> <span class="o">==</span> <span class="s1">&#39;*&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">ETags</span><span class="p">(</span><span class="n">star_tag</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">quoted</span><span class="p">:</span>
+            <span class="n">raw</span> <span class="o">=</span> <span class="n">quoted</span>
+        <span class="k">if</span> <span class="n">is_weak</span><span class="p">:</span>
+            <span class="n">weak</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">raw</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">strong</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">raw</span><span class="p">)</span>
+        <span class="n">pos</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">end</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">ETags</span><span class="p">(</span><span class="n">strong</span><span class="p">,</span> <span class="n">weak</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="generate_etag"><a class="viewcode-back" href="../../generated/werkzeug.generate_etag.html#werkzeug.generate_etag">[docs]</a><span class="k">def</span> <span class="nf">generate_etag</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Generate an etag for some data.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">md5</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="parse_date"><a class="viewcode-back" href="../../generated/werkzeug.parse_date.html#werkzeug.parse_date">[docs]</a><span class="k">def</span> <span class="nf">parse_date</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Parse one of the following date formats into a datetime object:</span>
+
+<span class="sd">    .. sourcecode:: text</span>
+
+<span class="sd">        Sun, 06 Nov 1994 08:49:37 GMT  ; RFC 822, updated by RFC 1123</span>
+<span class="sd">        Sunday, 06-Nov-94 08:49:37 GMT ; RFC 850, obsoleted by RFC 1036</span>
+<span class="sd">        Sun Nov  6 08:49:37 1994       ; ANSI C&#39;s asctime() format</span>
+
+<span class="sd">    If parsing fails the return value is `None`.</span>
+
+<span class="sd">    :param value: a string with a supported date format.</span>
+<span class="sd">    :return: a :class:`datetime.datetime` object.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">value</span><span class="p">:</span>
+        <span class="n">t</span> <span class="o">=</span> <span class="n">parsedate_tz</span><span class="p">(</span><span class="n">value</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+        <span class="k">if</span> <span class="n">t</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">year</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="c1"># unfortunately that function does not tell us if two digit</span>
+                <span class="c1"># years were part of the string, or if they were prefixed</span>
+                <span class="c1"># with two zeroes.  So what we do is to assume that 69-99</span>
+                <span class="c1"># refer to 1900, and everything below to 2000</span>
+                <span class="k">if</span> <span class="n">year</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">year</span> <span class="o">&lt;=</span> <span class="mi">68</span><span class="p">:</span>
+                    <span class="n">year</span> <span class="o">+=</span> <span class="mi">2000</span>
+                <span class="k">elif</span> <span class="n">year</span> <span class="o">&gt;=</span> <span class="mi">69</span> <span class="ow">and</span> <span class="n">year</span> <span class="o">&lt;=</span> <span class="mi">99</span><span class="p">:</span>
+                    <span class="n">year</span> <span class="o">+=</span> <span class="mi">1900</span>
+                <span class="k">return</span> <span class="n">datetime</span><span class="p">(</span><span class="o">*</span><span class="p">((</span><span class="n">year</span><span class="p">,)</span> <span class="o">+</span> <span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">7</span><span class="p">]))</span> <span class="o">-</span> \
+                    <span class="n">timedelta</span><span class="p">(</span><span class="n">seconds</span><span class="o">=</span><span class="n">t</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">or</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="k">except</span> <span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="ne">OverflowError</span><span class="p">):</span>
+                <span class="k">return</span> <span class="bp">None</span></div>
+
+
+<span class="k">def</span> <span class="nf">_dump_date</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">delim</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Used for `http_date` and `cookie_date`.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">d</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">d</span> <span class="o">=</span> <span class="n">gmtime</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">datetime</span><span class="p">):</span>
+        <span class="n">d</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">utctimetuple</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="p">(</span><span class="n">integer_types</span><span class="p">,</span> <span class="nb">float</span><span class="p">)):</span>
+        <span class="n">d</span> <span class="o">=</span> <span class="n">gmtime</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+    <span class="k">return</span> <span class="s1">&#39;</span><span class="si">%s</span><span class="s1">, </span><span class="si">%02d%s%s%s%s</span><span class="s1"> </span><span class="si">%02d</span><span class="s1">:</span><span class="si">%02d</span><span class="s1">:</span><span class="si">%02d</span><span class="s1"> GMT&#39;</span> <span class="o">%</span> <span class="p">(</span>
+        <span class="p">(</span><span class="s1">&#39;Mon&#39;</span><span class="p">,</span> <span class="s1">&#39;Tue&#39;</span><span class="p">,</span> <span class="s1">&#39;Wed&#39;</span><span class="p">,</span> <span class="s1">&#39;Thu&#39;</span><span class="p">,</span> <span class="s1">&#39;Fri&#39;</span><span class="p">,</span> <span class="s1">&#39;Sat&#39;</span><span class="p">,</span> <span class="s1">&#39;Sun&#39;</span><span class="p">)[</span><span class="n">d</span><span class="o">.</span><span class="n">tm_wday</span><span class="p">],</span>
+        <span class="n">d</span><span class="o">.</span><span class="n">tm_mday</span><span class="p">,</span> <span class="n">delim</span><span class="p">,</span>
+        <span class="p">(</span><span class="s1">&#39;Jan&#39;</span><span class="p">,</span> <span class="s1">&#39;Feb&#39;</span><span class="p">,</span> <span class="s1">&#39;Mar&#39;</span><span class="p">,</span> <span class="s1">&#39;Apr&#39;</span><span class="p">,</span> <span class="s1">&#39;May&#39;</span><span class="p">,</span> <span class="s1">&#39;Jun&#39;</span><span class="p">,</span> <span class="s1">&#39;Jul&#39;</span><span class="p">,</span> <span class="s1">&#39;Aug&#39;</span><span class="p">,</span> <span class="s1">&#39;Sep&#39;</span><span class="p">,</span>
+         <span class="s1">&#39;Oct&#39;</span><span class="p">,</span> <span class="s1">&#39;Nov&#39;</span><span class="p">,</span> <span class="s1">&#39;Dec&#39;</span><span class="p">)[</span><span class="n">d</span><span class="o">.</span><span class="n">tm_mon</span> <span class="o">-</span> <span class="mi">1</span><span class="p">],</span>
+        <span class="n">delim</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">tm_year</span><span class="p">),</span> <span class="n">d</span><span class="o">.</span><span class="n">tm_hour</span><span class="p">,</span> <span class="n">d</span><span class="o">.</span><span class="n">tm_min</span><span class="p">,</span> <span class="n">d</span><span class="o">.</span><span class="n">tm_sec</span>
+    <span class="p">)</span>
+
+
+<div class="viewcode-block" id="cookie_date"><a class="viewcode-back" href="../../generated/werkzeug.cookie_date.html#werkzeug.cookie_date">[docs]</a><span class="k">def</span> <span class="nf">cookie_date</span><span class="p">(</span><span class="n">expires</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Formats the time to ensure compatibility with Netscape&#39;s cookie</span>
+<span class="sd">    standard.</span>
+
+<span class="sd">    Accepts a floating point number expressed in seconds since the epoch in, a</span>
+<span class="sd">    datetime object or a timetuple.  All times in UTC.  The :func:`parse_date`</span>
+<span class="sd">    function can be used to parse such a date.</span>
+
+<span class="sd">    Outputs a string in the format ``Wdy, DD-Mon-YYYY HH:MM:SS GMT``.</span>
+
+<span class="sd">    :param expires: If provided that date is used, otherwise the current.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">_dump_date</span><span class="p">(</span><span class="n">expires</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="http_date"><a class="viewcode-back" href="../../generated/werkzeug.http_date.html#werkzeug.http_date">[docs]</a><span class="k">def</span> <span class="nf">http_date</span><span class="p">(</span><span class="n">timestamp</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Formats the time to match the RFC1123 date format.</span>
+
+<span class="sd">    Accepts a floating point number expressed in seconds since the epoch in, a</span>
+<span class="sd">    datetime object or a timetuple.  All times in UTC.  The :func:`parse_date`</span>
+<span class="sd">    function can be used to parse such a date.</span>
+
+<span class="sd">    Outputs a string in the format ``Wdy, DD Mon YYYY HH:MM:SS GMT``.</span>
+
+<span class="sd">    :param timestamp: If provided that date is used, otherwise the current.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">_dump_date</span><span class="p">(</span><span class="n">timestamp</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="is_resource_modified"><a class="viewcode-back" href="../../generated/werkzeug.is_resource_modified.html#werkzeug.is_resource_modified">[docs]</a><span class="k">def</span> <span class="nf">is_resource_modified</span><span class="p">(</span><span class="n">environ</span><span class="p">,</span> <span class="n">etag</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">last_modified</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Convenience method for conditional requests.</span>
+
+<span class="sd">    :param environ: the WSGI environment of the request to be checked.</span>
+<span class="sd">    :param etag: the etag for the response for comparison.</span>
+<span class="sd">    :param data: or alternatively the data of the response to automatically</span>
+<span class="sd">                 generate an etag using :func:`generate_etag`.</span>
+<span class="sd">    :param last_modified: an optional date of the last modification.</span>
+<span class="sd">    :return: `True` if the resource was modified, otherwise `False`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">etag</span> <span class="ow">is</span> <span class="bp">None</span> <span class="ow">and</span> <span class="n">data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">etag</span> <span class="o">=</span> <span class="n">generate_etag</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;both data and etag given&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">environ</span><span class="p">[</span><span class="s1">&#39;REQUEST_METHOD&#39;</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;HEAD&#39;</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">False</span>
+
+    <span class="n">unmodified</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">last_modified</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
+        <span class="n">last_modified</span> <span class="o">=</span> <span class="n">parse_date</span><span class="p">(</span><span class="n">last_modified</span><span class="p">)</span>
+
+    <span class="c1"># ensure that microsecond is zero because the HTTP spec does not transmit</span>
+    <span class="c1"># that either and we might have some false positives.  See issue #39</span>
+    <span class="k">if</span> <span class="n">last_modified</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">last_modified</span> <span class="o">=</span> <span class="n">last_modified</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">microsecond</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+    <span class="n">modified_since</span> <span class="o">=</span> <span class="n">parse_date</span><span class="p">(</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;HTTP_IF_MODIFIED_SINCE&#39;</span><span class="p">))</span>
+
+    <span class="k">if</span> <span class="n">modified_since</span> <span class="ow">and</span> <span class="n">last_modified</span> <span class="ow">and</span> <span class="n">last_modified</span> <span class="o">&lt;=</span> <span class="n">modified_since</span><span class="p">:</span>
+        <span class="n">unmodified</span> <span class="o">=</span> <span class="bp">True</span>
+    <span class="k">if</span> <span class="n">etag</span><span class="p">:</span>
+        <span class="n">if_none_match</span> <span class="o">=</span> <span class="n">parse_etags</span><span class="p">(</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;HTTP_IF_NONE_MATCH&#39;</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">if_none_match</span><span class="p">:</span>
+            <span class="c1"># http://tools.ietf.org/html/rfc7232#section-3.2</span>
+            <span class="c1"># &quot;A recipient MUST use the weak comparison function when comparing</span>
+            <span class="c1"># entity-tags for If-None-Match&quot;</span>
+            <span class="n">etag</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">unquote_etag</span><span class="p">(</span><span class="n">etag</span><span class="p">)</span>
+            <span class="n">unmodified</span> <span class="o">=</span> <span class="n">if_none_match</span><span class="o">.</span><span class="n">contains_weak</span><span class="p">(</span><span class="n">etag</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="ow">not</span> <span class="n">unmodified</span></div>
+
+
+<div class="viewcode-block" id="remove_entity_headers"><a class="viewcode-back" href="../../generated/werkzeug.remove_entity_headers.html#werkzeug.remove_entity_headers">[docs]</a><span class="k">def</span> <span class="nf">remove_entity_headers</span><span class="p">(</span><span class="n">headers</span><span class="p">,</span> <span class="n">allowed</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;expires&#39;</span><span class="p">,</span> <span class="s1">&#39;content-location&#39;</span><span class="p">)):</span>
+    <span class="sd">&quot;&quot;&quot;Remove all entity headers from a list or :class:`Headers` object.  This</span>
+<span class="sd">    operation works in-place.  `Expires` and `Content-Location` headers are</span>
+<span class="sd">    by default not removed.  The reason for this is :rfc:`2616` section</span>
+<span class="sd">    10.3.5 which specifies some entity headers that should be sent.</span>
+
+<span class="sd">    .. versionchanged:: 0.5</span>
+<span class="sd">       added `allowed` parameter.</span>
+
+<span class="sd">    :param headers: a list or :class:`Headers` object.</span>
+<span class="sd">    :param allowed: a list of headers that should still be allowed even though</span>
+<span class="sd">                    they are entity headers.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">allowed</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">allowed</span><span class="p">)</span>
+    <span class="n">headers</span><span class="p">[:]</span> <span class="o">=</span> <span class="p">[(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">headers</span> <span class="k">if</span>
+                  <span class="ow">not</span> <span class="n">is_entity_header</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="ow">or</span> <span class="n">key</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="n">allowed</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="remove_hop_by_hop_headers"><a class="viewcode-back" href="../../generated/werkzeug.remove_hop_by_hop_headers.html#werkzeug.remove_hop_by_hop_headers">[docs]</a><span class="k">def</span> <span class="nf">remove_hop_by_hop_headers</span><span class="p">(</span><span class="n">headers</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Remove all HTTP/1.1 &quot;Hop-by-Hop&quot; headers from a list or</span>
+<span class="sd">    :class:`Headers` object.  This operation works in-place.</span>
+
+<span class="sd">    .. versionadded:: 0.5</span>
+
+<span class="sd">    :param headers: a list or :class:`Headers` object.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">headers</span><span class="p">[:]</span> <span class="o">=</span> <span class="p">[(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">headers</span> <span class="k">if</span>
+                  <span class="ow">not</span> <span class="n">is_hop_by_hop_header</span><span class="p">(</span><span class="n">key</span><span class="p">)]</span></div>
+
+
+<div class="viewcode-block" id="is_entity_header"><a class="viewcode-back" href="../../generated/werkzeug.is_entity_header.html#werkzeug.is_entity_header">[docs]</a><span class="k">def</span> <span class="nf">is_entity_header</span><span class="p">(</span><span class="n">header</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Check if a header is an entity header.</span>
+
+<span class="sd">    .. versionadded:: 0.5</span>
+
+<span class="sd">    :param header: the header to test.</span>
+<span class="sd">    :return: `True` if it&#39;s an entity header, `False` otherwise.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">header</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="n">_entity_headers</span></div>
+
+
+<div class="viewcode-block" id="is_hop_by_hop_header"><a class="viewcode-back" href="../../generated/werkzeug.is_hop_by_hop_header.html#werkzeug.is_hop_by_hop_header">[docs]</a><span class="k">def</span> <span class="nf">is_hop_by_hop_header</span><span class="p">(</span><span class="n">header</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Check if a header is an HTTP/1.1 &quot;Hop-by-Hop&quot; header.</span>
+
+<span class="sd">    .. versionadded:: 0.5</span>
+
+<span class="sd">    :param header: the header to test.</span>
+<span class="sd">    :return: `True` if it&#39;s an entity header, `False` otherwise.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">header</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="n">_hop_by_hop_headers</span></div>
+
+
+<div class="viewcode-block" id="parse_cookie"><a class="viewcode-back" href="../../generated/werkzeug.parse_cookie.html#werkzeug.parse_cookie">[docs]</a><span class="k">def</span> <span class="nf">parse_cookie</span><span class="p">(</span><span class="n">header</span><span class="p">,</span> <span class="n">charset</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;replace&#39;</span><span class="p">,</span> <span class="n">cls</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Parse a cookie.  Either from a string or WSGI environ.</span>
+
+<span class="sd">    Per default encoding errors are ignored.  If you want a different behavior</span>
+<span class="sd">    you can set `errors` to ``&#39;replace&#39;`` or ``&#39;strict&#39;``.  In strict mode a</span>
+<span class="sd">    :exc:`HTTPUnicodeError` is raised.</span>
+
+<span class="sd">    .. versionchanged:: 0.5</span>
+<span class="sd">       This function now returns a :class:`TypeConversionDict` instead of a</span>
+<span class="sd">       regular dict.  The `cls` parameter was added.</span>
+
+<span class="sd">    :param header: the header to be used to parse the cookie.  Alternatively</span>
+<span class="sd">                   this can be a WSGI environment.</span>
+<span class="sd">    :param charset: the charset for the cookie values.</span>
+<span class="sd">    :param errors: the error behavior for the charset decoding.</span>
+<span class="sd">    :param cls: an optional dict class to use.  If this is not specified</span>
+<span class="sd">                       or `None` the default :class:`TypeConversionDict` is</span>
+<span class="sd">                       used.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">header</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+        <span class="n">header</span> <span class="o">=</span> <span class="n">header</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;HTTP_COOKIE&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">header</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">header</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+
+    <span class="c1"># If the value is an unicode string it&#39;s mangled through latin1.  This</span>
+    <span class="c1"># is done because on PEP 3333 on Python 3 all headers are assumed latin1</span>
+    <span class="c1"># which however is incorrect for cookies, which are sent in page encoding.</span>
+    <span class="c1"># As a result we</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">header</span><span class="p">,</span> <span class="n">text_type</span><span class="p">):</span>
+        <span class="n">header</span> <span class="o">=</span> <span class="n">header</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;latin1&#39;</span><span class="p">,</span> <span class="s1">&#39;replace&#39;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">cls</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">cls</span> <span class="o">=</span> <span class="n">TypeConversionDict</span>
+
+    <span class="k">def</span> <span class="nf">_parse_pairs</span><span class="p">():</span>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">_cookie_parse_impl</span><span class="p">(</span><span class="n">header</span><span class="p">):</span>
+            <span class="n">key</span> <span class="o">=</span> <span class="n">to_unicode</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">charset</span><span class="p">,</span> <span class="n">errors</span><span class="p">,</span> <span class="n">allow_none_charset</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+            <span class="n">val</span> <span class="o">=</span> <span class="n">to_unicode</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">charset</span><span class="p">,</span> <span class="n">errors</span><span class="p">,</span> <span class="n">allow_none_charset</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+            <span class="k">yield</span> <span class="n">try_coerce_native</span><span class="p">(</span><span class="n">key</span><span class="p">),</span> <span class="n">val</span>
+
+    <span class="k">return</span> <span class="n">cls</span><span class="p">(</span><span class="n">_parse_pairs</span><span class="p">())</span></div>
+
+
+<div class="viewcode-block" id="dump_cookie"><a class="viewcode-back" href="../../generated/werkzeug.dump_cookie.html#werkzeug.dump_cookie">[docs]</a><span class="k">def</span> <span class="nf">dump_cookie</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">max_age</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">expires</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="s1">&#39;/&#39;</span><span class="p">,</span>
+                <span class="n">domain</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">secure</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">httponly</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                <span class="n">charset</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">sync_expires</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Creates a new Set-Cookie header without the ``Set-Cookie`` prefix</span>
+<span class="sd">    The parameters are the same as in the cookie Morsel object in the</span>
+<span class="sd">    Python standard library but it accepts unicode data, too.</span>
+
+<span class="sd">    On Python 3 the return value of this function will be a unicode</span>
+<span class="sd">    string, on Python 2 it will be a native string.  In both cases the</span>
+<span class="sd">    return value is usually restricted to ascii as the vast majority of</span>
+<span class="sd">    values are properly escaped, but that is no guarantee.  If a unicode</span>
+<span class="sd">    string is returned it&#39;s tunneled through latin1 as required by</span>
+<span class="sd">    PEP 3333.</span>
+
+<span class="sd">    The return value is not ASCII safe if the key contains unicode</span>
+<span class="sd">    characters.  This is technically against the specification but</span>
+<span class="sd">    happens in the wild.  It&#39;s strongly recommended to not use</span>
+<span class="sd">    non-ASCII values for the keys.</span>
+
+<span class="sd">    :param max_age: should be a number of seconds, or `None` (default) if</span>
+<span class="sd">                    the cookie should last only as long as the client&#39;s</span>
+<span class="sd">                    browser session.  Additionally `timedelta` objects</span>
+<span class="sd">                    are accepted, too.</span>
+<span class="sd">    :param expires: should be a `datetime` object or unix timestamp.</span>
+<span class="sd">    :param path: limits the cookie to a given path, per default it will</span>
+<span class="sd">                 span the whole domain.</span>
+<span class="sd">    :param domain: Use this if you want to set a cross-domain cookie. For</span>
+<span class="sd">                   example, ``domain=&quot;.example.com&quot;`` will set a cookie</span>
+<span class="sd">                   that is readable by the domain ``www.example.com``,</span>
+<span class="sd">                   ``foo.example.com`` etc. Otherwise, a cookie will only</span>
+<span class="sd">                   be readable by the domain that set it.</span>
+<span class="sd">    :param secure: The cookie will only be available via HTTPS</span>
+<span class="sd">    :param httponly: disallow JavaScript to access the cookie.  This is an</span>
+<span class="sd">                     extension to the cookie standard and probably not</span>
+<span class="sd">                     supported by all browsers.</span>
+<span class="sd">    :param charset: the encoding for unicode values.</span>
+<span class="sd">    :param sync_expires: automatically set expires if max_age is defined</span>
+<span class="sd">                         but expires not.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="n">to_bytes</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">charset</span><span class="p">)</span>
+    <span class="n">value</span> <span class="o">=</span> <span class="n">to_bytes</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">charset</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">path</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="n">iri_to_uri</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">charset</span><span class="p">)</span>
+    <span class="n">domain</span> <span class="o">=</span> <span class="n">_make_cookie_domain</span><span class="p">(</span><span class="n">domain</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">max_age</span><span class="p">,</span> <span class="n">timedelta</span><span class="p">):</span>
+        <span class="n">max_age</span> <span class="o">=</span> <span class="p">(</span><span class="n">max_age</span><span class="o">.</span><span class="n">days</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">24</span><span class="p">)</span> <span class="o">+</span> <span class="n">max_age</span><span class="o">.</span><span class="n">seconds</span>
+    <span class="k">if</span> <span class="n">expires</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">expires</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
+            <span class="n">expires</span> <span class="o">=</span> <span class="n">cookie_date</span><span class="p">(</span><span class="n">expires</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">max_age</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span> <span class="ow">and</span> <span class="n">sync_expires</span><span class="p">:</span>
+        <span class="n">expires</span> <span class="o">=</span> <span class="n">to_bytes</span><span class="p">(</span><span class="n">cookie_date</span><span class="p">(</span><span class="n">time</span><span class="p">()</span> <span class="o">+</span> <span class="n">max_age</span><span class="p">))</span>
+
+    <span class="n">buf</span> <span class="o">=</span> <span class="p">[</span><span class="n">key</span> <span class="o">+</span> <span class="n">b</span><span class="s1">&#39;=&#39;</span> <span class="o">+</span> <span class="n">_cookie_quote</span><span class="p">(</span><span class="n">value</span><span class="p">)]</span>
+
+    <span class="c1"># XXX: In theory all of these parameters that are not marked with `None`</span>
+    <span class="c1"># should be quoted.  Because stdlib did not quote it before I did not</span>
+    <span class="c1"># want to introduce quoting there now.</span>
+    <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">q</span> <span class="ow">in</span> <span class="p">((</span><span class="n">b</span><span class="s1">&#39;Domain&#39;</span><span class="p">,</span> <span class="n">domain</span><span class="p">,</span> <span class="bp">True</span><span class="p">),</span>
+                    <span class="p">(</span><span class="n">b</span><span class="s1">&#39;Expires&#39;</span><span class="p">,</span> <span class="n">expires</span><span class="p">,</span> <span class="bp">False</span><span class="p">,),</span>
+                    <span class="p">(</span><span class="n">b</span><span class="s1">&#39;Max-Age&#39;</span><span class="p">,</span> <span class="n">max_age</span><span class="p">,</span> <span class="bp">False</span><span class="p">),</span>
+                    <span class="p">(</span><span class="n">b</span><span class="s1">&#39;Secure&#39;</span><span class="p">,</span> <span class="n">secure</span><span class="p">,</span> <span class="bp">None</span><span class="p">),</span>
+                    <span class="p">(</span><span class="n">b</span><span class="s1">&#39;HttpOnly&#39;</span><span class="p">,</span> <span class="n">httponly</span><span class="p">,</span> <span class="bp">None</span><span class="p">),</span>
+                    <span class="p">(</span><span class="n">b</span><span class="s1">&#39;Path&#39;</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="bp">False</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">q</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">v</span><span class="p">:</span>
+                <span class="n">buf</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+            <span class="k">continue</span>
+
+        <span class="k">if</span> <span class="n">v</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">continue</span>
+
+        <span class="n">tmp</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="p">(</span><span class="nb">bytes</span><span class="p">,</span> <span class="nb">bytearray</span><span class="p">)):</span>
+            <span class="n">v</span> <span class="o">=</span> <span class="n">to_bytes</span><span class="p">(</span><span class="n">text_type</span><span class="p">(</span><span class="n">v</span><span class="p">),</span> <span class="n">charset</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">q</span><span class="p">:</span>
+            <span class="n">v</span> <span class="o">=</span> <span class="n">_cookie_quote</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+        <span class="n">tmp</span> <span class="o">+=</span> <span class="n">b</span><span class="s1">&#39;=&#39;</span> <span class="o">+</span> <span class="n">v</span>
+        <span class="n">buf</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">bytes</span><span class="p">(</span><span class="n">tmp</span><span class="p">))</span>
+
+    <span class="c1"># The return value will be an incorrectly encoded latin1 header on</span>
+    <span class="c1"># Python 3 for consistency with the headers object and a bytestring</span>
+    <span class="c1"># on Python 2 because that&#39;s how the API makes more sense.</span>
+    <span class="n">rv</span> <span class="o">=</span> <span class="n">b</span><span class="s1">&#39;; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">buf</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">PY2</span><span class="p">:</span>
+        <span class="n">rv</span> <span class="o">=</span> <span class="n">rv</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;latin1&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">rv</span></div>
+
+
+<span class="k">def</span> <span class="nf">is_byte_range_valid</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">,</span> <span class="n">length</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Checks if a given byte content range is valid for the given length.</span>
+
+<span class="sd">    .. versionadded:: 0.7</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">start</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">)</span> <span class="o">!=</span> <span class="p">(</span><span class="n">stop</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">False</span>
+    <span class="k">elif</span> <span class="n">start</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">length</span> <span class="ow">is</span> <span class="bp">None</span> <span class="ow">or</span> <span class="n">length</span> <span class="o">&gt;=</span> <span class="mi">0</span>
+    <span class="k">elif</span> <span class="n">length</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">start</span> <span class="o">&lt;</span> <span class="n">stop</span>
+    <span class="k">elif</span> <span class="n">start</span> <span class="o">&gt;=</span> <span class="n">stop</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">False</span>
+    <span class="k">return</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">start</span> <span class="o">&lt;</span> <span class="n">length</span>
+
+
+<span class="c1"># circular dependency fun</span>
+<span class="kn">from</span> <span class="nn">werkzeug.datastructures</span> <span class="kn">import</span> <span class="n">Accept</span><span class="p">,</span> <span class="n">HeaderSet</span><span class="p">,</span> <span class="n">ETags</span><span class="p">,</span> <span class="n">Authorization</span><span class="p">,</span> \
+    <span class="n">WWWAuthenticate</span><span class="p">,</span> <span class="n">TypeConversionDict</span><span class="p">,</span> <span class="n">IfRange</span><span class="p">,</span> <span class="n">Range</span><span class="p">,</span> <span class="n">ContentRange</span><span class="p">,</span> \
+    <span class="n">RequestCacheControl</span>
+
+
+<span class="c1"># DEPRECATED</span>
+<span class="c1"># backwards compatible imports</span>
+<span class="kn">from</span> <span class="nn">werkzeug.datastructures</span> <span class="kn">import</span> <span class="p">(</span>  <span class="c1"># noqa</span>
+    <span class="n">MIMEAccept</span><span class="p">,</span> <span class="n">CharsetAccept</span><span class="p">,</span> <span class="n">LanguageAccept</span><span class="p">,</span> <span class="n">Headers</span>
+<span class="p">)</span>
+<span class="kn">from</span> <span class="nn">werkzeug.urls</span> <span class="kn">import</span> <span class="n">iri_to_uri</span>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/copybutton.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

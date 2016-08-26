@@ -1,0 +1,6 @@
+werkzeug.CharsetAccept.to_header
+================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: CharsetAccept.to_header

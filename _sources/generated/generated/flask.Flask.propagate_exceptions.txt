@@ -1,0 +1,6 @@
+flask.Flask.propagate_exceptions
+================================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Flask.propagate_exceptions

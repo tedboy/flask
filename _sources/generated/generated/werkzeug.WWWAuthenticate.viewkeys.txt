@@ -1,0 +1,6 @@
+werkzeug.WWWAuthenticate.viewkeys
+=================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: WWWAuthenticate.viewkeys

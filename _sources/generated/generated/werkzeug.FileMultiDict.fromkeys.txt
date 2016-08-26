@@ -1,0 +1,6 @@
+werkzeug.FileMultiDict.fromkeys
+===============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: FileMultiDict.fromkeys

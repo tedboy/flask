@@ -1,0 +1,6 @@
+werkzeug.TypeConversionDict.pop
+===============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: TypeConversionDict.pop

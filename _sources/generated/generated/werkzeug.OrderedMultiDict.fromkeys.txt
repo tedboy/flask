@@ -1,0 +1,6 @@
+werkzeug.OrderedMultiDict.fromkeys
+==================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: OrderedMultiDict.fromkeys

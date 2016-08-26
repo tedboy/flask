@@ -1,0 +1,6 @@
+werkzeug.BaseRequest.cookies
+============================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: BaseRequest.cookies

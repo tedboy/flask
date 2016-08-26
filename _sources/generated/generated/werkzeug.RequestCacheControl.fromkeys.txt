@@ -1,0 +1,6 @@
+werkzeug.RequestCacheControl.fromkeys
+=====================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: RequestCacheControl.fromkeys

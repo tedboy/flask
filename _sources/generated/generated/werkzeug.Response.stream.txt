@@ -1,0 +1,6 @@
+werkzeug.Response.stream
+========================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Response.stream

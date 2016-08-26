@@ -1,0 +1,6 @@
+flask.Config.from_pyfile
+========================
+
+.. currentmodule:: flask
+
+.. automethod:: Config.from_pyfile

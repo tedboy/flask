@@ -1,0 +1,6 @@
+flask.Response.get_wsgi_headers
+===============================
+
+.. currentmodule:: flask
+
+.. automethod:: Response.get_wsgi_headers

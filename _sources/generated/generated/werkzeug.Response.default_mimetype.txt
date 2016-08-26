@@ -1,0 +1,6 @@
+werkzeug.Response.default_mimetype
+==================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Response.default_mimetype

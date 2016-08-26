@@ -1,0 +1,6 @@
+flask.Config.get_namespace
+==========================
+
+.. currentmodule:: flask
+
+.. automethod:: Config.get_namespace

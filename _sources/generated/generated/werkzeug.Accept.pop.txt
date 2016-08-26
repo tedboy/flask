@@ -1,0 +1,6 @@
+werkzeug.Accept.pop
+===================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Accept.pop

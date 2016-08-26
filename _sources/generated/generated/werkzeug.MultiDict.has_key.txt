@@ -1,0 +1,6 @@
+werkzeug.MultiDict.has_key
+==========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: MultiDict.has_key

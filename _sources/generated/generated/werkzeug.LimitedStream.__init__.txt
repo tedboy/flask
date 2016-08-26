@@ -1,0 +1,6 @@
+werkzeug.LimitedStream.__init__
+===============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: LimitedStream.__init__

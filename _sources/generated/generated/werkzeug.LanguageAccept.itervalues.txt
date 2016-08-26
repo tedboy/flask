@@ -1,0 +1,6 @@
+werkzeug.LanguageAccept.itervalues
+==================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: LanguageAccept.itervalues

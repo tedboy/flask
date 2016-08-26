@@ -1,0 +1,6 @@
+flask.Session.new
+=================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Session.new

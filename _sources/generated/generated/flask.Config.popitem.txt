@@ -1,0 +1,6 @@
+flask.Config.popitem
+====================
+
+.. currentmodule:: flask
+
+.. automethod:: Config.popitem

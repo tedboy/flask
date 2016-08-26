@@ -1,0 +1,6 @@
+flask.Blueprint.warn_on_modifications
+=====================================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Blueprint.warn_on_modifications

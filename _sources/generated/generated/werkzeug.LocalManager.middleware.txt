@@ -1,0 +1,6 @@
+werkzeug.LocalManager.middleware
+================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: LocalManager.middleware

@@ -1,0 +1,6 @@
+werkzeug.cached_property.deleter
+================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: cached_property.deleter

@@ -1,0 +1,6 @@
+werkzeug.ETagResponseMixin.add_etag
+===================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ETagResponseMixin.add_etag

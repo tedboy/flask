@@ -1,0 +1,6 @@
+werkzeug.LimitedStream.tell
+===========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: LimitedStream.tell

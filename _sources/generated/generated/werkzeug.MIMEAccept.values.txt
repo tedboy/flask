@@ -1,0 +1,6 @@
+werkzeug.MIMEAccept.values
+==========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: MIMEAccept.values

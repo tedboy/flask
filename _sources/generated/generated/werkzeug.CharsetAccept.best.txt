@@ -1,0 +1,6 @@
+werkzeug.CharsetAccept.best
+===========================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: CharsetAccept.best

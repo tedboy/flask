@@ -1,0 +1,6 @@
+werkzeug.ImmutableTypeConversionDict.get
+========================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ImmutableTypeConversionDict.get

@@ -1,0 +1,6 @@
+flask.after_this_request
+========================
+
+.. currentmodule:: flask
+
+.. autofunction:: after_this_request

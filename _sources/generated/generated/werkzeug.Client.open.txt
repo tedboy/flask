@@ -1,0 +1,6 @@
+werkzeug.Client.open
+====================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Client.open

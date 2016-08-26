@@ -1,0 +1,6 @@
+werkzeug.Authorization.pop
+==========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Authorization.pop

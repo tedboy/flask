@@ -1,0 +1,6 @@
+werkzeug.Headers.setdefault
+===========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Headers.setdefault

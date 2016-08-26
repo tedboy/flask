@@ -1,0 +1,6 @@
+flask.Blueprint.jinja_loader
+============================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Blueprint.jinja_loader

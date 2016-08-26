@@ -1,0 +1,6 @@
+werkzeug.ResponseCacheControl.to_header
+=======================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ResponseCacheControl.to_header

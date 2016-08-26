@@ -1,0 +1,6 @@
+werkzeug.BaseRequest.encoding_errors
+====================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: BaseRequest.encoding_errors

@@ -1,0 +1,6 @@
+flask.copy_current_request_context
+==================================
+
+.. currentmodule:: flask
+
+.. autofunction:: copy_current_request_context

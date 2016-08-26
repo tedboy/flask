@@ -1,0 +1,6 @@
+werkzeug.EnvironBuilder.content_length
+======================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: EnvironBuilder.content_length

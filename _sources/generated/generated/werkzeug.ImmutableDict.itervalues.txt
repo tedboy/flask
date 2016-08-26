@@ -1,0 +1,6 @@
+werkzeug.ImmutableDict.itervalues
+=================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ImmutableDict.itervalues

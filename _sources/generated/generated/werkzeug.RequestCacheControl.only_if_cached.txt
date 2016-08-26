@@ -1,0 +1,6 @@
+werkzeug.RequestCacheControl.only_if_cached
+===========================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: RequestCacheControl.only_if_cached

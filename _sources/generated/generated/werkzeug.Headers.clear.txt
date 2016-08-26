@@ -1,0 +1,6 @@
+werkzeug.Headers.clear
+======================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Headers.clear

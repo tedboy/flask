@@ -1,0 +1,6 @@
+werkzeug.CommonResponseDescriptorsMixin.age
+===========================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: CommonResponseDescriptorsMixin.age

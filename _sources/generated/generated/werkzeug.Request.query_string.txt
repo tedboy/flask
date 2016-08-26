@@ -1,0 +1,6 @@
+werkzeug.Request.query_string
+=============================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Request.query_string

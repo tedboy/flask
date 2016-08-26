@@ -1,0 +1,57 @@
+werkzeug.WWWAuthenticate
+========================
+.. currentmodule:: werkzeug
+.. autoclass:: WWWAuthenticate
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~WWWAuthenticate.__init__
+   ~WWWAuthenticate.auth_property
+   ~WWWAuthenticate.clear
+   ~WWWAuthenticate.copy
+   ~WWWAuthenticate.fromkeys
+   ~WWWAuthenticate.get
+   ~WWWAuthenticate.has_key
+   ~WWWAuthenticate.items
+   ~WWWAuthenticate.iteritems
+   ~WWWAuthenticate.iterkeys
+   ~WWWAuthenticate.itervalues
+   ~WWWAuthenticate.keys
+   ~WWWAuthenticate.pop
+   ~WWWAuthenticate.popitem
+   ~WWWAuthenticate.set_basic
+   ~WWWAuthenticate.set_digest
+   ~WWWAuthenticate.setdefault
+   ~WWWAuthenticate.to_header
+   ~WWWAuthenticate.update
+   ~WWWAuthenticate.values
+   ~WWWAuthenticate.viewitems
+   ~WWWAuthenticate.viewkeys
+   ~WWWAuthenticate.viewvalues
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~WWWAuthenticate.algorithm
+   ~WWWAuthenticate.domain
+   ~WWWAuthenticate.nonce
+   ~WWWAuthenticate.on_update
+   ~WWWAuthenticate.opaque
+   ~WWWAuthenticate.qop
+   ~WWWAuthenticate.realm
+   ~WWWAuthenticate.stale
+   ~WWWAuthenticate.type
+

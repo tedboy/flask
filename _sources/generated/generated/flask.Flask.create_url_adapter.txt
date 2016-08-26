@@ -1,0 +1,6 @@
+flask.Flask.create_url_adapter
+==============================
+
+.. currentmodule:: flask
+
+.. automethod:: Flask.create_url_adapter

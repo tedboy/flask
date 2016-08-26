@@ -1,0 +1,6 @@
+werkzeug.ResponseCacheControl.clear
+===================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ResponseCacheControl.clear

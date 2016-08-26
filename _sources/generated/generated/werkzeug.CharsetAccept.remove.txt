@@ -1,0 +1,6 @@
+werkzeug.CharsetAccept.remove
+=============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: CharsetAccept.remove

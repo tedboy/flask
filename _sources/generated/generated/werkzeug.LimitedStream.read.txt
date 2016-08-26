@@ -1,0 +1,6 @@
+werkzeug.LimitedStream.read
+===========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: LimitedStream.read

@@ -1,0 +1,6 @@
+werkzeug.ImmutableList.index
+============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ImmutableList.index

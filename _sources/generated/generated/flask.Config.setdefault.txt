@@ -1,0 +1,6 @@
+flask.Config.setdefault
+=======================
+
+.. currentmodule:: flask
+
+.. automethod:: Config.setdefault

@@ -1,0 +1,6 @@
+flask.Response.location
+=======================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Response.location

@@ -1,0 +1,6 @@
+werkzeug.ImmutableDict.viewitems
+================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ImmutableDict.viewitems

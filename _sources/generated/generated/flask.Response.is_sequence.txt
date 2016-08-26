@@ -1,0 +1,6 @@
+flask.Response.is_sequence
+==========================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Response.is_sequence

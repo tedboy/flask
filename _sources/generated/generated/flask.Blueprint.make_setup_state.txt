@@ -1,0 +1,6 @@
+flask.Blueprint.make_setup_state
+================================
+
+.. currentmodule:: flask
+
+.. automethod:: Blueprint.make_setup_state

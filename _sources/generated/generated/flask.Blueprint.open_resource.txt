@@ -1,0 +1,6 @@
+flask.Blueprint.open_resource
+=============================
+
+.. currentmodule:: flask
+
+.. automethod:: Blueprint.open_resource

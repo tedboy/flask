@@ -1,0 +1,6 @@
+werkzeug.Accept.remove
+======================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Accept.remove

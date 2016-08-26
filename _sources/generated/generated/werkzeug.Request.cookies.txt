@@ -1,0 +1,6 @@
+werkzeug.Request.cookies
+========================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Request.cookies

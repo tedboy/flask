@@ -1,0 +1,6 @@
+flask.Request.get_data
+======================
+
+.. currentmodule:: flask
+
+.. automethod:: Request.get_data

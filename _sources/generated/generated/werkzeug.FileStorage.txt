@@ -1,0 +1,32 @@
+werkzeug.FileStorage
+====================
+.. currentmodule:: werkzeug
+.. autoclass:: FileStorage
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~FileStorage.__init__
+   ~FileStorage.close
+   ~FileStorage.save
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~FileStorage.content_length
+   ~FileStorage.content_type
+   ~FileStorage.mimetype
+   ~FileStorage.mimetype_params
+

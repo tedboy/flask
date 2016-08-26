@@ -1,0 +1,6 @@
+werkzeug.LanguageAccept.best_match
+==================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: LanguageAccept.best_match

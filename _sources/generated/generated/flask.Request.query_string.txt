@@ -1,0 +1,6 @@
+flask.Request.query_string
+==========================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Request.query_string

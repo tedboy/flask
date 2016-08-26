@@ -1,0 +1,6 @@
+werkzeug.CharsetAccept.reverse
+==============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: CharsetAccept.reverse

@@ -1,0 +1,6 @@
+werkzeug.LanguageAccept.reverse
+===============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: LanguageAccept.reverse

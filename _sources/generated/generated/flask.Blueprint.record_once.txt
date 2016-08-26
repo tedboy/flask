@@ -1,0 +1,6 @@
+flask.Blueprint.record_once
+===========================
+
+.. currentmodule:: flask
+
+.. automethod:: Blueprint.record_once

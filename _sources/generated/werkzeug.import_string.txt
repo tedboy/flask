@@ -1,0 +1,6 @@
+werkzeug.import_string
+======================
+
+.. currentmodule:: werkzeug
+
+.. autofunction:: import_string

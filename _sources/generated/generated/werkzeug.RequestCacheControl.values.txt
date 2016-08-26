@@ -1,0 +1,6 @@
+werkzeug.RequestCacheControl.values
+===================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: RequestCacheControl.values

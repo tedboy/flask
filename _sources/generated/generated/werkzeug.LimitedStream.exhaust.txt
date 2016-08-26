@@ -1,0 +1,6 @@
+werkzeug.LimitedStream.exhaust
+==============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: LimitedStream.exhaust

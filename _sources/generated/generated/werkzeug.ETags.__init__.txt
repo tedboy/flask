@@ -1,0 +1,6 @@
+werkzeug.ETags.__init__
+=======================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ETags.__init__

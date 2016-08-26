@@ -1,0 +1,6 @@
+werkzeug.LocalManager.get_ident
+===============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: LocalManager.get_ident

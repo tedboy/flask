@@ -1,0 +1,6 @@
+werkzeug.Response.freeze
+========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Response.freeze

@@ -1,0 +1,6 @@
+werkzeug.Authorization.keys
+===========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Authorization.keys

@@ -1,0 +1,6 @@
+werkzeug.CharsetAccept.count
+============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: CharsetAccept.count

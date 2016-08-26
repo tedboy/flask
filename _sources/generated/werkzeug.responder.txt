@@ -1,0 +1,6 @@
+werkzeug.responder
+==================
+
+.. currentmodule:: werkzeug
+
+.. autofunction:: responder

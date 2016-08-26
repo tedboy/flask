@@ -1,0 +1,6 @@
+werkzeug.Request.if_unmodified_since
+====================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Request.if_unmodified_since

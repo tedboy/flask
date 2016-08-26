@@ -1,0 +1,6 @@
+flask.Flask.send_static_file
+============================
+
+.. currentmodule:: flask
+
+.. automethod:: Flask.send_static_file

@@ -1,0 +1,6 @@
+flask.Request.script_root
+=========================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Request.script_root

@@ -1,0 +1,6 @@
+werkzeug.CharsetAccept.find
+===========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: CharsetAccept.find

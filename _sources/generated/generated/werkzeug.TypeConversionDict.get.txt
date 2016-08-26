@@ -1,0 +1,6 @@
+werkzeug.TypeConversionDict.get
+===============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: TypeConversionDict.get

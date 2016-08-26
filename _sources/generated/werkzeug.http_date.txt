@@ -1,0 +1,6 @@
+werkzeug.http_date
+==================
+
+.. currentmodule:: werkzeug
+
+.. autofunction:: http_date

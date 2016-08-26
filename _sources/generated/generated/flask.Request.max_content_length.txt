@@ -1,0 +1,6 @@
+flask.Request.max_content_length
+================================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Request.max_content_length

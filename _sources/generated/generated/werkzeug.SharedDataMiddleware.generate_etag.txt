@@ -1,0 +1,6 @@
+werkzeug.SharedDataMiddleware.generate_etag
+===========================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: SharedDataMiddleware.generate_etag

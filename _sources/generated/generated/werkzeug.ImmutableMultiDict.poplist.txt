@@ -1,0 +1,6 @@
+werkzeug.ImmutableMultiDict.poplist
+===================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ImmutableMultiDict.poplist

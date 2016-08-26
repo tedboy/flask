@@ -1,0 +1,6 @@
+werkzeug.Response.last_modified
+===============================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Response.last_modified

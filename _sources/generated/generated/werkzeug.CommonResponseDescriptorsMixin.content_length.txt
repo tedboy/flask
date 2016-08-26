@@ -1,0 +1,6 @@
+werkzeug.CommonResponseDescriptorsMixin.content_length
+======================================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: CommonResponseDescriptorsMixin.content_length

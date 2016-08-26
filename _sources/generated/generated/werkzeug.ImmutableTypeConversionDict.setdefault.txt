@@ -1,0 +1,6 @@
+werkzeug.ImmutableTypeConversionDict.setdefault
+===============================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ImmutableTypeConversionDict.setdefault

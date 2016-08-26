@@ -1,0 +1,6 @@
+werkzeug.Accept.index
+=====================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Accept.index

@@ -1,0 +1,6 @@
+werkzeug.OrderedMultiDict.setdefault
+====================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: OrderedMultiDict.setdefault

@@ -1,0 +1,6 @@
+werkzeug.CallbackDict.iteritems
+===============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: CallbackDict.iteritems

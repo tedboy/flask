@@ -1,0 +1,6 @@
+flask.make_response
+===================
+
+.. currentmodule:: flask
+
+.. autofunction:: make_response

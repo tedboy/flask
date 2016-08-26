@@ -1,0 +1,6 @@
+werkzeug.run_simple
+===================
+
+.. currentmodule:: werkzeug
+
+.. autofunction:: run_simple

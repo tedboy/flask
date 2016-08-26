@@ -1,0 +1,6 @@
+werkzeug.BaseRequest.is_xhr
+===========================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: BaseRequest.is_xhr

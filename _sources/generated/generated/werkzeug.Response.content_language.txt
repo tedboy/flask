@@ -1,0 +1,6 @@
+werkzeug.Response.content_language
+==================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Response.content_language

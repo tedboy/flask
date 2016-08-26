@@ -1,0 +1,49 @@
+werkzeug.CombinedMultiDict
+==========================
+.. currentmodule:: werkzeug
+.. autoclass:: CombinedMultiDict
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~CombinedMultiDict.__init__
+   ~CombinedMultiDict.add
+   ~CombinedMultiDict.clear
+   ~CombinedMultiDict.copy
+   ~CombinedMultiDict.deepcopy
+   ~CombinedMultiDict.fromkeys
+   ~CombinedMultiDict.get
+   ~CombinedMultiDict.getlist
+   ~CombinedMultiDict.has_key
+   ~CombinedMultiDict.items
+   ~CombinedMultiDict.iteritems
+   ~CombinedMultiDict.iterkeys
+   ~CombinedMultiDict.iterlists
+   ~CombinedMultiDict.iterlistvalues
+   ~CombinedMultiDict.itervalues
+   ~CombinedMultiDict.keys
+   ~CombinedMultiDict.lists
+   ~CombinedMultiDict.listvalues
+   ~CombinedMultiDict.pop
+   ~CombinedMultiDict.popitem
+   ~CombinedMultiDict.popitemlist
+   ~CombinedMultiDict.poplist
+   ~CombinedMultiDict.setdefault
+   ~CombinedMultiDict.setlist
+   ~CombinedMultiDict.setlistdefault
+   ~CombinedMultiDict.to_dict
+   ~CombinedMultiDict.update
+   ~CombinedMultiDict.values
+   ~CombinedMultiDict.viewitems
+   ~CombinedMultiDict.viewkeys
+   ~CombinedMultiDict.viewvalues
+
+
+
+
+

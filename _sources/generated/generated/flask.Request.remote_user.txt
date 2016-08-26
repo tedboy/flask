@@ -1,0 +1,6 @@
+flask.Request.remote_user
+=========================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Request.remote_user

@@ -1,0 +1,6 @@
+werkzeug.MIMEAccept.find
+========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: MIMEAccept.find

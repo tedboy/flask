@@ -1,0 +1,36 @@
+werkzeug.DebuggedApplication
+============================
+.. currentmodule:: werkzeug
+.. autoclass:: DebuggedApplication
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~DebuggedApplication.__init__
+   ~DebuggedApplication.check_pin_trust
+   ~DebuggedApplication.debug_application
+   ~DebuggedApplication.display_console
+   ~DebuggedApplication.execute_command
+   ~DebuggedApplication.get_resource
+   ~DebuggedApplication.log_pin_request
+   ~DebuggedApplication.paste_traceback
+   ~DebuggedApplication.pin_auth
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~DebuggedApplication.pin
+   ~DebuggedApplication.pin_cookie_name
+

@@ -1,0 +1,6 @@
+werkzeug.ResponseCacheControl.has_key
+=====================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ResponseCacheControl.has_key

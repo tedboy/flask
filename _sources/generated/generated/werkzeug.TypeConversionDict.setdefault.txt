@@ -1,0 +1,6 @@
+werkzeug.TypeConversionDict.setdefault
+======================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: TypeConversionDict.setdefault

@@ -1,0 +1,6 @@
+werkzeug.ImmutableOrderedMultiDict.itervalues
+=============================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ImmutableOrderedMultiDict.itervalues

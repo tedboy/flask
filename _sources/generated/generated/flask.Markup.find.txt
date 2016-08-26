@@ -1,0 +1,6 @@
+flask.Markup.find
+=================
+
+.. currentmodule:: flask
+
+.. automethod:: Markup.find

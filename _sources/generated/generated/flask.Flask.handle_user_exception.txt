@@ -1,0 +1,6 @@
+flask.Flask.handle_user_exception
+=================================
+
+.. currentmodule:: flask
+
+.. automethod:: Flask.handle_user_exception

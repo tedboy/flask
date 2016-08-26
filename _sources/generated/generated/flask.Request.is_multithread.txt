@@ -1,0 +1,6 @@
+flask.Request.is_multithread
+============================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Request.is_multithread

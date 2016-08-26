@@ -1,0 +1,6 @@
+werkzeug.LanguageAccept.values
+==============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: LanguageAccept.values

@@ -1,0 +1,6 @@
+flask.Response.status_code
+==========================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Response.status_code

@@ -1,0 +1,6 @@
+werkzeug.Client.head
+====================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Client.head

@@ -1,0 +1,6 @@
+werkzeug.Response.get_data
+==========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Response.get_data

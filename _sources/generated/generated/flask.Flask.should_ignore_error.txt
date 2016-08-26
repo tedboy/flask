@@ -1,0 +1,6 @@
+flask.Flask.should_ignore_error
+===============================
+
+.. currentmodule:: flask
+
+.. automethod:: Flask.should_ignore_error

@@ -1,0 +1,1140 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>17. Command Line Interface &mdash; Flask API</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Flask API" href="index.html"/>
+        <link rel="up" title="Flask doc materials" href="flask_doc.html"/>
+        <link rel="next" title="18. Development Server" href="flask_doc.server.html"/>
+        <link rel="prev" title="16. Flask Extensions" href="flask_doc.extensions.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Flask API
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="flask_doc.html">Flask doc materials</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="flask_doc.foreword.html">1. Foreword</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.foreword.html#what-does-micro-mean">1.1. What does &#8220;micro&#8221; mean?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.foreword.html#configuration-and-conventions">1.2. Configuration and Conventions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.foreword.html#growing-with-flask">1.3. Growing with Flask</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="flask_doc.advanced_foreword.html">2. Foreword for Experienced Programmers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.advanced_foreword.html#thread-locals-in-flask">2.1. Thread-Locals in Flask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.advanced_foreword.html#develop-for-the-web-with-caution">2.2. Develop for the Web with Caution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.advanced_foreword.html#python-3-support-in-flask">2.3. Python 3 Support in Flask</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="flask_doc.installation.html">3. Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.installation.html#virtualenv">3.1. virtualenv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.installation.html#system-wide-installation">3.2. System-Wide Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.installation.html#living-on-the-edge">3.3. Living on the Edge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.installation.html#pip-and-setuptools-on-windows">3.4. <cite>pip</cite> and <cite>setuptools</cite> on Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="flask_doc.quickstart.html">4. Quickstart</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.quickstart.html#a-minimal-application">4.1. A Minimal Application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.quickstart.html#what-to-do-if-the-server-does-not-start">4.2. What to do if the Server does not Start</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="flask_doc.quickstart.html#old-version-of-flask">4.2.1. Old Version of Flask</a></li>
+<li class="toctree-l4"><a class="reference internal" href="flask_doc.quickstart.html#invalid-import-name">4.2.2. Invalid Import Name</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.quickstart.html#debug-mode">4.3. Debug Mode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.quickstart.html#routing">4.4. Routing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="flask_doc.quickstart.html#variable-rules">4.4.1. Variable Rules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="flask_doc.quickstart.html#url-building">4.4.2. URL Building</a></li>
+<li class="toctree-l4"><a class="reference internal" href="flask_doc.quickstart.html#http-methods">4.4.3. HTTP Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.quickstart.html#static-files">4.5. Static Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.quickstart.html#rendering-templates">4.6. Rendering Templates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.quickstart.html#accessing-request-data">4.7. Accessing Request Data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="flask_doc.quickstart.html#context-locals">4.7.1. Context Locals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="flask_doc.quickstart.html#the-request-object">4.7.2. The Request Object</a></li>
+<li class="toctree-l4"><a class="reference internal" href="flask_doc.quickstart.html#file-uploads">4.7.3. File Uploads</a></li>
+<li class="toctree-l4"><a class="reference internal" href="flask_doc.quickstart.html#cookies">4.7.4. Cookies</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.quickstart.html#redirects-and-errors">4.8. Redirects and Errors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.quickstart.html#about-responses">4.9. About Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.quickstart.html#sessions">4.10. Sessions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.quickstart.html#message-flashing">4.11. Message Flashing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.quickstart.html#logging">4.12. Logging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.quickstart.html#hooking-in-wsgi-middlewares">4.13. Hooking in WSGI Middlewares</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.quickstart.html#using-flask-extensions">4.14. Using Flask Extensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.quickstart.html#deploying-to-a-web-server">4.15. Deploying to a Web Server</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="flask_doc.tutorial.html">5. TODO - Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flask_doc.templating.html">6. Templates</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.templating.html#jinja-setup">6.1. Jinja Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.templating.html#standard-context">6.2. Standard Context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.templating.html#standard-filters">6.3. Standard Filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.templating.html#controlling-autoescaping">6.4. Controlling Autoescaping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.templating.html#registering-filters">6.5. Registering Filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.templating.html#context-processors">6.6. Context Processors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="flask_doc.testing.html">7. Testing Flask Applications</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.testing.html#the-application">7.1. The Application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.testing.html#the-testing-skeleton">7.2. The Testing Skeleton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.testing.html#the-first-test">7.3. The First Test</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.testing.html#logging-in-and-out">7.4. Logging In and Out</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.testing.html#test-adding-messages">7.5. Test Adding Messages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.testing.html#other-testing-tricks">7.6. Other Testing Tricks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.testing.html#faking-resources-and-context">7.7. Faking Resources and Context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.testing.html#keeping-the-context-around">7.8. Keeping the Context Around</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.testing.html#accessing-and-modifying-sessions">7.9. Accessing and Modifying Sessions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="flask_doc.errorhandling.html">8. Application Errors</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.errorhandling.html#error-logging-tools">8.1. Error Logging Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.errorhandling.html#error-handlers">8.2. Error handlers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="flask_doc.errorhandling.html#registering">8.2.1. Registering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="flask_doc.errorhandling.html#handling">8.2.2. Handling</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.errorhandling.html#error-mails">8.3. Error Mails</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.errorhandling.html#logging-to-a-file">8.4. Logging to a File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.errorhandling.html#controlling-the-log-format">8.5. Controlling the Log Format</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="flask_doc.errorhandling.html#email">8.5.1. Email</a></li>
+<li class="toctree-l4"><a class="reference internal" href="flask_doc.errorhandling.html#file-logging">8.5.2. File logging</a></li>
+<li class="toctree-l4"><a class="reference internal" href="flask_doc.errorhandling.html#complex-log-formatting">8.5.3. Complex Log Formatting</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.errorhandling.html#other-libraries">8.6. Other Libraries</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="flask_doc.errorhandling.html#debugging-application-errors">9. Debugging Application Errors</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.errorhandling.html#when-in-doubt-run-manually">9.1. When in Doubt, Run Manually</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.errorhandling.html#working-with-debuggers">9.2. Working with Debuggers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="flask_doc.config.html">10. Configuration Handling</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.config.html#configuration-basics">10.1. Configuration Basics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.config.html#builtin-configuration-values">10.2. Builtin Configuration Values</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.config.html#configuring-from-files">10.3. Configuring from Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.config.html#configuration-best-practices">10.4. Configuration Best Practices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.config.html#development-production">10.5. Development / Production</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.config.html#instance-folders">10.6. Instance Folders</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="flask_doc.signals.html">11. Signals</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.signals.html#subscribing-to-signals">11.1. Subscribing to Signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.signals.html#creating-signals">11.2. Creating Signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.signals.html#sending-signals">11.3. Sending Signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.signals.html#signals-and-flask-s-request-context">11.4. Signals and Flask&#8217;s Request Context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.signals.html#decorator-based-signal-subscriptions">11.5. Decorator Based Signal Subscriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.signals.html#core-signals">11.6. Core Signals</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="flask_doc.views.html">12. Pluggable Views</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.views.html#basic-principle">12.1. Basic Principle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.views.html#method-hints">12.2. Method Hints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.views.html#method-based-dispatching">12.3. Method Based Dispatching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.views.html#decorating-views">12.4. Decorating Views</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.views.html#method-views-for-apis">12.5. Method Views for APIs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="flask_doc.appcontext.html">13. The Application Context</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.appcontext.html#purpose-of-the-application-context">13.1. Purpose of the Application Context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.appcontext.html#creating-an-application-context">13.2. Creating an Application Context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.appcontext.html#locality-of-the-context">13.3. Locality of the Context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.appcontext.html#context-usage">13.4. Context Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="flask_doc.reqcontext.html">14. The Request Context</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.reqcontext.html#diving-into-context-locals">14.1. Diving into Context Locals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.reqcontext.html#how-the-context-works">14.2. How the Context Works</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.reqcontext.html#callbacks-and-errors">14.3. Callbacks and Errors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.reqcontext.html#teardown-callbacks">14.4. Teardown Callbacks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.reqcontext.html#notes-on-proxies">14.5. Notes On Proxies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.reqcontext.html#context-preservation-on-error">14.6. Context Preservation on Error</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="flask_doc.blueprints.html">15. Modular Applications with Blueprints</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.blueprints.html#why-blueprints">15.1. Why Blueprints?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.blueprints.html#the-concept-of-blueprints">15.2. The Concept of Blueprints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.blueprints.html#my-first-blueprint">15.3. My First Blueprint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.blueprints.html#registering-blueprints">15.4. Registering Blueprints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.blueprints.html#blueprint-resources">15.5. Blueprint Resources</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="flask_doc.blueprints.html#blueprint-resource-folder">15.5.1. Blueprint Resource Folder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="flask_doc.blueprints.html#static-files">15.5.2. Static Files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="flask_doc.blueprints.html#templates">15.5.3. Templates</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.blueprints.html#building-urls">15.6. Building URLs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.blueprints.html#error-handlers">15.7. Error Handlers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="flask_doc.extensions.html">16. Flask Extensions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.extensions.html#finding-extensions">16.1. Finding Extensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.extensions.html#using-extensions">16.2. Using Extensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.extensions.html#building-extensions">16.3. Building Extensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.extensions.html#flask-before-0-8">16.4. Flask Before 0.8</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">17. Command Line Interface</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#basic-usage">17.1. Basic Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#virtualenv-integration">17.2. Virtualenv Integration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#debug-flag">17.3. Debug Flag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#running-a-shell">17.4. Running a Shell</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#custom-commands">17.5. Custom Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#application-context">17.6. Application Context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#factory-functions">17.7. Factory Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#custom-scripts">17.8. Custom Scripts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cli-plugins">17.9. CLI Plugins</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="flask_doc.server.html">18. Development Server</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.server.html#command-line">18.1. Command Line</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.server.html#in-code">18.2. In Code</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="flask_doc.shell.html">19. Working with the Shell</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.shell.html#command-line-interface">19.1. Command Line Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.shell.html#creating-a-request-context">19.2. Creating a Request Context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.shell.html#firing-before-after-request">19.3. Firing Before/After Request</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.shell.html#further-improving-the-shell-experience">19.4. Further Improving the Shell Experience</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="flask_doc.patterns.html">20. TODO - PATTERNS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flask_doc.deploying.html">21. TODO - Deployment Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flask_doc.becomingbig.html">22. Becoming Big</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.becomingbig.html#read-the-source">22.1. Read the Source.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.becomingbig.html#hook-extend">22.2. Hook. Extend.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.becomingbig.html#subclass">22.3. Subclass.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.becomingbig.html#wrap-with-middleware">22.4. Wrap with middleware.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.becomingbig.html#fork">22.5. Fork.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.becomingbig.html#scale-like-a-pro">22.6. Scale like a pro.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.becomingbig.html#discuss-with-the-community">22.7. Discuss with the community.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="flask_doc2.html">Flask doc &#8212; Additional Notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="flask_doc.design.html">1. Design Decisions in Flask</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.design.html#the-explicit-application-object">1.1. The Explicit Application Object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.design.html#the-routing-system">1.2. The Routing System</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.design.html#one-template-engine">1.3. One Template Engine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.design.html#micro-with-dependencies">1.4. Micro with Dependencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.design.html#thread-locals">1.5. Thread Locals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.design.html#what-flask-is-what-flask-is-not">1.6. What Flask is, What Flask is Not</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="flask_doc.htmlfaq.html">2. HTML/XHTML FAQ</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.htmlfaq.html#history-of-xhtml">2.1. History of XHTML</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.htmlfaq.html#history-of-html5">2.2. History of HTML5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.htmlfaq.html#html-versus-xhtml">2.3. HTML versus XHTML</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.htmlfaq.html#what-does-strict-mean">2.4. What does &#8220;strict&#8221; mean?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.htmlfaq.html#new-technologies-in-html5">2.5. New technologies in HTML5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.htmlfaq.html#what-should-be-used">2.6. What should be used?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="flask_doc.security.html">3. Security Considerations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.security.html#cross-site-scripting-xss">3.1. Cross-Site Scripting (XSS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.security.html#cross-site-request-forgery-csrf">3.2. Cross-Site Request Forgery (CSRF)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.security.html#json-security">3.3. JSON Security</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="flask_doc.unicode.html">4. Unicode in Flask</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.unicode.html#automatic-conversion">4.1. Automatic Conversion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.unicode.html#the-golden-rule">4.2. The Golden Rule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.unicode.html#encoding-and-decoding-yourself">4.3. Encoding and Decoding Yourself</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.unicode.html#configuring-editors">4.4. Configuring Editors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="flask_doc.extensiondev.html">5. Flask Extension Development</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.extensiondev.html#anatomy-of-an-extension">5.1. Anatomy of an Extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.extensiondev.html#hello-flaskext">5.2. &#8220;Hello Flaskext!&#8221;</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="flask_doc.extensiondev.html#setup-py">5.2.1. setup.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="flask_doc.extensiondev.html#flask-sqlite3-py">5.2.2. flask_sqlite3.py</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.extensiondev.html#initializing-extensions">5.3. Initializing Extensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.extensiondev.html#the-extension-code">5.4. The Extension Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.extensiondev.html#using-app-ctx-stack">5.5. Using _app_ctx_stack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.extensiondev.html#teardown-behavior">5.6. Teardown Behavior</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.extensiondev.html#learn-from-others">5.7. Learn from Others</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.extensiondev.html#approved-extensions">5.8. Approved Extensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.extensiondev.html#extension-import-transition">5.9. Extension Import Transition</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="flask_doc.styleguide.html">6. Pocoo Styleguide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.styleguide.html#general-layout">6.1. General Layout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.styleguide.html#expressions-and-statements">6.2. Expressions and Statements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.styleguide.html#naming-conventions">6.3. Naming Conventions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.styleguide.html#docstrings">6.4. Docstrings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flask_doc.styleguide.html#comments">6.5. Comments</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="werk_doc.html">Werkzeug doc materials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="werk_doc.tutorial.html">1. Werkzeug Tutorial</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="werk_doc.tutorial.html#introducing-shortly">1.1. Introducing Shortly</a></li>
+<li class="toctree-l3"><a class="reference internal" href="werk_doc.tutorial.html#step-0-a-basic-wsgi-introduction">1.2. Step 0: A Basic WSGI Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="werk_doc.tutorial.html#step-1-creating-the-folders">1.3. Step 1: Creating the Folders</a></li>
+<li class="toctree-l3"><a class="reference internal" href="werk_doc.tutorial.html#step-2-the-base-structure">1.4. Step 2: The Base Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="werk_doc.tutorial.html#intermezzo-running-the-application">1.5. Intermezzo: Running the Application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="werk_doc.tutorial.html#step-3-the-environment">1.6. Step 3: The Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="werk_doc.tutorial.html#step-4-the-routing">1.7. Step 4: The Routing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="werk_doc.tutorial.html#step-5-the-first-view">1.8. Step 5: The First View</a></li>
+<li class="toctree-l3"><a class="reference internal" href="werk_doc.tutorial.html#step-6-redirect-view">1.9. Step 6: Redirect View</a></li>
+<li class="toctree-l3"><a class="reference internal" href="werk_doc.tutorial.html#step-7-detail-view">1.10. Step 7: Detail View</a></li>
+<li class="toctree-l3"><a class="reference internal" href="werk_doc.tutorial.html#step-8-templates">1.11. Step 8: Templates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="werk_doc.tutorial.html#step-9-the-style">1.12. Step 9: The Style</a></li>
+<li class="toctree-l3"><a class="reference internal" href="werk_doc.tutorial.html#bonus-refinements">1.13. Bonus: Refinements</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="werk_doc.quickstart.html">2. Quickstart</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="werk_doc.quickstart.html#wsgi-environment">2.1. WSGI Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="werk_doc.quickstart.html#enter-request">2.2. Enter Request</a></li>
+<li class="toctree-l3"><a class="reference internal" href="werk_doc.quickstart.html#header-parsing">2.3. Header Parsing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="werk_doc.quickstart.html#responses">2.4. Responses</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="werk_doc.deployment.html">3. Application Deployment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="werk_doc.deployment.cgi.html">3.1. CGI</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="werk_doc.deployment.cgi.html#creating-a-cgi-file">3.1.1. Creating a <cite>.cgi</cite> file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="werk_doc.deployment.cgi.html#server-setup">3.1.2. Server Setup</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="werk_doc.deployment.mod_wsgi.html">3.2. <cite>mod_wsgi</cite> (Apache)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="werk_doc.deployment.mod_wsgi.html#installing-mod-wsgi">3.2.1. Installing <cite>mod_wsgi</cite></a></li>
+<li class="toctree-l4"><a class="reference internal" href="werk_doc.deployment.mod_wsgi.html#creating-a-wsgi-file">3.2.2. Creating a <cite>.wsgi</cite> file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="werk_doc.deployment.mod_wsgi.html#configuring-apache">3.2.3. Configuring Apache</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="werk_doc.deployment.fastcgi.html">3.3. FastCGI</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="werk_doc.deployment.fastcgi.html#creating-a-fcgi-file">3.3.1. Creating a <cite>.fcgi</cite> file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="werk_doc.deployment.fastcgi.html#configuring-lighttpd">3.3.2. Configuring lighttpd</a></li>
+<li class="toctree-l4"><a class="reference internal" href="werk_doc.deployment.fastcgi.html#configuring-nginx">3.3.3. Configuring nginx</a></li>
+<li class="toctree-l4"><a class="reference internal" href="werk_doc.deployment.fastcgi.html#debugging">3.3.4. Debugging</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="werk_doc.deployment.proxying.html">3.4. HTTP Proxying</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="werk_doc.deployment.proxying.html#creating-a-py-server">3.4.1. Creating a <cite>.py</cite> server</a></li>
+<li class="toctree-l4"><a class="reference internal" href="werk_doc.deployment.proxying.html#configuring-nginx">3.4.2. Configuring nginx</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="generated/flask.html">flask</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="generated/flask.html#functions">Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/flask.after_this_request.html">flask.after_this_request</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/flask.copy_current_request_context.html">flask.copy_current_request_context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/flask.escape.html">flask.escape</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/flask.flash.html">flask.flash</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/flask.get_flashed_messages.html">flask.get_flashed_messages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/flask.get_template_attribute.html">flask.get_template_attribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/flask.has_app_context.html">flask.has_app_context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/flask.has_request_context.html">flask.has_request_context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/flask.jsonify.html">flask.jsonify</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/flask.make_response.html">flask.make_response</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/flask.redirect.html">flask.redirect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/flask.render_template.html">flask.render_template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/flask.render_template_string.html">flask.render_template_string</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/flask.safe_join.html">flask.safe_join</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/flask.send_file.html">flask.send_file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/flask.send_from_directory.html">flask.send_from_directory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/flask.stream_with_context.html">flask.stream_with_context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/flask.url_for.html">flask.url_for</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="generated/flask.html#classes">Classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/flask.Blueprint.html">flask.Blueprint</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/flask.Blueprint.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/flask.Blueprint.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/flask.Config.html">flask.Config</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/flask.Config.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/flask.Flask.html">flask.Flask</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/flask.Flask.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/flask.Flask.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/flask.Markup.html">flask.Markup</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/flask.Markup.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/flask.Request.html">flask.Request</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/flask.Request.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/flask.Request.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/flask.Response.html">flask.Response</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/flask.Response.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/flask.Response.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/flask.Session.html">flask.Session</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/flask.Session.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/flask.Session.html#attributes">Attributes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="generated/werkzeug.html">werkzeug</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="generated/werkzeug.html#functions">Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.append_slash_redirect.html">werkzeug.append_slash_redirect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.bind_arguments.html">werkzeug.bind_arguments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.check_password_hash.html">werkzeug.check_password_hash</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.cookie_date.html">werkzeug.cookie_date</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.create_environ.html">werkzeug.create_environ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.dump_cookie.html">werkzeug.dump_cookie</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.dump_header.html">werkzeug.dump_header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.dump_options_header.html">werkzeug.dump_options_header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.escape.html">werkzeug.escape</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.extract_path_info.html">werkzeug.extract_path_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.find_modules.html">werkzeug.find_modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.format_string.html">werkzeug.format_string</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.generate_etag.html">werkzeug.generate_etag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.generate_password_hash.html">werkzeug.generate_password_hash</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.get_current_url.html">werkzeug.get_current_url</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.get_host.html">werkzeug.get_host</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.http_date.html">werkzeug.http_date</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.import_string.html">werkzeug.import_string</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.iri_to_uri.html">werkzeug.iri_to_uri</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.is_entity_header.html">werkzeug.is_entity_header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.is_hop_by_hop_header.html">werkzeug.is_hop_by_hop_header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.is_resource_modified.html">werkzeug.is_resource_modified</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.make_line_iter.html">werkzeug.make_line_iter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.parse_accept_header.html">werkzeug.parse_accept_header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.parse_authorization_header.html">werkzeug.parse_authorization_header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.parse_cache_control_header.html">werkzeug.parse_cache_control_header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.parse_cookie.html">werkzeug.parse_cookie</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.parse_date.html">werkzeug.parse_date</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.parse_dict_header.html">werkzeug.parse_dict_header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.parse_etags.html">werkzeug.parse_etags</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.parse_form_data.html">werkzeug.parse_form_data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.parse_list_header.html">werkzeug.parse_list_header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.parse_options_header.html">werkzeug.parse_options_header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.parse_set_header.html">werkzeug.parse_set_header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.parse_www_authenticate_header.html">werkzeug.parse_www_authenticate_header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.peek_path_info.html">werkzeug.peek_path_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.pop_path_info.html">werkzeug.pop_path_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.quote_etag.html">werkzeug.quote_etag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.quote_header_value.html">werkzeug.quote_header_value</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.redirect.html">werkzeug.redirect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.release_local.html">werkzeug.release_local</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.remove_entity_headers.html">werkzeug.remove_entity_headers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.remove_hop_by_hop_headers.html">werkzeug.remove_hop_by_hop_headers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.responder.html">werkzeug.responder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.run_simple.html">werkzeug.run_simple</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.run_wsgi_app.html">werkzeug.run_wsgi_app</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.secure_filename.html">werkzeug.secure_filename</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.test_app.html">werkzeug.test_app</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.unescape.html">werkzeug.unescape</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.unquote_etag.html">werkzeug.unquote_etag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.unquote_header_value.html">werkzeug.unquote_header_value</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.uri_to_iri.html">werkzeug.uri_to_iri</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.url_decode.html">werkzeug.url_decode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.url_encode.html">werkzeug.url_encode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.url_fix.html">werkzeug.url_fix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.url_quote.html">werkzeug.url_quote</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.url_quote_plus.html">werkzeug.url_quote_plus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.url_unquote.html">werkzeug.url_unquote</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.url_unquote_plus.html">werkzeug.url_unquote_plus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.validate_arguments.html">werkzeug.validate_arguments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.wrap_file.html">werkzeug.wrap_file</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="generated/werkzeug.html#classes">Classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.Aborter.html">werkzeug.Aborter</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.Aborter.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.Accept.html">werkzeug.Accept</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.Accept.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.Accept.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.AcceptMixin.html">werkzeug.AcceptMixin</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.AcceptMixin.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.Authorization.html">werkzeug.Authorization</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.Authorization.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.Authorization.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.AuthorizationMixin.html">werkzeug.AuthorizationMixin</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.AuthorizationMixin.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.BaseRequest.html">werkzeug.BaseRequest</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.BaseRequest.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.BaseRequest.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.BaseResponse.html">werkzeug.BaseResponse</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.BaseResponse.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.BaseResponse.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.CallbackDict.html">werkzeug.CallbackDict</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.CallbackDict.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.CallbackDict.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.CharsetAccept.html">werkzeug.CharsetAccept</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.CharsetAccept.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.CharsetAccept.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.Client.html">werkzeug.Client</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.Client.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.ClosingIterator.html">werkzeug.ClosingIterator</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.ClosingIterator.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.CombinedMultiDict.html">werkzeug.CombinedMultiDict</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.CombinedMultiDict.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.CommonRequestDescriptorsMixin.html">werkzeug.CommonRequestDescriptorsMixin</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.CommonRequestDescriptorsMixin.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.CommonResponseDescriptorsMixin.html">werkzeug.CommonResponseDescriptorsMixin</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.CommonResponseDescriptorsMixin.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.DebuggedApplication.html">werkzeug.DebuggedApplication</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.DebuggedApplication.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.DebuggedApplication.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.DispatcherMiddleware.html">werkzeug.DispatcherMiddleware</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.DispatcherMiddleware.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.ETagRequestMixin.html">werkzeug.ETagRequestMixin</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.ETagRequestMixin.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.ETagResponseMixin.html">werkzeug.ETagResponseMixin</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.ETagResponseMixin.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.ETagResponseMixin.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.ETags.html">werkzeug.ETags</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.ETags.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.EnvironBuilder.html">werkzeug.EnvironBuilder</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.EnvironBuilder.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.EnvironBuilder.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.EnvironHeaders.html">werkzeug.EnvironHeaders</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.EnvironHeaders.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.FileMultiDict.html">werkzeug.FileMultiDict</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.FileMultiDict.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.FileStorage.html">werkzeug.FileStorage</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.FileStorage.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.FileStorage.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.FileWrapper.html">werkzeug.FileWrapper</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.FileWrapper.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.HTMLBuilder.html">werkzeug.HTMLBuilder</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.HTMLBuilder.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.HeaderSet.html">werkzeug.HeaderSet</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.HeaderSet.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.Headers.html">werkzeug.Headers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.Headers.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.Href.html">werkzeug.Href</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.Href.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.ImmutableDict.html">werkzeug.ImmutableDict</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.ImmutableDict.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.ImmutableList.html">werkzeug.ImmutableList</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.ImmutableList.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.ImmutableMultiDict.html">werkzeug.ImmutableMultiDict</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.ImmutableMultiDict.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.ImmutableOrderedMultiDict.html">werkzeug.ImmutableOrderedMultiDict</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.ImmutableOrderedMultiDict.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.ImmutableTypeConversionDict.html">werkzeug.ImmutableTypeConversionDict</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.ImmutableTypeConversionDict.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.LanguageAccept.html">werkzeug.LanguageAccept</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.LanguageAccept.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.LanguageAccept.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.LimitedStream.html">werkzeug.LimitedStream</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.LimitedStream.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.LimitedStream.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.Local.html">werkzeug.Local</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.Local.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.LocalManager.html">werkzeug.LocalManager</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.LocalManager.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.LocalProxy.html">werkzeug.LocalProxy</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.LocalProxy.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.LocalStack.html">werkzeug.LocalStack</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.LocalStack.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.LocalStack.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.MIMEAccept.html">werkzeug.MIMEAccept</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.MIMEAccept.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.MIMEAccept.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.MultiDict.html">werkzeug.MultiDict</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.MultiDict.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.OrderedMultiDict.html">werkzeug.OrderedMultiDict</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.OrderedMultiDict.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.Request.html">werkzeug.Request</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.Request.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.Request.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.RequestCacheControl.html">werkzeug.RequestCacheControl</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.RequestCacheControl.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.RequestCacheControl.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.Response.html">werkzeug.Response</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.Response.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.Response.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.ResponseCacheControl.html">werkzeug.ResponseCacheControl</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.ResponseCacheControl.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.ResponseCacheControl.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.ResponseStreamMixin.html">werkzeug.ResponseStreamMixin</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.ResponseStreamMixin.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.SharedDataMiddleware.html">werkzeug.SharedDataMiddleware</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.SharedDataMiddleware.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.TypeConversionDict.html">werkzeug.TypeConversionDict</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.TypeConversionDict.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.UserAgent.html">werkzeug.UserAgent</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.UserAgent.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.UserAgentMixin.html">werkzeug.UserAgentMixin</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.UserAgentMixin.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.WWWAuthenticate.html">werkzeug.WWWAuthenticate</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.WWWAuthenticate.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.WWWAuthenticate.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.WWWAuthenticateMixin.html">werkzeug.WWWAuthenticateMixin</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.WWWAuthenticateMixin.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.cached_property.html">werkzeug.cached_property</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.cached_property.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.cached_property.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.environ_property.html">werkzeug.environ_property</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.environ_property.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.environ_property.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="generated/generated/werkzeug.header_property.html">werkzeug.header_property</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.header_property.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/generated/werkzeug.header_property.html#attributes">Attributes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="generated/werkzeug.html#exceptions">Exceptions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/werkzeug.ArgumentValidationError.html">werkzeug.ArgumentValidationError</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Flask API</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="flask_doc.html">Flask doc materials</a> &raquo;</li>
+        
+      <li>17. Command Line Interface</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/flask_doc.cli.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="command-line-interface">
+<span id="cli"></span><h1>17. Command Line Interface<a class="headerlink" href="#command-line-interface" title="Permalink to this headline">¶</a></h1>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.11.</span></p>
+</div>
+<p>One of the nice new features in Flask 0.11 is the built-in integration of
+the <a class="reference external" href="http://click.pocoo.org/">click</a> command line interface.  This
+enables a wide range of new features for the Flask ecosystem and your own
+applications.</p>
+<div class="section" id="basic-usage">
+<h2>17.1. Basic Usage<a class="headerlink" href="#basic-usage" title="Permalink to this headline">¶</a></h2>
+<p>After installation of Flask you will now find a <strong class="command">flask</strong> script
+installed into your virtualenv.  If you don&#8217;t want to install Flask or you
+have a special use-case you can also use <code class="docutils literal"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">flask</span></code> to accomplish
+exactly the same.</p>
+<p>The way this script works is by providing access to all the commands on
+your Flask application&#8217;s <code class="xref py py-attr docutils literal"><span class="pre">Flask.cli</span></code> instance as well as some
+built-in commands that are always there.  Flask extensions can also
+register more commands there if they desire so.</p>
+<p>For the <strong class="command">flask</strong> script to work, an application needs to be
+discovered.  This is achieved by exporting the <code class="docutils literal"><span class="pre">FLASK_APP</span></code> environment
+variable.  It can be either set to an import path or to a filename of a
+Python module that contains a Flask application.</p>
+<p>In that imported file the name of the app needs to be called <code class="docutils literal"><span class="pre">app</span></code> or
+optionally be specified after a colon.  For instance
+<code class="docutils literal"><span class="pre">mymodule:application</span></code> would tell it to use the <cite>application</cite> object in
+the <code class="file docutils literal"><span class="pre">mymodule.py</span></code> file.</p>
+<p>Given a <code class="file docutils literal"><span class="pre">hello.py</span></code> file with the application in it named <code class="docutils literal"><span class="pre">app</span></code>
+this is how it can be run.</p>
+<p>Environment variables (On Windows use <code class="docutils literal"><span class="pre">set</span></code> instead of <code class="docutils literal"><span class="pre">export</span></code>):</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>export FLASK_APP=hello
+flask run
+</pre></div>
+</div>
+<p>Or with a filename:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>export FLASK_APP=/path/to/hello.py
+flask run
+</pre></div>
+</div>
+</div>
+<div class="section" id="virtualenv-integration">
+<h2>17.2. Virtualenv Integration<a class="headerlink" href="#virtualenv-integration" title="Permalink to this headline">¶</a></h2>
+<p>If you are constantly working with a virtualenv you can also put the
+<code class="docutils literal"><span class="pre">export</span> <span class="pre">FLASK_APP</span></code> into your <code class="docutils literal"><span class="pre">activate</span></code> script by adding it to the
+bottom of the file.  That way every time you activate your virtualenv you
+automatically also activate the correct application name.</p>
+</div>
+<div class="section" id="debug-flag">
+<h2>17.3. Debug Flag<a class="headerlink" href="#debug-flag" title="Permalink to this headline">¶</a></h2>
+<p>The <strong class="command">flask</strong> script can also be instructed to enable the debug
+mode of the application automatically by exporting <code class="docutils literal"><span class="pre">FLASK_DEBUG</span></code>.  If
+set to <code class="docutils literal"><span class="pre">1</span></code> debug is enabled or <code class="docutils literal"><span class="pre">0</span></code> disables it.</p>
+<p>Or with a filename:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>export FLASK_DEBUG=1
+</pre></div>
+</div>
+</div>
+<div class="section" id="running-a-shell">
+<h2>17.4. Running a Shell<a class="headerlink" href="#running-a-shell" title="Permalink to this headline">¶</a></h2>
+<p>To run an interactive Python shell you can use the <code class="docutils literal"><span class="pre">shell</span></code> command:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>flask shell
+</pre></div>
+</div>
+<p>This will start up an interactive Python shell, setup the correct
+application context and setup the local variables in the shell.  This is
+done by invoking the <a class="reference internal" href="generated/generated/flask.Flask.make_shell_context.html#flask.Flask.make_shell_context" title="flask.Flask.make_shell_context"><code class="xref py py-meth docutils literal"><span class="pre">Flask.make_shell_context()</span></code></a> method of the
+application.  By default you have access to your <code class="docutils literal"><span class="pre">app</span></code> and <code class="xref py py-data docutils literal"><span class="pre">g</span></code>.</p>
+</div>
+<div class="section" id="custom-commands">
+<h2>17.5. Custom Commands<a class="headerlink" href="#custom-commands" title="Permalink to this headline">¶</a></h2>
+<p>If you want to add more commands to the shell script you can do this
+easily.  Flask uses <a class="reference external" href="http://click.pocoo.org/">click</a> for the command interface which makes
+creating custom commands very easy.  For instance if you want a shell
+command to initialize the database you can do this:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">click</span>
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+
+<span class="nd">@app.cli.command</span><span class="p">()</span>
+<span class="k">def</span> <span class="nf">initdb</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Initialize the database.&quot;&quot;&quot;</span>
+    <span class="n">click</span><span class="o">.</span><span class="n">echo</span><span class="p">(</span><span class="s1">&#39;Init the db&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The command will then show up on the command line:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ flask initdb
+Init the db
+</pre></div>
+</div>
+</div>
+<div class="section" id="application-context">
+<h2>17.6. Application Context<a class="headerlink" href="#application-context" title="Permalink to this headline">¶</a></h2>
+<p>Most commands operate on the application so it makes a lot of sense if
+they have the application context setup.  Because of this, if you register
+a callback on <code class="docutils literal"><span class="pre">app.cli</span></code> with the <code class="xref py py-meth docutils literal"><span class="pre">command()</span></code> the
+callback will automatically be wrapped through <code class="xref py py-func docutils literal"><span class="pre">cli.with_appcontext()</span></code>
+which informs the cli system to ensure that an application context is set
+up.  This behavior is not available if a command is added later with
+<code class="xref py py-func docutils literal"><span class="pre">add_command()</span></code> or through other means.</p>
+<p>It can also be disabled by passing <code class="docutils literal"><span class="pre">with_appcontext=False</span></code> to the
+decorator:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="nd">@app.cli.command</span><span class="p">(</span><span class="n">with_appcontext</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">example</span><span class="p">():</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="factory-functions">
+<h2>17.7. Factory Functions<a class="headerlink" href="#factory-functions" title="Permalink to this headline">¶</a></h2>
+<p>In case you are using factory functions to create your application (see
+<span class="xref std std-ref">app-factories</span>) you will discover that the <strong class="command">flask</strong> command
+cannot work with them directly.  Flask won&#8217;t be able to figure out how to
+instantiate your application properly by itself.  Because of this reason
+the recommendation is to create a separate file that instantiates
+applications.  This is not the only way to make this work.  Another is the
+<a class="reference internal" href="#custom-scripts"><span>Custom Scripts</span></a> support.</p>
+<p>For instance if you have a factory function that creates an application
+from a filename you could make a separate file that creates such an
+application from an environment variable.</p>
+<p>This could be a file named <code class="file docutils literal"><span class="pre">autoapp.py</span></code> with these contents:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">yourapplication</span> <span class="kn">import</span> <span class="n">create_app</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">create_app</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;YOURAPPLICATION_CONFIG&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Once this has happened you can make the flask command automatically pick
+it up:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>export YOURAPPLICATION_CONFIG=/path/to/config.cfg
+export FLASK_APP=/path/to/autoapp.py
+</pre></div>
+</div>
+<p>From this point onwards <strong class="command">flask</strong> will find your application.</p>
+</div>
+<div class="section" id="custom-scripts">
+<span id="id1"></span><h2>17.8. Custom Scripts<a class="headerlink" href="#custom-scripts" title="Permalink to this headline">¶</a></h2>
+<p>While the most common way is to use the <strong class="command">flask</strong> command, you can
+also make your own &#8220;driver scripts&#8221;.  Since Flask uses click for the
+scripts there is no reason you cannot hook these scripts into any click
+application.  There is one big caveat and that is, that commands
+registered to <code class="xref py py-attr docutils literal"><span class="pre">Flask.cli</span></code> will expect to be (indirectly at least)
+launched from a <code class="xref py py-class docutils literal"><span class="pre">flask.cli.FlaskGroup</span></code> click group.  This is
+necessary so that the commands know which Flask application they have to
+work with.</p>
+<p>To understand why you might want custom scripts you need to understand how
+click finds and executes the Flask application.  If you use the
+<strong class="command">flask</strong> script you specify the application to work with on the
+command line or environment variable as an import name.  This is simple
+but it has some limitations.  Primarily it does not work with application
+factory functions (see <span class="xref std std-ref">app-factories</span>).</p>
+<p>With a custom script you don&#8217;t have this problem as you can fully
+customize how the application will be created.  This is very useful if you
+write reusable applications that you want to ship to users and they should
+be presented with a custom management script.</p>
+<p>To explain all of this, here is an example <code class="file docutils literal"><span class="pre">manage.py</span></code> script that
+manages a hypothetical wiki application.  We will go through the details
+afterwards:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">click</span>
+<span class="kn">from</span> <span class="nn">flask.cli</span> <span class="kn">import</span> <span class="n">FlaskGroup</span>
+
+<span class="k">def</span> <span class="nf">create_wiki_app</span><span class="p">(</span><span class="n">info</span><span class="p">):</span>
+    <span class="kn">from</span> <span class="nn">yourwiki</span> <span class="kn">import</span> <span class="n">create_app</span>
+    <span class="k">return</span> <span class="n">create_app</span><span class="p">(</span>
+        <span class="n">config</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;WIKI_CONFIG&#39;</span><span class="p">,</span> <span class="s1">&#39;wikiconfig.py&#39;</span><span class="p">))</span>
+
+<span class="nd">@click.group</span><span class="p">(</span><span class="n">cls</span><span class="o">=</span><span class="n">FlaskGroup</span><span class="p">,</span> <span class="n">create_app</span><span class="o">=</span><span class="n">create_wiki_app</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">cli</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;This is a management script for the wiki application.&quot;&quot;&quot;</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">cli</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>That&#8217;s a lot of code for not much, so let&#8217;s go through all parts step by
+step.</p>
+<ol class="arabic">
+<li><p class="first">First we import the <code class="docutils literal"><span class="pre">click</span></code> library as well as the click extensions
+from the <code class="docutils literal"><span class="pre">flask.cli</span></code> package.  Primarily we are here interested
+in the <code class="xref py py-class docutils literal"><span class="pre">FlaskGroup</span></code> click group.</p>
+</li>
+<li><p class="first">The next thing we do is defining a function that is invoked with the
+script info object (<code class="xref py py-class docutils literal"><span class="pre">ScriptInfo</span></code>) from Flask and its
+purpose is to fully import and create the application.  This can
+either directly import an application object or create it (see
+<span class="xref std std-ref">app-factories</span>).  In this case we load the config from an
+environment variable.</p>
+</li>
+<li><p class="first">Next step is to create a <code class="xref py py-class docutils literal"><span class="pre">FlaskGroup</span></code>.  In this case we just
+make an empty function with a help doc string that just does nothing
+and then pass the <code class="docutils literal"><span class="pre">create_wiki_app</span></code> function as a factory function.</p>
+<p>Whenever click now needs to operate on a Flask application it will
+call that function with the script info and ask for it to be created.</p>
+</li>
+<li><p class="first">All is rounded up by invoking the script.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="cli-plugins">
+<h2>17.9. CLI Plugins<a class="headerlink" href="#cli-plugins" title="Permalink to this headline">¶</a></h2>
+<p>Flask extensions can always patch the <code class="xref py py-attr docutils literal"><span class="pre">Flask.cli</span></code> instance with more
+commands if they want.  However there is a second way to add CLI plugins
+to Flask which is through <code class="docutils literal"><span class="pre">setuptools</span></code>.  If you make a Python package that
+should export a Flask command line plugin you can ship a <code class="file docutils literal"><span class="pre">setup.py</span></code> file
+that declares an entrypoint that points to a click command:</p>
+<p>Example <code class="file docutils literal"><span class="pre">setup.py</span></code>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>from setuptools import setup
+
+setup(
+    name=&#39;flask-my-extension&#39;,
+    ...
+    entry_points=&#39;&#39;&#39;
+        [flask.commands]
+        my-command=mypackage.commands:cli
+    &#39;&#39;&#39;,
+)
+</pre></div>
+</div>
+<p>Inside <code class="file docutils literal"><span class="pre">mypackage/commands.py</span></code> you can then export a Click object:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">click</span>
+
+<span class="nd">@click.command</span><span class="p">()</span>
+<span class="k">def</span> <span class="nf">cli</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;This is an example command.&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+<p>Once that package is installed in the same virtualenv as Flask itself you
+can run <code class="docutils literal"><span class="pre">flask</span> <span class="pre">my-command</span></code> to invoke your command.  This is useful to
+provide extra functionality that Flask itself cannot ship.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="flask_doc.server.html" class="btn btn-neutral float-right" title="18. Development Server" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="flask_doc.extensions.html" class="btn btn-neutral" title="16. Flask Extensions" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/copybutton.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

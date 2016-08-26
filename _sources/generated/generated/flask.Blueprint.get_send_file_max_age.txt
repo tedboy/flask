@@ -1,0 +1,6 @@
+flask.Blueprint.get_send_file_max_age
+=====================================
+
+.. currentmodule:: flask
+
+.. automethod:: Blueprint.get_send_file_max_age

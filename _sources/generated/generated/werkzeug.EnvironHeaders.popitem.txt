@@ -1,0 +1,6 @@
+werkzeug.EnvironHeaders.popitem
+===============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: EnvironHeaders.popitem

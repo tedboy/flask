@@ -1,0 +1,6 @@
+werkzeug.WWWAuthenticate.copy
+=============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: WWWAuthenticate.copy

@@ -1,0 +1,19 @@
+werkzeug.Local
+==============
+.. currentmodule:: werkzeug
+.. autoclass:: Local
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Local.__init__
+
+
+
+
+

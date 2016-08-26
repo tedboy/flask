@@ -1,0 +1,6 @@
+werkzeug.release_local
+======================
+
+.. currentmodule:: werkzeug
+
+.. autofunction:: release_local

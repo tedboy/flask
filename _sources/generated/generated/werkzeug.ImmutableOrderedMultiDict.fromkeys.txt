@@ -1,0 +1,6 @@
+werkzeug.ImmutableOrderedMultiDict.fromkeys
+===========================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ImmutableOrderedMultiDict.fromkeys

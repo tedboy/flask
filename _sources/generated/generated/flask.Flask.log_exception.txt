@@ -1,0 +1,6 @@
+flask.Flask.log_exception
+=========================
+
+.. currentmodule:: flask
+
+.. automethod:: Flask.log_exception

@@ -1,0 +1,6 @@
+werkzeug.CombinedMultiDict.popitem
+==================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: CombinedMultiDict.popitem

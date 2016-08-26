@@ -1,0 +1,6 @@
+werkzeug.Authorization.iteritems
+================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Authorization.iteritems

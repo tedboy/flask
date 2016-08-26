@@ -1,0 +1,6 @@
+werkzeug.TypeConversionDict.fromkeys
+====================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: TypeConversionDict.fromkeys

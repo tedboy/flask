@@ -1,0 +1,6 @@
+werkzeug.ImmutableDict.viewvalues
+=================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ImmutableDict.viewvalues

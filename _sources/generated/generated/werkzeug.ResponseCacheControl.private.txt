@@ -1,0 +1,6 @@
+werkzeug.ResponseCacheControl.private
+=====================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: ResponseCacheControl.private

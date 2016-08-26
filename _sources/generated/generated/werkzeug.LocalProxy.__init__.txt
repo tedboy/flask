@@ -1,0 +1,6 @@
+werkzeug.LocalProxy.__init__
+============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: LocalProxy.__init__

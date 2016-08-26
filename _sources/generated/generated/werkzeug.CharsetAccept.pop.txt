@@ -1,0 +1,6 @@
+werkzeug.CharsetAccept.pop
+==========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: CharsetAccept.pop

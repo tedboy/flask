@@ -1,0 +1,6 @@
+werkzeug.test_app
+=================
+
+.. currentmodule:: werkzeug
+
+.. autofunction:: test_app

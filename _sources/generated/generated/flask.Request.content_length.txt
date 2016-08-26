@@ -1,0 +1,6 @@
+flask.Request.content_length
+============================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Request.content_length

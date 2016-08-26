@@ -1,0 +1,29 @@
+werkzeug.LocalStack
+===================
+.. currentmodule:: werkzeug
+.. autoclass:: LocalStack
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~LocalStack.__init__
+   ~LocalStack.pop
+   ~LocalStack.push
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~LocalStack.top
+

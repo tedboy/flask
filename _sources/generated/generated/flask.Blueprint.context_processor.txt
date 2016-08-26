@@ -1,0 +1,6 @@
+flask.Blueprint.context_processor
+=================================
+
+.. currentmodule:: flask
+
+.. automethod:: Blueprint.context_processor

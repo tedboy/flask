@@ -1,0 +1,6 @@
+werkzeug.RequestCacheControl.on_update
+======================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: RequestCacheControl.on_update

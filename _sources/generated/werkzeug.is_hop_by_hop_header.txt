@@ -1,0 +1,6 @@
+werkzeug.is_hop_by_hop_header
+=============================
+
+.. currentmodule:: werkzeug
+
+.. autofunction:: is_hop_by_hop_header

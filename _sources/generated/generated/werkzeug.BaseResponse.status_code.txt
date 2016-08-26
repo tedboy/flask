@@ -1,0 +1,6 @@
+werkzeug.BaseResponse.status_code
+=================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: BaseResponse.status_code

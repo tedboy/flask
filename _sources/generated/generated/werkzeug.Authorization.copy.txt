@@ -1,0 +1,6 @@
+werkzeug.Authorization.copy
+===========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Authorization.copy

@@ -1,0 +1,6 @@
+werkzeug.WWWAuthenticateMixin.www_authenticate
+==============================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: WWWAuthenticateMixin.www_authenticate

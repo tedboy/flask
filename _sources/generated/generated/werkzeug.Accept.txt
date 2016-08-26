@@ -1,0 +1,42 @@
+werkzeug.Accept
+===============
+.. currentmodule:: werkzeug
+.. autoclass:: Accept
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Accept.__init__
+   ~Accept.append
+   ~Accept.best_match
+   ~Accept.count
+   ~Accept.extend
+   ~Accept.find
+   ~Accept.index
+   ~Accept.insert
+   ~Accept.itervalues
+   ~Accept.pop
+   ~Accept.quality
+   ~Accept.remove
+   ~Accept.reverse
+   ~Accept.sort
+   ~Accept.to_header
+   ~Accept.values
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~Accept.best
+

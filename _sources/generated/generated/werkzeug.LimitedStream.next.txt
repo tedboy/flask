@@ -1,0 +1,6 @@
+werkzeug.LimitedStream.next
+===========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: LimitedStream.next

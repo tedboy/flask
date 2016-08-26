@@ -1,0 +1,6 @@
+flask.Flask.session_interface
+=============================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Flask.session_interface

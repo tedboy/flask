@@ -1,0 +1,6 @@
+werkzeug.EnvironBuilder.input_stream
+====================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: EnvironBuilder.input_stream

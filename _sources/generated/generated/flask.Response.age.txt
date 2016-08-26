@@ -1,0 +1,6 @@
+flask.Response.age
+==================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Response.age

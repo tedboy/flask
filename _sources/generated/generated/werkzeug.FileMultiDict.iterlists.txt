@@ -1,0 +1,6 @@
+werkzeug.FileMultiDict.iterlists
+================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: FileMultiDict.iterlists

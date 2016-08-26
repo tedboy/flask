@@ -1,0 +1,6 @@
+werkzeug.BaseRequest.__init__
+=============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: BaseRequest.__init__

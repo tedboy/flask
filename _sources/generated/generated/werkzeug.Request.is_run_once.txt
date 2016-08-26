@@ -1,0 +1,6 @@
+werkzeug.Request.is_run_once
+============================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Request.is_run_once

@@ -1,0 +1,6 @@
+werkzeug.ResponseCacheControl.s_maxage
+======================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: ResponseCacheControl.s_maxage

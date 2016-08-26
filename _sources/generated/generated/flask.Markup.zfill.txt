@@ -1,0 +1,6 @@
+flask.Markup.zfill
+==================
+
+.. currentmodule:: flask
+
+.. automethod:: Markup.zfill

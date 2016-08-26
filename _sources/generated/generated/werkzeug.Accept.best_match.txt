@@ -1,0 +1,6 @@
+werkzeug.Accept.best_match
+==========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Accept.best_match

@@ -1,0 +1,6 @@
+werkzeug.Authorization.get
+==========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Authorization.get

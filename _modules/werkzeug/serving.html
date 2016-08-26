@@ -1,0 +1,1639 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>werkzeug.serving &mdash; Flask API</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Flask API" href="../../index.html"/>
+        <link rel="up" title="Module code" href="../index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Flask API
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../flask_doc.html">Flask doc materials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.foreword.html">1. Foreword</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.foreword.html#what-does-micro-mean">1.1. What does &#8220;micro&#8221; mean?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.foreword.html#configuration-and-conventions">1.2. Configuration and Conventions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.foreword.html#growing-with-flask">1.3. Growing with Flask</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.advanced_foreword.html">2. Foreword for Experienced Programmers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.advanced_foreword.html#thread-locals-in-flask">2.1. Thread-Locals in Flask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.advanced_foreword.html#develop-for-the-web-with-caution">2.2. Develop for the Web with Caution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.advanced_foreword.html#python-3-support-in-flask">2.3. Python 3 Support in Flask</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.installation.html">3. Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.installation.html#virtualenv">3.1. virtualenv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.installation.html#system-wide-installation">3.2. System-Wide Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.installation.html#living-on-the-edge">3.3. Living on the Edge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.installation.html#pip-and-setuptools-on-windows">3.4. <cite>pip</cite> and <cite>setuptools</cite> on Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.quickstart.html">4. Quickstart</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.quickstart.html#a-minimal-application">4.1. A Minimal Application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.quickstart.html#what-to-do-if-the-server-does-not-start">4.2. What to do if the Server does not Start</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../flask_doc.quickstart.html#old-version-of-flask">4.2.1. Old Version of Flask</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../flask_doc.quickstart.html#invalid-import-name">4.2.2. Invalid Import Name</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.quickstart.html#debug-mode">4.3. Debug Mode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.quickstart.html#routing">4.4. Routing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../flask_doc.quickstart.html#variable-rules">4.4.1. Variable Rules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../flask_doc.quickstart.html#url-building">4.4.2. URL Building</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../flask_doc.quickstart.html#http-methods">4.4.3. HTTP Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.quickstart.html#static-files">4.5. Static Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.quickstart.html#rendering-templates">4.6. Rendering Templates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.quickstart.html#accessing-request-data">4.7. Accessing Request Data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../flask_doc.quickstart.html#context-locals">4.7.1. Context Locals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../flask_doc.quickstart.html#the-request-object">4.7.2. The Request Object</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../flask_doc.quickstart.html#file-uploads">4.7.3. File Uploads</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../flask_doc.quickstart.html#cookies">4.7.4. Cookies</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.quickstart.html#redirects-and-errors">4.8. Redirects and Errors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.quickstart.html#about-responses">4.9. About Responses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.quickstart.html#sessions">4.10. Sessions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.quickstart.html#message-flashing">4.11. Message Flashing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.quickstart.html#logging">4.12. Logging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.quickstart.html#hooking-in-wsgi-middlewares">4.13. Hooking in WSGI Middlewares</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.quickstart.html#using-flask-extensions">4.14. Using Flask Extensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.quickstart.html#deploying-to-a-web-server">4.15. Deploying to a Web Server</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.tutorial.html">5. TODO - Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.templating.html">6. Templates</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.templating.html#jinja-setup">6.1. Jinja Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.templating.html#standard-context">6.2. Standard Context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.templating.html#standard-filters">6.3. Standard Filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.templating.html#controlling-autoescaping">6.4. Controlling Autoescaping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.templating.html#registering-filters">6.5. Registering Filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.templating.html#context-processors">6.6. Context Processors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.testing.html">7. Testing Flask Applications</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.testing.html#the-application">7.1. The Application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.testing.html#the-testing-skeleton">7.2. The Testing Skeleton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.testing.html#the-first-test">7.3. The First Test</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.testing.html#logging-in-and-out">7.4. Logging In and Out</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.testing.html#test-adding-messages">7.5. Test Adding Messages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.testing.html#other-testing-tricks">7.6. Other Testing Tricks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.testing.html#faking-resources-and-context">7.7. Faking Resources and Context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.testing.html#keeping-the-context-around">7.8. Keeping the Context Around</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.testing.html#accessing-and-modifying-sessions">7.9. Accessing and Modifying Sessions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.errorhandling.html">8. Application Errors</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.errorhandling.html#error-logging-tools">8.1. Error Logging Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.errorhandling.html#error-handlers">8.2. Error handlers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../flask_doc.errorhandling.html#registering">8.2.1. Registering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../flask_doc.errorhandling.html#handling">8.2.2. Handling</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.errorhandling.html#error-mails">8.3. Error Mails</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.errorhandling.html#logging-to-a-file">8.4. Logging to a File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.errorhandling.html#controlling-the-log-format">8.5. Controlling the Log Format</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../flask_doc.errorhandling.html#email">8.5.1. Email</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../flask_doc.errorhandling.html#file-logging">8.5.2. File logging</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../flask_doc.errorhandling.html#complex-log-formatting">8.5.3. Complex Log Formatting</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.errorhandling.html#other-libraries">8.6. Other Libraries</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.errorhandling.html#debugging-application-errors">9. Debugging Application Errors</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.errorhandling.html#when-in-doubt-run-manually">9.1. When in Doubt, Run Manually</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.errorhandling.html#working-with-debuggers">9.2. Working with Debuggers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.config.html">10. Configuration Handling</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.config.html#configuration-basics">10.1. Configuration Basics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.config.html#builtin-configuration-values">10.2. Builtin Configuration Values</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.config.html#configuring-from-files">10.3. Configuring from Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.config.html#configuration-best-practices">10.4. Configuration Best Practices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.config.html#development-production">10.5. Development / Production</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.config.html#instance-folders">10.6. Instance Folders</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.signals.html">11. Signals</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.signals.html#subscribing-to-signals">11.1. Subscribing to Signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.signals.html#creating-signals">11.2. Creating Signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.signals.html#sending-signals">11.3. Sending Signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.signals.html#signals-and-flask-s-request-context">11.4. Signals and Flask&#8217;s Request Context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.signals.html#decorator-based-signal-subscriptions">11.5. Decorator Based Signal Subscriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.signals.html#core-signals">11.6. Core Signals</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.views.html">12. Pluggable Views</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.views.html#basic-principle">12.1. Basic Principle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.views.html#method-hints">12.2. Method Hints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.views.html#method-based-dispatching">12.3. Method Based Dispatching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.views.html#decorating-views">12.4. Decorating Views</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.views.html#method-views-for-apis">12.5. Method Views for APIs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.appcontext.html">13. The Application Context</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.appcontext.html#purpose-of-the-application-context">13.1. Purpose of the Application Context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.appcontext.html#creating-an-application-context">13.2. Creating an Application Context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.appcontext.html#locality-of-the-context">13.3. Locality of the Context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.appcontext.html#context-usage">13.4. Context Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.reqcontext.html">14. The Request Context</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.reqcontext.html#diving-into-context-locals">14.1. Diving into Context Locals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.reqcontext.html#how-the-context-works">14.2. How the Context Works</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.reqcontext.html#callbacks-and-errors">14.3. Callbacks and Errors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.reqcontext.html#teardown-callbacks">14.4. Teardown Callbacks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.reqcontext.html#notes-on-proxies">14.5. Notes On Proxies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.reqcontext.html#context-preservation-on-error">14.6. Context Preservation on Error</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.blueprints.html">15. Modular Applications with Blueprints</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.blueprints.html#why-blueprints">15.1. Why Blueprints?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.blueprints.html#the-concept-of-blueprints">15.2. The Concept of Blueprints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.blueprints.html#my-first-blueprint">15.3. My First Blueprint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.blueprints.html#registering-blueprints">15.4. Registering Blueprints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.blueprints.html#blueprint-resources">15.5. Blueprint Resources</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../flask_doc.blueprints.html#blueprint-resource-folder">15.5.1. Blueprint Resource Folder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../flask_doc.blueprints.html#static-files">15.5.2. Static Files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../flask_doc.blueprints.html#templates">15.5.3. Templates</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.blueprints.html#building-urls">15.6. Building URLs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.blueprints.html#error-handlers">15.7. Error Handlers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.extensions.html">16. Flask Extensions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.extensions.html#finding-extensions">16.1. Finding Extensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.extensions.html#using-extensions">16.2. Using Extensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.extensions.html#building-extensions">16.3. Building Extensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.extensions.html#flask-before-0-8">16.4. Flask Before 0.8</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.cli.html">17. Command Line Interface</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.cli.html#basic-usage">17.1. Basic Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.cli.html#virtualenv-integration">17.2. Virtualenv Integration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.cli.html#debug-flag">17.3. Debug Flag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.cli.html#running-a-shell">17.4. Running a Shell</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.cli.html#custom-commands">17.5. Custom Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.cli.html#application-context">17.6. Application Context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.cli.html#factory-functions">17.7. Factory Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.cli.html#custom-scripts">17.8. Custom Scripts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.cli.html#cli-plugins">17.9. CLI Plugins</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.server.html">18. Development Server</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.server.html#command-line">18.1. Command Line</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.server.html#in-code">18.2. In Code</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.shell.html">19. Working with the Shell</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.shell.html#command-line-interface">19.1. Command Line Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.shell.html#creating-a-request-context">19.2. Creating a Request Context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.shell.html#firing-before-after-request">19.3. Firing Before/After Request</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.shell.html#further-improving-the-shell-experience">19.4. Further Improving the Shell Experience</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.patterns.html">20. TODO - PATTERNS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.deploying.html">21. TODO - Deployment Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.becomingbig.html">22. Becoming Big</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.becomingbig.html#read-the-source">22.1. Read the Source.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.becomingbig.html#hook-extend">22.2. Hook. Extend.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.becomingbig.html#subclass">22.3. Subclass.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.becomingbig.html#wrap-with-middleware">22.4. Wrap with middleware.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.becomingbig.html#fork">22.5. Fork.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.becomingbig.html#scale-like-a-pro">22.6. Scale like a pro.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.becomingbig.html#discuss-with-the-community">22.7. Discuss with the community.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../flask_doc2.html">Flask doc &#8212; Additional Notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.design.html">1. Design Decisions in Flask</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.design.html#the-explicit-application-object">1.1. The Explicit Application Object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.design.html#the-routing-system">1.2. The Routing System</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.design.html#one-template-engine">1.3. One Template Engine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.design.html#micro-with-dependencies">1.4. Micro with Dependencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.design.html#thread-locals">1.5. Thread Locals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.design.html#what-flask-is-what-flask-is-not">1.6. What Flask is, What Flask is Not</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.htmlfaq.html">2. HTML/XHTML FAQ</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.htmlfaq.html#history-of-xhtml">2.1. History of XHTML</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.htmlfaq.html#history-of-html5">2.2. History of HTML5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.htmlfaq.html#html-versus-xhtml">2.3. HTML versus XHTML</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.htmlfaq.html#what-does-strict-mean">2.4. What does &#8220;strict&#8221; mean?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.htmlfaq.html#new-technologies-in-html5">2.5. New technologies in HTML5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.htmlfaq.html#what-should-be-used">2.6. What should be used?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.security.html">3. Security Considerations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.security.html#cross-site-scripting-xss">3.1. Cross-Site Scripting (XSS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.security.html#cross-site-request-forgery-csrf">3.2. Cross-Site Request Forgery (CSRF)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.security.html#json-security">3.3. JSON Security</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.unicode.html">4. Unicode in Flask</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.unicode.html#automatic-conversion">4.1. Automatic Conversion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.unicode.html#the-golden-rule">4.2. The Golden Rule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.unicode.html#encoding-and-decoding-yourself">4.3. Encoding and Decoding Yourself</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.unicode.html#configuring-editors">4.4. Configuring Editors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.extensiondev.html">5. Flask Extension Development</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.extensiondev.html#anatomy-of-an-extension">5.1. Anatomy of an Extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.extensiondev.html#hello-flaskext">5.2. &#8220;Hello Flaskext!&#8221;</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../flask_doc.extensiondev.html#setup-py">5.2.1. setup.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../flask_doc.extensiondev.html#flask-sqlite3-py">5.2.2. flask_sqlite3.py</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.extensiondev.html#initializing-extensions">5.3. Initializing Extensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.extensiondev.html#the-extension-code">5.4. The Extension Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.extensiondev.html#using-app-ctx-stack">5.5. Using _app_ctx_stack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.extensiondev.html#teardown-behavior">5.6. Teardown Behavior</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.extensiondev.html#learn-from-others">5.7. Learn from Others</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.extensiondev.html#approved-extensions">5.8. Approved Extensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.extensiondev.html#extension-import-transition">5.9. Extension Import Transition</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../flask_doc.styleguide.html">6. Pocoo Styleguide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.styleguide.html#general-layout">6.1. General Layout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.styleguide.html#expressions-and-statements">6.2. Expressions and Statements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.styleguide.html#naming-conventions">6.3. Naming Conventions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.styleguide.html#docstrings">6.4. Docstrings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flask_doc.styleguide.html#comments">6.5. Comments</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../werk_doc.html">Werkzeug doc materials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../werk_doc.tutorial.html">1. Werkzeug Tutorial</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../werk_doc.tutorial.html#introducing-shortly">1.1. Introducing Shortly</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../werk_doc.tutorial.html#step-0-a-basic-wsgi-introduction">1.2. Step 0: A Basic WSGI Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../werk_doc.tutorial.html#step-1-creating-the-folders">1.3. Step 1: Creating the Folders</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../werk_doc.tutorial.html#step-2-the-base-structure">1.4. Step 2: The Base Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../werk_doc.tutorial.html#intermezzo-running-the-application">1.5. Intermezzo: Running the Application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../werk_doc.tutorial.html#step-3-the-environment">1.6. Step 3: The Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../werk_doc.tutorial.html#step-4-the-routing">1.7. Step 4: The Routing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../werk_doc.tutorial.html#step-5-the-first-view">1.8. Step 5: The First View</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../werk_doc.tutorial.html#step-6-redirect-view">1.9. Step 6: Redirect View</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../werk_doc.tutorial.html#step-7-detail-view">1.10. Step 7: Detail View</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../werk_doc.tutorial.html#step-8-templates">1.11. Step 8: Templates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../werk_doc.tutorial.html#step-9-the-style">1.12. Step 9: The Style</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../werk_doc.tutorial.html#bonus-refinements">1.13. Bonus: Refinements</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../werk_doc.quickstart.html">2. Quickstart</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../werk_doc.quickstart.html#wsgi-environment">2.1. WSGI Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../werk_doc.quickstart.html#enter-request">2.2. Enter Request</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../werk_doc.quickstart.html#header-parsing">2.3. Header Parsing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../werk_doc.quickstart.html#responses">2.4. Responses</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../werk_doc.deployment.html">3. Application Deployment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../werk_doc.deployment.cgi.html">3.1. CGI</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../werk_doc.deployment.cgi.html#creating-a-cgi-file">3.1.1. Creating a <cite>.cgi</cite> file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../werk_doc.deployment.cgi.html#server-setup">3.1.2. Server Setup</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../werk_doc.deployment.mod_wsgi.html">3.2. <cite>mod_wsgi</cite> (Apache)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../werk_doc.deployment.mod_wsgi.html#installing-mod-wsgi">3.2.1. Installing <cite>mod_wsgi</cite></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../werk_doc.deployment.mod_wsgi.html#creating-a-wsgi-file">3.2.2. Creating a <cite>.wsgi</cite> file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../werk_doc.deployment.mod_wsgi.html#configuring-apache">3.2.3. Configuring Apache</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../werk_doc.deployment.fastcgi.html">3.3. FastCGI</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../werk_doc.deployment.fastcgi.html#creating-a-fcgi-file">3.3.1. Creating a <cite>.fcgi</cite> file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../werk_doc.deployment.fastcgi.html#configuring-lighttpd">3.3.2. Configuring lighttpd</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../werk_doc.deployment.fastcgi.html#configuring-nginx">3.3.3. Configuring nginx</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../werk_doc.deployment.fastcgi.html#debugging">3.3.4. Debugging</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../werk_doc.deployment.proxying.html">3.4. HTTP Proxying</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../werk_doc.deployment.proxying.html#creating-a-py-server">3.4.1. Creating a <cite>.py</cite> server</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../werk_doc.deployment.proxying.html#configuring-nginx">3.4.2. Configuring nginx</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/flask.html">flask</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/flask.html#functions">Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/flask.after_this_request.html">flask.after_this_request</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/flask.copy_current_request_context.html">flask.copy_current_request_context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/flask.escape.html">flask.escape</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/flask.flash.html">flask.flash</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/flask.get_flashed_messages.html">flask.get_flashed_messages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/flask.get_template_attribute.html">flask.get_template_attribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/flask.has_app_context.html">flask.has_app_context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/flask.has_request_context.html">flask.has_request_context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/flask.jsonify.html">flask.jsonify</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/flask.make_response.html">flask.make_response</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/flask.redirect.html">flask.redirect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/flask.render_template.html">flask.render_template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/flask.render_template_string.html">flask.render_template_string</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/flask.safe_join.html">flask.safe_join</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/flask.send_file.html">flask.send_file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/flask.send_from_directory.html">flask.send_from_directory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/flask.stream_with_context.html">flask.stream_with_context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/flask.url_for.html">flask.url_for</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/flask.html#classes">Classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/flask.Blueprint.html">flask.Blueprint</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/flask.Blueprint.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/flask.Blueprint.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/flask.Config.html">flask.Config</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/flask.Config.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/flask.Flask.html">flask.Flask</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/flask.Flask.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/flask.Flask.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/flask.Markup.html">flask.Markup</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/flask.Markup.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/flask.Request.html">flask.Request</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/flask.Request.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/flask.Request.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/flask.Response.html">flask.Response</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/flask.Response.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/flask.Response.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/flask.Session.html">flask.Session</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/flask.Session.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/flask.Session.html#attributes">Attributes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/werkzeug.html">werkzeug</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/werkzeug.html#functions">Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.append_slash_redirect.html">werkzeug.append_slash_redirect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.bind_arguments.html">werkzeug.bind_arguments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.check_password_hash.html">werkzeug.check_password_hash</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.cookie_date.html">werkzeug.cookie_date</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.create_environ.html">werkzeug.create_environ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.dump_cookie.html">werkzeug.dump_cookie</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.dump_header.html">werkzeug.dump_header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.dump_options_header.html">werkzeug.dump_options_header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.escape.html">werkzeug.escape</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.extract_path_info.html">werkzeug.extract_path_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.find_modules.html">werkzeug.find_modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.format_string.html">werkzeug.format_string</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.generate_etag.html">werkzeug.generate_etag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.generate_password_hash.html">werkzeug.generate_password_hash</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.get_current_url.html">werkzeug.get_current_url</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.get_host.html">werkzeug.get_host</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.http_date.html">werkzeug.http_date</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.import_string.html">werkzeug.import_string</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.iri_to_uri.html">werkzeug.iri_to_uri</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.is_entity_header.html">werkzeug.is_entity_header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.is_hop_by_hop_header.html">werkzeug.is_hop_by_hop_header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.is_resource_modified.html">werkzeug.is_resource_modified</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.make_line_iter.html">werkzeug.make_line_iter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.parse_accept_header.html">werkzeug.parse_accept_header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.parse_authorization_header.html">werkzeug.parse_authorization_header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.parse_cache_control_header.html">werkzeug.parse_cache_control_header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.parse_cookie.html">werkzeug.parse_cookie</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.parse_date.html">werkzeug.parse_date</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.parse_dict_header.html">werkzeug.parse_dict_header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.parse_etags.html">werkzeug.parse_etags</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.parse_form_data.html">werkzeug.parse_form_data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.parse_list_header.html">werkzeug.parse_list_header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.parse_options_header.html">werkzeug.parse_options_header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.parse_set_header.html">werkzeug.parse_set_header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.parse_www_authenticate_header.html">werkzeug.parse_www_authenticate_header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.peek_path_info.html">werkzeug.peek_path_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.pop_path_info.html">werkzeug.pop_path_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.quote_etag.html">werkzeug.quote_etag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.quote_header_value.html">werkzeug.quote_header_value</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.redirect.html">werkzeug.redirect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.release_local.html">werkzeug.release_local</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.remove_entity_headers.html">werkzeug.remove_entity_headers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.remove_hop_by_hop_headers.html">werkzeug.remove_hop_by_hop_headers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.responder.html">werkzeug.responder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.run_simple.html">werkzeug.run_simple</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.run_wsgi_app.html">werkzeug.run_wsgi_app</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.secure_filename.html">werkzeug.secure_filename</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.test_app.html">werkzeug.test_app</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.unescape.html">werkzeug.unescape</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.unquote_etag.html">werkzeug.unquote_etag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.unquote_header_value.html">werkzeug.unquote_header_value</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.uri_to_iri.html">werkzeug.uri_to_iri</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.url_decode.html">werkzeug.url_decode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.url_encode.html">werkzeug.url_encode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.url_fix.html">werkzeug.url_fix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.url_quote.html">werkzeug.url_quote</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.url_quote_plus.html">werkzeug.url_quote_plus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.url_unquote.html">werkzeug.url_unquote</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.url_unquote_plus.html">werkzeug.url_unquote_plus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.validate_arguments.html">werkzeug.validate_arguments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.wrap_file.html">werkzeug.wrap_file</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/werkzeug.html#classes">Classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.Aborter.html">werkzeug.Aborter</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.Aborter.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.Accept.html">werkzeug.Accept</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.Accept.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.Accept.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.AcceptMixin.html">werkzeug.AcceptMixin</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.AcceptMixin.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.Authorization.html">werkzeug.Authorization</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.Authorization.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.Authorization.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.AuthorizationMixin.html">werkzeug.AuthorizationMixin</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.AuthorizationMixin.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.BaseRequest.html">werkzeug.BaseRequest</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.BaseRequest.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.BaseRequest.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.BaseResponse.html">werkzeug.BaseResponse</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.BaseResponse.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.BaseResponse.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.CallbackDict.html">werkzeug.CallbackDict</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.CallbackDict.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.CallbackDict.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.CharsetAccept.html">werkzeug.CharsetAccept</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.CharsetAccept.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.CharsetAccept.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.Client.html">werkzeug.Client</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.Client.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.ClosingIterator.html">werkzeug.ClosingIterator</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.ClosingIterator.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.CombinedMultiDict.html">werkzeug.CombinedMultiDict</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.CombinedMultiDict.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.CommonRequestDescriptorsMixin.html">werkzeug.CommonRequestDescriptorsMixin</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.CommonRequestDescriptorsMixin.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.CommonResponseDescriptorsMixin.html">werkzeug.CommonResponseDescriptorsMixin</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.CommonResponseDescriptorsMixin.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.DebuggedApplication.html">werkzeug.DebuggedApplication</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.DebuggedApplication.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.DebuggedApplication.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.DispatcherMiddleware.html">werkzeug.DispatcherMiddleware</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.DispatcherMiddleware.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.ETagRequestMixin.html">werkzeug.ETagRequestMixin</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.ETagRequestMixin.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.ETagResponseMixin.html">werkzeug.ETagResponseMixin</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.ETagResponseMixin.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.ETagResponseMixin.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.ETags.html">werkzeug.ETags</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.ETags.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.EnvironBuilder.html">werkzeug.EnvironBuilder</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.EnvironBuilder.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.EnvironBuilder.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.EnvironHeaders.html">werkzeug.EnvironHeaders</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.EnvironHeaders.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.FileMultiDict.html">werkzeug.FileMultiDict</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.FileMultiDict.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.FileStorage.html">werkzeug.FileStorage</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.FileStorage.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.FileStorage.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.FileWrapper.html">werkzeug.FileWrapper</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.FileWrapper.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.HTMLBuilder.html">werkzeug.HTMLBuilder</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.HTMLBuilder.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.HeaderSet.html">werkzeug.HeaderSet</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.HeaderSet.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.Headers.html">werkzeug.Headers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.Headers.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.Href.html">werkzeug.Href</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.Href.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.ImmutableDict.html">werkzeug.ImmutableDict</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.ImmutableDict.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.ImmutableList.html">werkzeug.ImmutableList</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.ImmutableList.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.ImmutableMultiDict.html">werkzeug.ImmutableMultiDict</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.ImmutableMultiDict.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.ImmutableOrderedMultiDict.html">werkzeug.ImmutableOrderedMultiDict</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.ImmutableOrderedMultiDict.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.ImmutableTypeConversionDict.html">werkzeug.ImmutableTypeConversionDict</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.ImmutableTypeConversionDict.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.LanguageAccept.html">werkzeug.LanguageAccept</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.LanguageAccept.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.LanguageAccept.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.LimitedStream.html">werkzeug.LimitedStream</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.LimitedStream.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.LimitedStream.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.Local.html">werkzeug.Local</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.Local.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.LocalManager.html">werkzeug.LocalManager</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.LocalManager.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.LocalProxy.html">werkzeug.LocalProxy</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.LocalProxy.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.LocalStack.html">werkzeug.LocalStack</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.LocalStack.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.LocalStack.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.MIMEAccept.html">werkzeug.MIMEAccept</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.MIMEAccept.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.MIMEAccept.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.MultiDict.html">werkzeug.MultiDict</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.MultiDict.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.OrderedMultiDict.html">werkzeug.OrderedMultiDict</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.OrderedMultiDict.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.Request.html">werkzeug.Request</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.Request.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.Request.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.RequestCacheControl.html">werkzeug.RequestCacheControl</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.RequestCacheControl.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.RequestCacheControl.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.Response.html">werkzeug.Response</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.Response.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.Response.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.ResponseCacheControl.html">werkzeug.ResponseCacheControl</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.ResponseCacheControl.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.ResponseCacheControl.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.ResponseStreamMixin.html">werkzeug.ResponseStreamMixin</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.ResponseStreamMixin.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.SharedDataMiddleware.html">werkzeug.SharedDataMiddleware</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.SharedDataMiddleware.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.TypeConversionDict.html">werkzeug.TypeConversionDict</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.TypeConversionDict.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.UserAgent.html">werkzeug.UserAgent</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.UserAgent.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.UserAgentMixin.html">werkzeug.UserAgentMixin</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.UserAgentMixin.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.WWWAuthenticate.html">werkzeug.WWWAuthenticate</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.WWWAuthenticate.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.WWWAuthenticate.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.WWWAuthenticateMixin.html">werkzeug.WWWAuthenticateMixin</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.WWWAuthenticateMixin.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.cached_property.html">werkzeug.cached_property</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.cached_property.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.cached_property.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.environ_property.html">werkzeug.environ_property</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.environ_property.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.environ_property.html#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/generated/werkzeug.header_property.html">werkzeug.header_property</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.header_property.html#methods">Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/werkzeug.header_property.html#attributes">Attributes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/werkzeug.html#exceptions">Exceptions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/werkzeug.ArgumentValidationError.html">werkzeug.ArgumentValidationError</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Flask API</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>werkzeug.serving</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for werkzeug.serving</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    werkzeug.serving</span>
+<span class="sd">    ~~~~~~~~~~~~~~~~</span>
+
+<span class="sd">    There are many ways to serve a WSGI application.  While you&#39;re developing</span>
+<span class="sd">    it you usually don&#39;t want a full blown webserver like Apache but a simple</span>
+<span class="sd">    standalone one.  From Python 2.5 onwards there is the `wsgiref`_ server in</span>
+<span class="sd">    the standard library.  If you&#39;re using older versions of Python you can</span>
+<span class="sd">    download the package from the cheeseshop.</span>
+
+<span class="sd">    However there are some caveats. Sourcecode won&#39;t reload itself when</span>
+<span class="sd">    changed and each time you kill the server using ``^C`` you get an</span>
+<span class="sd">    `KeyboardInterrupt` error.  While the latter is easy to solve the first</span>
+<span class="sd">    one can be a pain in the ass in some situations.</span>
+
+<span class="sd">    The easiest way is creating a small ``start-myproject.py`` that runs the</span>
+<span class="sd">    application::</span>
+
+<span class="sd">        #!/usr/bin/env python</span>
+<span class="sd">        # -*- coding: utf-8 -*-</span>
+<span class="sd">        from myproject import make_app</span>
+<span class="sd">        from werkzeug.serving import run_simple</span>
+
+<span class="sd">        app = make_app(...)</span>
+<span class="sd">        run_simple(&#39;localhost&#39;, 8080, app, use_reloader=True)</span>
+
+<span class="sd">    You can also pass it a `extra_files` keyword argument with a list of</span>
+<span class="sd">    additional files (like configuration files) you want to observe.</span>
+
+<span class="sd">    For bigger applications you should consider using `werkzeug.script`</span>
+<span class="sd">    instead of a simple start file.</span>
+
+
+<span class="sd">    :copyright: (c) 2014 by the Werkzeug Team, see AUTHORS for more details.</span>
+<span class="sd">    :license: BSD, see LICENSE for more details.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">with_statement</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">socket</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">signal</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">ssl</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="k">class</span> <span class="nc">_SslDummy</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+        <span class="k">def</span> <span class="nf">__getattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s1">&#39;SSL support unavailable&#39;</span><span class="p">)</span>
+    <span class="n">ssl</span> <span class="o">=</span> <span class="n">_SslDummy</span><span class="p">()</span>
+
+
+<span class="k">def</span> <span class="nf">_get_openssl_crypto_module</span><span class="p">():</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">OpenSSL</span> <span class="kn">import</span> <span class="n">crypto</span>
+    <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;Using ad-hoc certificates requires the pyOpenSSL &#39;</span>
+                        <span class="s1">&#39;library.&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">crypto</span>
+
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">SocketServer</span> <span class="kn">import</span> <span class="n">ThreadingMixIn</span><span class="p">,</span> <span class="n">ForkingMixIn</span>
+    <span class="kn">from</span> <span class="nn">BaseHTTPServer</span> <span class="kn">import</span> <span class="n">HTTPServer</span><span class="p">,</span> <span class="n">BaseHTTPRequestHandler</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">socketserver</span> <span class="kn">import</span> <span class="n">ThreadingMixIn</span><span class="p">,</span> <span class="n">ForkingMixIn</span>
+    <span class="kn">from</span> <span class="nn">http.server</span> <span class="kn">import</span> <span class="n">HTTPServer</span><span class="p">,</span> <span class="n">BaseHTTPRequestHandler</span>
+
+<span class="c1"># important: do not use relative imports here or python -m will break</span>
+<span class="kn">import</span> <span class="nn">werkzeug</span>
+<span class="kn">from</span> <span class="nn">werkzeug._internal</span> <span class="kn">import</span> <span class="n">_log</span>
+<span class="kn">from</span> <span class="nn">werkzeug._compat</span> <span class="kn">import</span> <span class="n">PY2</span><span class="p">,</span> <span class="n">reraise</span><span class="p">,</span> <span class="n">wsgi_encoding_dance</span>
+<span class="kn">from</span> <span class="nn">werkzeug.urls</span> <span class="kn">import</span> <span class="n">url_parse</span><span class="p">,</span> <span class="n">url_unquote</span>
+<span class="kn">from</span> <span class="nn">werkzeug.exceptions</span> <span class="kn">import</span> <span class="n">InternalServerError</span>
+
+
+<span class="n">LISTEN_QUEUE</span> <span class="o">=</span> <span class="mi">128</span>
+<span class="n">can_open_by_fd</span> <span class="o">=</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">socket</span><span class="p">,</span> <span class="s1">&#39;fromfd&#39;</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">WSGIRequestHandler</span><span class="p">(</span><span class="n">BaseHTTPRequestHandler</span><span class="p">,</span> <span class="nb">object</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;A request handler that implements WSGI dispatching.&quot;&quot;&quot;</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">server_version</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;Werkzeug/&#39;</span> <span class="o">+</span> <span class="n">werkzeug</span><span class="o">.</span><span class="n">__version__</span>
+
+    <span class="k">def</span> <span class="nf">make_environ</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">request_url</span> <span class="o">=</span> <span class="n">url_parse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">shutdown_server</span><span class="p">():</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">shutdown_signal</span> <span class="o">=</span> <span class="bp">True</span>
+
+        <span class="n">url_scheme</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">ssl_context</span> <span class="ow">is</span> <span class="bp">None</span> <span class="ow">and</span> <span class="s1">&#39;http&#39;</span> <span class="ow">or</span> <span class="s1">&#39;https&#39;</span>
+        <span class="n">path_info</span> <span class="o">=</span> <span class="n">url_unquote</span><span class="p">(</span><span class="n">request_url</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
+
+        <span class="n">environ</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;wsgi.version&#39;</span><span class="p">:</span>         <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+            <span class="s1">&#39;wsgi.url_scheme&#39;</span><span class="p">:</span>      <span class="n">url_scheme</span><span class="p">,</span>
+            <span class="s1">&#39;wsgi.input&#39;</span><span class="p">:</span>           <span class="bp">self</span><span class="o">.</span><span class="n">rfile</span><span class="p">,</span>
+            <span class="s1">&#39;wsgi.errors&#39;</span><span class="p">:</span>          <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">,</span>
+            <span class="s1">&#39;wsgi.multithread&#39;</span><span class="p">:</span>     <span class="bp">self</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">multithread</span><span class="p">,</span>
+            <span class="s1">&#39;wsgi.multiprocess&#39;</span><span class="p">:</span>    <span class="bp">self</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">multiprocess</span><span class="p">,</span>
+            <span class="s1">&#39;wsgi.run_once&#39;</span><span class="p">:</span>        <span class="bp">False</span><span class="p">,</span>
+            <span class="s1">&#39;werkzeug.server.shutdown&#39;</span><span class="p">:</span> <span class="n">shutdown_server</span><span class="p">,</span>
+            <span class="s1">&#39;SERVER_SOFTWARE&#39;</span><span class="p">:</span>      <span class="bp">self</span><span class="o">.</span><span class="n">server_version</span><span class="p">,</span>
+            <span class="s1">&#39;REQUEST_METHOD&#39;</span><span class="p">:</span>       <span class="bp">self</span><span class="o">.</span><span class="n">command</span><span class="p">,</span>
+            <span class="s1">&#39;SCRIPT_NAME&#39;</span><span class="p">:</span>          <span class="s1">&#39;&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;PATH_INFO&#39;</span><span class="p">:</span>            <span class="n">wsgi_encoding_dance</span><span class="p">(</span><span class="n">path_info</span><span class="p">),</span>
+            <span class="s1">&#39;QUERY_STRING&#39;</span><span class="p">:</span>         <span class="n">wsgi_encoding_dance</span><span class="p">(</span><span class="n">request_url</span><span class="o">.</span><span class="n">query</span><span class="p">),</span>
+            <span class="s1">&#39;CONTENT_TYPE&#39;</span><span class="p">:</span>         <span class="bp">self</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">),</span>
+            <span class="s1">&#39;CONTENT_LENGTH&#39;</span><span class="p">:</span>       <span class="bp">self</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Content-Length&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">),</span>
+            <span class="s1">&#39;REMOTE_ADDR&#39;</span><span class="p">:</span>          <span class="bp">self</span><span class="o">.</span><span class="n">address_string</span><span class="p">(),</span>
+            <span class="s1">&#39;REMOTE_PORT&#39;</span><span class="p">:</span>          <span class="bp">self</span><span class="o">.</span><span class="n">port_integer</span><span class="p">(),</span>
+            <span class="s1">&#39;SERVER_NAME&#39;</span><span class="p">:</span>          <span class="bp">self</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">server_address</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+            <span class="s1">&#39;SERVER_PORT&#39;</span><span class="p">:</span>          <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">server_address</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span>
+            <span class="s1">&#39;SERVER_PROTOCOL&#39;</span><span class="p">:</span>      <span class="bp">self</span><span class="o">.</span><span class="n">request_version</span>
+        <span class="p">}</span>
+
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">key</span> <span class="o">=</span> <span class="s1">&#39;HTTP_&#39;</span> <span class="o">+</span> <span class="n">key</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="s1">&#39;_&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">key</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;HTTP_CONTENT_TYPE&#39;</span><span class="p">,</span> <span class="s1">&#39;HTTP_CONTENT_LENGTH&#39;</span><span class="p">):</span>
+                <span class="n">environ</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+
+        <span class="k">if</span> <span class="n">request_url</span><span class="o">.</span><span class="n">scheme</span> <span class="ow">and</span> <span class="n">request_url</span><span class="o">.</span><span class="n">netloc</span><span class="p">:</span>
+            <span class="n">environ</span><span class="p">[</span><span class="s1">&#39;HTTP_HOST&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">request_url</span><span class="o">.</span><span class="n">netloc</span>
+
+        <span class="k">return</span> <span class="n">environ</span>
+
+    <span class="k">def</span> <span class="nf">run_wsgi</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Expect&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;100-continue&#39;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">wfile</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">b</span><span class="s1">&#39;HTTP/1.1 100 Continue</span><span class="se">\r\n\r\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">environ</span> <span class="o">=</span> <span class="n">environ</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">make_environ</span><span class="p">()</span>
+        <span class="n">headers_set</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">headers_sent</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="k">def</span> <span class="nf">write</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+            <span class="k">assert</span> <span class="n">headers_set</span><span class="p">,</span> <span class="s1">&#39;write() before start_response&#39;</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">headers_sent</span><span class="p">:</span>
+                <span class="n">status</span><span class="p">,</span> <span class="n">response_headers</span> <span class="o">=</span> <span class="n">headers_sent</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">headers_set</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">code</span><span class="p">,</span> <span class="n">msg</span> <span class="o">=</span> <span class="n">status</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+                <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                    <span class="n">code</span><span class="p">,</span> <span class="n">msg</span> <span class="o">=</span> <span class="n">status</span><span class="p">,</span> <span class="s2">&quot;&quot;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">send_response</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">code</span><span class="p">),</span> <span class="n">msg</span><span class="p">)</span>
+                <span class="n">header_keys</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+                <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">response_headers</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">send_header</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+                    <span class="n">key</span> <span class="o">=</span> <span class="n">key</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+                    <span class="n">header_keys</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+                <span class="k">if</span> <span class="s1">&#39;content-length&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">header_keys</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">close_connection</span> <span class="o">=</span> <span class="bp">True</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">send_header</span><span class="p">(</span><span class="s1">&#39;Connection&#39;</span><span class="p">,</span> <span class="s1">&#39;close&#39;</span><span class="p">)</span>
+                <span class="k">if</span> <span class="s1">&#39;server&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">header_keys</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">send_header</span><span class="p">(</span><span class="s1">&#39;Server&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">version_string</span><span class="p">())</span>
+                <span class="k">if</span> <span class="s1">&#39;date&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">header_keys</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">send_header</span><span class="p">(</span><span class="s1">&#39;Date&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">date_time_string</span><span class="p">())</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">end_headers</span><span class="p">()</span>
+
+            <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">),</span> <span class="s1">&#39;applications must write bytes&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">wfile</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">wfile</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+
+        <span class="k">def</span> <span class="nf">start_response</span><span class="p">(</span><span class="n">status</span><span class="p">,</span> <span class="n">response_headers</span><span class="p">,</span> <span class="n">exc_info</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">exc_info</span><span class="p">:</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">headers_sent</span><span class="p">:</span>
+                        <span class="n">reraise</span><span class="p">(</span><span class="o">*</span><span class="n">exc_info</span><span class="p">)</span>
+                <span class="k">finally</span><span class="p">:</span>
+                    <span class="n">exc_info</span> <span class="o">=</span> <span class="bp">None</span>
+            <span class="k">elif</span> <span class="n">headers_set</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">AssertionError</span><span class="p">(</span><span class="s1">&#39;Headers already set&#39;</span><span class="p">)</span>
+            <span class="n">headers_set</span><span class="p">[:]</span> <span class="o">=</span> <span class="p">[</span><span class="n">status</span><span class="p">,</span> <span class="n">response_headers</span><span class="p">]</span>
+            <span class="k">return</span> <span class="n">write</span>
+
+        <span class="k">def</span> <span class="nf">execute</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
+            <span class="n">application_iter</span> <span class="o">=</span> <span class="n">app</span><span class="p">(</span><span class="n">environ</span><span class="p">,</span> <span class="n">start_response</span><span class="p">)</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">application_iter</span><span class="p">:</span>
+                    <span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">headers_sent</span><span class="p">:</span>
+                    <span class="n">write</span><span class="p">(</span><span class="n">b</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+            <span class="k">finally</span><span class="p">:</span>
+                <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">application_iter</span><span class="p">,</span> <span class="s1">&#39;close&#39;</span><span class="p">):</span>
+                    <span class="n">application_iter</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+                <span class="n">application_iter</span> <span class="o">=</span> <span class="bp">None</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">execute</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">app</span><span class="p">)</span>
+        <span class="k">except</span> <span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">error</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">timeout</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">connection_dropped</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">environ</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">passthrough_errors</span><span class="p">:</span>
+                <span class="k">raise</span>
+            <span class="kn">from</span> <span class="nn">werkzeug.debug.tbtools</span> <span class="kn">import</span> <span class="n">get_current_traceback</span>
+            <span class="n">traceback</span> <span class="o">=</span> <span class="n">get_current_traceback</span><span class="p">(</span><span class="n">ignore_system_exceptions</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="c1"># if we haven&#39;t yet sent the headers but they are set</span>
+                <span class="c1"># we roll back to be able to set them again.</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">headers_sent</span><span class="p">:</span>
+                    <span class="k">del</span> <span class="n">headers_set</span><span class="p">[:]</span>
+                <span class="n">execute</span><span class="p">(</span><span class="n">InternalServerError</span><span class="p">())</span>
+            <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+                <span class="k">pass</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s1">&#39;error&#39;</span><span class="p">,</span> <span class="s1">&#39;Error on request:</span><span class="se">\n</span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span>
+                            <span class="n">traceback</span><span class="o">.</span><span class="n">plaintext</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">handle</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Handles a request ignoring dropped connections.&quot;&quot;&quot;</span>
+        <span class="n">rv</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">rv</span> <span class="o">=</span> <span class="n">BaseHTTPRequestHandler</span><span class="o">.</span><span class="n">handle</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="k">except</span> <span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">error</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">timeout</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">connection_dropped</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">ssl_context</span> <span class="ow">is</span> <span class="bp">None</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">is_ssl_error</span><span class="p">():</span>
+                <span class="k">raise</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">shutdown_signal</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">initiate_shutdown</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">rv</span>
+
+    <span class="k">def</span> <span class="nf">initiate_shutdown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;A horrible, horrible way to kill the server for Python 2.6 and</span>
+<span class="sd">        later.  It&#39;s the best we can do.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Windows does not provide SIGKILL, go with SIGTERM then.</span>
+        <span class="n">sig</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">signal</span><span class="p">,</span> <span class="s1">&#39;SIGKILL&#39;</span><span class="p">,</span> <span class="n">signal</span><span class="o">.</span><span class="n">SIGTERM</span><span class="p">)</span>
+        <span class="c1"># reloader active</span>
+        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;WERKZEUG_RUN_MAIN&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;true&#39;</span><span class="p">:</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">kill</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getpid</span><span class="p">(),</span> <span class="n">sig</span><span class="p">)</span>
+        <span class="c1"># python 2.7</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">_BaseServer__shutdown_request</span> <span class="o">=</span> <span class="bp">True</span>
+        <span class="c1"># python 2.6</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">_BaseServer__serving</span> <span class="o">=</span> <span class="bp">False</span>
+
+    <span class="k">def</span> <span class="nf">connection_dropped</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">error</span><span class="p">,</span> <span class="n">environ</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Called if the connection was closed by the client.  By default</span>
+<span class="sd">        nothing happens.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">handle_one_request</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Handle a single HTTP request.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">raw_requestline</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rfile</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw_requestline</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">close_connection</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">parse_request</span><span class="p">():</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">run_wsgi</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">send_response</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Send the response header and log the response code.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">log_request</span><span class="p">(</span><span class="n">code</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">message</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">message</span> <span class="o">=</span> <span class="n">code</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">responses</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">responses</span><span class="p">[</span><span class="n">code</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="ow">or</span> <span class="s1">&#39;&#39;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">request_version</span> <span class="o">!=</span> <span class="s1">&#39;HTTP/0.9&#39;</span><span class="p">:</span>
+            <span class="n">hdr</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> </span><span class="si">%d</span><span class="s2"> </span><span class="si">%s</span><span class="se">\r\n</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">protocol_version</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">wfile</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">hdr</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">version_string</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">BaseHTTPRequestHandler</span><span class="o">.</span><span class="n">version_string</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">address_string</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">client_address</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">port_integer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">client_address</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">log_request</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">code</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s1">&#39;info&#39;</span><span class="p">,</span> <span class="s1">&#39;&quot;</span><span class="si">%s</span><span class="s1">&quot; </span><span class="si">%s</span><span class="s1"> </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">requestline</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">size</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">log_error</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s1">&#39;error&#39;</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">log_message</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">format</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s1">&#39;info&#39;</span><span class="p">,</span> <span class="n">format</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">log</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="n">message</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="n">_log</span><span class="p">(</span><span class="nb">type</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">%s</span><span class="s1"> - - [</span><span class="si">%s</span><span class="s1">] </span><span class="si">%s</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">address_string</span><span class="p">(),</span>
+                                         <span class="bp">self</span><span class="o">.</span><span class="n">log_date_time_string</span><span class="p">(),</span>
+                                         <span class="n">message</span> <span class="o">%</span> <span class="n">args</span><span class="p">))</span>
+
+
+<span class="c1">#: backwards compatible name if someone is subclassing it</span>
+<span class="n">BaseRequestHandler</span> <span class="o">=</span> <span class="n">WSGIRequestHandler</span>
+
+
+<span class="k">def</span> <span class="nf">generate_adhoc_ssl_pair</span><span class="p">(</span><span class="n">cn</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">random</span>
+    <span class="n">crypto</span> <span class="o">=</span> <span class="n">_get_openssl_crypto_module</span><span class="p">()</span>
+
+    <span class="c1"># pretty damn sure that this is not actually accepted by anyone</span>
+    <span class="k">if</span> <span class="n">cn</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">cn</span> <span class="o">=</span> <span class="s1">&#39;*&#39;</span>
+
+    <span class="n">cert</span> <span class="o">=</span> <span class="n">crypto</span><span class="o">.</span><span class="n">X509</span><span class="p">()</span>
+    <span class="n">cert</span><span class="o">.</span><span class="n">set_serial_number</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">random</span><span class="p">()</span> <span class="o">*</span> <span class="n">sys</span><span class="o">.</span><span class="n">maxsize</span><span class="p">))</span>
+    <span class="n">cert</span><span class="o">.</span><span class="n">gmtime_adj_notBefore</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">cert</span><span class="o">.</span><span class="n">gmtime_adj_notAfter</span><span class="p">(</span><span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">24</span> <span class="o">*</span> <span class="mi">365</span><span class="p">)</span>
+
+    <span class="n">subject</span> <span class="o">=</span> <span class="n">cert</span><span class="o">.</span><span class="n">get_subject</span><span class="p">()</span>
+    <span class="n">subject</span><span class="o">.</span><span class="n">CN</span> <span class="o">=</span> <span class="n">cn</span>
+    <span class="n">subject</span><span class="o">.</span><span class="n">O</span> <span class="o">=</span> <span class="s1">&#39;Dummy Certificate&#39;</span>
+
+    <span class="n">issuer</span> <span class="o">=</span> <span class="n">cert</span><span class="o">.</span><span class="n">get_issuer</span><span class="p">()</span>
+    <span class="n">issuer</span><span class="o">.</span><span class="n">CN</span> <span class="o">=</span> <span class="s1">&#39;Untrusted Authority&#39;</span>
+    <span class="n">issuer</span><span class="o">.</span><span class="n">O</span> <span class="o">=</span> <span class="s1">&#39;Self-Signed&#39;</span>
+
+    <span class="n">pkey</span> <span class="o">=</span> <span class="n">crypto</span><span class="o">.</span><span class="n">PKey</span><span class="p">()</span>
+    <span class="n">pkey</span><span class="o">.</span><span class="n">generate_key</span><span class="p">(</span><span class="n">crypto</span><span class="o">.</span><span class="n">TYPE_RSA</span><span class="p">,</span> <span class="mi">1024</span><span class="p">)</span>
+    <span class="n">cert</span><span class="o">.</span><span class="n">set_pubkey</span><span class="p">(</span><span class="n">pkey</span><span class="p">)</span>
+    <span class="n">cert</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">pkey</span><span class="p">,</span> <span class="s1">&#39;md5&#39;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">cert</span><span class="p">,</span> <span class="n">pkey</span>
+
+
+<span class="k">def</span> <span class="nf">make_ssl_devcert</span><span class="p">(</span><span class="n">base_path</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">cn</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Creates an SSL key for development.  This should be used instead of</span>
+<span class="sd">    the ``&#39;adhoc&#39;`` key which generates a new cert on each server start.</span>
+<span class="sd">    It accepts a path for where it should store the key and cert and</span>
+<span class="sd">    either a host or CN.  If a host is given it will use the CN</span>
+<span class="sd">    ``*.host/CN=host``.</span>
+
+<span class="sd">    For more information see :func:`run_simple`.</span>
+
+<span class="sd">    .. versionadded:: 0.9</span>
+
+<span class="sd">    :param base_path: the path to the certificate and key.  The extension</span>
+<span class="sd">                      ``.crt`` is added for the certificate, ``.key`` is</span>
+<span class="sd">                      added for the key.</span>
+<span class="sd">    :param host: the name of the host.  This can be used as an alternative</span>
+<span class="sd">                 for the `cn`.</span>
+<span class="sd">    :param cn: the `CN` to use.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="kn">from</span> <span class="nn">OpenSSL</span> <span class="kn">import</span> <span class="n">crypto</span>
+    <span class="k">if</span> <span class="n">host</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">cn</span> <span class="o">=</span> <span class="s1">&#39;*.</span><span class="si">%s</span><span class="s1">/CN=</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">host</span><span class="p">)</span>
+    <span class="n">cert</span><span class="p">,</span> <span class="n">pkey</span> <span class="o">=</span> <span class="n">generate_adhoc_ssl_pair</span><span class="p">(</span><span class="n">cn</span><span class="o">=</span><span class="n">cn</span><span class="p">)</span>
+
+    <span class="n">cert_file</span> <span class="o">=</span> <span class="n">base_path</span> <span class="o">+</span> <span class="s1">&#39;.crt&#39;</span>
+    <span class="n">pkey_file</span> <span class="o">=</span> <span class="n">base_path</span> <span class="o">+</span> <span class="s1">&#39;.key&#39;</span>
+
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">cert_file</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">crypto</span><span class="o">.</span><span class="n">dump_certificate</span><span class="p">(</span><span class="n">crypto</span><span class="o">.</span><span class="n">FILETYPE_PEM</span><span class="p">,</span> <span class="n">cert</span><span class="p">))</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">pkey_file</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">crypto</span><span class="o">.</span><span class="n">dump_privatekey</span><span class="p">(</span><span class="n">crypto</span><span class="o">.</span><span class="n">FILETYPE_PEM</span><span class="p">,</span> <span class="n">pkey</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">cert_file</span><span class="p">,</span> <span class="n">pkey_file</span>
+
+
+<span class="k">def</span> <span class="nf">generate_adhoc_ssl_context</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Generates an adhoc SSL context for the development server.&quot;&quot;&quot;</span>
+    <span class="n">crypto</span> <span class="o">=</span> <span class="n">_get_openssl_crypto_module</span><span class="p">()</span>
+    <span class="kn">import</span> <span class="nn">tempfile</span>
+    <span class="kn">import</span> <span class="nn">atexit</span>
+
+    <span class="n">cert</span><span class="p">,</span> <span class="n">pkey</span> <span class="o">=</span> <span class="n">generate_adhoc_ssl_pair</span><span class="p">()</span>
+    <span class="n">cert_handle</span><span class="p">,</span> <span class="n">cert_file</span> <span class="o">=</span> <span class="n">tempfile</span><span class="o">.</span><span class="n">mkstemp</span><span class="p">()</span>
+    <span class="n">pkey_handle</span><span class="p">,</span> <span class="n">pkey_file</span> <span class="o">=</span> <span class="n">tempfile</span><span class="o">.</span><span class="n">mkstemp</span><span class="p">()</span>
+    <span class="n">atexit</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">,</span> <span class="n">pkey_file</span><span class="p">)</span>
+    <span class="n">atexit</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">,</span> <span class="n">cert_file</span><span class="p">)</span>
+
+    <span class="n">os</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">cert_handle</span><span class="p">,</span> <span class="n">crypto</span><span class="o">.</span><span class="n">dump_certificate</span><span class="p">(</span><span class="n">crypto</span><span class="o">.</span><span class="n">FILETYPE_PEM</span><span class="p">,</span> <span class="n">cert</span><span class="p">))</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">pkey_handle</span><span class="p">,</span> <span class="n">crypto</span><span class="o">.</span><span class="n">dump_privatekey</span><span class="p">(</span><span class="n">crypto</span><span class="o">.</span><span class="n">FILETYPE_PEM</span><span class="p">,</span> <span class="n">pkey</span><span class="p">))</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">close</span><span class="p">(</span><span class="n">cert_handle</span><span class="p">)</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">close</span><span class="p">(</span><span class="n">pkey_handle</span><span class="p">)</span>
+    <span class="n">ctx</span> <span class="o">=</span> <span class="n">load_ssl_context</span><span class="p">(</span><span class="n">cert_file</span><span class="p">,</span> <span class="n">pkey_file</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ctx</span>
+
+
+<span class="k">def</span> <span class="nf">load_ssl_context</span><span class="p">(</span><span class="n">cert_file</span><span class="p">,</span> <span class="n">pkey_file</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">protocol</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Loads SSL context from cert/private key files and optional protocol.</span>
+<span class="sd">    Many parameters are directly taken from the API of</span>
+<span class="sd">    :py:class:`ssl.SSLContext`.</span>
+
+<span class="sd">    :param cert_file: Path of the certificate to use.</span>
+<span class="sd">    :param pkey_file: Path of the private key to use. If not given, the key</span>
+<span class="sd">                      will be obtained from the certificate file.</span>
+<span class="sd">    :param protocol: One of the ``PROTOCOL_*`` constants in the stdlib ``ssl``</span>
+<span class="sd">                     module. Defaults to ``PROTOCOL_SSLv23``.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">protocol</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">protocol</span> <span class="o">=</span> <span class="n">ssl</span><span class="o">.</span><span class="n">PROTOCOL_SSLv23</span>
+    <span class="n">ctx</span> <span class="o">=</span> <span class="n">_SSLContext</span><span class="p">(</span><span class="n">protocol</span><span class="p">)</span>
+    <span class="n">ctx</span><span class="o">.</span><span class="n">load_cert_chain</span><span class="p">(</span><span class="n">cert_file</span><span class="p">,</span> <span class="n">pkey_file</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ctx</span>
+
+
+<span class="k">class</span> <span class="nc">_SSLContext</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="sd">&#39;&#39;&#39;A dummy class with a small subset of Python3&#39;s ``ssl.SSLContext``, only</span>
+<span class="sd">    intended to be used with and by Werkzeug.&#39;&#39;&#39;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">protocol</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_protocol</span> <span class="o">=</span> <span class="n">protocol</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_certfile</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_keyfile</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_password</span> <span class="o">=</span> <span class="bp">None</span>
+
+    <span class="k">def</span> <span class="nf">load_cert_chain</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">certfile</span><span class="p">,</span> <span class="n">keyfile</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_certfile</span> <span class="o">=</span> <span class="n">certfile</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_keyfile</span> <span class="o">=</span> <span class="n">keyfile</span> <span class="ow">or</span> <span class="n">certfile</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_password</span> <span class="o">=</span> <span class="n">password</span>
+
+    <span class="k">def</span> <span class="nf">wrap_socket</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sock</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">ssl</span><span class="o">.</span><span class="n">wrap_socket</span><span class="p">(</span><span class="n">sock</span><span class="p">,</span> <span class="n">keyfile</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_keyfile</span><span class="p">,</span>
+                               <span class="n">certfile</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_certfile</span><span class="p">,</span>
+                               <span class="n">ssl_version</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_protocol</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">is_ssl_error</span><span class="p">(</span><span class="n">error</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Checks if the given error (or the current one) is an SSL error.&quot;&quot;&quot;</span>
+    <span class="n">exc_types</span> <span class="o">=</span> <span class="p">(</span><span class="n">ssl</span><span class="o">.</span><span class="n">SSLError</span><span class="p">,)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">OpenSSL.SSL</span> <span class="kn">import</span> <span class="n">Error</span>
+        <span class="n">exc_types</span> <span class="o">+=</span> <span class="p">(</span><span class="n">Error</span><span class="p">,)</span>
+    <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+        <span class="k">pass</span>
+
+    <span class="k">if</span> <span class="n">error</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">error</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">exc_info</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">return</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">error</span><span class="p">,</span> <span class="n">exc_types</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">select_ip_version</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns AF_INET4 or AF_INET6 depending on where to connect to.&quot;&quot;&quot;</span>
+    <span class="c1"># disabled due to problems with current ipv6 implementations</span>
+    <span class="c1"># and various operating systems.  Probably this code also is</span>
+    <span class="c1"># not supposed to work, but I can&#39;t come up with any other</span>
+    <span class="c1"># ways to implement this.</span>
+    <span class="c1"># try:</span>
+    <span class="c1">#     info = socket.getaddrinfo(host, port, socket.AF_UNSPEC,</span>
+    <span class="c1">#                               socket.SOCK_STREAM, 0,</span>
+    <span class="c1">#                               socket.AI_PASSIVE)</span>
+    <span class="c1">#     if info:</span>
+    <span class="c1">#         return info[0][0]</span>
+    <span class="c1"># except socket.gaierror:</span>
+    <span class="c1">#     pass</span>
+    <span class="k">if</span> <span class="s1">&#39;:&#39;</span> <span class="ow">in</span> <span class="n">host</span> <span class="ow">and</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">socket</span><span class="p">,</span> <span class="s1">&#39;AF_INET6&#39;</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">socket</span><span class="o">.</span><span class="n">AF_INET6</span>
+    <span class="k">return</span> <span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span>
+
+
+<span class="k">class</span> <span class="nc">BaseWSGIServer</span><span class="p">(</span><span class="n">HTTPServer</span><span class="p">,</span> <span class="nb">object</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;Simple single-threaded, single-process WSGI server.&quot;&quot;&quot;</span>
+    <span class="n">multithread</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="n">multiprocess</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="n">request_queue_size</span> <span class="o">=</span> <span class="n">LISTEN_QUEUE</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">app</span><span class="p">,</span> <span class="n">handler</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+                 <span class="n">passthrough_errors</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">ssl_context</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">fd</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">handler</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">handler</span> <span class="o">=</span> <span class="n">WSGIRequestHandler</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">address_family</span> <span class="o">=</span> <span class="n">select_ip_version</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">fd</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">real_sock</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">fromfd</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">address_family</span><span class="p">,</span>
+                                      <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span>
+            <span class="n">port</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">HTTPServer</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">port</span><span class="p">)),</span> <span class="n">handler</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">app</span> <span class="o">=</span> <span class="n">app</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">passthrough_errors</span> <span class="o">=</span> <span class="n">passthrough_errors</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">shutdown_signal</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">host</span> <span class="o">=</span> <span class="n">host</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">port</span> <span class="o">=</span> <span class="n">port</span>
+
+        <span class="c1"># Patch in the original socket.</span>
+        <span class="k">if</span> <span class="n">fd</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">socket</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">socket</span> <span class="o">=</span> <span class="n">real_sock</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">server_address</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">socket</span><span class="o">.</span><span class="n">getsockname</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">ssl_context</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ssl_context</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">):</span>
+                <span class="n">ssl_context</span> <span class="o">=</span> <span class="n">load_ssl_context</span><span class="p">(</span><span class="o">*</span><span class="n">ssl_context</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">ssl_context</span> <span class="o">==</span> <span class="s1">&#39;adhoc&#39;</span><span class="p">:</span>
+                <span class="n">ssl_context</span> <span class="o">=</span> <span class="n">generate_adhoc_ssl_context</span><span class="p">()</span>
+            <span class="c1"># If we are on Python 2 the return value from socket.fromfd</span>
+            <span class="c1"># is an internal socket object but what we need for ssl wrap</span>
+            <span class="c1"># is the wrapper around it :(</span>
+            <span class="n">sock</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">socket</span>
+            <span class="k">if</span> <span class="n">PY2</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">sock</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">):</span>
+                <span class="n">sock</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">sock</span><span class="o">.</span><span class="n">family</span><span class="p">,</span> <span class="n">sock</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="n">sock</span><span class="o">.</span><span class="n">proto</span><span class="p">,</span> <span class="n">sock</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">socket</span> <span class="o">=</span> <span class="n">ssl_context</span><span class="o">.</span><span class="n">wrap_socket</span><span class="p">(</span><span class="n">sock</span><span class="p">,</span> <span class="n">server_side</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ssl_context</span> <span class="o">=</span> <span class="n">ssl_context</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ssl_context</span> <span class="o">=</span> <span class="bp">None</span>
+
+    <span class="k">def</span> <span class="nf">log</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="n">message</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="n">_log</span><span class="p">(</span><span class="nb">type</span><span class="p">,</span> <span class="n">message</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">serve_forever</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">shutdown_signal</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">HTTPServer</span><span class="o">.</span><span class="n">serve_forever</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">KeyboardInterrupt</span><span class="p">:</span>
+            <span class="k">pass</span>
+        <span class="k">finally</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">server_close</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">handle_error</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">client_address</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">passthrough_errors</span><span class="p">:</span>
+            <span class="k">raise</span>
+        <span class="k">return</span> <span class="n">HTTPServer</span><span class="o">.</span><span class="n">handle_error</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">client_address</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">get_request</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">con</span><span class="p">,</span> <span class="n">info</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">socket</span><span class="o">.</span><span class="n">accept</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">con</span><span class="p">,</span> <span class="n">info</span>
+
+
+<span class="k">class</span> <span class="nc">ThreadedWSGIServer</span><span class="p">(</span><span class="n">ThreadingMixIn</span><span class="p">,</span> <span class="n">BaseWSGIServer</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;A WSGI server that does threading.&quot;&quot;&quot;</span>
+    <span class="n">multithread</span> <span class="o">=</span> <span class="bp">True</span>
+
+
+<span class="k">class</span> <span class="nc">ForkingWSGIServer</span><span class="p">(</span><span class="n">ForkingMixIn</span><span class="p">,</span> <span class="n">BaseWSGIServer</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;A WSGI server that does forking.&quot;&quot;&quot;</span>
+    <span class="n">multiprocess</span> <span class="o">=</span> <span class="bp">True</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">app</span><span class="p">,</span> <span class="n">processes</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="n">handler</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+                 <span class="n">passthrough_errors</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">ssl_context</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">fd</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="n">BaseWSGIServer</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">app</span><span class="p">,</span> <span class="n">handler</span><span class="p">,</span>
+                                <span class="n">passthrough_errors</span><span class="p">,</span> <span class="n">ssl_context</span><span class="p">,</span> <span class="n">fd</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">max_children</span> <span class="o">=</span> <span class="n">processes</span>
+
+
+<span class="k">def</span> <span class="nf">make_server</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">app</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">threaded</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">processes</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                <span class="n">request_handler</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">passthrough_errors</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                <span class="n">ssl_context</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">fd</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Create a new server instance that is either threaded, or forks</span>
+<span class="sd">    or just processes one request after another.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">threaded</span> <span class="ow">and</span> <span class="n">processes</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;cannot have a multithreaded and &quot;</span>
+                         <span class="s2">&quot;multi process server.&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">threaded</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">ThreadedWSGIServer</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">app</span><span class="p">,</span> <span class="n">request_handler</span><span class="p">,</span>
+                                  <span class="n">passthrough_errors</span><span class="p">,</span> <span class="n">ssl_context</span><span class="p">,</span> <span class="n">fd</span><span class="o">=</span><span class="n">fd</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">processes</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">ForkingWSGIServer</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">app</span><span class="p">,</span> <span class="n">processes</span><span class="p">,</span> <span class="n">request_handler</span><span class="p">,</span>
+                                 <span class="n">passthrough_errors</span><span class="p">,</span> <span class="n">ssl_context</span><span class="p">,</span> <span class="n">fd</span><span class="o">=</span><span class="n">fd</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">BaseWSGIServer</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">app</span><span class="p">,</span> <span class="n">request_handler</span><span class="p">,</span>
+                              <span class="n">passthrough_errors</span><span class="p">,</span> <span class="n">ssl_context</span><span class="p">,</span> <span class="n">fd</span><span class="o">=</span><span class="n">fd</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">is_running_from_reloader</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Checks if the application is running from within the Werkzeug</span>
+<span class="sd">    reloader subprocess.</span>
+
+<span class="sd">    .. versionadded:: 0.10</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;WERKZEUG_RUN_MAIN&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;true&#39;</span>
+
+
+<div class="viewcode-block" id="run_simple"><a class="viewcode-back" href="../../generated/werkzeug.run_simple.html#werkzeug.run_simple">[docs]</a><span class="k">def</span> <span class="nf">run_simple</span><span class="p">(</span><span class="n">hostname</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">application</span><span class="p">,</span> <span class="n">use_reloader</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+               <span class="n">use_debugger</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">use_evalex</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+               <span class="n">extra_files</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">reloader_interval</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+               <span class="n">reloader_type</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span> <span class="n">threaded</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+               <span class="n">processes</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">request_handler</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">static_files</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+               <span class="n">passthrough_errors</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">ssl_context</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Start a WSGI application. Optional features include a reloader,</span>
+<span class="sd">    multithreading and fork support.</span>
+
+<span class="sd">    This function has a command-line interface too::</span>
+
+<span class="sd">        python -m werkzeug.serving --help</span>
+
+<span class="sd">    .. versionadded:: 0.5</span>
+<span class="sd">       `static_files` was added to simplify serving of static files as well</span>
+<span class="sd">       as `passthrough_errors`.</span>
+
+<span class="sd">    .. versionadded:: 0.6</span>
+<span class="sd">       support for SSL was added.</span>
+
+<span class="sd">    .. versionadded:: 0.8</span>
+<span class="sd">       Added support for automatically loading a SSL context from certificate</span>
+<span class="sd">       file and private key.</span>
+
+<span class="sd">    .. versionadded:: 0.9</span>
+<span class="sd">       Added command-line interface.</span>
+
+<span class="sd">    .. versionadded:: 0.10</span>
+<span class="sd">       Improved the reloader and added support for changing the backend</span>
+<span class="sd">       through the `reloader_type` parameter.  See :ref:`reloader`</span>
+<span class="sd">       for more information.</span>
+
+<span class="sd">    :param hostname: The host for the application.  eg: ``&#39;localhost&#39;``</span>
+<span class="sd">    :param port: The port for the server.  eg: ``8080``</span>
+<span class="sd">    :param application: the WSGI application to execute</span>
+<span class="sd">    :param use_reloader: should the server automatically restart the python</span>
+<span class="sd">                         process if modules were changed?</span>
+<span class="sd">    :param use_debugger: should the werkzeug debugging system be used?</span>
+<span class="sd">    :param use_evalex: should the exception evaluation feature be enabled?</span>
+<span class="sd">    :param extra_files: a list of files the reloader should watch</span>
+<span class="sd">                        additionally to the modules.  For example configuration</span>
+<span class="sd">                        files.</span>
+<span class="sd">    :param reloader_interval: the interval for the reloader in seconds.</span>
+<span class="sd">    :param reloader_type: the type of reloader to use.  The default is</span>
+<span class="sd">                          auto detection.  Valid values are ``&#39;stat&#39;`` and</span>
+<span class="sd">                          ``&#39;watchdog&#39;``. See :ref:`reloader` for more</span>
+<span class="sd">                          information.</span>
+<span class="sd">    :param threaded: should the process handle each request in a separate</span>
+<span class="sd">                     thread?</span>
+<span class="sd">    :param processes: if greater than 1 then handle each request in a new process</span>
+<span class="sd">                      up to this maximum number of concurrent processes.</span>
+<span class="sd">    :param request_handler: optional parameter that can be used to replace</span>
+<span class="sd">                            the default one.  You can use this to replace it</span>
+<span class="sd">                            with a different</span>
+<span class="sd">                            :class:`~BaseHTTPServer.BaseHTTPRequestHandler`</span>
+<span class="sd">                            subclass.</span>
+<span class="sd">    :param static_files: a dict of paths for static files.  This works exactly</span>
+<span class="sd">                         like :class:`SharedDataMiddleware`, it&#39;s actually</span>
+<span class="sd">                         just wrapping the application in that middleware before</span>
+<span class="sd">                         serving.</span>
+<span class="sd">    :param passthrough_errors: set this to `True` to disable the error catching.</span>
+<span class="sd">                               This means that the server will die on errors but</span>
+<span class="sd">                               it can be useful to hook debuggers in (pdb etc.)</span>
+<span class="sd">    :param ssl_context: an SSL context for the connection. Either an</span>
+<span class="sd">                        :class:`ssl.SSLContext`, a tuple in the form</span>
+<span class="sd">                        ``(cert_file, pkey_file)``, the string ``&#39;adhoc&#39;`` if</span>
+<span class="sd">                        the server should automatically create one, or ``None``</span>
+<span class="sd">                        to disable SSL (which is the default).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">use_debugger</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">werkzeug.debug</span> <span class="kn">import</span> <span class="n">DebuggedApplication</span>
+        <span class="n">application</span> <span class="o">=</span> <span class="n">DebuggedApplication</span><span class="p">(</span><span class="n">application</span><span class="p">,</span> <span class="n">use_evalex</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">static_files</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">werkzeug.wsgi</span> <span class="kn">import</span> <span class="n">SharedDataMiddleware</span>
+        <span class="n">application</span> <span class="o">=</span> <span class="n">SharedDataMiddleware</span><span class="p">(</span><span class="n">application</span><span class="p">,</span> <span class="n">static_files</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">log_startup</span><span class="p">(</span><span class="n">sock</span><span class="p">):</span>
+        <span class="n">display_hostname</span> <span class="o">=</span> <span class="n">hostname</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">hostname</span> <span class="ow">or</span> <span class="s1">&#39;localhost&#39;</span>
+        <span class="k">if</span> <span class="s1">&#39;:&#39;</span> <span class="ow">in</span> <span class="n">display_hostname</span><span class="p">:</span>
+            <span class="n">display_hostname</span> <span class="o">=</span> <span class="s1">&#39;[</span><span class="si">%s</span><span class="s1">]&#39;</span> <span class="o">%</span> <span class="n">display_hostname</span>
+        <span class="n">quit_msg</span> <span class="o">=</span> <span class="s1">&#39;(Press CTRL+C to quit)&#39;</span>
+        <span class="n">port</span> <span class="o">=</span> <span class="n">sock</span><span class="o">.</span><span class="n">getsockname</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">_log</span><span class="p">(</span><span class="s1">&#39;info&#39;</span><span class="p">,</span> <span class="s1">&#39; * Running on </span><span class="si">%s</span><span class="s1">://</span><span class="si">%s</span><span class="s1">:</span><span class="si">%d</span><span class="s1">/ </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span>
+             <span class="n">ssl_context</span> <span class="ow">is</span> <span class="bp">None</span> <span class="ow">and</span> <span class="s1">&#39;http&#39;</span> <span class="ow">or</span> <span class="s1">&#39;https&#39;</span><span class="p">,</span>
+             <span class="n">display_hostname</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">quit_msg</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">inner</span><span class="p">():</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">fd</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;WERKZEUG_SERVER_FD&#39;</span><span class="p">])</span>
+        <span class="k">except</span> <span class="p">(</span><span class="ne">LookupError</span><span class="p">,</span> <span class="ne">ValueError</span><span class="p">):</span>
+            <span class="n">fd</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="n">srv</span> <span class="o">=</span> <span class="n">make_server</span><span class="p">(</span><span class="n">hostname</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">application</span><span class="p">,</span> <span class="n">threaded</span><span class="p">,</span>
+                          <span class="n">processes</span><span class="p">,</span> <span class="n">request_handler</span><span class="p">,</span>
+                          <span class="n">passthrough_errors</span><span class="p">,</span> <span class="n">ssl_context</span><span class="p">,</span>
+                          <span class="n">fd</span><span class="o">=</span><span class="n">fd</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">fd</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">log_startup</span><span class="p">(</span><span class="n">srv</span><span class="o">.</span><span class="n">socket</span><span class="p">)</span>
+        <span class="n">srv</span><span class="o">.</span><span class="n">serve_forever</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">use_reloader</span><span class="p">:</span>
+        <span class="c1"># If we&#39;re not running already in the subprocess that is the</span>
+        <span class="c1"># reloader we want to open up a socket early to make sure the</span>
+        <span class="c1"># port is actually available.</span>
+        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;WERKZEUG_RUN_MAIN&#39;</span><span class="p">)</span> <span class="o">!=</span> <span class="s1">&#39;true&#39;</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">port</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">can_open_by_fd</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Cannot bind to a random port with enabled &#39;</span>
+                                 <span class="s1">&#39;reloader if the Python interpreter does &#39;</span>
+                                 <span class="s1">&#39;not support socket opening by fd.&#39;</span><span class="p">)</span>
+
+            <span class="c1"># Create and destroy a socket so that any exceptions are</span>
+            <span class="c1"># raised before we spawn a separate Python interpreter and</span>
+            <span class="c1"># lose this ability.</span>
+            <span class="n">address_family</span> <span class="o">=</span> <span class="n">select_ip_version</span><span class="p">(</span><span class="n">hostname</span><span class="p">,</span> <span class="n">port</span><span class="p">)</span>
+            <span class="n">s</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">address_family</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span>
+            <span class="n">s</span><span class="o">.</span><span class="n">setsockopt</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">SOL_SOCKET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SO_REUSEADDR</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">s</span><span class="o">.</span><span class="n">bind</span><span class="p">((</span><span class="n">hostname</span><span class="p">,</span> <span class="n">port</span><span class="p">))</span>
+            <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="s1">&#39;set_inheritable&#39;</span><span class="p">):</span>
+                <span class="n">s</span><span class="o">.</span><span class="n">set_inheritable</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+
+            <span class="c1"># If we can open the socket by file descriptor, then we can just</span>
+            <span class="c1"># reuse this one and our socket will survive the restarts.</span>
+            <span class="k">if</span> <span class="n">can_open_by_fd</span><span class="p">:</span>
+                <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;WERKZEUG_SERVER_FD&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">fileno</span><span class="p">())</span>
+                <span class="n">s</span><span class="o">.</span><span class="n">listen</span><span class="p">(</span><span class="n">LISTEN_QUEUE</span><span class="p">)</span>
+                <span class="n">log_startup</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">s</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+        <span class="kn">from</span> <span class="nn">._reloader</span> <span class="kn">import</span> <span class="n">run_with_reloader</span>
+        <span class="n">run_with_reloader</span><span class="p">(</span><span class="n">inner</span><span class="p">,</span> <span class="n">extra_files</span><span class="p">,</span> <span class="n">reloader_interval</span><span class="p">,</span>
+                          <span class="n">reloader_type</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">inner</span><span class="p">()</span></div>
+
+
+<span class="k">def</span> <span class="nf">run_with_reloader</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="c1"># People keep using undocumented APIs.  Do not use this function</span>
+    <span class="c1"># please, we do not guarantee that it continues working.</span>
+    <span class="kn">from</span> <span class="nn">._reloader</span> <span class="kn">import</span> <span class="n">run_with_reloader</span>
+    <span class="k">return</span> <span class="n">run_with_reloader</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="sd">&#39;&#39;&#39;A simple command-line interface for :py:func:`run_simple`.&#39;&#39;&#39;</span>
+
+    <span class="c1"># in contrast to argparse, this works at least under Python &lt; 2.7</span>
+    <span class="kn">import</span> <span class="nn">optparse</span>
+    <span class="kn">from</span> <span class="nn">werkzeug.utils</span> <span class="kn">import</span> <span class="n">import_string</span>
+
+    <span class="n">parser</span> <span class="o">=</span> <span class="n">optparse</span><span class="o">.</span><span class="n">OptionParser</span><span class="p">(</span>
+        <span class="n">usage</span><span class="o">=</span><span class="s1">&#39;Usage: %prog [options] app_module:app_object&#39;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_option</span><span class="p">(</span><span class="s1">&#39;-b&#39;</span><span class="p">,</span> <span class="s1">&#39;--bind&#39;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s1">&#39;address&#39;</span><span class="p">,</span>
+                      <span class="n">help</span><span class="o">=</span><span class="s1">&#39;The hostname:port the app should listen on.&#39;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_option</span><span class="p">(</span><span class="s1">&#39;-d&#39;</span><span class="p">,</span> <span class="s1">&#39;--debug&#39;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s1">&#39;use_debugger&#39;</span><span class="p">,</span>
+                      <span class="n">action</span><span class="o">=</span><span class="s1">&#39;store_true&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                      <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Use Werkzeug</span><span class="se">\&#39;</span><span class="s1">s debugger.&#39;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_option</span><span class="p">(</span><span class="s1">&#39;-r&#39;</span><span class="p">,</span> <span class="s1">&#39;--reload&#39;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s1">&#39;use_reloader&#39;</span><span class="p">,</span>
+                      <span class="n">action</span><span class="o">=</span><span class="s1">&#39;store_true&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                      <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Reload Python process if modules change.&#39;</span><span class="p">)</span>
+    <span class="n">options</span><span class="p">,</span> <span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+
+    <span class="n">hostname</span><span class="p">,</span> <span class="n">port</span> <span class="o">=</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span>
+    <span class="k">if</span> <span class="n">options</span><span class="o">.</span><span class="n">address</span><span class="p">:</span>
+        <span class="n">address</span> <span class="o">=</span> <span class="n">options</span><span class="o">.</span><span class="n">address</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">)</span>
+        <span class="n">hostname</span> <span class="o">=</span> <span class="n">address</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">address</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">port</span> <span class="o">=</span> <span class="n">address</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;No application supplied, or too much. See --help</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">app</span> <span class="o">=</span> <span class="n">import_string</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+    <span class="n">run_simple</span><span class="p">(</span>
+        <span class="n">hostname</span><span class="o">=</span><span class="p">(</span><span class="n">hostname</span> <span class="ow">or</span> <span class="s1">&#39;127.0.0.1&#39;</span><span class="p">),</span> <span class="n">port</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">port</span> <span class="ow">or</span> <span class="mi">5000</span><span class="p">),</span>
+        <span class="n">application</span><span class="o">=</span><span class="n">app</span><span class="p">,</span> <span class="n">use_reloader</span><span class="o">=</span><span class="n">options</span><span class="o">.</span><span class="n">use_reloader</span><span class="p">,</span>
+        <span class="n">use_debugger</span><span class="o">=</span><span class="n">options</span><span class="o">.</span><span class="n">use_debugger</span>
+    <span class="p">)</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/copybutton.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

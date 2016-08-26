@@ -1,0 +1,6 @@
+werkzeug.CallbackDict.fromkeys
+==============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: CallbackDict.fromkeys

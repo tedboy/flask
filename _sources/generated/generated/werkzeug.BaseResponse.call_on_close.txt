@@ -1,0 +1,6 @@
+werkzeug.BaseResponse.call_on_close
+===================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: BaseResponse.call_on_close

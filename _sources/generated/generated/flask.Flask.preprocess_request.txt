@@ -1,0 +1,6 @@
+flask.Flask.preprocess_request
+==============================
+
+.. currentmodule:: flask
+
+.. automethod:: Flask.preprocess_request

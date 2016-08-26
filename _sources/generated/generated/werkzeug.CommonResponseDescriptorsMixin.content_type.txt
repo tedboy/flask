@@ -1,0 +1,6 @@
+werkzeug.CommonResponseDescriptorsMixin.content_type
+====================================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: CommonResponseDescriptorsMixin.content_type

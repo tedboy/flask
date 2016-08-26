@@ -1,0 +1,25 @@
+werkzeug.ETags
+==============
+.. currentmodule:: werkzeug
+.. autoclass:: ETags
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~ETags.__init__
+   ~ETags.as_set
+   ~ETags.contains
+   ~ETags.contains_raw
+   ~ETags.contains_weak
+   ~ETags.is_weak
+   ~ETags.to_header
+
+
+
+
+

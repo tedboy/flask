@@ -1,0 +1,6 @@
+werkzeug.RequestCacheControl.min_fresh
+======================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: RequestCacheControl.min_fresh

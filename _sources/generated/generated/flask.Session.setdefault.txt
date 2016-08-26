@@ -1,0 +1,6 @@
+flask.Session.setdefault
+========================
+
+.. currentmodule:: flask
+
+.. automethod:: Session.setdefault

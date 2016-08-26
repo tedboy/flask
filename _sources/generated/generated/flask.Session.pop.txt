@@ -1,0 +1,6 @@
+flask.Session.pop
+=================
+
+.. currentmodule:: flask
+
+.. automethod:: Session.pop

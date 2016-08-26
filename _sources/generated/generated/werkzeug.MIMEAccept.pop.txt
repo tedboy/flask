@@ -1,0 +1,6 @@
+werkzeug.MIMEAccept.pop
+=======================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: MIMEAccept.pop

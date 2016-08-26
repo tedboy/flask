@@ -1,0 +1,28 @@
+werkzeug.CommonRequestDescriptorsMixin
+======================================
+.. currentmodule:: werkzeug
+.. autoclass:: CommonRequestDescriptorsMixin
+   :undoc-members:
+
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~CommonRequestDescriptorsMixin.content_encoding
+   ~CommonRequestDescriptorsMixin.content_length
+   ~CommonRequestDescriptorsMixin.content_md5
+   ~CommonRequestDescriptorsMixin.content_type
+   ~CommonRequestDescriptorsMixin.date
+   ~CommonRequestDescriptorsMixin.max_forwards
+   ~CommonRequestDescriptorsMixin.mimetype
+   ~CommonRequestDescriptorsMixin.mimetype_params
+   ~CommonRequestDescriptorsMixin.pragma
+   ~CommonRequestDescriptorsMixin.referrer
+

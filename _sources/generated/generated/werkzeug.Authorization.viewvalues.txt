@@ -1,0 +1,6 @@
+werkzeug.Authorization.viewvalues
+=================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Authorization.viewvalues

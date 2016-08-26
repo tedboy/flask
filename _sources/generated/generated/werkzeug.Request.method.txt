@@ -1,0 +1,6 @@
+werkzeug.Request.method
+=======================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Request.method

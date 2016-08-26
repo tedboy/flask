@@ -1,0 +1,6 @@
+flask.Flask.name
+================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Flask.name

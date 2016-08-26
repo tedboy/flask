@@ -1,0 +1,6 @@
+flask.Request.max_forwards
+==========================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Request.max_forwards

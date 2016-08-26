@@ -1,0 +1,6 @@
+werkzeug.Authorization.opaque
+=============================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Authorization.opaque

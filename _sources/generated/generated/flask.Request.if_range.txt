@@ -1,0 +1,6 @@
+flask.Request.if_range
+======================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Request.if_range

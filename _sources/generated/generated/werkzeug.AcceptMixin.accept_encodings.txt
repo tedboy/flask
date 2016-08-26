@@ -1,0 +1,6 @@
+werkzeug.AcceptMixin.accept_encodings
+=====================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: AcceptMixin.accept_encodings

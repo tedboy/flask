@@ -1,0 +1,6 @@
+flask.Session.iterkeys
+======================
+
+.. currentmodule:: flask
+
+.. automethod:: Session.iterkeys

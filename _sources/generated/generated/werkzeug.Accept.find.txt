@@ -1,0 +1,6 @@
+werkzeug.Accept.find
+====================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Accept.find

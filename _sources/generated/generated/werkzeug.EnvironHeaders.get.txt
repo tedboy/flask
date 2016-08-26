@@ -1,0 +1,6 @@
+werkzeug.EnvironHeaders.get
+===========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: EnvironHeaders.get

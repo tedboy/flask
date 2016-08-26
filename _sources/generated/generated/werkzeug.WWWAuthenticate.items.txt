@@ -1,0 +1,6 @@
+werkzeug.WWWAuthenticate.items
+==============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: WWWAuthenticate.items

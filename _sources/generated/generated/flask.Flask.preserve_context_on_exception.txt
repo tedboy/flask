@@ -1,0 +1,6 @@
+flask.Flask.preserve_context_on_exception
+=========================================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Flask.preserve_context_on_exception

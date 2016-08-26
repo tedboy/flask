@@ -1,0 +1,6 @@
+flask.Request.encoding_errors
+=============================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Request.encoding_errors

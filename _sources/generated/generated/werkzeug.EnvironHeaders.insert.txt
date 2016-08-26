@@ -1,0 +1,6 @@
+werkzeug.EnvironHeaders.insert
+==============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: EnvironHeaders.insert

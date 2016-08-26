@@ -1,0 +1,6 @@
+werkzeug.cached_property.__init__
+=================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: cached_property.__init__

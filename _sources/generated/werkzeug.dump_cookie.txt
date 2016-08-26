@@ -1,0 +1,6 @@
+werkzeug.dump_cookie
+====================
+
+.. currentmodule:: werkzeug
+
+.. autofunction:: dump_cookie

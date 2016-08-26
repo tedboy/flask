@@ -1,0 +1,6 @@
+flask.Request.charset
+=====================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Request.charset

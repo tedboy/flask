@@ -1,0 +1,6 @@
+werkzeug.ETags.contains_raw
+===========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ETags.contains_raw

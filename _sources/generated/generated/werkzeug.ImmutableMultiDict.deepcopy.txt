@@ -1,0 +1,6 @@
+werkzeug.ImmutableMultiDict.deepcopy
+====================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ImmutableMultiDict.deepcopy

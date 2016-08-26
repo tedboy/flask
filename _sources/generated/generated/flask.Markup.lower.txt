@@ -1,0 +1,6 @@
+flask.Markup.lower
+==================
+
+.. currentmodule:: flask
+
+.. automethod:: Markup.lower

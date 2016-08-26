@@ -1,0 +1,6 @@
+werkzeug.Client.get
+===================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Client.get

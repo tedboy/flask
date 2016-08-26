@@ -1,0 +1,6 @@
+flask.Request.host_url
+======================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Request.host_url

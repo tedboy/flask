@@ -1,0 +1,6 @@
+werkzeug.Request.accept_encodings
+=================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Request.accept_encodings

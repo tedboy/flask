@@ -1,0 +1,6 @@
+werkzeug.MIMEAccept.accept_html
+===============================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: MIMEAccept.accept_html

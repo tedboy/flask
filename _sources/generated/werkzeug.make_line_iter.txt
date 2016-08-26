@@ -1,0 +1,6 @@
+werkzeug.make_line_iter
+=======================
+
+.. currentmodule:: werkzeug
+
+.. autofunction:: make_line_iter

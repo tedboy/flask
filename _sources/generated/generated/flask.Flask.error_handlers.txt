@@ -1,0 +1,6 @@
+flask.Flask.error_handlers
+==========================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Flask.error_handlers

@@ -1,0 +1,6 @@
+werkzeug.ImmutableList.remove
+=============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ImmutableList.remove

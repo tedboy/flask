@@ -1,0 +1,6 @@
+flask.Config.fromkeys
+=====================
+
+.. currentmodule:: flask
+
+.. automethod:: Config.fromkeys

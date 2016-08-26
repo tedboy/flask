@@ -1,0 +1,6 @@
+flask.Flask.handle_http_exception
+=================================
+
+.. currentmodule:: flask
+
+.. automethod:: Flask.handle_http_exception

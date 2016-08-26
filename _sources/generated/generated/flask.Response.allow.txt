@@ -1,0 +1,6 @@
+flask.Response.allow
+====================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Response.allow

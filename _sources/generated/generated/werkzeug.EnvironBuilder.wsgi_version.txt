@@ -1,0 +1,6 @@
+werkzeug.EnvironBuilder.wsgi_version
+====================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: EnvironBuilder.wsgi_version

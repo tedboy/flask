@@ -1,0 +1,6 @@
+flask.Request.__init__
+======================
+
+.. currentmodule:: flask
+
+.. automethod:: Request.__init__

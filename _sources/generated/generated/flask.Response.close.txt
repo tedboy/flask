@@ -1,0 +1,6 @@
+flask.Response.close
+====================
+
+.. currentmodule:: flask
+
+.. automethod:: Response.close

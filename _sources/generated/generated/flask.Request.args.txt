@@ -1,0 +1,6 @@
+flask.Request.args
+==================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Request.args

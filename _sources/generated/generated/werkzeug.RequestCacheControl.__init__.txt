@@ -1,0 +1,6 @@
+werkzeug.RequestCacheControl.__init__
+=====================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: RequestCacheControl.__init__

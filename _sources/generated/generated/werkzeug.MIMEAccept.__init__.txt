@@ -1,0 +1,6 @@
+werkzeug.MIMEAccept.__init__
+============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: MIMEAccept.__init__

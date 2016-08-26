@@ -1,0 +1,48 @@
+flask.Session
+=============
+.. currentmodule:: flask
+.. autoclass:: Session
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Session.__init__
+   ~Session.clear
+   ~Session.copy
+   ~Session.fromkeys
+   ~Session.get
+   ~Session.has_key
+   ~Session.items
+   ~Session.iteritems
+   ~Session.iterkeys
+   ~Session.itervalues
+   ~Session.keys
+   ~Session.pop
+   ~Session.popitem
+   ~Session.setdefault
+   ~Session.update
+   ~Session.values
+   ~Session.viewitems
+   ~Session.viewkeys
+   ~Session.viewvalues
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~Session.modified
+   ~Session.new
+   ~Session.on_update
+   ~Session.permanent
+

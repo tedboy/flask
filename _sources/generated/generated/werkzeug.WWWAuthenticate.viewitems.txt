@@ -1,0 +1,6 @@
+werkzeug.WWWAuthenticate.viewitems
+==================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: WWWAuthenticate.viewitems

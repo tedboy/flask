@@ -1,0 +1,6 @@
+werkzeug.ImmutableTypeConversionDict.copy
+=========================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ImmutableTypeConversionDict.copy

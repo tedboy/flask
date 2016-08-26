@@ -1,0 +1,6 @@
+werkzeug.cached_property.setter
+===============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: cached_property.setter

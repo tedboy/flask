@@ -1,0 +1,6 @@
+flask.Session.popitem
+=====================
+
+.. currentmodule:: flask
+
+.. automethod:: Session.popitem

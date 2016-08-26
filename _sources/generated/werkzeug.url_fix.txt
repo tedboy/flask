@@ -1,0 +1,6 @@
+werkzeug.url_fix
+================
+
+.. currentmodule:: werkzeug
+
+.. autofunction:: url_fix

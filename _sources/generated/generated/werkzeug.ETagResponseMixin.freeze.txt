@@ -1,0 +1,6 @@
+werkzeug.ETagResponseMixin.freeze
+=================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ETagResponseMixin.freeze

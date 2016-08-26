@@ -1,0 +1,6 @@
+flask.Blueprint.app_template_filter
+===================================
+
+.. currentmodule:: flask
+
+.. automethod:: Blueprint.app_template_filter

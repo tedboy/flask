@@ -1,0 +1,6 @@
+werkzeug.EnvironBuilder.get_request
+===================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: EnvironBuilder.get_request

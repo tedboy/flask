@@ -1,0 +1,6 @@
+flask.Markup.unescape
+=====================
+
+.. currentmodule:: flask
+
+.. automethod:: Markup.unescape

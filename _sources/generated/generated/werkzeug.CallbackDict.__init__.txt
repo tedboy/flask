@@ -1,0 +1,6 @@
+werkzeug.CallbackDict.__init__
+==============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: CallbackDict.__init__

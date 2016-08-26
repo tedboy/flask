@@ -1,0 +1,6 @@
+werkzeug.OrderedMultiDict.has_key
+=================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: OrderedMultiDict.has_key

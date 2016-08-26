@@ -1,0 +1,6 @@
+werkzeug.EnvironBuilder.files
+=============================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: EnvironBuilder.files

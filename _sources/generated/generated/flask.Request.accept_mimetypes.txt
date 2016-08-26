@@ -1,0 +1,6 @@
+flask.Request.accept_mimetypes
+==============================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Request.accept_mimetypes

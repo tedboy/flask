@@ -1,0 +1,6 @@
+werkzeug.Headers.add
+====================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Headers.add

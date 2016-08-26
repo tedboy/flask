@@ -1,0 +1,6 @@
+werkzeug.DebuggedApplication.execute_command
+============================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: DebuggedApplication.execute_command

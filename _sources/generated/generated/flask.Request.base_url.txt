@@ -1,0 +1,6 @@
+flask.Request.base_url
+======================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Request.base_url

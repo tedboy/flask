@@ -1,0 +1,6 @@
+flask.has_request_context
+=========================
+
+.. currentmodule:: flask
+
+.. autofunction:: has_request_context

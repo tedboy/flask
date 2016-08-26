@@ -1,0 +1,6 @@
+werkzeug.Request.path
+=====================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Request.path

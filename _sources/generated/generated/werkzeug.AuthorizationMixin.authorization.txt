@@ -1,0 +1,6 @@
+werkzeug.AuthorizationMixin.authorization
+=========================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: AuthorizationMixin.authorization

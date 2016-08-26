@@ -1,0 +1,6 @@
+flask.Request.pragma
+====================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Request.pragma

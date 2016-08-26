@@ -1,0 +1,6 @@
+werkzeug.BaseResponse.implicit_sequence_conversion
+==================================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: BaseResponse.implicit_sequence_conversion

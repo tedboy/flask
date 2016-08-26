@@ -1,0 +1,6 @@
+werkzeug.Request.accept_charsets
+================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Request.accept_charsets

@@ -1,0 +1,6 @@
+werkzeug.MIMEAccept.extend
+==========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: MIMEAccept.extend

@@ -1,0 +1,6 @@
+flask.Flask.update_template_context
+===================================
+
+.. currentmodule:: flask
+
+.. automethod:: Flask.update_template_context

@@ -1,0 +1,6 @@
+werkzeug.TypeConversionDict.copy
+================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: TypeConversionDict.copy

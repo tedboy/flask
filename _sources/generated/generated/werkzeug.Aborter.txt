@@ -1,0 +1,19 @@
+werkzeug.Aborter
+================
+.. currentmodule:: werkzeug
+.. autoclass:: Aborter
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Aborter.__init__
+
+
+
+
+

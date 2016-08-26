@@ -1,0 +1,6 @@
+flask.Request.if_unmodified_since
+=================================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Request.if_unmodified_since

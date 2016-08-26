@@ -1,0 +1,6 @@
+werkzeug.Response.close
+=======================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Response.close

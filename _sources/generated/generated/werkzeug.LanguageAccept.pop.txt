@@ -1,0 +1,6 @@
+werkzeug.LanguageAccept.pop
+===========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: LanguageAccept.pop

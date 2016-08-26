@@ -1,0 +1,6 @@
+werkzeug.Headers.get_all
+========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Headers.get_all

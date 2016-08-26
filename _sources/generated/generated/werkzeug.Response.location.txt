@@ -1,0 +1,6 @@
+werkzeug.Response.location
+==========================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Response.location

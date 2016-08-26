@@ -1,0 +1,6 @@
+flask.Markup.striptags
+======================
+
+.. currentmodule:: flask
+
+.. automethod:: Markup.striptags

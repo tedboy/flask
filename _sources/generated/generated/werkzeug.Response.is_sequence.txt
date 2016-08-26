@@ -1,0 +1,6 @@
+werkzeug.Response.is_sequence
+=============================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Response.is_sequence

@@ -1,0 +1,6 @@
+flask.Response.data
+===================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Response.data

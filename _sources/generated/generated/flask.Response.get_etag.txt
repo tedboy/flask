@@ -1,0 +1,6 @@
+flask.Response.get_etag
+=======================
+
+.. currentmodule:: flask
+
+.. automethod:: Response.get_etag

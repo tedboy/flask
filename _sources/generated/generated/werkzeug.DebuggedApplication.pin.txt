@@ -1,0 +1,6 @@
+werkzeug.DebuggedApplication.pin
+================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: DebuggedApplication.pin

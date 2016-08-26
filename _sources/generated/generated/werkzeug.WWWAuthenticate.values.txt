@@ -1,0 +1,6 @@
+werkzeug.WWWAuthenticate.values
+===============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: WWWAuthenticate.values

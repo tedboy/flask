@@ -1,0 +1,6 @@
+werkzeug.DebuggedApplication.paste_traceback
+============================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: DebuggedApplication.paste_traceback

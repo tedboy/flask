@@ -1,0 +1,6 @@
+flask.Flask.request_globals_class
+=================================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Flask.request_globals_class

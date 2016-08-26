@@ -1,0 +1,6 @@
+flask.Request.headers
+=====================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Request.headers

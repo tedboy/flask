@@ -1,0 +1,6 @@
+flask.Request.application
+=========================
+
+.. currentmodule:: flask
+
+.. automethod:: Request.application

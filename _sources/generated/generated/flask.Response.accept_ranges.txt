@@ -1,0 +1,6 @@
+flask.Response.accept_ranges
+============================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Response.accept_ranges

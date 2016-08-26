@@ -1,0 +1,6 @@
+flask.Response.autocorrect_location_header
+==========================================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Response.autocorrect_location_header

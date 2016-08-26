@@ -1,0 +1,6 @@
+werkzeug.ResponseCacheControl.on_update
+=======================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: ResponseCacheControl.on_update

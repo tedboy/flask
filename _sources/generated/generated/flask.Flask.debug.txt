@@ -1,0 +1,6 @@
+flask.Flask.debug
+=================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Flask.debug

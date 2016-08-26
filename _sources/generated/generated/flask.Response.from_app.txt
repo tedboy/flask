@@ -1,0 +1,6 @@
+flask.Response.from_app
+=======================
+
+.. currentmodule:: flask
+
+.. automethod:: Response.from_app

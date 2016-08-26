@@ -1,0 +1,6 @@
+flask.Blueprint.register_error_handler
+======================================
+
+.. currentmodule:: flask
+
+.. automethod:: Blueprint.register_error_handler

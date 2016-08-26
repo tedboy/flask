@@ -1,0 +1,6 @@
+werkzeug.Authorization.popitem
+==============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Authorization.popitem

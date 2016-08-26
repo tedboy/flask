@@ -1,0 +1,6 @@
+flask.Config.viewkeys
+=====================
+
+.. currentmodule:: flask
+
+.. automethod:: Config.viewkeys

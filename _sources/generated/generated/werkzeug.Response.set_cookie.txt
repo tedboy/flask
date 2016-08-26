@@ -1,0 +1,6 @@
+werkzeug.Response.set_cookie
+============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Response.set_cookie

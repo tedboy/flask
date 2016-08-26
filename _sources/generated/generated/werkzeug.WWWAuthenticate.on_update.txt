@@ -1,0 +1,6 @@
+werkzeug.WWWAuthenticate.on_update
+==================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: WWWAuthenticate.on_update

@@ -1,0 +1,6 @@
+flask.Markup.replace
+====================
+
+.. currentmodule:: flask
+
+.. automethod:: Markup.replace

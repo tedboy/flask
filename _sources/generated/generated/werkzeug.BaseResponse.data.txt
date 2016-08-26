@@ -1,0 +1,6 @@
+werkzeug.BaseResponse.data
+==========================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: BaseResponse.data

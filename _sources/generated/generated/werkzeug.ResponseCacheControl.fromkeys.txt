@@ -1,0 +1,6 @@
+werkzeug.ResponseCacheControl.fromkeys
+======================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ResponseCacheControl.fromkeys

@@ -1,0 +1,6 @@
+werkzeug.BaseResponse.from_app
+==============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: BaseResponse.from_app

@@ -1,0 +1,36 @@
+werkzeug.TypeConversionDict
+===========================
+.. currentmodule:: werkzeug
+.. autoclass:: TypeConversionDict
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~TypeConversionDict.clear
+   ~TypeConversionDict.copy
+   ~TypeConversionDict.fromkeys
+   ~TypeConversionDict.get
+   ~TypeConversionDict.has_key
+   ~TypeConversionDict.items
+   ~TypeConversionDict.iteritems
+   ~TypeConversionDict.iterkeys
+   ~TypeConversionDict.itervalues
+   ~TypeConversionDict.keys
+   ~TypeConversionDict.pop
+   ~TypeConversionDict.popitem
+   ~TypeConversionDict.setdefault
+   ~TypeConversionDict.update
+   ~TypeConversionDict.values
+   ~TypeConversionDict.viewitems
+   ~TypeConversionDict.viewkeys
+   ~TypeConversionDict.viewvalues
+
+
+
+
+

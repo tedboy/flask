@@ -1,0 +1,6 @@
+werkzeug.CommonResponseDescriptorsMixin.date
+============================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: CommonResponseDescriptorsMixin.date

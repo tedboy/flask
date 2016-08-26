@@ -1,0 +1,24 @@
+werkzeug.SharedDataMiddleware
+=============================
+.. currentmodule:: werkzeug
+.. autoclass:: SharedDataMiddleware
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~SharedDataMiddleware.__init__
+   ~SharedDataMiddleware.generate_etag
+   ~SharedDataMiddleware.get_directory_loader
+   ~SharedDataMiddleware.get_file_loader
+   ~SharedDataMiddleware.get_package_loader
+   ~SharedDataMiddleware.is_allowed
+
+
+
+
+

@@ -1,0 +1,6 @@
+werkzeug.WWWAuthenticate.set_digest
+===================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: WWWAuthenticate.set_digest

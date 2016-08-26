@@ -1,0 +1,6 @@
+werkzeug.WWWAuthenticate.pop
+============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: WWWAuthenticate.pop

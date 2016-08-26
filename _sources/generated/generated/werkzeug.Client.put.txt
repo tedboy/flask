@@ -1,0 +1,6 @@
+werkzeug.Client.put
+===================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Client.put

@@ -1,0 +1,6 @@
+werkzeug.Request.pragma
+=======================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Request.pragma

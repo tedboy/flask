@@ -1,0 +1,6 @@
+werkzeug.MIMEAccept.append
+==========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: MIMEAccept.append

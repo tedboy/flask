@@ -1,0 +1,6 @@
+werkzeug.MIMEAccept.best
+========================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: MIMEAccept.best

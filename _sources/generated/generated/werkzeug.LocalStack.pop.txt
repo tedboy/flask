@@ -1,0 +1,6 @@
+werkzeug.LocalStack.pop
+=======================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: LocalStack.pop

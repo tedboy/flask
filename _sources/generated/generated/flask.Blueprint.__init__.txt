@@ -1,0 +1,6 @@
+flask.Blueprint.__init__
+========================
+
+.. currentmodule:: flask
+
+.. automethod:: Blueprint.__init__

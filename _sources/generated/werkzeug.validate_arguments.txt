@@ -1,0 +1,6 @@
+werkzeug.validate_arguments
+===========================
+
+.. currentmodule:: werkzeug
+
+.. autofunction:: validate_arguments

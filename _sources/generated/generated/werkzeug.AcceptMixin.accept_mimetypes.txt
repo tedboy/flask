@@ -1,0 +1,6 @@
+werkzeug.AcceptMixin.accept_mimetypes
+=====================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: AcceptMixin.accept_mimetypes

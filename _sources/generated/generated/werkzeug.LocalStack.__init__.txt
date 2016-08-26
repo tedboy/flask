@@ -1,0 +1,6 @@
+werkzeug.LocalStack.__init__
+============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: LocalStack.__init__

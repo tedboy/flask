@@ -1,0 +1,6 @@
+werkzeug.WWWAuthenticate.type
+=============================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: WWWAuthenticate.type

@@ -1,0 +1,6 @@
+flask.Flask.get_send_file_max_age
+=================================
+
+.. currentmodule:: flask
+
+.. automethod:: Flask.get_send_file_max_age

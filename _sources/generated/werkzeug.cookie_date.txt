@@ -1,0 +1,6 @@
+werkzeug.cookie_date
+====================
+
+.. currentmodule:: werkzeug
+
+.. autofunction:: cookie_date

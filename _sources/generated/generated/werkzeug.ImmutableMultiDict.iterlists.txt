@@ -1,0 +1,6 @@
+werkzeug.ImmutableMultiDict.iterlists
+=====================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ImmutableMultiDict.iterlists

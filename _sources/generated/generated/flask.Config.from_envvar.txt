@@ -1,0 +1,6 @@
+flask.Config.from_envvar
+========================
+
+.. currentmodule:: flask
+
+.. automethod:: Config.from_envvar

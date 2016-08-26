@@ -1,0 +1,6 @@
+werkzeug.BaseRequest.max_content_length
+=======================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: BaseRequest.max_content_length

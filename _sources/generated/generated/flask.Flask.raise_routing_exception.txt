@@ -1,0 +1,6 @@
+flask.Flask.raise_routing_exception
+===================================
+
+.. currentmodule:: flask
+
+.. automethod:: Flask.raise_routing_exception

@@ -1,0 +1,6 @@
+werkzeug.ImmutableOrderedMultiDict.setdefault
+=============================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ImmutableOrderedMultiDict.setdefault

@@ -1,0 +1,6 @@
+werkzeug.MIMEAccept.reverse
+===========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: MIMEAccept.reverse

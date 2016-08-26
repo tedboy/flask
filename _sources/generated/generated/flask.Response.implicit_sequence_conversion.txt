@@ -1,0 +1,6 @@
+flask.Response.implicit_sequence_conversion
+===========================================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Response.implicit_sequence_conversion

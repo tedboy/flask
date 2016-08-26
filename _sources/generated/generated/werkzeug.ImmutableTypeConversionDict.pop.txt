@@ -1,0 +1,6 @@
+werkzeug.ImmutableTypeConversionDict.pop
+========================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ImmutableTypeConversionDict.pop

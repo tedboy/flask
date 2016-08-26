@@ -1,0 +1,6 @@
+werkzeug.EnvironHeaders.copy
+============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: EnvironHeaders.copy

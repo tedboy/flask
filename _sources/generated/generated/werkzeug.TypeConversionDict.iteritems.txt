@@ -1,0 +1,6 @@
+werkzeug.TypeConversionDict.iteritems
+=====================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: TypeConversionDict.iteritems

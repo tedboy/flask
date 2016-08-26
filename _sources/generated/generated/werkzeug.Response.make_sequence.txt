@@ -1,0 +1,6 @@
+werkzeug.Response.make_sequence
+===============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Response.make_sequence

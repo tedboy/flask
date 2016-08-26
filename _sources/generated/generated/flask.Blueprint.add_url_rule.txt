@@ -1,0 +1,6 @@
+flask.Blueprint.add_url_rule
+============================
+
+.. currentmodule:: flask
+
+.. automethod:: Blueprint.add_url_rule

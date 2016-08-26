@@ -1,0 +1,6 @@
+werkzeug.LanguageAccept.find
+============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: LanguageAccept.find

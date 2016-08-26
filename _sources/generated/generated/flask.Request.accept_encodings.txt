@@ -1,0 +1,6 @@
+flask.Request.accept_encodings
+==============================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Request.accept_encodings

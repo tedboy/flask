@@ -1,0 +1,6 @@
+werkzeug.EnvironHeaders.iteritems
+=================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: EnvironHeaders.iteritems

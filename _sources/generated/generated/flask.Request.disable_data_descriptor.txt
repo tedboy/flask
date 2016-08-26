@@ -1,0 +1,6 @@
+flask.Request.disable_data_descriptor
+=====================================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Request.disable_data_descriptor

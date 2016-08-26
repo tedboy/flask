@@ -1,0 +1,6 @@
+werkzeug.UserAgent.to_header
+============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: UserAgent.to_header

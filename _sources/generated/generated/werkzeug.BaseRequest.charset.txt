@@ -1,0 +1,6 @@
+werkzeug.BaseRequest.charset
+============================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: BaseRequest.charset

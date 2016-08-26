@@ -1,0 +1,6 @@
+werkzeug.Headers.iteritems
+==========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Headers.iteritems

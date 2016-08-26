@@ -1,0 +1,6 @@
+flask.Request.trusted_hosts
+===========================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Request.trusted_hosts

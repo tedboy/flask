@@ -1,0 +1,6 @@
+werkzeug.OrderedMultiDict.update
+================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: OrderedMultiDict.update

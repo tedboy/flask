@@ -1,0 +1,6 @@
+werkzeug.CharsetAccept.sort
+===========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: CharsetAccept.sort

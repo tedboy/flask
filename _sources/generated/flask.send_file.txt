@@ -1,0 +1,6 @@
+flask.send_file
+===============
+
+.. currentmodule:: flask
+
+.. autofunction:: send_file

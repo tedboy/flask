@@ -1,0 +1,6 @@
+flask.Request.is_xhr
+====================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Request.is_xhr

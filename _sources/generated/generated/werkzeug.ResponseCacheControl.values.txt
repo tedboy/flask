@@ -1,0 +1,6 @@
+werkzeug.ResponseCacheControl.values
+====================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ResponseCacheControl.values

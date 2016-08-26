@@ -1,0 +1,6 @@
+werkzeug.LanguageAccept.to_header
+=================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: LanguageAccept.to_header

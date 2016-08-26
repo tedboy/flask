@@ -1,0 +1,6 @@
+werkzeug.CommonRequestDescriptorsMixin.referrer
+===============================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: CommonRequestDescriptorsMixin.referrer

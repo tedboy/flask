@@ -1,0 +1,6 @@
+flask.Flask.use_x_sendfile
+==========================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Flask.use_x_sendfile

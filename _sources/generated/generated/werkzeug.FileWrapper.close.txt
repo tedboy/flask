@@ -1,0 +1,6 @@
+werkzeug.FileWrapper.close
+==========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: FileWrapper.close

@@ -1,0 +1,6 @@
+werkzeug.EnvironBuilder.get_environ
+===================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: EnvironBuilder.get_environ

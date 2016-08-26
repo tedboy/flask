@@ -1,0 +1,6 @@
+werkzeug.Request.date
+=====================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Request.date

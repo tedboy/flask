@@ -1,0 +1,6 @@
+werkzeug.MultiDict.setlistdefault
+=================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: MultiDict.setlistdefault

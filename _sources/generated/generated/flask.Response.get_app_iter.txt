@@ -1,0 +1,6 @@
+flask.Response.get_app_iter
+===========================
+
+.. currentmodule:: flask
+
+.. automethod:: Response.get_app_iter

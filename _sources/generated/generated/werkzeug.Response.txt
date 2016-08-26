@@ -1,0 +1,77 @@
+werkzeug.Response
+=================
+.. currentmodule:: werkzeug
+.. autoclass:: Response
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Response.__init__
+   ~Response.add_etag
+   ~Response.calculate_content_length
+   ~Response.call_on_close
+   ~Response.close
+   ~Response.delete_cookie
+   ~Response.force_type
+   ~Response.freeze
+   ~Response.from_app
+   ~Response.get_app_iter
+   ~Response.get_data
+   ~Response.get_etag
+   ~Response.get_wsgi_headers
+   ~Response.get_wsgi_response
+   ~Response.iter_encoded
+   ~Response.make_conditional
+   ~Response.make_sequence
+   ~Response.set_cookie
+   ~Response.set_data
+   ~Response.set_etag
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~Response.accept_ranges
+   ~Response.age
+   ~Response.allow
+   ~Response.autocorrect_location_header
+   ~Response.automatically_set_content_length
+   ~Response.cache_control
+   ~Response.charset
+   ~Response.content_encoding
+   ~Response.content_language
+   ~Response.content_length
+   ~Response.content_location
+   ~Response.content_md5
+   ~Response.content_range
+   ~Response.content_type
+   ~Response.data
+   ~Response.date
+   ~Response.default_mimetype
+   ~Response.default_status
+   ~Response.expires
+   ~Response.implicit_sequence_conversion
+   ~Response.is_sequence
+   ~Response.is_streamed
+   ~Response.last_modified
+   ~Response.location
+   ~Response.mimetype
+   ~Response.mimetype_params
+   ~Response.retry_after
+   ~Response.status
+   ~Response.status_code
+   ~Response.stream
+   ~Response.vary
+   ~Response.www_authenticate
+

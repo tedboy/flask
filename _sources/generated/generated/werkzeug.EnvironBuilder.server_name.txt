@@ -1,0 +1,6 @@
+werkzeug.EnvironBuilder.server_name
+===================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: EnvironBuilder.server_name

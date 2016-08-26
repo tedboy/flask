@@ -1,0 +1,6 @@
+werkzeug.Authorization.setdefault
+=================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Authorization.setdefault

@@ -1,0 +1,6 @@
+werkzeug.BaseRequest.close
+==========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: BaseRequest.close

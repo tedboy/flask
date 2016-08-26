@@ -1,0 +1,6 @@
+flask.Markup.rfind
+==================
+
+.. currentmodule:: flask
+
+.. automethod:: Markup.rfind

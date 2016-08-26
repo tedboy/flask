@@ -1,0 +1,6 @@
+werkzeug.MIMEAccept.count
+=========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: MIMEAccept.count

@@ -1,0 +1,54 @@
+werkzeug.Authorization
+======================
+.. currentmodule:: werkzeug
+.. autoclass:: Authorization
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Authorization.__init__
+   ~Authorization.clear
+   ~Authorization.copy
+   ~Authorization.fromkeys
+   ~Authorization.get
+   ~Authorization.has_key
+   ~Authorization.items
+   ~Authorization.iteritems
+   ~Authorization.iterkeys
+   ~Authorization.itervalues
+   ~Authorization.keys
+   ~Authorization.pop
+   ~Authorization.popitem
+   ~Authorization.setdefault
+   ~Authorization.update
+   ~Authorization.values
+   ~Authorization.viewitems
+   ~Authorization.viewkeys
+   ~Authorization.viewvalues
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~Authorization.cnonce
+   ~Authorization.nc
+   ~Authorization.nonce
+   ~Authorization.opaque
+   ~Authorization.password
+   ~Authorization.qop
+   ~Authorization.realm
+   ~Authorization.response
+   ~Authorization.uri
+   ~Authorization.username
+

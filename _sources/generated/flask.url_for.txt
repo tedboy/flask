@@ -1,0 +1,6 @@
+flask.url_for
+=============
+
+.. currentmodule:: flask
+
+.. autofunction:: url_for

@@ -1,0 +1,6 @@
+flask.Flask.jinja_loader
+========================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Flask.jinja_loader

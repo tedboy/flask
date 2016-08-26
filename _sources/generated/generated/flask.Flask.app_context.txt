@@ -1,0 +1,6 @@
+flask.Flask.app_context
+=======================
+
+.. currentmodule:: flask
+
+.. automethod:: Flask.app_context

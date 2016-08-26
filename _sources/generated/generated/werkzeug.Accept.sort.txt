@@ -1,0 +1,6 @@
+werkzeug.Accept.sort
+====================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Accept.sort

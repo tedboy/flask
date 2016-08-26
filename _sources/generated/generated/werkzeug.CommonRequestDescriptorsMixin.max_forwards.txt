@@ -1,0 +1,6 @@
+werkzeug.CommonRequestDescriptorsMixin.max_forwards
+===================================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: CommonRequestDescriptorsMixin.max_forwards

@@ -1,0 +1,6 @@
+flask.Config.from_mapping
+=========================
+
+.. currentmodule:: flask
+
+.. automethod:: Config.from_mapping

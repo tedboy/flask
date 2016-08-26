@@ -1,0 +1,6 @@
+werkzeug.OrderedMultiDict.get
+=============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: OrderedMultiDict.get

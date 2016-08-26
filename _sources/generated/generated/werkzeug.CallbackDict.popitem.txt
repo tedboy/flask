@@ -1,0 +1,6 @@
+werkzeug.CallbackDict.popitem
+=============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: CallbackDict.popitem

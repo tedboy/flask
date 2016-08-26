@@ -1,0 +1,6 @@
+werkzeug.CallbackDict.copy
+==========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: CallbackDict.copy

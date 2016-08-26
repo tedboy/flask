@@ -1,0 +1,6 @@
+flask.Flask.send_file_max_age_default
+=====================================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Flask.send_file_max_age_default

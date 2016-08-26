@@ -1,0 +1,6 @@
+werkzeug.CharsetAccept.index
+============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: CharsetAccept.index

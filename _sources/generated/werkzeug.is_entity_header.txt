@@ -1,0 +1,6 @@
+werkzeug.is_entity_header
+=========================
+
+.. currentmodule:: werkzeug
+
+.. autofunction:: is_entity_header

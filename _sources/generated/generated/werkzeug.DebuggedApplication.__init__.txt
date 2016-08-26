@@ -1,0 +1,6 @@
+werkzeug.DebuggedApplication.__init__
+=====================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: DebuggedApplication.__init__

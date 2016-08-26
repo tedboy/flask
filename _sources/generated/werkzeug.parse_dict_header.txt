@@ -1,0 +1,6 @@
+werkzeug.parse_dict_header
+==========================
+
+.. currentmodule:: werkzeug
+
+.. autofunction:: parse_dict_header

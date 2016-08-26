@@ -1,0 +1,6 @@
+werkzeug.Authorization.viewkeys
+===============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Authorization.viewkeys

@@ -1,0 +1,21 @@
+werkzeug.FileWrapper
+====================
+.. currentmodule:: werkzeug
+.. autoclass:: FileWrapper
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~FileWrapper.__init__
+   ~FileWrapper.close
+   ~FileWrapper.next
+
+
+
+
+

@@ -1,0 +1,6 @@
+werkzeug.Request.mimetype_params
+================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Request.mimetype_params

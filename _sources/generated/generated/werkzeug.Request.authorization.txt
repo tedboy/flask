@@ -1,0 +1,6 @@
+werkzeug.Request.authorization
+==============================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Request.authorization

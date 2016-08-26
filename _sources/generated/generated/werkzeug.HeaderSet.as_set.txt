@@ -1,0 +1,6 @@
+werkzeug.HeaderSet.as_set
+=========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: HeaderSet.as_set

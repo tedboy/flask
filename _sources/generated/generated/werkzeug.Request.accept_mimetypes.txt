@@ -1,0 +1,6 @@
+werkzeug.Request.accept_mimetypes
+=================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Request.accept_mimetypes

@@ -1,0 +1,6 @@
+werkzeug.Request.if_range
+=========================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Request.if_range

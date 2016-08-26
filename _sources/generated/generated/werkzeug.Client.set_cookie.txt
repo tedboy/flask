@@ -1,0 +1,6 @@
+werkzeug.Client.set_cookie
+==========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Client.set_cookie

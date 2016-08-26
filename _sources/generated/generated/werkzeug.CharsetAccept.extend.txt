@@ -1,0 +1,6 @@
+werkzeug.CharsetAccept.extend
+=============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: CharsetAccept.extend

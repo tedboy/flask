@@ -1,0 +1,6 @@
+flask.Response.expires
+======================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Response.expires

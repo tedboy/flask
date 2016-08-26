@@ -1,0 +1,6 @@
+werkzeug.ETagResponseMixin.make_conditional
+===========================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ETagResponseMixin.make_conditional

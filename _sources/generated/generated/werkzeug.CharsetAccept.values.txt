@@ -1,0 +1,6 @@
+werkzeug.CharsetAccept.values
+=============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: CharsetAccept.values

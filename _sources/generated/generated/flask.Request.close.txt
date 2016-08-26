@@ -1,0 +1,6 @@
+flask.Request.close
+===================
+
+.. currentmodule:: flask
+
+.. automethod:: Request.close

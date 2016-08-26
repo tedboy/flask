@@ -1,0 +1,6 @@
+werkzeug.FileMultiDict.items
+============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: FileMultiDict.items

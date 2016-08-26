@@ -1,0 +1,6 @@
+flask.Request.blueprint
+=======================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Request.blueprint

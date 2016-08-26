@@ -1,0 +1,6 @@
+werkzeug.peek_path_info
+=======================
+
+.. currentmodule:: werkzeug
+
+.. autofunction:: peek_path_info

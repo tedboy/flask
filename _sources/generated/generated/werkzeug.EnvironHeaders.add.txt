@@ -1,0 +1,6 @@
+werkzeug.EnvironHeaders.add
+===========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: EnvironHeaders.add

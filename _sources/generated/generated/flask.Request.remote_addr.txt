@@ -1,0 +1,6 @@
+flask.Request.remote_addr
+=========================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Request.remote_addr

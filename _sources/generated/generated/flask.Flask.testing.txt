@@ -1,0 +1,6 @@
+flask.Flask.testing
+===================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Flask.testing

@@ -1,0 +1,63 @@
+flask.Blueprint
+===============
+.. currentmodule:: flask
+.. autoclass:: Blueprint
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Blueprint.__init__
+   ~Blueprint.add_app_template_filter
+   ~Blueprint.add_app_template_global
+   ~Blueprint.add_app_template_test
+   ~Blueprint.add_url_rule
+   ~Blueprint.after_app_request
+   ~Blueprint.after_request
+   ~Blueprint.app_context_processor
+   ~Blueprint.app_errorhandler
+   ~Blueprint.app_template_filter
+   ~Blueprint.app_template_global
+   ~Blueprint.app_template_test
+   ~Blueprint.app_url_defaults
+   ~Blueprint.app_url_value_preprocessor
+   ~Blueprint.before_app_first_request
+   ~Blueprint.before_app_request
+   ~Blueprint.before_request
+   ~Blueprint.context_processor
+   ~Blueprint.endpoint
+   ~Blueprint.errorhandler
+   ~Blueprint.get_send_file_max_age
+   ~Blueprint.make_setup_state
+   ~Blueprint.open_resource
+   ~Blueprint.record
+   ~Blueprint.record_once
+   ~Blueprint.register
+   ~Blueprint.register_error_handler
+   ~Blueprint.route
+   ~Blueprint.send_static_file
+   ~Blueprint.teardown_app_request
+   ~Blueprint.teardown_request
+   ~Blueprint.url_defaults
+   ~Blueprint.url_value_preprocessor
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~Blueprint.has_static_folder
+   ~Blueprint.jinja_loader
+   ~Blueprint.static_folder
+   ~Blueprint.static_url_path
+   ~Blueprint.warn_on_modifications
+

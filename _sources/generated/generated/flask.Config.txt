@@ -1,0 +1,43 @@
+flask.Config
+============
+.. currentmodule:: flask
+.. autoclass:: Config
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Config.__init__
+   ~Config.clear
+   ~Config.copy
+   ~Config.from_envvar
+   ~Config.from_json
+   ~Config.from_mapping
+   ~Config.from_object
+   ~Config.from_pyfile
+   ~Config.fromkeys
+   ~Config.get
+   ~Config.get_namespace
+   ~Config.has_key
+   ~Config.items
+   ~Config.iteritems
+   ~Config.iterkeys
+   ~Config.itervalues
+   ~Config.keys
+   ~Config.pop
+   ~Config.popitem
+   ~Config.setdefault
+   ~Config.update
+   ~Config.values
+   ~Config.viewitems
+   ~Config.viewkeys
+   ~Config.viewvalues
+
+
+
+
+

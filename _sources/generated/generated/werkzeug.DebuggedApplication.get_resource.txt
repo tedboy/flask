@@ -1,0 +1,6 @@
+werkzeug.DebuggedApplication.get_resource
+=========================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: DebuggedApplication.get_resource

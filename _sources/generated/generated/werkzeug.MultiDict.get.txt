@@ -1,0 +1,6 @@
+werkzeug.MultiDict.get
+======================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: MultiDict.get

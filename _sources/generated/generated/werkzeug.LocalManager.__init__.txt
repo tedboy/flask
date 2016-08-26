@@ -1,0 +1,6 @@
+werkzeug.LocalManager.__init__
+==============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: LocalManager.__init__

@@ -1,0 +1,6 @@
+flask.Request.if_modified_since
+===============================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Request.if_modified_since

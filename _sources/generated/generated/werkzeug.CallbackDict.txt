@@ -1,0 +1,45 @@
+werkzeug.CallbackDict
+=====================
+.. currentmodule:: werkzeug
+.. autoclass:: CallbackDict
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~CallbackDict.__init__
+   ~CallbackDict.clear
+   ~CallbackDict.copy
+   ~CallbackDict.fromkeys
+   ~CallbackDict.get
+   ~CallbackDict.has_key
+   ~CallbackDict.items
+   ~CallbackDict.iteritems
+   ~CallbackDict.iterkeys
+   ~CallbackDict.itervalues
+   ~CallbackDict.keys
+   ~CallbackDict.pop
+   ~CallbackDict.popitem
+   ~CallbackDict.setdefault
+   ~CallbackDict.update
+   ~CallbackDict.values
+   ~CallbackDict.viewitems
+   ~CallbackDict.viewkeys
+   ~CallbackDict.viewvalues
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~CallbackDict.on_update
+

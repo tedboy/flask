@@ -1,0 +1,6 @@
+werkzeug.ImmutableList.pop
+==========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ImmutableList.pop

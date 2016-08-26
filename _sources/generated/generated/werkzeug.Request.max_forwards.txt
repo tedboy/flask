@@ -1,0 +1,6 @@
+werkzeug.Request.max_forwards
+=============================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Request.max_forwards

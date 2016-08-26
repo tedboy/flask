@@ -1,0 +1,28 @@
+werkzeug.header_property
+========================
+.. currentmodule:: werkzeug
+.. autoclass:: header_property
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~header_property.__init__
+   ~header_property.lookup
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~header_property.read_only
+

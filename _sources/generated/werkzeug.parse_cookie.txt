@@ -1,0 +1,6 @@
+werkzeug.parse_cookie
+=====================
+
+.. currentmodule:: werkzeug
+
+.. autofunction:: parse_cookie

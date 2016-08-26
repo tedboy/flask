@@ -1,0 +1,6 @@
+flask.Request.method
+====================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Request.method

@@ -1,0 +1,6 @@
+werkzeug.RequestCacheControl.copy
+=================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: RequestCacheControl.copy

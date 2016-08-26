@@ -1,0 +1,6 @@
+werkzeug.FileMultiDict.add_file
+===============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: FileMultiDict.add_file

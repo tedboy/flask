@@ -1,0 +1,6 @@
+werkzeug.CommonRequestDescriptorsMixin.content_type
+===================================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: CommonRequestDescriptorsMixin.content_type

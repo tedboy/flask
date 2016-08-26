@@ -1,0 +1,6 @@
+werkzeug.TypeConversionDict.viewitems
+=====================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: TypeConversionDict.viewitems

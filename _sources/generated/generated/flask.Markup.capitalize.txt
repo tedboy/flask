@@ -1,0 +1,6 @@
+flask.Markup.capitalize
+=======================
+
+.. currentmodule:: flask
+
+.. automethod:: Markup.capitalize

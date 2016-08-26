@@ -1,0 +1,6 @@
+werkzeug.FileStorage.__init__
+=============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: FileStorage.__init__

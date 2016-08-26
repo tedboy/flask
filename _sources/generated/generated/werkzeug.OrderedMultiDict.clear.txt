@@ -1,0 +1,6 @@
+werkzeug.OrderedMultiDict.clear
+===============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: OrderedMultiDict.clear

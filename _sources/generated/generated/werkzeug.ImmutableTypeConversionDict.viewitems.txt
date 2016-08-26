@@ -1,0 +1,6 @@
+werkzeug.ImmutableTypeConversionDict.viewitems
+==============================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ImmutableTypeConversionDict.viewitems

@@ -1,0 +1,6 @@
+flask.Blueprint.app_url_value_preprocessor
+==========================================
+
+.. currentmodule:: flask
+
+.. automethod:: Blueprint.app_url_value_preprocessor

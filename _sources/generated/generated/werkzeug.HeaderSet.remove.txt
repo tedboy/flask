@@ -1,0 +1,6 @@
+werkzeug.HeaderSet.remove
+=========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: HeaderSet.remove

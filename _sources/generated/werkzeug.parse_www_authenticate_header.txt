@@ -1,0 +1,6 @@
+werkzeug.parse_www_authenticate_header
+======================================
+
+.. currentmodule:: werkzeug
+
+.. autofunction:: parse_www_authenticate_header

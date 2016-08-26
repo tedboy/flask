@@ -1,0 +1,6 @@
+flask.Flask.after_request
+=========================
+
+.. currentmodule:: flask
+
+.. automethod:: Flask.after_request

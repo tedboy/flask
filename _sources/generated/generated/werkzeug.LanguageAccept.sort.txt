@@ -1,0 +1,6 @@
+werkzeug.LanguageAccept.sort
+============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: LanguageAccept.sort

@@ -1,0 +1,6 @@
+werkzeug.ResponseCacheControl.cache_property
+============================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ResponseCacheControl.cache_property

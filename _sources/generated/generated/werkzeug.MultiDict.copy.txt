@@ -1,0 +1,6 @@
+werkzeug.MultiDict.copy
+=======================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: MultiDict.copy

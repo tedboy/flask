@@ -1,0 +1,6 @@
+flask.Flask.static_folder
+=========================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Flask.static_folder

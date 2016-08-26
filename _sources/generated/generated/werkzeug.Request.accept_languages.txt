@@ -1,0 +1,6 @@
+werkzeug.Request.accept_languages
+=================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Request.accept_languages

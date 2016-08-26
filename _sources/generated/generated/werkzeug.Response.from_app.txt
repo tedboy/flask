@@ -1,0 +1,6 @@
+werkzeug.Response.from_app
+==========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: Response.from_app

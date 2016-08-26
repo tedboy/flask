@@ -1,0 +1,6 @@
+flask.Flask.add_template_global
+===============================
+
+.. currentmodule:: flask
+
+.. automethod:: Flask.add_template_global

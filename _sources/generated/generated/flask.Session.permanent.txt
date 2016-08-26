@@ -1,0 +1,6 @@
+flask.Session.permanent
+=======================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Session.permanent

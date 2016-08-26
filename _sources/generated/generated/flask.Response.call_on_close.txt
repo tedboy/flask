@@ -1,0 +1,6 @@
+flask.Response.call_on_close
+============================
+
+.. currentmodule:: flask
+
+.. automethod:: Response.call_on_close

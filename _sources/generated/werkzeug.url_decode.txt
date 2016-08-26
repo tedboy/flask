@@ -1,0 +1,6 @@
+werkzeug.url_decode
+===================
+
+.. currentmodule:: werkzeug
+
+.. autofunction:: url_decode

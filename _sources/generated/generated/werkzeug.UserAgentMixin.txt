@@ -1,0 +1,19 @@
+werkzeug.UserAgentMixin
+=======================
+.. currentmodule:: werkzeug
+.. autoclass:: UserAgentMixin
+   :undoc-members:
+
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~UserAgentMixin.user_agent
+

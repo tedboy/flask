@@ -1,0 +1,19 @@
+werkzeug.LocalProxy
+===================
+.. currentmodule:: werkzeug
+.. autoclass:: LocalProxy
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~LocalProxy.__init__
+
+
+
+
+

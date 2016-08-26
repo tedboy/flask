@@ -1,0 +1,6 @@
+flask.Session.clear
+===================
+
+.. currentmodule:: flask
+
+.. automethod:: Session.clear

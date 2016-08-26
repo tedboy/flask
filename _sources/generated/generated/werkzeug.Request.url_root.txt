@@ -1,0 +1,6 @@
+werkzeug.Request.url_root
+=========================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Request.url_root

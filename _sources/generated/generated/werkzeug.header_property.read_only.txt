@@ -1,0 +1,6 @@
+werkzeug.header_property.read_only
+==================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: header_property.read_only

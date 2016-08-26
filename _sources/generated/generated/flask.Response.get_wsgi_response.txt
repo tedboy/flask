@@ -1,0 +1,6 @@
+flask.Response.get_wsgi_response
+================================
+
+.. currentmodule:: flask
+
+.. automethod:: Response.get_wsgi_response

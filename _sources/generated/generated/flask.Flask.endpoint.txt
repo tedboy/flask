@@ -1,0 +1,6 @@
+flask.Flask.endpoint
+====================
+
+.. currentmodule:: flask
+
+.. automethod:: Flask.endpoint

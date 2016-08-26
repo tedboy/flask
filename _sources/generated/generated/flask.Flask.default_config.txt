@@ -1,0 +1,6 @@
+flask.Flask.default_config
+==========================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Flask.default_config

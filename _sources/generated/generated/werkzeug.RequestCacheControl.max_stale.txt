@@ -1,0 +1,6 @@
+werkzeug.RequestCacheControl.max_stale
+======================================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: RequestCacheControl.max_stale

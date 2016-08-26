@@ -1,0 +1,6 @@
+werkzeug.CharsetAccept.best_match
+=================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: CharsetAccept.best_match

@@ -1,0 +1,6 @@
+werkzeug.parse_authorization_header
+===================================
+
+.. currentmodule:: werkzeug
+
+.. autofunction:: parse_authorization_header

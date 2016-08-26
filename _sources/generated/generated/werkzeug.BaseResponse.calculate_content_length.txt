@@ -1,0 +1,6 @@
+werkzeug.BaseResponse.calculate_content_length
+==============================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: BaseResponse.calculate_content_length

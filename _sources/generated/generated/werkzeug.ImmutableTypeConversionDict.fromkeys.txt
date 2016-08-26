@@ -1,0 +1,6 @@
+werkzeug.ImmutableTypeConversionDict.fromkeys
+=============================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ImmutableTypeConversionDict.fromkeys

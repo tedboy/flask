@@ -1,0 +1,6 @@
+werkzeug.ClosingIterator.close
+==============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ClosingIterator.close

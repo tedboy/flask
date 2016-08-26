@@ -1,0 +1,6 @@
+werkzeug.HeaderSet.index
+========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: HeaderSet.index

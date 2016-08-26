@@ -1,0 +1,6 @@
+werkzeug.ClosingIterator.__init__
+=================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ClosingIterator.__init__

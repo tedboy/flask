@@ -1,0 +1,6 @@
+werkzeug.ImmutableDict.values
+=============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: ImmutableDict.values

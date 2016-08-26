@@ -1,0 +1,6 @@
+werkzeug.BaseResponse.make_sequence
+===================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: BaseResponse.make_sequence

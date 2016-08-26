@@ -1,0 +1,6 @@
+flask.Request.endpoint
+======================
+
+.. currentmodule:: flask
+
+.. autoattribute:: Request.endpoint

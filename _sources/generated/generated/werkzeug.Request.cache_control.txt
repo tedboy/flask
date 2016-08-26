@@ -1,0 +1,6 @@
+werkzeug.Request.cache_control
+==============================
+
+.. currentmodule:: werkzeug
+
+.. autoattribute:: Request.cache_control

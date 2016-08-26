@@ -1,0 +1,6 @@
+werkzeug.LimitedStream.readline
+===============================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: LimitedStream.readline

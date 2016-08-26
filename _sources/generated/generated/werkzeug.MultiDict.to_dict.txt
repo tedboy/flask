@@ -1,0 +1,6 @@
+werkzeug.MultiDict.to_dict
+==========================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: MultiDict.to_dict

@@ -1,0 +1,6 @@
+werkzeug.CombinedMultiDict.deepcopy
+===================================
+
+.. currentmodule:: werkzeug
+
+.. automethod:: CombinedMultiDict.deepcopy
