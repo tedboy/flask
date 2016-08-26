@@ -108,7 +108,7 @@ language = None
 # directories to ignore when looking for source files.
 # This patterns also effect to html_static_path and html_extra_path
 exclude_patterns = [
-"api.rst",
+# "api.rst",
 # 'demo_autoclass.rst',
 # 'demo_automodule.rst',
 # 'demo_automodule.rst',
@@ -163,7 +163,7 @@ html_theme = 'sphinx_rtd_theme'
 # documentation.
 #
 html_theme_options = {
-    'collapse_navigation': True,
+    'collapse_navigation': False,
     'navigation_depth': 4,
 }
 

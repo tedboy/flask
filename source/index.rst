@@ -17,6 +17,7 @@ Flask and Werkzeug API I created using the rst source codes and ``autosummary``.
    :caption: Table of Contents
 
    flask_doc.rst
+   flask_doc2.rst
    werk_doc.rst
    api.rst
 
