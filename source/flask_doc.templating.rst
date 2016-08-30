@@ -1,5 +1,12 @@
-Templates
-=========
+Flask --- Templates
+===================
+
+.. contents::`Contents`
+    :depth: 2
+    :local:
+
+.. sectnum::    
+    :start: 1    
 
 Flask leverages Jinja2 as template engine.  You are obviously free to use
 a different template engine, but you still have to install Jinja2 to run
