@@ -5,6 +5,13 @@ Configuration Handling
 
 .. versionadded:: 0.3
 
+.. contents::`Contents`
+    :depth: 2
+    :local:
+
+.. sectnum::    
+    :start: 1    
+
 Applications need some kind of configuration.  There are different settings
 you might want to change depending on the application environment like
 toggling the debug mode, setting the secret key, and other such

@@ -13,9 +13,17 @@ Flask and Werkzeug API I created using the rst source codes and ``autosummary``.
 - https://github.com/pallets/flask/tree/master/docs
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Table of Contents
 
+   tutorial/index.rst
+   quickstart/flask_doc.quickstart.rst
+   patterns/index1.rst
+   patterns/index2.rst
+   deploying/index.rst
+   flask_doc.templating.rst
+   flask_doc.config.rst
+   flask_doc.testing.rst
    flask_doc.rst
    flask_doc2.rst
    werk_doc.rst

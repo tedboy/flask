@@ -5,6 +5,13 @@ Testing Flask Applications
 
    **Something that is untested is broken.**
 
+.. contents::`Contents`
+    :depth: 2
+    :local:
+
+.. sectnum::    
+    :start: 1 
+
 The origin of this quote is unknown and while it is not entirely correct, it is also
 not far from the truth.  Untested applications make it hard to
 improve existing code and developers of untested applications tend to
