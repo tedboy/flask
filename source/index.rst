@@ -27,6 +27,20 @@ Flask and Werkzeug API I created using the rst source codes and ``autosummary``.
    flask_doc.rst
    flask_doc2.rst
    werk_doc.rst
-   api.rst
 
 
+.. now include api part
+
+.. toctree::
+    :maxdepth: 1
+    :caption: Auto-generated API
+
+    generated/flask
+    generated/werkzeug
+
+.. autosummary::
+   :toctree:generated/
+   :template:module_custom.rst
+
+    flask
+    werkzeug
