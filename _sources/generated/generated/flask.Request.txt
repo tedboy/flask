@@ -1,5 +1,5 @@
-flask.Request
-=============
+:class:`flask.Request`
+======================
 .. currentmodule:: flask
 .. autoclass:: Request
    :undoc-members:

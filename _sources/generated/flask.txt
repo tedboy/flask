@@ -1,5 +1,5 @@
-flask
-=====
+:mod:`flask`
+============
 
 .. automodule:: flask
 

@@ -1,5 +1,5 @@
-werkzeug.HeaderSet
-==================
+:class:`werkzeug.HeaderSet`
+===========================
 .. currentmodule:: werkzeug
 .. autoclass:: HeaderSet
    :undoc-members:

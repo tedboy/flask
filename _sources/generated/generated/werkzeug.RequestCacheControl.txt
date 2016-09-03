@@ -1,5 +1,5 @@
-werkzeug.RequestCacheControl
-============================
+:class:`werkzeug.RequestCacheControl`
+=====================================
 .. currentmodule:: werkzeug
 .. autoclass:: RequestCacheControl
    :undoc-members:

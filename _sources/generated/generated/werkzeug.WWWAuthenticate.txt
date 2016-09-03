@@ -1,5 +1,5 @@
-werkzeug.WWWAuthenticate
-========================
+:class:`werkzeug.WWWAuthenticate`
+=================================
 .. currentmodule:: werkzeug
 .. autoclass:: WWWAuthenticate
    :undoc-members:

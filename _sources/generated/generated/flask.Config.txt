@@ -1,5 +1,5 @@
-flask.Config
-============
+:class:`flask.Config`
+=====================
 .. currentmodule:: flask
 .. autoclass:: Config
    :undoc-members:

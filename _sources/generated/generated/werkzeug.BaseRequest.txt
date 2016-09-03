@@ -1,5 +1,5 @@
-werkzeug.BaseRequest
-====================
+:class:`werkzeug.BaseRequest`
+=============================
 .. currentmodule:: werkzeug
 .. autoclass:: BaseRequest
    :undoc-members:

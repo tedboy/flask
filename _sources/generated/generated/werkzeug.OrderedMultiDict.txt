@@ -1,5 +1,5 @@
-werkzeug.OrderedMultiDict
-=========================
+:class:`werkzeug.OrderedMultiDict`
+==================================
 .. currentmodule:: werkzeug
 .. autoclass:: OrderedMultiDict
    :undoc-members:

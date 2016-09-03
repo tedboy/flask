@@ -1,5 +1,5 @@
-flask.Response
-==============
+:class:`flask.Response`
+=======================
 .. currentmodule:: flask
 .. autoclass:: Response
    :undoc-members:

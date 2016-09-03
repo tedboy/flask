@@ -1,5 +1,5 @@
-werkzeug.LocalProxy
-===================
+:class:`werkzeug.LocalProxy`
+============================
 .. currentmodule:: werkzeug
 .. autoclass:: LocalProxy
    :undoc-members:

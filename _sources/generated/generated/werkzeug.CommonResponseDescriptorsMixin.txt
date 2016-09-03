@@ -1,5 +1,5 @@
-werkzeug.CommonResponseDescriptorsMixin
-=======================================
+:class:`werkzeug.CommonResponseDescriptorsMixin`
+================================================
 .. currentmodule:: werkzeug
 .. autoclass:: CommonResponseDescriptorsMixin
    :undoc-members:

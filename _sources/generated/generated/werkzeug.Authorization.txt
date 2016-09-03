@@ -1,5 +1,5 @@
-werkzeug.Authorization
-======================
+:class:`werkzeug.Authorization`
+===============================
 .. currentmodule:: werkzeug
 .. autoclass:: Authorization
    :undoc-members:

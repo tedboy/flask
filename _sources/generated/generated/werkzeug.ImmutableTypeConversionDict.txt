@@ -1,5 +1,5 @@
-werkzeug.ImmutableTypeConversionDict
-====================================
+:class:`werkzeug.ImmutableTypeConversionDict`
+=============================================
 .. currentmodule:: werkzeug
 .. autoclass:: ImmutableTypeConversionDict
    :undoc-members:

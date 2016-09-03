@@ -1,5 +1,5 @@
-werkzeug.Accept
-===============
+:class:`werkzeug.Accept`
+========================
 .. currentmodule:: werkzeug
 .. autoclass:: Accept
    :undoc-members:

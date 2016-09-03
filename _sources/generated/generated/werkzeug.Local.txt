@@ -1,5 +1,5 @@
-werkzeug.Local
-==============
+:class:`werkzeug.Local`
+=======================
 .. currentmodule:: werkzeug
 .. autoclass:: Local
    :undoc-members:

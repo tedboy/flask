@@ -1,5 +1,5 @@
-werkzeug.header_property
-========================
+:class:`werkzeug.header_property`
+=================================
 .. currentmodule:: werkzeug
 .. autoclass:: header_property
    :undoc-members:

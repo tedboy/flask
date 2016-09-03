@@ -1,5 +1,5 @@
-werkzeug.Href
-=============
+:class:`werkzeug.Href`
+======================
 .. currentmodule:: werkzeug
 .. autoclass:: Href
    :undoc-members:

@@ -1,5 +1,5 @@
-werkzeug.AuthorizationMixin
-===========================
+:class:`werkzeug.AuthorizationMixin`
+====================================
 .. currentmodule:: werkzeug
 .. autoclass:: AuthorizationMixin
    :undoc-members:

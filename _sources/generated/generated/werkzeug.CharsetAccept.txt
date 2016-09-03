@@ -1,5 +1,5 @@
-werkzeug.CharsetAccept
-======================
+:class:`werkzeug.CharsetAccept`
+===============================
 .. currentmodule:: werkzeug
 .. autoclass:: CharsetAccept
    :undoc-members:

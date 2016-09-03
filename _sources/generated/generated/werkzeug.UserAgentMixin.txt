@@ -1,5 +1,5 @@
-werkzeug.UserAgentMixin
-=======================
+:class:`werkzeug.UserAgentMixin`
+================================
 .. currentmodule:: werkzeug
 .. autoclass:: UserAgentMixin
    :undoc-members:

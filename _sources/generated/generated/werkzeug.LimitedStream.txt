@@ -1,5 +1,5 @@
-werkzeug.LimitedStream
-======================
+:class:`werkzeug.LimitedStream`
+===============================
 .. currentmodule:: werkzeug
 .. autoclass:: LimitedStream
    :undoc-members:

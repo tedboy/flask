@@ -1,5 +1,5 @@
-werkzeug.ResponseCacheControl
-=============================
+:class:`werkzeug.ResponseCacheControl`
+======================================
 .. currentmodule:: werkzeug
 .. autoclass:: ResponseCacheControl
    :undoc-members:

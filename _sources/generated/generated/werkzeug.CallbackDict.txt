@@ -1,5 +1,5 @@
-werkzeug.CallbackDict
-=====================
+:class:`werkzeug.CallbackDict`
+==============================
 .. currentmodule:: werkzeug
 .. autoclass:: CallbackDict
    :undoc-members:

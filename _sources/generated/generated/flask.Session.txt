@@ -1,5 +1,5 @@
-flask.Session
-=============
+:class:`flask.Session`
+======================
 .. currentmodule:: flask
 .. autoclass:: Session
    :undoc-members:

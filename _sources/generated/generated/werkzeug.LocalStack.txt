@@ -1,5 +1,5 @@
-werkzeug.LocalStack
-===================
+:class:`werkzeug.LocalStack`
+============================
 .. currentmodule:: werkzeug
 .. autoclass:: LocalStack
    :undoc-members:

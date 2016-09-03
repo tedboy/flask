@@ -1,5 +1,5 @@
-werkzeug.AcceptMixin
-====================
+:class:`werkzeug.AcceptMixin`
+=============================
 .. currentmodule:: werkzeug
 .. autoclass:: AcceptMixin
    :undoc-members:

@@ -1,5 +1,5 @@
-werkzeug.CommonRequestDescriptorsMixin
-======================================
+:class:`werkzeug.CommonRequestDescriptorsMixin`
+===============================================
 .. currentmodule:: werkzeug
 .. autoclass:: CommonRequestDescriptorsMixin
    :undoc-members:

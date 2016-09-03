@@ -1,5 +1,5 @@
-werkzeug.environ_property
-=========================
+:class:`werkzeug.environ_property`
+==================================
 .. currentmodule:: werkzeug
 .. autoclass:: environ_property
    :undoc-members:

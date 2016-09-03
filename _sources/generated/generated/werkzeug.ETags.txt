@@ -1,5 +1,5 @@
-werkzeug.ETags
-==============
+:class:`werkzeug.ETags`
+=======================
 .. currentmodule:: werkzeug
 .. autoclass:: ETags
    :undoc-members:

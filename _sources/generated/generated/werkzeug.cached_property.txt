@@ -1,5 +1,5 @@
-werkzeug.cached_property
-========================
+:class:`werkzeug.cached_property`
+=================================
 .. currentmodule:: werkzeug
 .. autoclass:: cached_property
    :undoc-members:

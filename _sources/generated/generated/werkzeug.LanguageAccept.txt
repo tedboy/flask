@@ -1,5 +1,5 @@
-werkzeug.LanguageAccept
-=======================
+:class:`werkzeug.LanguageAccept`
+================================
 .. currentmodule:: werkzeug
 .. autoclass:: LanguageAccept
    :undoc-members:

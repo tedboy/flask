@@ -1,5 +1,5 @@
-werkzeug.EnvironHeaders
-=======================
+:class:`werkzeug.EnvironHeaders`
+================================
 .. currentmodule:: werkzeug
 .. autoclass:: EnvironHeaders
    :undoc-members:

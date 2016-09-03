@@ -1,5 +1,5 @@
-werkzeug.EnvironBuilder
-=======================
+:class:`werkzeug.EnvironBuilder`
+================================
 .. currentmodule:: werkzeug
 .. autoclass:: EnvironBuilder
    :undoc-members:

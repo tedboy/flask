@@ -1,5 +1,5 @@
-werkzeug.BaseResponse
-=====================
+:class:`werkzeug.BaseResponse`
+==============================
 .. currentmodule:: werkzeug
 .. autoclass:: BaseResponse
    :undoc-members:

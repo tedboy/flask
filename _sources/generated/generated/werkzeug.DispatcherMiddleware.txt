@@ -1,5 +1,5 @@
-werkzeug.DispatcherMiddleware
-=============================
+:class:`werkzeug.DispatcherMiddleware`
+======================================
 .. currentmodule:: werkzeug
 .. autoclass:: DispatcherMiddleware
    :undoc-members:

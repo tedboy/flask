@@ -1,5 +1,5 @@
-werkzeug.DebuggedApplication
-============================
+:class:`werkzeug.DebuggedApplication`
+=====================================
 .. currentmodule:: werkzeug
 .. autoclass:: DebuggedApplication
    :undoc-members:

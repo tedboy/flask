@@ -1,5 +1,5 @@
-werkzeug.ETagRequestMixin
-=========================
+:class:`werkzeug.ETagRequestMixin`
+==================================
 .. currentmodule:: werkzeug
 .. autoclass:: ETagRequestMixin
    :undoc-members:

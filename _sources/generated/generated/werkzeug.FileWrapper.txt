@@ -1,5 +1,5 @@
-werkzeug.FileWrapper
-====================
+:class:`werkzeug.FileWrapper`
+=============================
 .. currentmodule:: werkzeug
 .. autoclass:: FileWrapper
    :undoc-members:

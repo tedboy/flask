@@ -1,5 +1,5 @@
-werkzeug.Client
-===============
+:class:`werkzeug.Client`
+========================
 .. currentmodule:: werkzeug
 .. autoclass:: Client
    :undoc-members:

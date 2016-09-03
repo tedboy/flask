@@ -1,5 +1,5 @@
-flask.Blueprint
-===============
+:class:`flask.Blueprint`
+========================
 .. currentmodule:: flask
 .. autoclass:: Blueprint
    :undoc-members:

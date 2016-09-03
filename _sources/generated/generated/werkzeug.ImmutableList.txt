@@ -1,5 +1,5 @@
-werkzeug.ImmutableList
-======================
+:class:`werkzeug.ImmutableList`
+===============================
 .. currentmodule:: werkzeug
 .. autoclass:: ImmutableList
    :undoc-members:

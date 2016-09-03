@@ -1,5 +1,5 @@
-werkzeug.ClosingIterator
-========================
+:class:`werkzeug.ClosingIterator`
+=================================
 .. currentmodule:: werkzeug
 .. autoclass:: ClosingIterator
    :undoc-members:

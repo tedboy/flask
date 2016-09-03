@@ -1,5 +1,5 @@
-werkzeug.ImmutableMultiDict
-===========================
+:class:`werkzeug.ImmutableMultiDict`
+====================================
 .. currentmodule:: werkzeug
 .. autoclass:: ImmutableMultiDict
    :undoc-members:

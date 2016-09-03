@@ -1,5 +1,5 @@
-werkzeug.MIMEAccept
-===================
+:class:`werkzeug.MIMEAccept`
+============================
 .. currentmodule:: werkzeug
 .. autoclass:: MIMEAccept
    :undoc-members:

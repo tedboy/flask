@@ -1,5 +1,5 @@
-werkzeug.MultiDict
-==================
+:class:`werkzeug.MultiDict`
+===========================
 .. currentmodule:: werkzeug
 .. autoclass:: MultiDict
    :undoc-members:

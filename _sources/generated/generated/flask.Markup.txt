@@ -1,5 +1,5 @@
-flask.Markup
-============
+:class:`flask.Markup`
+=====================
 .. currentmodule:: flask
 .. autoclass:: Markup
    :undoc-members:

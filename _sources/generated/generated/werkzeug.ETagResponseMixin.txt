@@ -1,5 +1,5 @@
-werkzeug.ETagResponseMixin
-==========================
+:class:`werkzeug.ETagResponseMixin`
+===================================
 .. currentmodule:: werkzeug
 .. autoclass:: ETagResponseMixin
    :undoc-members:

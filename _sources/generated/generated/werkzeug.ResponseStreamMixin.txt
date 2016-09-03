@@ -1,5 +1,5 @@
-werkzeug.ResponseStreamMixin
-============================
+:class:`werkzeug.ResponseStreamMixin`
+=====================================
 .. currentmodule:: werkzeug
 .. autoclass:: ResponseStreamMixin
    :undoc-members:

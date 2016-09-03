@@ -1,5 +1,5 @@
-werkzeug.UserAgent
-==================
+:class:`werkzeug.UserAgent`
+===========================
 .. currentmodule:: werkzeug
 .. autoclass:: UserAgent
    :undoc-members:

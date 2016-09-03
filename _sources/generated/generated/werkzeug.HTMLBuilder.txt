@@ -1,5 +1,5 @@
-werkzeug.HTMLBuilder
-====================
+:class:`werkzeug.HTMLBuilder`
+=============================
 .. currentmodule:: werkzeug
 .. autoclass:: HTMLBuilder
    :undoc-members:

@@ -1,5 +1,5 @@
-werkzeug.SharedDataMiddleware
-=============================
+:class:`werkzeug.SharedDataMiddleware`
+======================================
 .. currentmodule:: werkzeug
 .. autoclass:: SharedDataMiddleware
    :undoc-members:
