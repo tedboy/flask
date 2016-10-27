@@ -33,7 +33,7 @@
 
   
     <link rel="top" title="Flask API" href="index.html"/>
-        <link rel="next" title="Other Flask doc materials" href="flask_doc.html"/>
+        <link rel="next" title="Patterns for Flask (part1)" href="patterns/index1.html"/>
         <link rel="prev" title="1   Configuration Handling" href="flask_doc.config.html"/> 
 
   
@@ -82,6 +82,30 @@
             
                 <p class="caption"><span class="caption-text">Table of Contents</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="interface_api.html">Flask interfaces &#8212; API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="interface_api.application_object.html">1. Application Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_api.blurprint_object.html">2. Blueprint Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_api.incoming_request_data.html">3. Incoming Request Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_api.response_object.html">4. Response Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_api.session.html">5. Sessions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_api.session_interface.html">6. Session Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_api.test_client.html">7. Test Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_api.app_globals.html">8. Application Globals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_api.useful_funcs.html">9. Useful Functions and Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_api.message_flashing.html">10. Message Flashing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_api.json_support.html">11. JSON Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_api.template_rendering.html">12. Template Rendering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_api.configuration.html">13. Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_api.extensions.html">14. Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_api.stream_helpers.html">15. Stream Helpers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_api.useful_internals.html">16. Useful Internals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_api.signals.html">17. Signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_api.class_based_views.html">18. Class-Based Views</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_api.url_route_regis.html">19. URL Route Registrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_api.view_func_options.html">20. View Function Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_api.cli.html">21. Command Line Interface</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial/index.html">Flask Tutorial</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="tutorial/introduction.html">Introducing Flaskr</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial/folders.html">Step 0: Creating The Folders</a></li>
@@ -139,6 +163,36 @@
 <li class="toctree-l2"><a class="reference internal" href="quickstart/quickstart13.html">13. Hooking in WSGI Middlewares</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quickstart/quickstart13.html#using-flask-extensions">14. Using Flask Extensions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quickstart/quickstart13.html#deploying-to-a-web-server">15. Deploying to a Web Server</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="flask_doc.templating.html">1&nbsp;&nbsp;&nbsp;Flask &#8212; Templates</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="flask_doc.templating.html#jinja-setup">1.1&nbsp;&nbsp;&nbsp;Jinja Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flask_doc.templating.html#standard-context">1.2&nbsp;&nbsp;&nbsp;Standard Context</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flask_doc.templating.html#standard-filters">1.3&nbsp;&nbsp;&nbsp;Standard Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flask_doc.templating.html#controlling-autoescaping">1.4&nbsp;&nbsp;&nbsp;Controlling Autoescaping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flask_doc.templating.html#registering-filters">1.5&nbsp;&nbsp;&nbsp;Registering Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flask_doc.templating.html#context-processors">1.6&nbsp;&nbsp;&nbsp;Context Processors</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="flask_doc.config.html">1&nbsp;&nbsp;&nbsp;Configuration Handling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="flask_doc.config.html#configuration-basics">1.1&nbsp;&nbsp;&nbsp;Configuration Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flask_doc.config.html#builtin-configuration-values">1.2&nbsp;&nbsp;&nbsp;Builtin Configuration Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flask_doc.config.html#configuring-from-files">1.3&nbsp;&nbsp;&nbsp;Configuring from Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flask_doc.config.html#configuration-best-practices">1.4&nbsp;&nbsp;&nbsp;Configuration Best Practices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flask_doc.config.html#development-production">1.5&nbsp;&nbsp;&nbsp;Development / Production</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flask_doc.config.html#instance-folders">1.6&nbsp;&nbsp;&nbsp;Instance Folders</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">1&nbsp;&nbsp;&nbsp;Testing Flask Applications</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#the-application">1.1&nbsp;&nbsp;&nbsp;The Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-testing-skeleton">1.2&nbsp;&nbsp;&nbsp;The Testing Skeleton</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-first-test">1.3&nbsp;&nbsp;&nbsp;The First Test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#logging-in-and-out">1.4&nbsp;&nbsp;&nbsp;Logging In and Out</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#test-adding-messages">1.5&nbsp;&nbsp;&nbsp;Test Adding Messages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#other-testing-tricks">1.6&nbsp;&nbsp;&nbsp;Other Testing Tricks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#faking-resources-and-context">1.7&nbsp;&nbsp;&nbsp;Faking Resources and Context</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#keeping-the-context-around">1.8&nbsp;&nbsp;&nbsp;Keeping the Context Around</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#accessing-and-modifying-sessions">1.9&nbsp;&nbsp;&nbsp;Accessing and Modifying Sessions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="patterns/index1.html">Patterns for Flask (part1)</a><ul>
@@ -331,36 +385,6 @@
 </li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="flask_doc.templating.html">1&nbsp;&nbsp;&nbsp;Flask &#8212; Templates</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="flask_doc.templating.html#jinja-setup">1.1&nbsp;&nbsp;&nbsp;Jinja Setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="flask_doc.templating.html#standard-context">1.2&nbsp;&nbsp;&nbsp;Standard Context</a></li>
-<li class="toctree-l2"><a class="reference internal" href="flask_doc.templating.html#standard-filters">1.3&nbsp;&nbsp;&nbsp;Standard Filters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="flask_doc.templating.html#controlling-autoescaping">1.4&nbsp;&nbsp;&nbsp;Controlling Autoescaping</a></li>
-<li class="toctree-l2"><a class="reference internal" href="flask_doc.templating.html#registering-filters">1.5&nbsp;&nbsp;&nbsp;Registering Filters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="flask_doc.templating.html#context-processors">1.6&nbsp;&nbsp;&nbsp;Context Processors</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="flask_doc.config.html">1&nbsp;&nbsp;&nbsp;Configuration Handling</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="flask_doc.config.html#configuration-basics">1.1&nbsp;&nbsp;&nbsp;Configuration Basics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="flask_doc.config.html#builtin-configuration-values">1.2&nbsp;&nbsp;&nbsp;Builtin Configuration Values</a></li>
-<li class="toctree-l2"><a class="reference internal" href="flask_doc.config.html#configuring-from-files">1.3&nbsp;&nbsp;&nbsp;Configuring from Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="flask_doc.config.html#configuration-best-practices">1.4&nbsp;&nbsp;&nbsp;Configuration Best Practices</a></li>
-<li class="toctree-l2"><a class="reference internal" href="flask_doc.config.html#development-production">1.5&nbsp;&nbsp;&nbsp;Development / Production</a></li>
-<li class="toctree-l2"><a class="reference internal" href="flask_doc.config.html#instance-folders">1.6&nbsp;&nbsp;&nbsp;Instance Folders</a></li>
-</ul>
-</li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">1&nbsp;&nbsp;&nbsp;Testing Flask Applications</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#the-application">1.1&nbsp;&nbsp;&nbsp;The Application</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#the-testing-skeleton">1.2&nbsp;&nbsp;&nbsp;The Testing Skeleton</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#the-first-test">1.3&nbsp;&nbsp;&nbsp;The First Test</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#logging-in-and-out">1.4&nbsp;&nbsp;&nbsp;Logging In and Out</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#test-adding-messages">1.5&nbsp;&nbsp;&nbsp;Test Adding Messages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#other-testing-tricks">1.6&nbsp;&nbsp;&nbsp;Other Testing Tricks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#faking-resources-and-context">1.7&nbsp;&nbsp;&nbsp;Faking Resources and Context</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#keeping-the-context-around">1.8&nbsp;&nbsp;&nbsp;Keeping the Context Around</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#accessing-and-modifying-sessions">1.9&nbsp;&nbsp;&nbsp;Accessing and Modifying Sessions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="flask_doc.html">Other Flask doc materials</a><ul>
@@ -1148,7 +1172,7 @@ test method to our class, like this:</p>
 <p>Notice that our test functions begin with the word <cite>test</cite>; this allows
 <code class="xref py py-mod docutils literal"><span class="pre">unittest</span></code> to automatically identify the method as a test to run.</p>
 <p>By using <cite>self.app.get</cite> we can send an HTTP <code class="docutils literal"><span class="pre">GET</span></code> request to the application with
-the given path.  The return value will be a <code class="xref py py-class docutils literal"><span class="pre">response_class</span></code> object.
+the given path.  The return value will be a <a class="reference internal" href="interface_api.application_object.html#flask.Flask.response_class" title="flask.Flask.response_class"><code class="xref py py-class docutils literal"><span class="pre">response_class</span></code></a> object.
 We can now use the <code class="xref py py-attr docutils literal"><span class="pre">data</span></code> attribute to inspect
 the return value (as string) from the application.  In this case, we ensure that
 <code class="docutils literal"><span class="pre">'No</span> <span class="pre">entries</span> <span class="pre">here</span> <span class="pre">so</span> <span class="pre">far'</span></code> is part of the output.</p>
@@ -1227,10 +1251,10 @@ suite.</p>
 <div class="section" id="other-testing-tricks">
 <h2>1.6&nbsp;&nbsp;&nbsp;Other Testing Tricks<a class="headerlink" href="#other-testing-tricks" title="Permalink to this headline">¶</a></h2>
 <p>Besides using the test client as shown above, there is also the
-<a class="reference internal" href="generated/generated/flask.Flask.test_request_context.html#flask.Flask.test_request_context" title="flask.Flask.test_request_context"><code class="xref py py-meth docutils literal"><span class="pre">test_request_context()</span></code></a> method that can be used
+<a class="reference internal" href="interface_api.application_object.html#flask.Flask.test_request_context" title="flask.Flask.test_request_context"><code class="xref py py-meth docutils literal"><span class="pre">test_request_context()</span></code></a> method that can be used
 in combination with the <code class="docutils literal"><span class="pre">with</span></code> statement to activate a request context
-temporarily.  With this you can access the <code class="xref py py-class docutils literal"><span class="pre">request</span></code>,
-<code class="xref py py-class docutils literal"><span class="pre">g</span></code> and <code class="xref py py-class docutils literal"><span class="pre">session</span></code> objects like in view
+temporarily.  With this you can access the <a class="reference internal" href="interface_api.incoming_request_data.html#flask.request" title="flask.request"><code class="xref py py-class docutils literal"><span class="pre">request</span></code></a>,
+<a class="reference internal" href="interface_api.app_globals.html#flask.g" title="flask.g"><code class="xref py py-class docutils literal"><span class="pre">g</span></code></a> and <a class="reference internal" href="interface_api.session.html#flask.session" title="flask.session"><code class="xref py py-class docutils literal"><span class="pre">session</span></code></a> objects like in view
 functions.  Here is a full example that demonstrates this approach:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">flask</span>
 
@@ -1247,12 +1271,12 @@ way.</p>
 there does not seem to be a good way to do that, consider switching to
 application factories (see <a class="reference internal" href="patterns/appfactories.html#app-factories"><span>Application Factories</span></a>).</p>
 <p>Note however that if you are using a test request context, the
-<a class="reference internal" href="generated/generated/flask.Flask.before_request.html#flask.Flask.before_request" title="flask.Flask.before_request"><code class="xref py py-meth docutils literal"><span class="pre">before_request()</span></code></a> and <a class="reference internal" href="generated/generated/flask.Flask.after_request.html#flask.Flask.after_request" title="flask.Flask.after_request"><code class="xref py py-meth docutils literal"><span class="pre">after_request()</span></code></a>
+<a class="reference internal" href="interface_api.application_object.html#flask.Flask.before_request" title="flask.Flask.before_request"><code class="xref py py-meth docutils literal"><span class="pre">before_request()</span></code></a> and <a class="reference internal" href="interface_api.application_object.html#flask.Flask.after_request" title="flask.Flask.after_request"><code class="xref py py-meth docutils literal"><span class="pre">after_request()</span></code></a>
 functions are not called automatically.  However
-<a class="reference internal" href="generated/generated/flask.Flask.teardown_request.html#flask.Flask.teardown_request" title="flask.Flask.teardown_request"><code class="xref py py-meth docutils literal"><span class="pre">teardown_request()</span></code></a> functions are indeed executed when
+<a class="reference internal" href="interface_api.application_object.html#flask.Flask.teardown_request" title="flask.Flask.teardown_request"><code class="xref py py-meth docutils literal"><span class="pre">teardown_request()</span></code></a> functions are indeed executed when
 the test request context leaves the <code class="docutils literal"><span class="pre">with</span></code> block.  If you do want the
-<a class="reference internal" href="generated/generated/flask.Flask.before_request.html#flask.Flask.before_request" title="flask.Flask.before_request"><code class="xref py py-meth docutils literal"><span class="pre">before_request()</span></code></a> functions to be called as well, you
-need to call <a class="reference internal" href="generated/generated/flask.Flask.preprocess_request.html#flask.Flask.preprocess_request" title="flask.Flask.preprocess_request"><code class="xref py py-meth docutils literal"><span class="pre">preprocess_request()</span></code></a> yourself:</p>
+<a class="reference internal" href="interface_api.application_object.html#flask.Flask.before_request" title="flask.Flask.before_request"><code class="xref py py-meth docutils literal"><span class="pre">before_request()</span></code></a> functions to be called as well, you
+need to call <a class="reference internal" href="interface_api.application_object.html#flask.Flask.preprocess_request" title="flask.Flask.preprocess_request"><code class="xref py py-meth docutils literal"><span class="pre">preprocess_request()</span></code></a> yourself:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">app</span> <span class="o">=</span> <span class="n">flask</span><span class="o">.</span><span class="n">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
 
 <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">test_request_context</span><span class="p">(</span><span class="s1">&#39;/?name=Peter&#39;</span><span class="p">):</span>
@@ -1262,8 +1286,8 @@ need to call <a class="reference internal" href="generated/generated/flask.Flask
 </div>
 <p>This can be necessary to open database connections or something similar
 depending on how your application was designed.</p>
-<p>If you want to call the <a class="reference internal" href="generated/generated/flask.Flask.after_request.html#flask.Flask.after_request" title="flask.Flask.after_request"><code class="xref py py-meth docutils literal"><span class="pre">after_request()</span></code></a> functions you
-need to call into <a class="reference internal" href="generated/generated/flask.Flask.process_response.html#flask.Flask.process_response" title="flask.Flask.process_response"><code class="xref py py-meth docutils literal"><span class="pre">process_response()</span></code></a> which however
+<p>If you want to call the <a class="reference internal" href="interface_api.application_object.html#flask.Flask.after_request" title="flask.Flask.after_request"><code class="xref py py-meth docutils literal"><span class="pre">after_request()</span></code></a> functions you
+need to call into <a class="reference internal" href="interface_api.application_object.html#flask.Flask.process_response" title="flask.Flask.process_response"><code class="xref py py-meth docutils literal"><span class="pre">process_response()</span></code></a> which however
 requires that you pass it a response object:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">app</span> <span class="o">=</span> <span class="n">flask</span><span class="o">.</span><span class="n">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
 
@@ -1282,7 +1306,7 @@ start using the test client.</p>
 <p><span class="versionmodified">New in version 0.10.</span></p>
 </div>
 <p>A very common pattern is to store user authorization information and
-database connections on the application context or the <code class="xref py py-attr docutils literal"><span class="pre">flask.g</span></code>
+database connections on the application context or the <a class="reference internal" href="interface_api.app_globals.html#flask.g" title="flask.g"><code class="xref py py-attr docutils literal"><span class="pre">flask.g</span></code></a>
 object.  The general pattern for this is to put the object on there on
 first usage and then to remove it on a teardown.  Imagine for instance
 this code to get the current user:</p>
@@ -1296,7 +1320,7 @@ this code to get the current user:</p>
 </div>
 <p>For a test it would be nice to override this user from the outside without
 having to change some code.  This can be accomplished with
-hooking the <code class="xref py py-data docutils literal"><span class="pre">flask.appcontext_pushed</span></code> signal:</p>
+hooking the <a class="reference internal" href="interface_api.signals.html#flask.appcontext_pushed" title="flask.appcontext_pushed"><code class="xref py py-data docutils literal"><span class="pre">flask.appcontext_pushed</span></code></a> signal:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">contextlib</span> <span class="kn">import</span> <span class="n">contextmanager</span>
 <span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">appcontext_pushed</span><span class="p">,</span> <span class="n">g</span>
 
@@ -1331,7 +1355,7 @@ hooking the <code class="xref py py-data docutils literal"><span class="pre">fla
 <p>Sometimes it is helpful to trigger a regular request but still keep the
 context around for a little longer so that additional introspection can
 happen.  With Flask 0.4 this is possible by using the
-<a class="reference internal" href="generated/generated/flask.Flask.test_client.html#flask.Flask.test_client" title="flask.Flask.test_client"><code class="xref py py-meth docutils literal"><span class="pre">test_client()</span></code></a> with a <code class="docutils literal"><span class="pre">with</span></code> block:</p>
+<a class="reference internal" href="interface_api.application_object.html#flask.Flask.test_client" title="flask.Flask.test_client"><code class="xref py py-meth docutils literal"><span class="pre">test_client()</span></code></a> with a <code class="docutils literal"><span class="pre">with</span></code> block:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">app</span> <span class="o">=</span> <span class="n">flask</span><span class="o">.</span><span class="n">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
 
 <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">test_client</span><span class="p">()</span> <span class="k">as</span> <span class="n">c</span><span class="p">:</span>
@@ -1339,7 +1363,7 @@ happen.  With Flask 0.4 this is possible by using the
     <span class="k">assert</span> <span class="n">request</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="s1">&#39;tequila&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;42&#39;</span>
 </pre></div>
 </div>
-<p>If you were to use just the <a class="reference internal" href="generated/generated/flask.Flask.test_client.html#flask.Flask.test_client" title="flask.Flask.test_client"><code class="xref py py-meth docutils literal"><span class="pre">test_client()</span></code></a> without
+<p>If you were to use just the <a class="reference internal" href="interface_api.application_object.html#flask.Flask.test_client" title="flask.Flask.test_client"><code class="xref py py-meth docutils literal"><span class="pre">test_client()</span></code></a> without
 the <code class="docutils literal"><span class="pre">with</span></code> block, the <code class="docutils literal"><span class="pre">assert</span></code> would fail with an error because <cite>request</cite>
 is no longer available (because you are trying to use it outside of the actual request).</p>
 </div>
@@ -1351,7 +1375,7 @@ is no longer available (because you are trying to use it outside of the actual r
 <p>Sometimes it can be very helpful to access or modify the sessions from the
 test client.  Generally there are two ways for this.  If you just want to
 ensure that a session has certain keys set to certain values you can just
-keep the context around and access <code class="xref py py-data docutils literal"><span class="pre">flask.session</span></code>:</p>
+keep the context around and access <a class="reference internal" href="interface_api.session.html#flask.session" title="flask.session"><code class="xref py py-data docutils literal"><span class="pre">flask.session</span></code></a>:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">test_client</span><span class="p">()</span> <span class="k">as</span> <span class="n">c</span><span class="p">:</span>
     <span class="n">rv</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
     <span class="k">assert</span> <span class="n">flask</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="s1">&#39;foo&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">42</span>
@@ -1371,7 +1395,7 @@ independently of the session backend used:</p>
 </pre></div>
 </div>
 <p>Note that in this case you have to use the <code class="docutils literal"><span class="pre">sess</span></code> object instead of the
-<code class="xref py py-data docutils literal"><span class="pre">flask.session</span></code> proxy.  The object however itself will provide the
+<a class="reference internal" href="interface_api.session.html#flask.session" title="flask.session"><code class="xref py py-data docutils literal"><span class="pre">flask.session</span></code></a> proxy.  The object however itself will provide the
 same interface.</p>
 </div>
 </div>
@@ -1383,7 +1407,7 @@ same interface.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="flask_doc.html" class="btn btn-neutral float-right" title="Other Flask doc materials" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="patterns/index1.html" class="btn btn-neutral float-right" title="Patterns for Flask (part1)" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="flask_doc.config.html" class="btn btn-neutral" title="1   Configuration Handling" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -1395,7 +1419,6 @@ same interface.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2016.
 
     </p>
   </div>
